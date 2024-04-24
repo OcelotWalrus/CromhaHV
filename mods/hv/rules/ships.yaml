@@ -247,7 +247,7 @@ SUBMARINE:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, techcenter
+		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 60
 		Description: actor-submarine.description
 	UpdatesPlayerStatistics:
@@ -257,7 +257,7 @@ SUBMARINE:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 55
+		Speed: 130
 		TurnSpeed: 40
 	RevealsShroud:
 		Range: 7c0
@@ -273,6 +273,18 @@ SUBMARINE:
 		Sequence: shoot
 	Armament:
 		Weapon: MissileLauncher
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 4
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	ReloadAmmoPool:
+		Delay: 100
+		Count: 1
 	MissileSpawnerParent:
 		Actors: slcm
 		RespawnTicks: 120

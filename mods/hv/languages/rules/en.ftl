@@ -90,6 +90,14 @@ actor-plane2 =
       Can't attack Water, Ground or Air Units
    .name = Speeder
 
+actor-plane3 =
+   .description = Fast Stealth Attack Ship
+      Strong vs Buildings
+      Strong vs Ground units
+      Strong vs Air units
+      Strong vs Water Units
+   .name = Lockhead Martin F-35 Lightning-II
+
 actor-copter =
    .name = Attack Helicopter
    .description = Small Helicopter Gunship

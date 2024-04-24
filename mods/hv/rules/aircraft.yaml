@@ -131,6 +131,90 @@ PLANE2:
 		TrailLength: 12
 		ZOffset: -1000
 
+PLANE3:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Smoke: ^SmokeEmitter
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 70
+		Prerequisites: techcenter, ~starport.yi
+		Description: actor-plane3.description
+	Valued:
+		Cost: 2300
+	Tooltip:
+		Name: Lockhead Martin F-35 Lightning-II
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 80000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 13c0
+		MinRange: 6c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 6c0
+		Type: GroundPosition
+	Armament@Ground:
+		Weapon: Bomb
+		PauseOnCondition: !ammo
+	Armament@Air:
+		Weapon: AircraftChainGunAir
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 70
+		Count: 2
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: true
+		OpportunityFire: true
+	Aircraft:
+		CruiseAltitude: 3200
+		InitialFacing: 768
+		TurnSpeed: 30
+		Speed: 200
+		RepulsionSpeed: 55
+		MaximumPitch: 66
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: stealth_on_humanoide9000.wav
+		UncloakSound: stealth_off_humanoide9000.wav
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled || ecm-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Voiced:
+		VoiceSet: SpeederVoice
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	Selectable:
+		Bounds: 1024, 1024
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
+
 COPTER:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
@@ -273,31 +357,31 @@ COPTER2:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
-		Cost: 900
+		Cost: 2000
 	Tooltip:
 		Name: actor-copter2.name
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 50
-		Prerequisites: ~starport.sc
+		BuildPaletteOrder: 80
+		Prerequisites: ~starport.yi
 		Description: actor-copter2.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
-		Type: Heavy
+		Type: Steel
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
+		Range: 16c0
+		MinRange: 8c0
 		Type: GroundPosition
-		RevealGeneratedShroud: False
+		RevealGeneratedShroud: True
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 8c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 135
+		TurnSpeed: 35
+		Speed: 175
 		AltitudeVelocity: 0c58
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
@@ -311,10 +395,9 @@ COPTER2:
 	Selectable:
 		DecorationBounds: 2048, 1843
 	Cargo:
-		Types: Pod
-		MaxWeight: 8
-		AfterUnloadDelay: 40
-		RequiresCondition: !carrying
+		Types: Pod, Vehicle
+		MaxWeight: 28
+		AfterUnloadDelay: 20
 		LoadedCondition: loaded
 	Carryall:
 		BeforeLoadDelay: 10
@@ -450,7 +533,6 @@ DROPSHIP:
 		MaxWeight: 8
 		AfterUnloadDelay: 40
 		UnloadVoice: Unload
-		RequiresCondition: !carrying
 		LoadedCondition: loaded
 	Carryall:
 		BeforeLoadDelay: 10

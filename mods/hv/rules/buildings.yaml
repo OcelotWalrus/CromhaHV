@@ -1468,7 +1468,7 @@ SILO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~structures.sc
+		Prerequisites: techcenter
 		BuildLimit: 1
 		Description: actor-silo.description
 	Building:
