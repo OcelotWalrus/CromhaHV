@@ -263,6 +263,50 @@ GENERATOR:
 			sc: generator2
 			yi: generator
 
+NUCLEARGENERATOR:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
+	Selectable:
+		Bounds: 2048, 3072, 0, -512
+	Buildable:
+		Queue: Building
+		Prerequisites: ~base, techcenter
+		BuildPaletteOrder: 130
+		Description: actor-generator-nuclear.description
+	Encyclopedia:
+		Description: actor-generator-nuclear.encyclopedia
+		Order: 10
+		Category: Buildings
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: actor-generator-nuclear.name
+	ProvidesPrerequisite@BuildingName:
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 60000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Power:
+		Amount: 230
+	Targetable:
+		TargetTypes: Ground, Structure
+	ScalePowerWithHealth:
+	RenderSprites:
+		Image: generator
+		FactionImages:
+			sc: generator2
+			yi: generator
+
 RADAR:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
@@ -1489,7 +1533,7 @@ SILO:
 		PauseOnCondition: disabled
 		Cursor: nuke
 		Icon: nuke
-		ChargeInterval: 13500
+		ChargeInterval: 21500
 		Name: actor-silo.nukepower-name
 		Description: actor-silo.nukepower-description
 		MissileWeapon: nuclear

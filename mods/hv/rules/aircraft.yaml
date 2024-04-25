@@ -404,7 +404,6 @@ COPTER2:
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
 		CarryCondition: carrying
-		RequiresCondition: !loaded
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3

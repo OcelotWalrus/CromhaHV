@@ -179,6 +179,15 @@ actor-generator =
     Always plan ahead so you don't accidentally power down your base slowing down your progress. On the other hand it is a vital strategy to destroy enemy power plants to distract the enemy into power micromanagement, losen defenses temporarily and to put enemy on hold.
    .name = Power Plant
 
+actor-generator-nuclear =
+   .description = Generates power for other structures.
+   .encyclopedia = Generators power the base. Loss of power effects buildings individually. Without power the radar shows no minimap, production is slowed down, support power charging is paused, base defense system stop operating.
+
+   To restore power you can build more generators or as a short term action disable certain buildings by clicking the zap button and selected buildings to power down. With power lines cut the actions are more drastic: buildings will be unable to produce or contribute to the tech tree also canceling current production queues if they are effected.
+
+   Always plan ahead so you don't accidentally power down your base slowing down your progress. On the other hand it is a vital strategy to destroy enemy power plants to distract the enemy into power micromanagement, losen defenses temporarily and to put enemy on hold.
+   .name = Nuclear Power Plant
+
 actor-radar =
    .description = Provides an overview
     of the battlefield.

@@ -20,7 +20,7 @@ Player:
 		ResourceDistance: 6
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base, base2
-		PowerTypes: generator
+		PowerTypes: generator, generator-nuclear
 		BarracksTypes: module, module2
 		VehiclesFactoryTypes: factory3, factory4, base, base2
 		ProductionTypes: module, module2, factory3, factory4, starport, starport2, harbor, harbor2, base, base2
