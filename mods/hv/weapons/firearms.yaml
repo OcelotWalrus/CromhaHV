@@ -93,6 +93,32 @@ BikeChainGun:
 			Heavy: 10
 			Concrete: 5
 
+BikeChainGunAir:
+	Inherits: BuggyChainGun
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+	StartBurstReport: ccbysmgfire02.wav
+	BurstDelays: 2
+	Range: 7c0
+	Projectile: InstantHit
+	Warhead@Damage: SpreadDamage
+		Damage: 250
+		Versus:
+			Light: 167
+			Heavy: 23
+
+BikeChainGunAirAmeliored:
+	Inherits: BuggyChainGun
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+	StartBurstReport: ccbysmgfire02.wav
+	BurstDelays: 2
+	Range: 8c0
+	Projectile: InstantHit
+	Warhead@Damage: SpreadDamage
+		Damage: 250
+		Versus:
+			Light: 167
+			Heavy: 23
+
 HelicopterChainGunGround:
 	Inherits: ^AircraftChainGun
 	ValidTargets: Water, Ground, Tree, Lava, Swamp

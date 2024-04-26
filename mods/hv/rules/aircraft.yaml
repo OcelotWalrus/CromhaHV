@@ -7,7 +7,7 @@ PLANE1:
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 40
 		Prerequisites: ~starport.yi
 		Description: actor-plane1.description
 	Valued:
@@ -17,7 +17,7 @@ PLANE1:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 9000
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 4c0
@@ -27,12 +27,10 @@ PLANE1:
 		Range: 4c0
 		Type: GroundPosition
 	Armament@Ground:
-		Weapon: AircraftChainGunGround
-		MuzzleSequence: muzzle
+		Weapon: BikeChainGunAir
 		LocalOffset: 50,0,0
 	Armament@Air:
-		Weapon: AircraftChainGunAir
-		MuzzleSequence: muzzle
+		Weapon: BikeChainGunAir
 		LocalOffset: 50,0,0
 	AttackAircraft:
 		FacingTolerance: 92
@@ -72,13 +70,13 @@ PLANE2:
 		Prerequisites: techcenter, ~starport.yi
 		Description: actor-plane2.description
 	Valued:
-		Cost: 1500
+		Cost: 2000
 	Tooltip:
 		Name: actor-plane2.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 11000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 4c0
@@ -88,7 +86,7 @@ PLANE2:
 		Range: 4c0
 		Type: GroundPosition
 	Armament:
-		Weapon: Plasma
+		Weapon: ^AntiGroundMissile
 		LocalOffset: 250,0,0
 		PauseOnCondition: !ammo
 	AmmoPool:
@@ -143,7 +141,7 @@ PLANE3:
 	Valued:
 		Cost: 2300
 	Tooltip:
-		Name: Lockhead Martin F-35 Lightning-II
+		Name: actor-plane3.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -162,7 +160,7 @@ PLANE3:
 		Weapon: Bomb
 		PauseOnCondition: !ammo
 	Armament@Air:
-		Weapon: AircraftChainGunAir
+		Weapon: ^AntiAirMissile
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
 	AmmoPool:
@@ -175,7 +173,7 @@ PLANE3:
 		PipCount: 8
 	ReloadAmmoPool:
 		Delay: 70
-		Count: 2
+		Count: 8
 	AttackAircraft:
 		FacingTolerance: 92
 		PersistentTargeting: true
@@ -194,6 +192,9 @@ PLANE3:
 		UncloakSound: stealth_off_humanoide9000.wav
 		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled || ecm-disabled
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 4c0
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
@@ -214,6 +215,161 @@ PLANE3:
 		Offset: -298,164,0
 		TrailLength: 12
 		ZOffset: -1000
+
+PLANE4:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@Smoke: ^SmokeEmitter
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 40
+		Prerequisites: ~starport.yi
+		Description: actor-plane4.description
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: actor-plane4.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10500
+	RevealsShroud:
+		Range: 12c0
+		MinRange: 6c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 6c0
+		Type: GroundPosition
+	Armament@Ground:
+		Weapon: Plasma
+		PauseOnCondition: !ammo
+		LocalOffset: 50,0,0
+	Armament@Air:
+		Weapon: DoubleBarrelledArtilleryAir
+		LocalOffset: 50,0,0
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 70
+		Count: 2
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: true
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 2760
+		InitialFacing: 768
+		TurnSpeed: 28
+		Speed: 225
+		RepulsionSpeed: 45
+		MaximumPitch: 59
+	Voiced:
+		VoiceSet: GunshipVoice
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	WithMuzzleOverlay:
+	Contrail@Right:
+		Offset: -298,-264,0
+		TrailLength: 12
+	Contrail@Left:
+		Offset: -298,264,0
+		TrailLength: 12
+	Selectable:
+		Bounds: 1024, 1024
+
+PLANE5:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Smoke: ^SmokeEmitter
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 60
+		Prerequisites: techcenter, ~starport.yi
+		Description: actor-plane5.description
+	Valued:
+		Cost: 2150
+	Tooltip:
+		Name: actor-plane5.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 11000
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Armament:
+		Weapon: ^AntiGroundMissile
+		LocalOffset: 250,0,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 70
+		Count: 2
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 4060
+		InitialFacing: 768
+		TurnSpeed: 24
+		Speed: 200
+		RepulsionSpeed: 50
+		MaximumPitch: 60
+	Voiced:
+		VoiceSet: SpeederVoice
+	Cloak:
+		InitialDelay: 60
+		CloakDelay: 60
+		CloakSound: stealth_on_humanoide9000.wav
+		UncloakSound: stealth_off_humanoide9000.wav
+		IsPlayerPalette: true
+		PauseOnCondition: ecm-disabled
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 8c0
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	Selectable:
+		Bounds: 1024, 1024
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
+	-AppearsOnRadar:
 
 COPTER:
 	Inherits: ^Helicopter
@@ -494,7 +650,7 @@ DROPSHIP:
 		Name: actor-dropship.name
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 90
 		Prerequisites: ~starport.yi
 		Description: actor-dropship.description
 	UpdatesPlayerStatistics:

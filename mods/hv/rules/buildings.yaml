@@ -2761,6 +2761,10 @@ DROPZONE:
 	Building:
 		Footprint: x+x +++ x+x
 		Dimensions: 3,3
+	Buildable:
+		BuildPaletteOrder: 130
+		Prerequisites: factory, ~structures.yi
+		Description: actor-dropzone.description
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0

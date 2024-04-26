@@ -80,23 +80,35 @@ notification-railgun-ready = Orbital Railgun ready.
 actor-plane1 =
    .description = Attack Ship armed with
     a large chain gun.
-      Strong vs Pods, Buildings and Aircraft
-      Weak vs Tanks
-   .name = Gun Ship
+      Strong vs Pods and Aircraft
+      Weak vs Tanks and Buildings
+   .name = F-15EX Eagle II
 
 actor-plane2 =
-   .description = Fast Attack Ship
+   .description = Fast Plasma Attack Ship
       Strong vs Buildings
       Can't attack Water, Ground or Air Units
-   .name = Speeder
+   .name = B-2A-Spirit
 
 actor-plane3 =
    .description = Fast Stealth Attack Ship
-      Strong vs Buildings
-      Strong vs Ground units
-      Strong vs Air units
-      Strong vs Water Units
-   .name = Lockhead Martin F-35 Lightning-II
+      Strong vs Buildings, Air units, Water Units, Ground Units
+   .name = F-35 Lightning-II
+
+actor-plane4 =
+   .description = Attack Ship armed with
+    a missile gun, designed for air superiority
+      Strong vs Pods and Aircraft
+      Weak vs Tanks and Buildings
+   .name = F-22A Raptor
+
+actor-plane5 =
+   .description = Stealth Missile Attack Ship
+      Strong vs Buildings and Ground Units
+      Weak vs Air Units and Pods
+      Can't attack Air Units
+      Can detected cloaked submarines
+   .name = F-117 Nighthawk
 
 actor-copter =
    .name = Attack Helicopter
@@ -105,7 +117,7 @@ actor-copter =
       Weak vs Tanks
 
 actor-saucer =
-   .name = Scout Saucer
+   .name = E-2 Hawkeye
    .description = Reconnaissance air unit.
       Unarmed
 
@@ -116,7 +128,7 @@ actor-banshee =
       Can't attack Water, Ground or Air Units
 
 actor-copter2 =
-   .name = Transport Helicopter
+   .name = CV-22B Osprey
    .description = Vehicle Transport Helicopter.
       Can load pods
       and lift one vehicle.

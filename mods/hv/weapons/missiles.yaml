@@ -5,6 +5,8 @@
 	ReloadDelay: 50
 	Range: 5c0
 	Report: rocketlaunch01.wav
+	Burst: 4
+	BurstDelays: 8
 	Projectile: Missile
 		Speed: 213
 		Arm: 0
