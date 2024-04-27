@@ -528,3 +528,51 @@ WATERMINELAYER3:
 	Inherits: WATERMINELAYER
 	Buildable:
 		Prerequisites: ~harbor.cc, tradplat
+
+AIRCRAFTCARRIER:
+	Inherits: ^Ship
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: actor-aircraftcarrier.name
+		GenericName: actor-aircraftcarrier.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.cc, techcenter
+		BuildPaletteOrder: 90
+		Description: actor-aircraftcarrier.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 75000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: navaltransport
+		Speed: 140
+		TurnSpeed: 35
+	RevealsShroud:
+		Range: 11c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	WithLandingCraftAnimation:
+		OpenTerrainTypes: Shore, IceCliff
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 6c0
+	RenderDetectionCircle:
+		TrailCount: 3
+	Cargo:
+		Types: Aircraft
+		MaxWeight: 16
+		AfterUnloadDelay: 25
+		EjectOnDeath: true
+		LoadingCondition: notmobile
+		PassengerFacing: 0
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 1, -1
+		RequiresSelection: true

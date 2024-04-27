@@ -282,6 +282,9 @@
 	Guardable:
 	ProximityCaptor:
 		Types: Plane
+	Passenger:
+		CargoType: Aircraft
+		Weight: 8
 	Tooltip:
 		GenericName: meta-plane-generic-name
 	WithShadow:

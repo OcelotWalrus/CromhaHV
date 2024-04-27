@@ -224,3 +224,6 @@ waterminelayer2:
 
 waterminelayer3:
 	Inherits: waterminelayer2
+
+aircraftcarrier:
+	Inherits: navaltransport

@@ -2691,7 +2691,7 @@ DWALLTC:
 		Footprint: x
 
 RECONSTRUCTOR:
-	Inherits: ^Building
+	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
@@ -2703,12 +2703,15 @@ RECONSTRUCTOR:
 		Description: actor-reconstructor.encyclopedia
 		Order: 300
 		Category: Buildings
+	Valued:
+		Cost: 3000
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
 	Buildable:
+		Queue: Building
 		BuildPaletteOrder: 140
-		Prerequisites: factory5, ~structures.cc
+		Prerequisites: factory5, techcenter, ~structures.cc
 		Description: actor-dropzone.description
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -2952,7 +2955,7 @@ WATCHTOWER:
 		Sticky: true
 
 DROPZONE:
-	Inherits: ^Building
+	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
@@ -2968,9 +2971,12 @@ DROPZONE:
 		Footprint: x+x +++ x+x
 		Dimensions: 3,3
 	Buildable:
+		Queue: Building
 		BuildPaletteOrder: 130
 		Prerequisites: factory5, ~structures.cc
 		Description: actor-dropzone.description
+	Valued:
+		Cost: 2000
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0

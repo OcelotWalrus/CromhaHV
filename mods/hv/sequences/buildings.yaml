@@ -1992,7 +1992,17 @@ reconstructor:
 		Filename: bits/flame2.png
 		Offset: 15, 8
 	icon:
-		Filename: bits/icon.png
+		Filename: bits/reconstructor-icon.png
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
 
 storage2:
 	Inherits@Flame: ^BuildingFlame2
@@ -2271,7 +2281,17 @@ dropzone:
 		Filename: bits/flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/icon.png
+		Filename: bits/dropzone-icon.png
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
 
 oresmelt:
 	Inherits@Flame: ^BuildingFlame

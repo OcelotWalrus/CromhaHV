@@ -154,19 +154,19 @@
 		InternalName: yi
 		Side: Corporations
 		Selectable: true
-		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    - Electric Pod\n    - Bomber Pod\n    - Sniper Pod\n    - Gatling Bike\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapon:\n    - Air Strike\n    - Orbital Railgun Strike
+		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    - Electric Pod\n    - Bomber Pod\n    - Sniper Pod\n    - Gatling Bike\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapons:\n    - Air Strike\n    - Orbital Railgun Strike
 	Faction@Synapol:
 		Name: Synapol
 		InternalName: sc
 		Side: Corporations
 		Selectable: true
-		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Rocket Pod\n    - Flame Pod\n    - Mortar Pod\n    - Ramp Buggy\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
+		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Rocket Pod\n    - Flame Pod\n    - Mortar Pod\n    - Ramp Buggy\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapons:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
 	Faction@CromhaCorp:
 		Name: Cromha Corp
 		InternalName: cc
 		Side: Empires
 		Selectable: true
-		Description: Cromha Corporations\nA large cosmic empire that manufactures,\neverything from common household appliances to armaments.\nTheir air and naval force department became a large paramilitary force.\n\nFaction Variations:\n    - Uses fighters jets as air units\n    - Uses submarines and aircraft carriers as naval units.\n\nSpecial Units:\n    - Chaingun Pod\n    - Artillery Pod\n    - Gatling Hawk\n    - Ramp Buggy\n    - Stealth Tank\n\nSuperweapon:\n    - Air Support\n    - Grand Howitzer\n    - Orbital Missile Strike
+		Description: Cromha Corporations\nA large cosmic empire that manufactures,\neverything from common household appliances to armaments.\nTheir air and naval force department became a large paramilitary force.\n\nFaction Variations:\n    - Uses fighters jets as air units\n    - Uses submarines and aircraft carriers as naval units.\n\nSpecial Units:\n    - Chaingun Pod\n    - Artillery Pod\n    - Gatling Hawk\n    - Ramp Buggy\n    - Stealth Tank\n\nSuperweapons:\n    - Air Support\n    - Grand Howitzer\n    - Orbital Missile Strike\n\nSpecial Technologies:\n    - Drop Zone\n    - Tech Reconstructor
 	Faction@Random:
 		Name: Any
 		InternalName: Random

@@ -77,6 +77,19 @@ notification-railgun-charging = Orbital Railgun charging.
 notification-railgun-ready = Orbital Railgun ready.
 
 ## Aircraft
+actor-plane1 =
+   .description = Attack Ship armed with
+    a large chain gun.
+      Strong vs Pods, Buildings and Aircraft
+      Weak vs Tanks
+   .name = Gun Ship
+
+actor-plane2 =
+   .description = Fast Attack Ship
+      Strong vs Buildings
+      Can't attack Water, Ground or Air Units
+   .name = Speeder
+
 actor-jet1 =
    .description = Attack Ship armed with
     a large chain gun.
@@ -618,6 +631,15 @@ actor-navaltransport =
    .generic-name = Naval Transporter
    .description = General-purpose naval transport.
     Can carry pods.
+      Unarmed
+
+actor-aircraftcarrier =
+   .name = Aircraft Carrier
+   .generic-name = Aircraft Carrier
+   .description = Air-Attack-purpose naval transport.
+    Can carry aircraft, and repair them.
+    Can detect hidden submarines.
+      Equipped with a long-range radar.
       Unarmed
 
 actor-waterminelayer =
