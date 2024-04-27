@@ -101,7 +101,7 @@ actor-jet2 =
    .description = Fast Plasma Attack Ship
       Strong vs Buildings
       Can't attack Water, Ground or Air Units
-   .name = B-2A-Spirit
+   .name = B-2A Spirit
 
 actor-jet3 =
    .description = Fast Stealth Attack Ship

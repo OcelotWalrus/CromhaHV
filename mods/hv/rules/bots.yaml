@@ -112,7 +112,7 @@ Player:
 			silo: 9000
 			uplink: 9000
 			orbitalstrike: 7500
-	BuildingRepairBotModule:
+	BuildingRepairBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
@@ -192,18 +192,18 @@ Player:
 			transprt: 1
 		UnitDelays:
 			builder: 15000
-	PriorityCaptureManagerBotModule:
+	PriorityCaptureManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
 		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone
 		MaximumCaptureTargetOptions: 15
-	MinerBotModule:
+	MinerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: miner
 		DeployableTerrainTypes: Ore
 		DeployedActorTypes: miner2
 		VehiclesQueue: Utility
-	MinelayerBotModule:
+	MinelayerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		MinelayingActorTypes: tank6, waterminelayer, waterminelayer2
 		IgnoredEnemyTargetTypes: Structure, Defense, Air
@@ -211,31 +211,31 @@ Player:
 		AwayFromAlliedTargetTypes: Structure, Defense
 		AwayFromEnemyTargetTypes: Structure, Defense
 	CubePickupBotModule:
-		RequiresCondition: enable-rogue-ai
+		RequiresCondition: enable-rogue-ai || enable-cromha-ai
 		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
-	LoadCargoBotModule:
+	LoadCargoBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: transprt
 		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2
-	DeployActorBotModule:
+	DeployActorBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, brokerpod
-	PowerDownBotModule:
+	PowerDownBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-	ScoutBotModule:
+	ScoutBotModule@RogueAI:
 		ScoutActorTypes: balloon, saucer
 		MoveRadius: 20
 		RequiresCondition: enable-rogue-ai
-	SendUnitToAttackBotModule:
+	SendUnitToAttackBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		ActorTypesAndAttackDesire:
 			bomberpod: 30
 		ValidTargets: Structure, Vehicle
 		InvalidTargets: Air, Water
-	ExternalConditionPowerBotModule:
+	ExternalConditionPowerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		OrderName: ShieldsUp
-	SupportPowerBotModule:
+	SupportPowerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		Decisions:
 			Nuke:
@@ -308,3 +308,329 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 3c0
+	# Enhanced AI
+	ModularBot@CromhaAI:
+		Name: Cromha AI
+		Type: cromha
+	GrantConditionOnBotOwner@CromhaAI:
+		Condition: enable-cromha-ai
+		Bots: cromha
+	BuilderBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		BuilderTypes: builder
+		MinimumBaseRadius: 15
+	BaseBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+	CustomBaseBuilderBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		MinimumExcessPower: 40
+		MaximumExcessPower: 600
+		ResourceDistance: 9
+		WaterTerrainTypes: Littoral, Pelagic, Oceanic
+		ConstructionYardTypes: base, base2, base3
+		PowerTypes: generator, generator-nuclear
+		BarracksTypes: module, module2, module3
+		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
+		ProductionTypes: module, module2, module3, factory3, factory4, factory5, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3, dropzone
+		NavalProductionTypes: harbor, harbor2, harbor3
+		RefineryTypes: storage
+		DefenseTypes: turret, turret2, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3, reconstructor
+		BuildingLimits:
+			base: 2
+			base2: 2
+			base3: 2
+			storage: 3
+			module: 2
+			module2: 2
+			module3: 2
+			dropzone: 2
+			reconstructor: 2
+			factory3: 2
+			factory4: 2
+			factory5: 2
+			radar: 1
+			radar2: 1
+			radar3: 1
+			starport: 2
+			starport2: 2
+			starport3: 2
+			oresmelt: 6
+			orepurifier: 6
+			orepurifier2: 6
+			tradplat: 2
+			techcenter: 2
+			harbor: 1
+			harbor2: 1
+			harbor3: 1
+			field: 2
+			howitzer: 1
+			howitzer2: 1
+			uplink: 1
+			orbitalstrike: 1
+			silo: 1
+		BuildingFractions:
+			base: 1
+			base2: 1
+			base3: 1
+			storage: 3
+			module: 1
+			module2: 1
+			module3: 1
+			dropzone: 1
+			reconstructor: 1
+			radar: 1
+			radar2: 1
+			radar3: 1
+			factory3: 1
+			factory4: 1
+			factory5: 1
+			harbor: 1
+			harbor2: 1
+			harbor3: 1
+			tradplat: 2
+			starport: 1
+			starport2: 1
+			starport3: 1
+			techcenter: 1
+			oresmelt: 3
+			orepurifier: 3
+			orepurifier2: 3
+			bunker: 7
+			bunker2: 7
+			bunker3: 7
+			turret: 5
+			turret2: 5
+			turret3: 5
+			aaturret: 6
+			aaturret2: 6
+			aaturret3: 6
+			howitzer: 1
+			howitzer2: 1
+			uplink: 1
+			orbitalstrike: 1
+			field: 1
+			silo: 1
+		BuildingDelays:
+			radar: 4000
+			radar2: 4000
+			radar3: 4000
+			howitzer: 8000
+			howitzer2: 8000
+			field: 8000
+			silo: 9000
+			uplink: 9000
+			orbitalstrike: 9000
+	BuildingRepairBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+	SquadManagerBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		SquadSize: 35
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
+		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier
+		AirUnitsTypes: plane1, plane2, plane3, plane4, copter, banshee, jet1, jet2, jet3, jet4, jet5
+		ConstructionYardTypes: base, base2, base3
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, buker3, turret, turret2, turret3 aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo
+	UnitBuilderBotModule@CromhaAI:
+		IdleBaseUnitsMaximum: 55
+		RequiresCondition: enable-cromha-ai
+		UnitQueues: Pod, Utility, Tank, Aircraft, Ship
+		UnitsToBuild:
+			miner: 3
+			builder: 1
+			radartank: 1
+			tank1: 3
+			tank2: 3
+			tank3: 5
+			tank5: 5
+			tank6: 1
+			tank7: 1
+			tank8: 1
+			aatank: 3
+			tank15: 1
+			tank16: 1
+			chaingunpod: 5
+			artillery: 5
+			cromhabuggy: 3
+			gatlinghawk: 3
+			cromhastealth: 3
+			transprt: 1
+			artil: 5
+			scout1: 1
+			scout2: 1
+			mortarpod: 1
+			flamepod: 1
+			elitepod: 1
+			sniperpod: 1
+			electricpod: 1
+			brokerpod: 9
+			technician: 1
+			bomberpod: 1
+			missiletank: 5
+			jet4: 5
+			jet3: 5
+			jet2: 5
+			jet1: 5
+			copter: 5
+			copter2: 5
+			banshee: 5
+			balloon: 1
+			saucer: 1
+			boat: 1
+			boat2: 1
+			boat3: 1
+			submarine: 2
+			carrier: 2
+			waterminelayer: 1
+			waterminelayer2: 1
+		UnitLimits:
+			miner: 2
+			builder: 2
+			balloon: 3
+			saucer: 3
+			radartank: 2
+			tank6: 2
+			tank8: 2
+			boat3: 4
+			submarine: 4
+			submarine2: 1
+			carrier: 4
+			aircraftcarrier: 1
+			waterminelayer: 1
+			waterminelayer2: 1
+			technician: 3
+			bomberpod: 4
+			brokerpod: 9
+			transprt: 1
+		UnitDelays:
+			builder: 9000
+	PriorityCaptureManagerBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		CapturingActorTypes: technician
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2
+		MaximumCaptureTargetOptions: 18
+	MinerBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		DeployableActorTypes: miner
+		DeployableTerrainTypes: Ore
+		DeployedActorTypes: miner2
+		VehiclesQueue: Utility
+	MinelayerBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		MinelayingActorTypes: tank6, waterminelayer, waterminelayer2
+		IgnoredEnemyTargetTypes: Structure, Defense, Air
+		UseEnemyLocationTargetTypes: Structure, Defense
+		AwayFromAlliedTargetTypes: Structure, Defense
+		AwayFromEnemyTargetTypes: Structure, Defense
+	LoadCargoBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		TransportTypes: transprt
+		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, plane1, plane2, jet1, jet2, jet3, jet4, jet5, artillerypod, chaingunpod
+	DeployActorBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		DeployableActorTypes: radartank, brokerpod
+	PowerDownBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+	ScoutBotModule@CromhaAI:
+		ScoutActorTypes: balloon, saucer, saucer2
+		MoveRadius: 35
+		RequiresCondition: enable-cromha-ai
+	SendUnitToAttackBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		ActorTypesAndAttackDesire:
+			bomberpod: 30
+		ValidTargets: Structure, Vehicle
+		InvalidTargets: Air, Water
+	ExternalConditionPowerBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		OrderName: ShieldsUp
+	SupportPowerBotModule@CromhaAI:
+		RequiresCondition: enable-cromha-ai
+		Decisions:
+			Nuke:
+				OrderName: Nukem
+				MinimumAttractiveness: 3700
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 9c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -15
+					TargetMetric: Value
+					CheckRadius: 7c0
+			DropPods:
+				OrderName: EjectPods
+				MinimumAttractiveness: 25
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@3:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -5
+					TargetMetric: Value
+					CheckRadius: 5c0
+			AirStrike:
+				OrderName: FlushBombers
+				MinimumAttractiveness: 25
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 6c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -15
+					TargetMetric: Value
+					CheckRadius: 6c0
+				Consideration@3:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 8c0
+			Howitzer:
+				OrderName: FireMission
+				MinimumAttractiveness: 25
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 6c0
+			Railgun:
+				OrderName: Blastem
+				MinimumAttractiveness: 1800
+				FineScanRadius: 2
+				Consideration@1:
+					Against: Enemy
+					Types: Air, Tank, Vehicle, Infantry, Water
+					Attractiveness: 2
+					TargetMetric: Value
+					CheckRadius: 4c0
+				Consideration@2:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 4c0
+				Consideration@3:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 5c0
