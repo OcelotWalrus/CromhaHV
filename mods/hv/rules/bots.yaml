@@ -140,6 +140,11 @@ Player:
 			aatank: 3
 			tank15: 1
 			tank16: 1
+			chaingunpod: 5
+			artillery: 5
+			cromhabuggy: 3
+			gatlinghawk: 3
+			cromhastealth: 3
 			transprt: 1
 			artil: 5
 			scout1: 1

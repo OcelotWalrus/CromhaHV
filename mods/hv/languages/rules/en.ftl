@@ -758,7 +758,7 @@ actor-cromhabuggy =
       Can't attack Aircraft
 
 actor-gatlinghawk =
-   .description = Armed with an heavy machine gun.
+   .description = Cloaked and armed with an heavy machine gun.
       Strong vs Pods, Tanks
       Weak vs Buildings
       Can't attack aircraft

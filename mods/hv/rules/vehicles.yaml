@@ -993,15 +993,15 @@ CROMHABUGGY:
 		LocalOffset: 0,0,200
 
 GATLINGHAWK:
-	Inherits: TANK13
+	Inherits: TANK7
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: Utility
+		Queue: Tank
 		BuildPaletteOrder: 30
 		Prerequisites: storage, ~factory.cc
 		Description: actor-gatlinghawk.description
 	Valued:
-		Cost: 650
+		Cost: 850
 	Tooltip:
 		Name: actor-gatlinghawk.name
 	Armor:
@@ -1011,6 +1011,7 @@ GATLINGHAWK:
 	Armament:
 		Weapon: BikeChainGun
 		LocalOffset: 500,-250,0
+	-WithAttackAnimation:
 
 CROMHASTEALTH:
 	Inherits: TANK7
