@@ -98,6 +98,15 @@ boat3:
 		Filename: bits/units-icons.png
 		Start: 14
 
+boat5:
+	Inherits: boat3
+
+boat6:
+	Inherits: boat
+
+boat7:
+	Inherits: boat2
+
 submarine:
 	idle:
 		Filename: bits/submarine.png
@@ -125,6 +134,9 @@ carrier:
 		Filename: bits/units-icons.png
 		Start: 46
 
+carrier2:
+	Inherits: carrier
+
 submarine2:
 	idle:
 		Filename: bits/submarine2.png
@@ -132,6 +144,9 @@ submarine2:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 50
+
+submarine3:
+	Inherits: submarine
 
 patrolboat:
 	idle:
@@ -206,3 +221,6 @@ waterminelayer2:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 58
+
+waterminelayer3:
+	Inherits: waterminelayer2

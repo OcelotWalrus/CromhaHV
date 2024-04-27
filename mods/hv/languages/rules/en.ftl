@@ -77,32 +77,32 @@ notification-railgun-charging = Orbital Railgun charging.
 notification-railgun-ready = Orbital Railgun ready.
 
 ## Aircraft
-actor-plane1 =
+actor-jet1 =
    .description = Attack Ship armed with
     a large chain gun.
       Strong vs Pods and Aircraft
       Weak vs Tanks and Buildings
    .name = F-15EX Eagle II
 
-actor-plane2 =
+actor-jet2 =
    .description = Fast Plasma Attack Ship
       Strong vs Buildings
       Can't attack Water, Ground or Air Units
    .name = B-2A-Spirit
 
-actor-plane3 =
+actor-jet3 =
    .description = Fast Stealth Attack Ship
       Strong vs Buildings, Air units, Water Units, Ground Units
    .name = F-35 Lightning-II
 
-actor-plane4 =
+actor-jet4 =
    .description = Attack Ship armed with
     a missile gun, designed for air superiority
       Strong vs Pods and Aircraft
       Weak vs Tanks and Buildings
    .name = F-22A Raptor
 
-actor-plane5 =
+actor-jet5 =
    .description = Stealth Missile Attack Ship
       Strong vs Buildings and Ground Units
       Weak vs Air Units and Pods
@@ -339,6 +339,16 @@ actor-uplink =
    .railgun-description = Initiate a surgical strike.
     Applies instant damage to a small area.
 
+actor-orbital-strike =
+   .name = Orbital Missile Strike
+   .encyclopedia = Trigger an orbital satellite, who triggers the Cromha Coporation defense satellites to launch missiles to the target coordinates.
+   .description = Orders an orbital missile strike
+      Requires power to operate.
+      Maximum 1 can be built.
+      Special Ability: Orbital Strike
+   .railgun-name = Orbital Missile Strike
+   .railgun-description = Initiate a missile strike.
+
 actor-storage =
    .description = Stores excess resources.
    .name = Storage
@@ -506,6 +516,20 @@ actor-electricpod =
       Strong vs Tanks and Aircraft
       Weak vs Pods
    .name = Electric Pod
+
+actor-chaingunpod =
+   .description = Fast support vehicle.
+    Armed with a machine gun.
+      Strong vs Tanks and Pods
+      Weak vs Aircraft
+   .name = Chaingun Pod
+
+actor-artillerypod =
+   .description = Distance support vehicle.
+    Armed with artillery cannons
+      Strong vs Tanks and Pods
+       Can't attack Aircraft
+   .name = Artillery Pod
 
 actor-minipod1 =
    .name = Civilian
@@ -725,6 +749,20 @@ actor-tank1 =
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
+
+actor-cromhabuggy =
+   .name = Ramp Buggy
+   .generic-name = Buggy
+   .description = Fires a mortar.
+      Strong vs Pods, Tanks, Buildings
+      Can't attack Aircraft
+
+actor-gatlinghawk =
+   .description = Armed with an heavy machine gun.
+      Strong vs Pods, Tanks
+      Weak vs Buildings
+      Can't attack aircraft
+   .name = Gatling Hawk
 
 actor-tank2 =
    .name = Gatling Bike

@@ -675,6 +675,13 @@ BUILDER2:
 	Transforms:
 		IntoActor: outpost2
 
+BUILDER3:
+	Inherits: BUILDER
+	Buildable:
+		Prerequisites: ~structures.cc
+	Transforms:
+		IntoActor: outpost3
+
 COLLECTOR:
 	Inherits: ^Vehicle
 	Tooltip:
@@ -969,3 +976,46 @@ TANK13:
 		PlayerExperience: 5
 	SpawnActorOnDeath:
 		Actor: moneycube
+
+CROMHABUGGY:
+	Inherits: TANK1
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: module, ~factory.cc
+		Queue: Tank
+		Description: actor-cromhabuggy.description
+	Tooltip:
+		Name: actor-cromhabuggy.name
+		GenericName: actor-cromhabuggy.generic-name
+	Armament:
+		Weapon: mortargun
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,200
+
+GATLINGHAWK:
+	Inherits: TANK13
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Utility
+		BuildPaletteOrder: 30
+		Prerequisites: storage, ~factory.cc
+		Description: actor-gatlinghawk.description
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-gatlinghawk.name
+	Armor:
+		Type: Steel
+	Mobile:
+		Speed: 125
+	Armament:
+		Weapon: BikeChainGun
+		LocalOffset: 500,-250,0
+
+CROMHASTEALTH:
+	Inherits: TANK7
+	Buildable:
+		Queue: Tank
+		BuildPaletteOrder: 80
+		Prerequisites: ~factory.cc, techcenter
+		Description: actor-tank7.description

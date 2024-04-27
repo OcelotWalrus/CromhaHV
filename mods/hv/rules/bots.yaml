@@ -19,66 +19,99 @@ Player:
 		MaximumExcessPower: 200
 		ResourceDistance: 6
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
-		ConstructionYardTypes: base, base2
+		ConstructionYardTypes: base, base2, base3
 		PowerTypes: generator, generator-nuclear
-		BarracksTypes: module, module2
-		VehiclesFactoryTypes: factory3, factory4, base, base2
-		ProductionTypes: module, module2, factory3, factory4, starport, starport2, harbor, harbor2, base, base2
-		NavalProductionTypes: harbor, harbor2
+		BarracksTypes: module, module2, module3
+		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
+		ProductionTypes: module, module2, module3, factory3, factory4, factory5, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3, dropzone
+		NavalProductionTypes: harbor, harbor2, harbor3
 		RefineryTypes: storage
-		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
+		DefenseTypes: turret, turret2, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3, reconstructor
 		BuildingLimits:
 			base: 1
+			base2: 1
+			base3: 1
 			storage: 1
 			module: 4
+			module2: 4
+			module3: 4
+			dropzone: 2
+			reconstructor: 2
 			factory3: 4
 			factory4: 4
+			factory5: 4
 			radar: 1
 			radar2: 1
+			radar3: 1
 			starport: 4
 			starport2: 4
+			starport3: 4
 			oresmelt: 4
+			orepurifier: 4
+			orepurifier2: 4
 			tradplat: 1
 			techcenter: 1
 			harbor: 1
 			harbor2: 1
+			harbor3: 1
 			field: 1
 			howitzer: 1
+			howitzer2: 1
 			uplink: 1
+			orbitalstrike: 1
 			silo: 1
 		BuildingFractions:
 			base: 1
+			base2: 1
+			base3: 1
 			storage: 2
 			module: 1
 			module2: 1
+			module3: 1
+			dropzone: 1
+			reconstructor: 1
 			radar: 1
 			radar2: 1
+			radar3: 1
 			factory3: 1
 			factory4: 1
+			factory5: 1
 			harbor: 1
 			harbor2: 1
+			harbor3: 1
 			tradplat: 1
 			starport: 1
 			starport2: 1
+			starport3: 1
 			techcenter: 1
 			oresmelt: 9
+			orepurifier: 9
+			orepurifier2: 9
 			bunker: 7
 			bunker2: 7
+			bunker3: 7
 			turret: 5
 			turret2: 5
+			turret3: 5
 			aaturret: 6
 			aaturret2: 6
+			aaturret3: 6
 			howitzer: 1
+			howitzer2: 1
 			uplink: 1
+			orbitalstrike: 1
 			field: 1
 			silo: 1
 		BuildingDelays:
 			radar: 4000
 			radar2: 4000
+			radar3: 4000
 			howitzer: 8000
+			howitzer2: 7500
 			field: 8000
 			silo: 9000
 			uplink: 9000
+			orbitalstrike: 7500
 	BuildingRepairBotModule:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
@@ -87,8 +120,8 @@ Player:
 		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier
 		AirUnitsTypes: plane1, plane2, plane3, plane4, copter, banshee
-		ConstructionYardTypes: base, base2
-		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+		ConstructionYardTypes: base, base2, base3
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, buker3, turret, turret2, turret3 aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai

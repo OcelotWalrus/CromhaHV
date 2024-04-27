@@ -7,13 +7,144 @@ PLANE1:
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 30
 		Prerequisites: ~starport.yi
 		Description: actor-plane1.description
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: actor-plane1.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Armament@Ground:
+		Weapon: AircraftChainGunGround
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	Armament@Air:
+		Weapon: AircraftChainGunAir
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 768
+		TurnSpeed: 20
+		Speed: 200
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	Voiced:
+		VoiceSet: GunshipVoice
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	WithMuzzleOverlay:
+	Contrail@Right:
+		Offset: -298,-264,0
+		TrailLength: 12
+	Contrail@Left:
+		Offset: -298,264,0
+		TrailLength: 12
+	Selectable:
+		Bounds: 1024, 1024
+
+PLANE2:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Smoke: ^SmokeEmitter
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 50
+		Prerequisites: techcenter, ~starport.yi
+		Description: actor-plane2.description
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-plane2.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	RevealsShroud:
+		Range: 11c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Armament:
+		Weapon: Plasma
+		LocalOffset: 250,0,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 100
+		Count: 1
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 768
+		TurnSpeed: 20
+		Speed: 155
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	Voiced:
+		VoiceSet: SpeederVoice
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	Selectable:
+		Bounds: 1024, 1024
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
+
+JET1:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@Smoke: ^SmokeEmitter
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 40
+		Prerequisites: ~starport.cc
+		Description: actor-jet1.description
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-jet1.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -60,19 +191,19 @@ PLANE1:
 	Selectable:
 		Bounds: 1024, 1024
 
-PLANE2:
+JET2:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: techcenter, ~starport.yi
-		Description: actor-plane2.description
+		Prerequisites: techcenter, ~starport.cc
+		Description: actor-jet2.description
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: actor-plane2.name
+		Name: actor-jet2.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -129,19 +260,19 @@ PLANE2:
 		TrailLength: 12
 		ZOffset: -1000
 
-PLANE3:
+JET3:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 70
-		Prerequisites: techcenter, ~starport.yi
-		Description: actor-plane3.description
+		Prerequisites: techcenter, ~starport.cc
+		Description: actor-jet3.description
 	Valued:
 		Cost: 2300
 	Tooltip:
-		Name: actor-plane3.name
+		Name: actor-jet3.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -216,7 +347,7 @@ PLANE3:
 		TrailLength: 12
 		ZOffset: -1000
 
-PLANE4:
+JET4:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MagazineCasing: ^DropShellCasing
@@ -224,12 +355,12 @@ PLANE4:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: ~starport.yi
-		Description: actor-plane4.description
+		Prerequisites: ~starport.cc
+		Description: actor-jet4.description
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: actor-plane4.name
+		Name: actor-jet4.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -288,19 +419,19 @@ PLANE4:
 	Selectable:
 		Bounds: 1024, 1024
 
-PLANE5:
+JET5:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 60
-		Prerequisites: techcenter, ~starport.yi
-		Description: actor-plane5.description
+		Prerequisites: techcenter, ~starport.cc
+		Description: actor-jet5.description
 	Valued:
 		Cost: 2150
 	Tooltip:
-		Name: actor-plane5.name
+		Name: actor-jet5.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -457,6 +588,14 @@ SAUCER:
 		Sequence: shadow-overlay
 		Palette: shadow
 
+SAUCER2:
+	Inherits: SAUCER
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 20
+		Prerequisites: ~starport.cc
+		Description: actor-saucer.description
+
 BANSHEE:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
@@ -519,7 +658,7 @@ COPTER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 80
-		Prerequisites: ~starport.yi
+		Prerequisites: ~starport.cc
 		Description: actor-copter2.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -844,6 +983,32 @@ BOMBER1:
 		FacingTolerance: 512
 	Armament:
 		Weapon: Bomb
+
+BOMBER2:
+	Inherits: BOMBER1
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 70
+		Count: 8
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: stealth_on_humanoide9000.wav
+		UncloakSound: stealth_off_humanoide9000.wav
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled || ecm-disabled
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 4c0
+	AttackBomber:
+		FacingTolerance: 512
 
 CARGOSHIP:
 	Inherits@Exists: ^ExistsInWorld

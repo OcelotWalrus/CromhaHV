@@ -406,3 +406,123 @@ MediumBoatCannon:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
+
+OrbitalSetup:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@DamageDelivery: FireCluster
+		Weapon: OrbitalStrike
+		Dimensions: 1,1
+		Footprint: X
+	Warhead@Visual: FireRadius
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Weapon: OrbitalVisualStage1
+		Amount: 6
+		TransferAltitude: true
+
+OrbitalVisualStage1:
+	Projectile: InstantHit
+	Range: 1280
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@Visual: FireShrapnel
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Weapon: OrbitalVisualStage2
+		amount: 2
+
+OrbitalVisualStage2:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Projectile: GravityBomb
+		Image: orbital
+		Sequences: idle
+		Velocity: 0,0,-60 # needs to be synced with OrbitalStrike
+		Acceleration: 0,0,-45 # needs to be synced with OrbitalStrike
+	Warhead@Effect: CreateEffect
+		Explosions: large_3
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+
+OrbitalStrike:
+	Projectile: GravityBomb
+		Velocity: 0,0,-60 # needs to be synced with OrbitalVisualStage2
+		Acceleration: 0,0,-45 # needs to be synced with OrbitalVisualStage2
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Report: raygun_newlocknew.wav
+	Warhead@DamageImpact: SpreadDamage
+		Spread: 3c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryImpact: TreeDamage
+		Spread: 3c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		AffectsParent: true
+	Warhead@DamageArea: SpreadDamage
+		Spread: 3c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		Delay: 3
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryArea: TreeDamage
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Spread: 3c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		AffectsParent: true
+	Warhead@Visual: FireRadius
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Weapon: OrbitalDistortion
+		Amount: 15, 30
+		AffectsParent: true
+	Warhead@CenterSpark: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 4
+		AffectsParent: true
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@SparkWave1: FireRadius
+		Weapon: OrbitalSparkWave1
+		Amount: 12
+		AffectsParent: true
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@SparkWave2: FireRadius
+		Weapon: OrbitalSparkWave2
+		Amount: 36
+		AffectsParent: true
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+
+OrbitalDistortion:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Projectile: EnergyBolt
+		Radius: 2
+		Duration: 12
+		Distortion: 256
+		Color: 8080FF
+		ZOffset: 256
+		SegmentLength: 384
+		FadeOut: true
+	Range: 2c768
+
+OrbitalSparkWave1:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Projectile: InstantHit
+	Range: 1280
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@Visual: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 3
+		AffectsParent: true
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+
+OrbitalSparkWave2:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Projectile: InstantHit
+	Range: 2560
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@Visual: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 3
+		AffectsParent: true
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp

@@ -177,6 +177,17 @@ BASE2:
 		Prerequisites: outpost2, ~base.sc
 	-Encyclopedia:
 
+BASE3:
+	Inherits: BASE
+	RenderSprites:
+		Image: base
+	-ProvidesPrerequisite@Yuruki:
+	ProvidesPrerequisite@CromhaCorp:
+		Prerequisite: structures.cc
+	Buildable:
+		Prerequisites: outpost3, ~base.cc
+	-Encyclopedia:
+
 OUTPOST:
 	Inherits: ^BaseBuilding
 	Valued:
@@ -217,6 +228,14 @@ OUTPOST2:
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: base.sc
+	-Encyclopedia:
+
+OUTPOST3:
+	Inherits: OUTPOST
+	-ProvidesPrerequisite@Yuruki:
+	ProvidesPrerequisite@CromhaCorp:
+		Factions: cc
+		Prerequisite: base.cc
 	-Encyclopedia:
 
 GENERATOR:
@@ -405,6 +424,32 @@ RADAR2:
 		IncomingTextNotification: notifications-drop-pod-incoming
 	-Encyclopedia:
 
+RADAR3:
+	Inherits: RADAR
+	Buildable:
+		Prerequisites: storage, ~structures.cc
+	AirstrikePower:
+		PauseOnCondition: lowpower || disabled
+		Icon: airstrike
+		Cursor: airstrike
+		ChargeInterval: 2950
+		SquadSize: 6
+		QuantizedFacings: 8
+		Name: actor-radar.airstrikepower-name
+		Description: actor-radar.airstrikepower-description
+		UnitType: bomber2
+		DisplayRadarPing: true
+		CameraActor: camera
+		UseDirectionalTarget: true
+		DirectionArrowAnimation: direction
+		SupportPowerPaletteOrder: 30
+		OrderName: FlushBombers
+		BeginChargeSpeechNotification: AirStrikeCharging
+		EndChargeSpeechNotification: AirStrikeReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: AirStrikeIncoming
+	-Encyclopedia:
+
 TRADPLAT:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
@@ -496,6 +541,7 @@ TRADPLAT:
 		FactionImages:
 			sc: tradplat2
 			yi: tradplat
+			cc: tradplat
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -613,6 +659,17 @@ MODULE2:
 		RequiresCondition: !powerdown
 	RenderSprites:
 		Image: module2
+	-Encyclopedia:
+
+MODULE3:
+	Inherits: MODULE
+	Buildable:
+		Prerequisites: ~structures.cc
+	ProvidesPrerequisite@Faction:
+		Prerequisite: module.cc
+		RequiresCondition: !powerdown
+	RenderSprites:
+		Image: module
 	-Encyclopedia:
 
 MINER2:
@@ -764,6 +821,16 @@ STARPORT2:
 		Prerequisites: radar, ~structures.sc
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.sc
+		RequiresCondition: !powerdown
+	-WithProductionExitOverlay:
+	-Encyclopedia:
+
+STARPORT3:
+	Inherits: STARPORT
+	Buildable:
+		Prerequisites: radar, ~structures.cc
+	ProvidesPrerequisite@Faction:
+		Prerequisite: starport.cc
 		RequiresCondition: !powerdown
 	-WithProductionExitOverlay:
 	-Encyclopedia:
@@ -1025,6 +1092,17 @@ FACTORY4:
 		Image: factory4
 	-Encyclopedia:
 
+FACTORY5:
+	Inherits: FACTORY3
+	Buildable:
+		Prerequisites: module, storage, ~structures.cc
+	ProvidesPrerequisite@Faction:
+		Prerequisite: factory.cc
+		RequiresCondition: !powerdown
+	RenderSprites:
+		Image: factory3
+	-Encyclopedia:
+
 TECHCENTER:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
@@ -1071,6 +1149,7 @@ TECHCENTER:
 		FactionImages:
 			sc: techcenter2
 			yi: techcenter
+			cc: techcenter
 	WithIdleOverlay@ANIMATION:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
@@ -1123,6 +1202,12 @@ OREPURIFIER:
 	Encyclopedia:
 		Description: actor-orepurifier.encyclopedia
 	-WithIdleOverlay@Shadow:
+
+OREPURIFIER2:
+	Inherits: OREPURIFIER
+	-Encyclopedia:
+	Buildable:
+		Prerequisites: ~structures.cc, techcenter
 
 BUNKER:
 	Inherits: ^DefenseBuilding
@@ -1177,6 +1262,14 @@ BUNKER2:
 	Inherits: BUNKER
 	Buildable:
 		Prerequisites: module, ~structures.sc
+	AttackGarrisoned:
+		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
+	-Encyclopedia:
+
+BUNKER3:
+	Inherits: BUNKER
+	Buildable:
+		Prerequisites: module, ~structures.cc
 	AttackGarrisoned:
 		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
 	-Encyclopedia:
@@ -1256,6 +1349,15 @@ TURRET2:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
 		Sequence: shoot
+
+TURRET3:
+	Inherits: TURRET
+	Inherits@AutoTarget: ^AutoTargetGround
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: factory, ~structures.cc
+		Description: actor-turret.description
+	-Encyclopedia:
 
 AATURRET:
 	Inherits: ^DefenseBuilding
@@ -1345,6 +1447,13 @@ AATURRET2:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 
+AATURRET3:
+	Inherits: AATURRET
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: radar, ~structures.cc
+		Description: actor-aaturret.description
+
 HOWITZER:
 	Inherits: ^DefenseBuilding
 	Selectable:
@@ -1418,6 +1527,15 @@ HOWITZER:
 		TurnSpeed: 60
 		RequiresCondition: !build-incomplete
 		RealignDelay: -1
+
+HOWITZER2:
+	Inherits: HOWITZER
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: radar, ~structures.cc
+		Description: actor-howitzer.description
+		BuildLimit: 1
+	-Encyclopedia
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -1512,7 +1630,7 @@ SILO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter
+		Prerequisites: techcenter, ~structures.sc
 		BuildLimit: 1
 		Description: actor-silo.description
 	Building:
@@ -1638,6 +1756,79 @@ UPLINK:
 		ActivationDelay: 0
 		AirburstAltitude: 40c0
 		Weapon: RailgunSetup
+
+ORBITALSTRIKE:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Selectable:
+		Bounds: 2048, 3072, 0, 0
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: actor-orbital-strike.name
+	Encyclopedia:
+		Description: actor-orbital-strike.encyclopedia
+		Order: 130
+		Category: Buildings
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: techcenter, ~structures.cc
+		BuildLimit: 1
+		Description: actor-orbital-strike.description
+	Building:
+		Footprint: == == xx
+		Dimensions: 2,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -1024,0,0
+		Type: Rectangle
+			TopLeft: -1048, 512
+			BottomRight: 1048, 1524
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 4c0
+	SupportPowerChargeBar:
+	Power:
+		Amount: -150
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	WithIdleOverlay@Lights:
+		Sequence: animation
+		RequiresCondition: !build-incomplete
+	DetonateWeaponPower:
+		OrderName: Blastem
+		PauseOnCondition: lowpower
+		Icon: railgun
+		Cursor: railgun
+		ChargeInterval: 4500
+		Name: actor-orbital-strike.railgun-name
+		Description: actor-orbital-strike.railgun-description
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: true
+		CameraRange: 5c0
+		SupportPowerPaletteOrder: 10
+		DetectedSpeechNotification: OrbitalRailgunDetected
+		DetectedTextNotification: notification-railgun-detected
+		BeginChargeSpeechNotification: OrbitalRailgunCharging
+		BeginChargeTextNotification: notification-railgun-charging
+		EndChargeSpeechNotification: OrbitalRailgunReady
+		EndChargeTextNotification: notification-railgun-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: OrbitalRailgunFired
+		ActivationDelay: 0
+		AirburstAltitude: 40c0
+		Weapon: OrbitalSetup
 
 STORAGE:
 	Inherits: ^BaseBuilding
@@ -1914,6 +2105,17 @@ HARBOR2:
 		RequiresCondition: !powerdown
 	Buildable:
 		Prerequisites: module, ~structures.sc
+	-Encyclopedia:
+
+HARBOR3:
+	Inherits: HARBOR
+	RenderSprites:
+		Image: harbor
+	ProvidesPrerequisite@Faction:
+		Prerequisite: harbor.cc
+		RequiresCondition: !powerdown
+	Buildable:
+		Prerequisites: module, ~structures.cc
 	-Encyclopedia:
 
 BARRIER:
@@ -2504,6 +2706,10 @@ RECONSTRUCTOR:
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
+	Buildable:
+		BuildPaletteOrder: 140
+		Prerequisites: factory5, ~structures.cc
+		Description: actor-dropzone.description
 	HitShape:
 		UseTargetableCellsOffsets: true
 		TargetableOffsets: -512,0,0
@@ -2763,7 +2969,7 @@ DROPZONE:
 		Dimensions: 3,3
 	Buildable:
 		BuildPaletteOrder: 130
-		Prerequisites: factory, ~structures.yi
+		Prerequisites: factory5, ~structures.cc
 		Description: actor-dropzone.description
 	HitShape:
 		UseTargetableCellsOffsets: False

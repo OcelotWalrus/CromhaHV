@@ -381,6 +381,7 @@ flags:
 		spectator: 226, 241, 30, 15
 		yi: 226, 209, 30, 15
 		sc: 226, 225, 30, 15
+		cc: 226, 209, 30, 15
 
 music:
 	Inherits: ^Glyphs

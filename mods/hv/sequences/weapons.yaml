@@ -230,6 +230,10 @@ railgun:
 	idle:
 		Filename: bits/railgun-projectile.png
 
+orbital:
+	idle:
+		Filename: bits/bullet11.png
+
 smoke:
 	idle:
 		Filename: bits/smoke.png

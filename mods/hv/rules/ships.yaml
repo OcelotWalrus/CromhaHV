@@ -45,6 +45,15 @@ BOAT3:
 	WithMuzzleOverlay:
 		IgnoreOffset: True
 
+BOAT5:
+	Inherits: BOAT3
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.cc
+		BuildPaletteOrder: 10
+		Description: actor-boat3.description
+
 PATROLBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
@@ -140,6 +149,15 @@ BOAT:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
+BOAT6:
+	Inherits: BOAT
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.cc, radar
+		BuildPaletteOrder: 30
+		Description: actor-boat.description
+
 SUBMARINE2:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -219,6 +237,15 @@ BOAT2:
 	AttackTurreted:
 	WithSpriteTurret:
 
+BOAT7:
+	Inherits: BOAT2
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.cc, techcenter
+		BuildPaletteOrder: 50
+		Description: actor-boat2.description
+
 BOAT4:
 	Inherits: BOAT2
 	Tooltip:
@@ -293,6 +320,15 @@ SUBMARINE:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
+
+SUBMARINE3:
+	Inherits: SUBMARINE
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.cc, techcenter
+		BuildPaletteOrder: 60
+		Description: actor-submarine.description
 
 SLCM:
 	Inherits: ^ShootableMissile
@@ -372,6 +408,14 @@ CARRIER:
 		Weapon: DroneLauncher
 	Voiced:
 		VoiceSet: DroneVoice
+
+CARRIER2:
+	Inherits: CARRIER
+	Buildable:
+		Queue: Ship
+		BuildPaletteOrder: 60
+		Prerequisites: ~harbor.cc, techcenter
+		Description: actor-carrier.description
 
 NAVALTRANSPORT:
 	Inherits: ^Ship
@@ -479,3 +523,8 @@ WATERMINELAYER2:
 	Inherits: WATERMINELAYER
 	Buildable:
 		Prerequisites: ~harbor.yi, tradplat
+
+WATERMINELAYER3:
+	Inherits: WATERMINELAYER
+	Buildable:
+		Prerequisites: ~harbor.cc, tradplat
