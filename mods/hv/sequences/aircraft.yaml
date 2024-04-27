@@ -53,8 +53,7 @@ jet1:
 		Facings: 8
 		Tick: 50
 	icon:
-		Filename: units-icons.png
-		Start: 48
+		Filename: jet1-icon.png
 
 jet2:
 	idle:
