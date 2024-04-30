@@ -1022,12 +1022,6 @@ CROMHASTEALTH:
 	Armament@PRIMARY:
 		Weapon: StealthTankMissile
 		LocalOffset: 213,0,128
-	Armament@SECONDARY:
-		Weapon: RepairBeam
-		Cursor: repair
-		OutsideRangeCursor: repair
-		TargetRelationships: Ally
-		ForceTargetRelationships: None
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
