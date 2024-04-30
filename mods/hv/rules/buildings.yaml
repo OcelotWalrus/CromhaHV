@@ -1268,6 +1268,7 @@ BUNKER2:
 
 BUNKER3:
 	Inherits: BUNKER
+	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		Prerequisites: module, ~structures.cc
 	AttackGarrisoned:
@@ -1437,6 +1438,7 @@ TURRET2:
 TURRET3:
 	Inherits: TURRET
 	Inherits@AutoTarget: ^AutoTargetGround
+	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: factory, ~structures.cc
@@ -1533,6 +1535,7 @@ AATURRET2:
 
 AATURRET3:
 	Inherits: AATURRET
+	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.cc

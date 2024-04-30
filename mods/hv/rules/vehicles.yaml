@@ -1019,7 +1019,7 @@ CROMHASTEALTH:
 		BuildPaletteOrder: 80
 		Prerequisites: ~factory.cc, techcenter
 		Description: actor-cromhastealth.description
-	Armament@PRIMARY:
+	Armament:
 		Weapon: StealthTankMissile
 		LocalOffset: 213,0,128
 	AutoTarget:
