@@ -2188,7 +2188,18 @@ extractor:
 		Filename: bits/flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/icon.png
+		Filename: bits/extractor-icon.png
+		Offset: 0, 0
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
 
 comlink:
 	Inherits@Flame: ^BuildingFlame2

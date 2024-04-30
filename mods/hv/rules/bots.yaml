@@ -328,13 +328,13 @@ Player:
 		ResourceDistance: 9
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base, base2, base3
-		PowerTypes: generator, generator-nuclear
+		PowerTypes: generator, generatornuclear
 		BarracksTypes: module, module2, module3
 		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
 		ProductionTypes: module, module2, module3, factory3, factory4, factory5, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3, dropzone
 		NavalProductionTypes: harbor, harbor2, harbor3
 		RefineryTypes: storage
-		DefenseTypes: turret, turret2, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3, reconstructor
+		DefenseTypes: turret, turret2, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3, reconstructor, clusterturret, amplifier
 		BuildingLimits:
 			base: 2
 			base2: 2
@@ -357,6 +357,7 @@ Player:
 			oresmelt: 6
 			orepurifier: 6
 			orepurifier2: 6
+			extractor: 3
 			tradplat: 2
 			techcenter: 2
 			harbor: 1
@@ -395,9 +396,12 @@ Player:
 			oresmelt: 3
 			orepurifier: 3
 			orepurifier2: 3
+			extractor: 2
 			bunker: 7
 			bunker2: 7
 			bunker3: 7
+			clusterturret: 3
+			amplifier: 3
 			turret: 5
 			turret2: 5
 			turret3: 5
@@ -427,9 +431,9 @@ Player:
 		SquadSize: 35
 		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier
-		AirUnitsTypes: plane1, plane2, plane3, plane4, copter, banshee, jet1, jet2, jet3, jet4, jet5
+		AirUnitsTypes: plane1, plane2, copter, banshee, jet1, jet2, jet3, jet4, jet5
 		ConstructionYardTypes: base, base2, base3
-		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, buker3, turret, turret2, turret3 aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
 	UnitBuilderBotModule@CromhaAI:
 		IdleBaseUnitsMaximum: 55
 		RequiresCondition: enable-cromha-ai
@@ -446,6 +450,7 @@ Player:
 			tank7: 1
 			tank8: 1
 			aatank: 3
+			aatank2: 3
 			tank15: 1
 			tank16: 1
 			chaingunpod: 5
@@ -506,7 +511,7 @@ Player:
 	PriorityCaptureManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		CapturingActorTypes: technician
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, outpost, outpost2, outpost3
 		MaximumCaptureTargetOptions: 18
 	MinerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
@@ -524,7 +529,7 @@ Player:
 	LoadCargoBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, plane1, plane2, jet1, jet2, jet3, jet4, jet5, artillerypod, chaingunpod
+		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, plane1, plane2, jet1, jet2, jet3, jet4, jet5, artillerypod, chaingunpod, tank3, tank5, aatank, aatank2, artil, artil3, cromhabuggy, gatlinghawk, cromhastealth, stealth
 	DeployActorBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		DeployableActorTypes: radartank, brokerpod
@@ -532,7 +537,7 @@ Player:
 		RequiresCondition: enable-cromha-ai
 	ScoutBotModule@CromhaAI:
 		ScoutActorTypes: balloon, saucer, saucer2
-		MoveRadius: 35
+		MoveRadius: 45
 		RequiresCondition: enable-cromha-ai
 	SendUnitToAttackBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai

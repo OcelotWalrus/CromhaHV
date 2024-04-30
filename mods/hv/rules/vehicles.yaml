@@ -994,7 +994,6 @@ CROMHABUGGY:
 
 GATLINGHAWK:
 	Inherits: TANK7
-	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 30
@@ -1019,4 +1018,16 @@ CROMHASTEALTH:
 		Queue: Tank
 		BuildPaletteOrder: 80
 		Prerequisites: ~factory.cc, techcenter
-		Description: actor-tank7.description
+		Description: actor-cromhastealth.description
+	Armament@PRIMARY:
+		Weapon: StealthTankMissile
+		LocalOffset: 213,0,128
+	Armament@SECONDARY:
+		Weapon: RepairBeam
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything

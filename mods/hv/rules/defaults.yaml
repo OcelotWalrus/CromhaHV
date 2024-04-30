@@ -1146,3 +1146,10 @@
 	HitShape:
 	RejectsOrders:
 	Interactable:
+
+^WeaponRangeUpgrade:
+	RangeMultiplier:
+		Modifier: 175
+		RequiresCondition: weapon-range-upgrade
+	ExternalCondition:
+		Condition: weapon-range-upgrade

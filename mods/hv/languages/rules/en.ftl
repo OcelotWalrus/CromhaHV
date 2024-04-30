@@ -280,6 +280,17 @@ actor-bunker =
    .name = Bunker
    .encyclopedia = The bunker houses a single machine gun nest that is effective against lightly armored pods. While being protected against small arms, rockets or tank shells quickly destroy the bunker including its inhabitants. Right-click on the building to force the personnel to leave. Order another pod type inside to change the weaponry.
 
+actor-clusterturret =
+   .description = Base defense.
+      Requires power to operate.
+      Strong vs Tanks and Pods
+   .name = Cluster Turret
+
+actor-amplifier =
+   .description = Weapon range amplifier.
+      Requires power to operate.
+   .name = Amplifier
+
 actor-turret =
    .description = Base defense.
       Requires power to operate.
@@ -395,12 +406,14 @@ actor-reconstructor =
    .captured-desc = Provides self-healing to units when powered.
    .capturable-desc = Capture and provide power to enable self-healing for units.
    .encyclopedia = Both machine and human operator can be healed and restored using nano technology. This advanced form of medicine is only available on some planets which also made it affordable due to universal healthcare plans for the local population. Capture a facilty to grant access to your troops. Lasts only as long as the facility is in possession.
+   .description = Provides self-healing to units when powered.
 
 actor-extractor =
    .name = Resource Extractor
    .captured-desc = Provides additional resources.
    .capturable-desc = Capture and provide additional resources.
    .encyclopedia = Civilians in the area might also try to harvest the planet's resources. Capture the facility to keep it running but force all the profits onto the company's account.
+   .description = Provides additional resources.
 
 actor-comlink =
    .name = Communication Link
@@ -785,6 +798,13 @@ actor-gatlinghawk =
       Weak vs Buildings
       Can't attack aircraft
    .name = Gatling Hawk
+
+actor-cromhastealth =
+   .description = Cloaked missile tank.
+      Strong vs Vehicles and Buildings
+      Weak vs Pods
+      Can restore ally health.
+   .name = Stealth Tank
 
 actor-tank2 =
    .name = Gatling Bike

@@ -1274,6 +1274,90 @@ BUNKER3:
 		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
 	-Encyclopedia:
 
+CLUSTERTURRET:
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: factory5, ~structures.cc
+		Description: actor-clusterturret.description
+	Selectable:
+		Bounds: 1256, 1480, 0, -256
+	Power:
+		Amount: -25
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-clusterturret.name
+	Health:
+		HP: 55000
+	Armament:
+		Weapon: cluster
+		LocalOffset: 0,0,400
+		FireDelay: 6
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 8c0
+	RevealsShroud:
+		Range: 7c0
+	AttackTurreted:
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithAttackAnimation@Normal:
+		Sequence: shoot
+		RequiresCondition: !burning
+	WithAttackAnimation@Damaged:
+		Sequence: shoot-damaged
+		RequiresCondition: burning
+	Turreted:
+		TurnSpeed: 512
+		RealignDelay: -1
+		RequiresCondition: !build-incomplete
+
+AMPLIFIER:
+	Inherits: ^DefenseBuilding
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: factory5, ~structures.cc
+		Description: actor-amplifier.description
+	Selectable:
+		Bounds: 1256, 1480, 0, -256
+	Power:
+		Amount: -30
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-amplifier.name
+	Health:
+		HP: 55000
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 4c0
+	RevealsShroud:
+		Range: 7c0
+	WithIdleOverlay:
+		Sequence: animation
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	ProximityExternalCondition:
+		Condition: weapon-range-upgrade
+		Range: 4c0
+	ProvidesPrerequisite:
+		Prerequisite: amplifier
+
 TURRET:
 	Inherits: ^DefenseBuilding
 	Inherits@AutoTarget: ^AutoTargetGround
@@ -2783,10 +2867,11 @@ EXTRACTOR:
 		Description: actor-extractor.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	ProvidesPrerequisite@BuildingName:
+	Valued:
+		Cost: 1600
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3
-		LocalCenterOffset: 0,1024,0
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
