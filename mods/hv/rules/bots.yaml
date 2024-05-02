@@ -418,6 +418,9 @@ Player:
 			radar: 4000
 			radar2: 4000
 			radar3: 4000
+			harbor: 5000
+			harbor2: 5000
+			harbor3: 5000
 			howitzer: 8000
 			howitzer2: 8000
 			field: 8000
@@ -480,13 +483,15 @@ Player:
 			banshee: 5
 			balloon: 1
 			saucer: 1
-			boat: 1
-			boat2: 1
-			boat3: 1
+			boat: 3
+			boat2: 3
+			boat3: 3
 			submarine: 2
 			carrier: 2
+			navaltransport: 2
 			waterminelayer: 1
 			waterminelayer2: 1
+			aircraftcarrier: 1
 		UnitLimits:
 			miner: 2
 			builder: 2
@@ -528,7 +533,7 @@ Player:
 		AwayFromEnemyTargetTypes: Structure, Defense
 	LoadCargoBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
-		TransportTypes: transprt
+		TransportTypes: transprt, copter2, dropship, navaltransport, aircraftcarrier
 		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, plane1, plane2, jet1, jet2, jet3, jet4, jet5, artillerypod, chaingunpod, tank3, tank5, aatank, aatank2, artil, artil3, cromhabuggy, gatlinghawk, cromhastealth, stealth
 	DeployActorBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
