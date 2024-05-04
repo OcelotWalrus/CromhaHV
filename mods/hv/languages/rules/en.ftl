@@ -558,10 +558,10 @@ actor-artillerypod =
    .name = Artillery Pod
 
 actor-voltagepod =
-   .description = Fast short-range support vehicle.
-    Armed with high-voltage cannons
+   .description = Fast short-range anti-air vehicle.
+    Armed with high-voltage AA cannons
        Strong vs Aircraft
-       Can't attack Ground Units
+       Can't attack Ground or Water Units
    .name = Voltage Pod
 
 actor-minipod1 =
