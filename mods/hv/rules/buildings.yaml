@@ -343,6 +343,7 @@ NUCLEARGENERATOR:
 		Image: generator
 		FactionImages:
 			sc: generator2
+			cc: generator2
 			yi: generator
 
 RADAR:
