@@ -713,7 +713,7 @@ MINER:
 		Queue: Utility
 		BuildPaletteOrder: 20
 		Description: actor-miner.description
-		Prerequisites: storage
+		Prerequisites: storage, ~!structures.cc
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -755,6 +755,32 @@ MINER:
 	Voiced:
 		VoiceSet: MinerVoice
 	-Guard:
+
+MINERCROMHA:
+	Inherits: MINER
+	Buildable:
+		Queue: Utility
+		BuildPaletteOrder: 20
+		Description: actor-miner.description
+		Prerequisites: ~structures.cc, storage
+	Health:
+		HP: 17000
+	Armor:
+		Type: Steel
+	Mobile:
+		TurnSpeed: 34
+		Speed: 90
+	Transforms:
+		PauseOnCondition: !validterrain
+		IntoActor: miner3
+		Facing: 750
+		Offset: 0,-2
+		NoTransformNotification: BuildingCannotPlaceAudio
+		NoTransformTextNotification: notification-cant-place-building
+		TransformNotification: MinerReady
+		TransformTextNotification: notification-miner-ready
+		TransformSounds: miner_transform.wav
+		Voice: Deploying
 
 MISSILETANK:
 	Inherits: ^TrackedVehicle

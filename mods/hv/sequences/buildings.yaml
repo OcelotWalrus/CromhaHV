@@ -579,6 +579,9 @@ miner2:
 		Start: 16
 		Offset: 0, 0
 
+miner3:
+	Inherits: miner2
+
 starport:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:

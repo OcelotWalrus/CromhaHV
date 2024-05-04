@@ -246,7 +246,7 @@ GENERATOR:
 		Bounds: 2048, 3072, 0, -512
 	Buildable:
 		Queue: Building
-		Prerequisites: ~base
+		Prerequisites: ~structures.yi
 		BuildPaletteOrder: 10
 		Description: actor-generator.description
 	Encyclopedia:
@@ -276,11 +276,30 @@ GENERATOR:
 	Targetable:
 		TargetTypes: Ground, Structure
 	ScalePowerWithHealth:
-	RenderSprites:
-		Image: generator
-		FactionImages:
-			sc: generator2
-			yi: generator
+
+GENERATOR2:
+	Inherits: GENERATOR
+	Buildable:
+		Queue: Building
+		Prerequisites: ~structures.sc
+		BuildPaletteOrder: 10
+		Description: actor-generator.description
+	Health:
+		HP: 45000
+	Power:
+		Amount: 135
+
+GENERATOR3:
+	Inherits: GENERATOR
+	Buildable:
+		Queue: Building
+		Prerequisites: ~structures.cc
+		BuildPaletteOrder: 10
+		Description: actor-generator.description
+	Health:
+		HP: 47000
+	Power:
+		Amount: 130
 
 NUCLEARGENERATOR:
 	Inherits: ^BaseBuilding
@@ -737,6 +756,27 @@ MINER2:
 		IntoActor: miner
 		Offset: 0,2
 		Facing: 750
+
+MINER3:
+	Inherits: MINER2
+	Health:
+		HP: 48000
+	ResourceCollector:
+		InitialDelay: 110
+		Interval: 45
+		Amount: 85
+		Capacity: 1100
+		DepletionModifier: 18
+		MinimumReserves: 500
+		DeliveryVehicleType: tanker1
+		Deposits:
+			iron: 45000
+			gold: 70000
+		DepletionNotification: ResourcesDepleted
+		Colors:
+			iron: 878787
+			gold: F07000
+		RequiresCondition: !build-incomplete
 
 STARPORT:
 	Inherits: ^BaseBuilding
@@ -2799,7 +2839,7 @@ RECONSTRUCTOR:
 		Queue: Building
 		BuildPaletteOrder: 140
 		Prerequisites: factory5, techcenter, ~structures.cc
-		Description: actor-dropzone.description
+		Description: actor-reconstructor.description
 	HitShape:
 		UseTargetableCellsOffsets: true
 		TargetableOffsets: -512,0,0

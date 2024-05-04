@@ -154,7 +154,7 @@
 		InternalName: yi
 		Side: Corporations
 		Selectable: true
-		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    - Electric Pod\n    - Bomber Pod\n    - Sniper Pod\n    - Gatling Bike\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapons:\n    - Air Strike\n    - Orbital Railgun Strike
+		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    - Electric Pod\n    - Bomber Pod\n    - Sniper Pod\n    - Gatling Bike\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapons:\n    - Air Strike\n    - Shield Generator\n    - Orbital Railgun Strike
 	Faction@Synapol:
 		Name: Synapol
 		InternalName: sc
@@ -501,7 +501,7 @@ World:
 		ClassName: options-starting-units.base-miner
 		Factions: cc
 		BaseActor: base3
-		SupportActors: miner
+		SupportActors: minercromha
 	StartingUnits@ScoutYI:
 		Class: scout
 		ClassName: options-starting-units.base-scout

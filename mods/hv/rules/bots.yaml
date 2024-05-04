@@ -1,314 +1,9 @@
 # License: CC-BY-SA-4.0
 
 Player:
-	ModularBot@RogueAI:
-		Name: Rogue AI
-		Type: rogue
-	GrantConditionOnBotOwner@RogueAI:
-		Condition: enable-rogue-ai
-		Bots: rogue
-	BaseBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-	BuilderBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		BuilderTypes: builder
-		MinimumBaseRadius: 15
-	CustomBaseBuilderBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		MinimumExcessPower: 40
-		MaximumExcessPower: 200
-		ResourceDistance: 6
-		WaterTerrainTypes: Littoral, Pelagic, Oceanic
-		ConstructionYardTypes: base, base2, base3
-		PowerTypes: generator, generator-nuclear
-		BarracksTypes: module, module2, module3
-		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
-		ProductionTypes: module, module2, module3, factory3, factory4, factory5, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3, dropzone
-		NavalProductionTypes: harbor, harbor2, harbor3
-		RefineryTypes: storage
-		DefenseTypes: turret, turret2, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3, reconstructor
-		BuildingLimits:
-			base: 1
-			base2: 1
-			base3: 1
-			storage: 1
-			module: 4
-			module2: 4
-			module3: 4
-			dropzone: 2
-			reconstructor: 2
-			factory3: 4
-			factory4: 4
-			factory5: 4
-			radar: 1
-			radar2: 1
-			radar3: 1
-			starport: 4
-			starport2: 4
-			starport3: 4
-			oresmelt: 4
-			orepurifier: 4
-			orepurifier2: 4
-			tradplat: 1
-			techcenter: 1
-			harbor: 1
-			harbor2: 1
-			harbor3: 1
-			field: 1
-			howitzer: 1
-			howitzer2: 1
-			uplink: 1
-			orbitalstrike: 1
-			silo: 1
-		BuildingFractions:
-			base: 1
-			base2: 1
-			base3: 1
-			storage: 2
-			module: 1
-			module2: 1
-			module3: 1
-			dropzone: 1
-			reconstructor: 1
-			radar: 1
-			radar2: 1
-			radar3: 1
-			factory3: 1
-			factory4: 1
-			factory5: 1
-			harbor: 1
-			harbor2: 1
-			harbor3: 1
-			tradplat: 1
-			starport: 1
-			starport2: 1
-			starport3: 1
-			techcenter: 1
-			oresmelt: 9
-			orepurifier: 9
-			orepurifier2: 9
-			bunker: 7
-			bunker2: 7
-			bunker3: 7
-			turret: 5
-			turret2: 5
-			turret3: 5
-			aaturret: 6
-			aaturret2: 6
-			aaturret3: 6
-			howitzer: 1
-			howitzer2: 1
-			uplink: 1
-			orbitalstrike: 1
-			field: 1
-			silo: 1
-		BuildingDelays:
-			radar: 4000
-			radar2: 4000
-			radar3: 4000
-			howitzer: 8000
-			howitzer2: 7500
-			field: 8000
-			silo: 9000
-			uplink: 9000
-			orbitalstrike: 7500
-	BuildingRepairBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-	SquadManagerBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
-		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier
-		AirUnitsTypes: plane1, plane2, plane3, plane4, copter, banshee
-		ConstructionYardTypes: base, base2, base3
-		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, buker3, turret, turret2, turret3 aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo
-	UnitBuilderBotModule@RogueAI:
-		IdleBaseUnitsMaximum: 30
-		RequiresCondition: enable-rogue-ai
-		UnitQueues: Pod, Utility, Tank, Aircraft, Ship
-		UnitsToBuild:
-			miner: 3
-			builder: 1
-			radartank: 1
-			tank1: 3
-			tank2: 3
-			tank3: 5
-			tank5: 5
-			tank6: 1
-			tank7: 1
-			tank8: 1
-			aatank: 3
-			tank15: 1
-			tank16: 1
-			chaingunpod: 5
-			artillery: 5
-			cromhabuggy: 3
-			gatlinghawk: 3
-			cromhastealth: 3
-			transprt: 1
-			artil: 5
-			scout1: 1
-			scout2: 1
-			mortarpod: 1
-			flamepod: 1
-			elitepod: 1
-			sniperpod: 1
-			electricpod: 1
-			brokerpod: 9
-			technician: 1
-			bomberpod: 1
-			missiletank: 5
-			plane4: 5
-			plane3: 5
-			plane2: 5
-			plane1: 5
-			copter: 5
-			banshee: 5
-			balloon: 1
-			saucer: 1
-			boat: 1
-			boat2: 1
-			boat3: 1
-			submarine: 2
-			carrier: 2
-			waterminelayer: 1
-			waterminelayer2: 1
-		UnitLimits:
-			miner: 1
-			builder: 1
-			balloon: 2
-			saucer: 2
-			radartank: 1
-			tank6: 1
-			tank8: 1
-			boat3: 3
-			submarine: 4
-			carrier: 4
-			waterminelayer: 1
-			waterminelayer2: 1
-			technician: 1
-			bomberpod: 3
-			brokerpod: 9
-			transprt: 1
-		UnitDelays:
-			builder: 15000
-	PriorityCaptureManagerBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		CapturingActorTypes: technician
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone
-		MaximumCaptureTargetOptions: 15
-	MinerBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: miner
-		DeployableTerrainTypes: Ore
-		DeployedActorTypes: miner2
-		VehiclesQueue: Utility
-	MinelayerBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		MinelayingActorTypes: tank6, waterminelayer, waterminelayer2
-		IgnoredEnemyTargetTypes: Structure, Defense, Air
-		UseEnemyLocationTargetTypes: Structure, Defense
-		AwayFromAlliedTargetTypes: Structure, Defense
-		AwayFromEnemyTargetTypes: Structure, Defense
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai || enable-cromha-ai
-		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
-	LoadCargoBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2
-	DeployActorBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: radartank, brokerpod
-	PowerDownBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-	ScoutBotModule@RogueAI:
-		ScoutActorTypes: balloon, saucer
-		MoveRadius: 20
-		RequiresCondition: enable-rogue-ai
-	SendUnitToAttackBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		ActorTypesAndAttackDesire:
-			bomberpod: 30
-		ValidTargets: Structure, Vehicle
-		InvalidTargets: Air, Water
-	ExternalConditionPowerBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		OrderName: ShieldsUp
-	SupportPowerBotModule@RogueAI:
-		RequiresCondition: enable-rogue-ai
-		Decisions:
-			Nuke:
-				OrderName: Nukem
-				MinimumAttractiveness: 3000
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
-			DropPods:
-				OrderName: EjectPods
-				MinimumAttractiveness: 5
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 8c0
-				Consideration@2:
-					Against: Enemy
-					Types: Water
-					Attractiveness: -5
-					TargetMetric: None
-					CheckRadius: 8c0
-			AirStrike:
-				OrderName: FlushBombers
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			Howitzer:
-				OrderName: FireMission
-				MinimumAttractiveness: 1
-				Consideration@1:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			Railgun:
-				OrderName: Blastem
-				MinimumAttractiveness: 1000
-				FineScanRadius: 2
-				Consideration@1:
-					Against: Enemy
-					Types: Air, Tank, Vehicle, Infantry, Water
-					Attractiveness: 2
-					TargetMetric: Value
-					CheckRadius: 2c0
-				Consideration@2:
-					Against: Enemy
-					Types: Structure
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 2c0
-				Consideration@3:
-					Against: Ally
-					Types: Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 3c0
-	# Enhanced AI
+		ExcludedUnitTypes: miner, minercromha, tanker1, tanker2, brokerpod
 	ModularBot@CromhaAI:
 		Name: Cromha AI
 		Type: cromha
@@ -328,7 +23,7 @@ Player:
 		ResourceDistance: 9
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base, base2, base3
-		PowerTypes: generator, generatornuclear
+		PowerTypes: generator, generator2, generator3, generatornuclear
 		BarracksTypes: module, module2, module3
 		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
 		ProductionTypes: module, module2, module3, factory3, factory4, factory5, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3, dropzone
@@ -432,17 +127,18 @@ Player:
 	SquadManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		SquadSize: 35
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, minercromha, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier
 		AirUnitsTypes: plane1, plane2, copter, banshee, jet1, jet2, jet3, jet4, jet5
 		ConstructionYardTypes: base, base2, base3
-		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, generator2, generator3, generatornuclear, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
 	UnitBuilderBotModule@CromhaAI:
 		IdleBaseUnitsMaximum: 55
 		RequiresCondition: enable-cromha-ai
 		UnitQueues: Pod, Utility, Tank, Aircraft, Ship
 		UnitsToBuild:
 			miner: 3
+			minercromha: 3
 			builder: 1
 			radartank: 1
 			tank1: 3
@@ -494,6 +190,7 @@ Player:
 			aircraftcarrier: 1
 		UnitLimits:
 			miner: 2
+			minercromha: 2
 			builder: 2
 			balloon: 3
 			saucer: 3
@@ -516,13 +213,13 @@ Player:
 	PriorityCaptureManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		CapturingActorTypes: technician
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, outpost, outpost2, outpost3
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, miner3, outpost, outpost2, outpost3
 		MaximumCaptureTargetOptions: 18
 	MinerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
-		DeployableActorTypes: miner
+		DeployableActorTypes: miner, minercromha
 		DeployableTerrainTypes: Ore
-		DeployedActorTypes: miner2
+		DeployedActorTypes: miner2, miner3
 		VehiclesQueue: Utility
 	MinelayerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai

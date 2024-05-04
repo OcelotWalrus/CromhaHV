@@ -772,6 +772,9 @@ miner:
 		Filename: bits/units-icons.png
 		Start: 5
 
+minercromha:
+	Inherits: miner
+
 builder1:
 	idle:
 		Filename: bits/builder1.png
