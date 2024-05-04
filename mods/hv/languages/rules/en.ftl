@@ -842,4 +842,5 @@ actor-watermine-name = AI Water Mine
 ## ResourceRenderer
 resource-generic = Mineable Resource Deposit
 resource-gold = Precious Metal Deposit
+resource-oil = Base Oil Reservoir
 resource-iron = Base Metal Deposit

@@ -722,10 +722,12 @@ MINER2:
 		Deposits:
 			iron: 50000
 			gold: 75000
+			oil: 75000
 		DepletionNotification: ResourcesDepleted
 		Colors:
 			iron: 878787
 			gold: F07000
+			oil: 2E2C2601
 		RequiresCondition: !build-incomplete
 	Exit:
 	WithSpriteBody:
@@ -773,10 +775,12 @@ MINER3:
 		Deposits:
 			iron: 45000
 			gold: 70000
+			oil: 70000
 		DepletionNotification: ResourcesDepleted
 		Colors:
 			iron: 878787
 			gold: F07000
+			oil: 2E2C2601
 		RequiresCondition: !build-incomplete
 
 STARPORT:

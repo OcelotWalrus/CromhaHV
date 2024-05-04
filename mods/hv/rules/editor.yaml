@@ -28,6 +28,11 @@ EditorWorld:
 				TerrainType: Ore
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Dirt
 				MaxDensity: 3
+			oil:
+				ResourceIndex: 10
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Dirt, Water
+				MaxDensity: 3
 			iron:
 				ResourceIndex: 2
 				TerrainType: Ore
@@ -74,6 +79,10 @@ EditorWorld:
 				Sequences: gold
 				Palette: effect
 				Name: resource-gold
+			oil:
+				Sequences: oil
+				Palette: effect
+				Name: resource-oil
 			iron:
 				Sequences: iron
 				Palette: effect

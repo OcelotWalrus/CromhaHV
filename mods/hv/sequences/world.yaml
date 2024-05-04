@@ -39,6 +39,9 @@ resources:
 		Filename: bits/gold.png
 	iron:
 		Filename: bits/iron.png
+	oil:
+		Filename: bits/null.png
+		Length: 1
 	invisible:
 		Filename: bits/null.png
 		Length: 1

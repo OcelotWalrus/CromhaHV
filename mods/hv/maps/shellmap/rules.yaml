@@ -2,6 +2,7 @@ Player:
 	PlayerResources:
 		ResourceValues:
 			gold: 0
+			oil: 0
 			iron: 0
 
 World:

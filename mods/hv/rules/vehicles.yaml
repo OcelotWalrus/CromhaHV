@@ -741,6 +741,7 @@ MINER:
 		Colors:
 			iron: 878787
 			gold: F07000
+			oil: 2E2C2601
 	Transforms:
 		PauseOnCondition: !validterrain
 		IntoActor: miner2

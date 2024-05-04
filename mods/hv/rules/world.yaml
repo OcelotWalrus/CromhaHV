@@ -15,7 +15,7 @@
 	NoBuildZone:
 		BlockedTerrainType: Blocked
 		MinerActorType: miner2
-		ResourceTypes: iron, gold
+		ResourceTypes: iron, gold, oil
 	DebugVisualizations:
 	DebugOffsetOverlayManager:
 	TerrainLighting:
@@ -302,6 +302,11 @@ World:
 				TerrainType: Ore
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt
 				MaxDensity: 3
+			oil:
+				ResourceIndex: 10
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt, Water
+				MaxDensity: 3
 			iron:
 				ResourceIndex: 2
 				TerrainType: Ore
@@ -348,6 +353,10 @@ World:
 				Sequences: gold
 				Palette: effect
 				Name: resource-generic
+			oil:
+				Sequences: oil
+				Palette: effect
+				Name: resource-generic
 			iron:
 				Sequences: iron
 				Palette: effect
@@ -376,7 +385,7 @@ World:
 				Sequence: corner
 				Palette: shadow-decoration
 	WithResourceAnimation:
-		Types: gold, iron
+		Types: gold, iron, oil
 		Ratio: 100
 		Interval: 20, 40
 		Image: twinkle

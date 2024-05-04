@@ -6,6 +6,7 @@
 		ExploredMapCheckboxEnabled: True
 	PlayerResources:
 		ResourceValues:
+			oil: 200
 			gold: 200
 			iron: 100
 
