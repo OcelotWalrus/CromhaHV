@@ -279,6 +279,9 @@ generator2:
 		Filename: bits/buildings-icons.png
 		Start: 31
 
+generator3:
+	Inherits: generator2
+
 radar:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
