@@ -130,7 +130,7 @@ actor-copter =
       Weak vs Tanks
 
 actor-saucer =
-   .name = E-2 Hawkeye
+   .name = Scout Saucer
    .description = Reconnaissance air unit.
       Unarmed
 
@@ -141,7 +141,7 @@ actor-banshee =
       Can't attack Water, Ground or Air Units
 
 actor-copter2 =
-   .name = CV-22B Osprey
+   .name = Transport Helicopter
    .description = Vehicle Transport Helicopter.
       Can load pods
       and lift one vehicle.
