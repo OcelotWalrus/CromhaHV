@@ -499,18 +499,20 @@ ARTILLERYPOD:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: actor-artil.name
+		Name: actor-artillerypod.name
 	Buildable:
 		Queue: Pod
 		Prerequisites: ~module.cc
 		BuildPaletteOrder: 30
-		Description: actor-artil.description
+		Description: actor-artillerypod.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 1700
 	Armor:
 		Type: Light
+	Mobile:
+		CanMoveBackward: true
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -520,6 +522,39 @@ ARTILLERYPOD:
 	Armament:
 		Weapon: SmallArtillery
 		LocalOffset: 500,0,100
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+
+VOLTAGEPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 980
+	Tooltip:
+		Name: actor-voltagepod.name
+	Buildable:
+		Queue: Pod
+		Prerequisites: ~module.cc
+		BuildPaletteOrder: 35
+		Description: actor-voltagepod.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 2200
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament:
+		Weapon: LightningBolt
+		Recoil: 100
+		RecoilRecovery: 25
+		LocalOffset: 500,0,0
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0

@@ -433,7 +433,7 @@ RADAR3:
 		Icon: airstrike
 		Cursor: airstrike
 		ChargeInterval: 2950
-		SquadSize: 6
+		SquadSize: 8
 		QuantizedFacings: 8
 		Name: actor-radar.airstrikepower-name
 		Description: actor-radar.airstrikepower-description

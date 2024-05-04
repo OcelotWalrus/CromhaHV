@@ -539,7 +539,7 @@ AIRCRAFTCARRIER:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.cc, techcenter
+		Prerequisites: ~disable
 		BuildPaletteOrder: 90
 		Description: actor-aircraftcarrier.description
 	UpdatesPlayerStatistics:

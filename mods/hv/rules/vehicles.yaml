@@ -542,7 +542,7 @@ TANK8:
 		GenericName: actor-tank8.generic-name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, techcenter, tradplat
+		Prerequisites: techcenter, tradplat
 		BuildPaletteOrder: 60
 		Description: actor-tank8.description
 	Armament:
@@ -801,7 +801,7 @@ TANK15:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
-		Prerequisites: ~factory.yi, radar, tradplat
+		Prerequisites: tradplat
 		Description: actor-tank15.description
 	Valued:
 		Cost: 1000
@@ -1007,6 +1007,7 @@ GATLINGHAWK:
 		Type: Steel
 	Mobile:
 		Speed: 125
+		CanMoveBackward: true
 	Armament:
 		Weapon: BikeChainGun
 		LocalOffset: 500,-250,0

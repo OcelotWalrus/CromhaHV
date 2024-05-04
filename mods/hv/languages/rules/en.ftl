@@ -95,25 +95,25 @@ actor-jet1 =
     a large chain gun.
       Strong vs Pods and Aircraft
       Weak vs Tanks and Buildings
-   .name = F-15EX Eagle II
+   .name = Husker Series 1
 
 actor-jet2 =
    .description = Fast Plasma Attack Ship
       Strong vs Buildings
       Can't attack Water, Ground or Air Units
-   .name = B-2A Spirit
+   .name = Nighthawk Series 1
 
 actor-jet3 =
    .description = Fast Stealth Attack Ship
       Strong vs Buildings, Air units, Water Units, Ground Units
-   .name = F-35 Lightning-II
+   .name = Lightning Series 1
 
 actor-jet4 =
    .description = Attack Ship armed with
     a missile gun, designed for air superiority
       Strong vs Pods and Aircraft
       Weak vs Tanks and Buildings
-   .name = F-22A Raptor
+   .name = Husker Series 2
 
 actor-jet5 =
    .description = Stealth Missile Attack Ship
@@ -121,7 +121,7 @@ actor-jet5 =
       Weak vs Air Units and Pods
       Can't attack Air Units
       Can detected cloaked submarines
-   .name = F-117 Nighthawk
+   .name = Nighthawk Series 2
 
 actor-copter =
    .name = Attack Helicopter
@@ -553,9 +553,16 @@ actor-chaingunpod =
 actor-artillerypod =
    .description = Distance support vehicle.
     Armed with artillery cannons
-      Strong vs Tanks and Pods
+       Strong vs Tanks and Pods
        Can't attack Aircraft
    .name = Artillery Pod
+
+actor-voltagepod =
+   .description = Fast short-range support vehicle.
+    Armed with high-voltage cannons
+       Strong vs Aircraft
+       Can't attack Ground Units
+   .name = Voltage Pod
 
 actor-minipod1 =
    .name = Civilian

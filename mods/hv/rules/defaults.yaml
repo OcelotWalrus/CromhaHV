@@ -294,12 +294,10 @@
 	MustBeDestroyed:
 	HitShape:
 	Repairable:
-		RepairActors: tradplat
+		RepairActors: tradplat, dropzone, starport3
 		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft
-	Repairable:
-		RepairActors: tradplat
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Explodes:
@@ -905,7 +903,7 @@
 	WithFacingSpriteBody:
 	HitShape:
 	RepairableNear:
-		RepairActors: harbor, harbor2
+		RepairActors: harbor, harbor2, harbor3
 		CloseEnough: 2c0
 	LeavesTrails:
 		Image: watertrail
