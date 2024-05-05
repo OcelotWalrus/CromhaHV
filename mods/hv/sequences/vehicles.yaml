@@ -995,6 +995,19 @@ artillerypod:
 voltagepod:
 	Inherits: sniperpod
 
+elitetechnician:
+	idle:
+		Filename: bits/elite_technician.png
+		Facings: 8
+	die:
+		Filename: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon:
+		Filename: bits/units-icons.png
+		Start: 33
+
 cromhabuggy:
 	Inherits: tank1
 

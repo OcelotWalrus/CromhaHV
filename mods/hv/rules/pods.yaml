@@ -558,3 +558,70 @@ VOLTAGEPOD:
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
+
+ELITETECHNICIAN:
+	Inherits: ^Pod
+	Inherits@Selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Pod
+		Description: actor-elitetechnician.description
+		Prerequisites: ~module, techcenter
+		BuildPaletteOrder: 70
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-elitetechnician.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	CaptureManager:
+		CapturingCondition: capturing
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 30
+		CaptureDelay: 270
+		ConsumedByCapture: false
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+		RequiresCondition: !ecm-disabled
+	Cloak:
+		InitialDelay: 40
+		CloakDelay: 40
+		CloakSound: stealth_on_humanoide9000.wav
+		UncloakSound: stealth_off_humanoide9000.wav
+		IsPlayerPalette: true
+		PauseOnCondition: capturing || ecm-disabled
+		CloakedPalette: cloak
+		CloakStyle: Palette
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	Voiced:
+		VoiceSet: TechnicianVoice
+	-Guard:
+	Health:
+		HP: 13500
+	Mobile:
+		Speed: 85
+		Voice: Move
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	AutoTargetPriority@Default:
+		ValidTargets: DamagedPod
+	Armament:
+		Weapon: RepairTorchElite
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	DetectCloaked:
+		Range: 2c0

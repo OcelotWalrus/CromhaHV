@@ -518,6 +518,12 @@ actor-technician =
       Unarmed
    .name = Technician Pod
 
+actor-elitetechnician =
+   .description = Stealth field technician.
+    Infiltrates and captures enemy structures.\Repairs pods.
+      Unarmed
+   .name = Elite Technician Pod
+
 actor-brokerpod =
    .description = Financial analyst.
     Invests into stock market for dividents.

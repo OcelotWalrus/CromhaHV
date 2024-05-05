@@ -108,6 +108,17 @@ RepairTorch:
 		ValidTargets: DamagedPod
 		Spread: 1
 
+RepairTorchElite:
+	Inherits: RepairTorch
+	ReloadDelay: 2
+	Range: 2c0
+	ValidTargets: DamagedPod
+	Warhead@Repair: TargetDamage
+		DebugOverlayColor: 00FF00
+		Damage: -70
+		ValidTargets: DamagedPod
+		Spread: 5
+
 Plasma:
 	Inherits: BigSplash
 	ValidTargets: Structure, Wall

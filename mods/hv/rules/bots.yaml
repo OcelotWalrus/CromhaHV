@@ -127,7 +127,7 @@ Player:
 	SquadManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		SquadSize: 35
-		ExcludeFromSquadsTypes: miner, minercromha, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, minercromha, builder, tanker1, tanker2, tank6, tank8, technician, elitetechnician, brokerpod, waterminelayer, waterminelayer2, bomberpod
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier, radarship
 		AirUnitsTypes: plane1, plane2, copter, banshee, jet1, jet2, jet3, jet4, jet5
 		ConstructionYardTypes: base, base2, base3
@@ -168,7 +168,8 @@ Player:
 			sniperpod: 1
 			electricpod: 1
 			brokerpod: 9
-			technician: 1
+			technician: 4
+			elitetechnician: 2
 			bomberpod: 1
 			missiletank: 5
 			jet4: 5
@@ -207,7 +208,8 @@ Player:
 			aircraftcarrier: 1
 			waterminelayer: 1
 			waterminelayer2: 1
-			technician: 3
+			technician: 5
+			elitetechnician: 3
 			bomberpod: 4
 			brokerpod: 9
 			transprt: 1
@@ -215,7 +217,7 @@ Player:
 			builder: 9000
 	PriorityCaptureManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
-		CapturingActorTypes: technician
+		CapturingActorTypes: technician, elitetechnician
 		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, miner3, outpost, outpost2, outpost3
 		MaximumCaptureTargetOptions: 18
 	MinerBotModule@CromhaAI:
