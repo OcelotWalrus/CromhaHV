@@ -279,6 +279,7 @@ GENERATOR:
 
 GENERATOR2:
 	Inherits: GENERATOR
+	-Encyclopedia:
 	Buildable:
 		Queue: Building
 		Prerequisites: ~structures.sc
@@ -291,6 +292,7 @@ GENERATOR2:
 
 GENERATOR3:
 	Inherits: GENERATOR
+	-Encyclopedia:
 	Buildable:
 		Queue: Building
 		Prerequisites: ~structures.cc
@@ -312,10 +314,6 @@ NUCLEARGENERATOR:
 		Prerequisites: ~base, techcenter
 		BuildPaletteOrder: 130
 		Description: actor-generator-nuclear.description
-	Encyclopedia:
-		Description: actor-generator-nuclear.encyclopedia
-		Order: 10
-		Category: Buildings
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -762,6 +760,7 @@ MINER2:
 
 MINER3:
 	Inherits: MINER2
+	-Encyclopedia:
 	Health:
 		HP: 48000
 	ResourceCollector:
