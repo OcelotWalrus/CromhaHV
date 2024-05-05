@@ -128,7 +128,7 @@ Player:
 		RequiresCondition: enable-cromha-ai
 		SquadSize: 35
 		ExcludeFromSquadsTypes: miner, minercromha, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
-		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier
+		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier, radarship
 		AirUnitsTypes: plane1, plane2, copter, banshee, jet1, jet2, jet3, jet4, jet5
 		ConstructionYardTypes: base, base2, base3
 		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, generator2, generator3, generatornuclear, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
@@ -141,6 +141,7 @@ Player:
 			minercromha: 3
 			builder: 1
 			radartank: 1
+			radarship: 1
 			tank1: 3
 			tank2: 3
 			tank3: 5
@@ -182,6 +183,7 @@ Player:
 			boat: 3
 			boat2: 3
 			boat3: 3
+			patrolboat: 3
 			submarine: 2
 			carrier: 2
 			navaltransport: 2
@@ -195,6 +197,7 @@ Player:
 			balloon: 3
 			saucer: 3
 			radartank: 2
+			radarship: 2
 			tank6: 2
 			tank8: 2
 			boat3: 4
