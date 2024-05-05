@@ -662,6 +662,13 @@ actor-aircraftcarrier =
       Equipped with a long-range radar.
       Unarmed
 
+actor-radarship =
+   .description = Slow ship equipped with a long-range radar.n
+    Can detect cloaked units.
+      Unarmed
+   .name = Reconnaissance Vessel
+   .deployed--name = Reconnaissance Vessel (deployed)
+
 actor-waterminelayer =
    .name = Naval Minelayer
    .generic-name = Boat

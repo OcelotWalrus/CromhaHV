@@ -581,3 +581,43 @@ AIRCRAFTCARRIER:
 		Position: BottomLeft
 		Margin: 1, -1
 		RequiresSelection: true
+
+RADARSHIP:
+	Inherits: ^Ship
+	Inherits@Selection: ^SelectableSupportUnit
+	-AppearsOnRadar:
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: actor-radarship.name
+		RequiresCondition: !deployed
+	Tooltip@DEPLOYED:
+		Name: actor-radarship.deployed--name
+		RequiresCondition: deployed
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: harbor, radar
+		BuildPaletteOrder: 90
+		Description: actor-radarship.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 13000
+	Armor:
+		Type: Steel
+	Mobile:
+		Speed: 75
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 14c0
+		MinRage: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 7c0
+	RenderDetectionCircle:
+		TrailCount: 8
+	DetectCloaked:
+		Range: 14c0
+		RequiresCondition: !ecm-disabled
+		DetectionTypes: Cloak, Underwater

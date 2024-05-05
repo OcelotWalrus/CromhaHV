@@ -305,7 +305,7 @@ World:
 			oil:
 				ResourceIndex: 10
 				TerrainType: Ore
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt, Water
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt, Water, Littoral
 				MaxDensity: 3
 			iron:
 				ResourceIndex: 2
