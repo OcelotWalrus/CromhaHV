@@ -858,6 +858,15 @@ STARPORT:
 		ExitCell: 0,0
 		Sequence: production-done
 		RequiresCondition: !build-incomplete && !burning
+	RepairsUnits:
+		HpPerStep: 1000
+		Interval: 7
+		PlayerExperience: 15
+		StartRepairingNotification: Repairing
+		StartRepairingTextNotification: notifications-repairing
+		FinishRepairingNotification: UnitRepaired
+		FinishRepairingTextNotification: notification-unit-repaired
+		RequiresCondition: !disabled
 
 STARPORT2:
 	Inherits: STARPORT
@@ -3090,6 +3099,7 @@ DROPZONE:
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Reservable:
 	Tooltip:
 		Name: actor-dropzone.name
 	Encyclopedia:

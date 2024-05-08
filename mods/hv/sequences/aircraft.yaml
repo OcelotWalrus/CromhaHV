@@ -45,7 +45,7 @@ plane2:
 
 jet1:
 	idle:
-		Filename: bits/jet1.png
+		Filename: bits/plane1.png
 		Facings: 8
 	muzzle:
 		Filename: muzzle2.png
@@ -72,7 +72,7 @@ jet3:
 
 jet4:
 	idle:
-		Filename: bits/jet4.png
+		Filename: bits/plane1.png
 		Facings: 8
 	icon:
 		Filename: jet4-icon.png

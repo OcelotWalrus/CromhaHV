@@ -288,10 +288,10 @@ JET3:
 		Range: 6c0
 		Type: GroundPosition
 	Armament@Ground:
-		Weapon: Bomb
+		Weapon: PlasmaBomb
 		PauseOnCondition: !ammo
 	Armament@Air:
-		Weapon: ^AntiAirMissile
+		Weapon: JetMissile
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
 	AmmoPool:
@@ -378,7 +378,7 @@ JET4:
 		PauseOnCondition: !ammo
 		LocalOffset: 50,0,0
 	Armament@Air:
-		Weapon: DoubleBarrelledArtilleryAir
+		Weapon: JetMissile
 		LocalOffset: 50,0,0
 	AmmoPool:
 		Ammo: 8
@@ -1009,6 +1009,8 @@ BOMBER2:
 		Range: 4c0
 	AttackBomber:
 		FacingTolerance: 512
+	Armament:
+		Weapon: PlasmaBomb
 
 CARGOSHIP:
 	Inherits@Exists: ^ExistsInWorld

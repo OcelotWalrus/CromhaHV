@@ -294,7 +294,7 @@
 	MustBeDestroyed:
 	HitShape:
 	Repairable:
-		RepairActors: tradplat, dropzone, starport3
+		RepairActors: tradplat, dropzone, starport, starport2, starport3
 		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft

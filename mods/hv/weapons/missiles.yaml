@@ -45,6 +45,19 @@
 	Warhead@Effect: CreateEffect
 		ImpactActors: false
 
+JetMissile:
+	Inherits: ^AntiAirMissile
+	Range: 8c0
+	Projectile: Missile
+		Speed: 270
+		Arm: 0
+		Blockable: true
+		Image: bullet6
+		Shadow: true
+		HorizontalRateOfTurn: 25
+		TrailImage: smoke
+		RangeLimit: -1
+
 AntiGroundRocket:
 	Inherits: BigSplash
 	Inherits: ^AntiGroundMissile

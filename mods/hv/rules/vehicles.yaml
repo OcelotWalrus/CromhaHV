@@ -679,6 +679,8 @@ BUILDER3:
 	Inherits: BUILDER
 	Buildable:
 		Prerequisites: ~structures.cc
+	RenderSprites:
+		Image: builder3
 	Transforms:
 		IntoActor: outpost3
 

@@ -166,7 +166,7 @@
 		InternalName: cc
 		Side: Empires
 		Selectable: true
-		Description: Cromha Corporations\nA large cosmic corporation empire that manufactures,\neverything from common household appliances to armaments.\nTheir air and naval force department became a large paramilitary force.\n\nFaction Variations:\n    - Uses fighters jets as air units\n    - Uses submarines and aircraft carriers as naval units.\n\nSpecial Units:\n    - Chaingun Pod\n    - Artillery Pod\n    - Voltage Pod\n    - Gatling Hawk\n    - Ramp Buggy\n    - Stealth Tank\n    - Husker Series 1-2\n    - Nighthawk Series 1-2\n    - Lightning Series 1\n\nSuperweapons:\n    - Air Support\n    - Grand Howitzer\n    - Orbital Missile Strike\n\nSpecial Technologies:\n    - Drop Zone\n    - Tech Reconstructor
+		Description: Cromha Corporations\nA large cosmic corporation empire that manufactures,\neverything from common household appliances to armaments.\nThey specialized in aircraft manufacturing. Their air and naval force department became a large paramilitary force.\n\nFaction Variations:\n    - Uses fighters jets as air units\n    - Uses submarines and aircraft carriers as naval units.\n\nSpecial Units:\n    - Chaingun Pod\n    - Artillery Pod\n    - Voltage Pod\n    - Gatling Hawk\n    - Ramp Buggy\n    - Stealth Tank\n    - Husker Series 1-2\n    - Nighthawk Series 1-2\n    - Lightning Series 1\n\nSuperweapons:\n    - Air Support\n    - Grand Howitzer\n    - Orbital Missile Strike\n\nSpecial Technologies:\n    - Drop Zone\n    - Tech Reconstructor
 	Faction@Random:
 		Name: Any
 		InternalName: Random
