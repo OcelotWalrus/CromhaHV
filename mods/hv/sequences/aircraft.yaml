@@ -53,7 +53,8 @@ jet1:
 		Facings: 8
 		Tick: 50
 	icon:
-		Filename: jet1-icon.png
+		Filename: units-icons.png
+		Start: 49
 
 jet2:
 	idle:
@@ -68,14 +69,16 @@ jet3:
 		Filename: bits/bomber1.png
 		Facings: 8
 	icon:
-		Filename: jet3-icon.png
+		Filename: bits/units-icons.png
+		Start: 60
 
 jet4:
 	idle:
 		Filename: bits/plane1.png
 		Facings: 8
 	icon:
-		Filename: jet4-icon.png
+		Filename: units-icons.png
+		Start: 49
 
 jet5:
 	idle:

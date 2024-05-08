@@ -1998,7 +1998,9 @@ reconstructor:
 		Filename: bits/flame2.png
 		Offset: 15, 8
 	icon:
-		Filename: bits/reconstructor-icon.png
+		Filename: bits/buildings-icons.png
+		Start: 38
+		Offset: 0, 0
 	make:
 		Filename: bits/build.png
 		Length: 39
@@ -2008,7 +2010,6 @@ reconstructor:
 		Filename: bits/build-vanish.png
 		Length: 26
 		Tick: 30
-		ZOffset: 2048
 
 storage2:
 	Inherits@Flame: ^BuildingFlame2
@@ -2298,7 +2299,8 @@ dropzone:
 		Filename: bits/flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/dropzone-icon.png
+		Filename: bits/buildings-icons.png
+		Start: 39
 	make:
 		Filename: bits/build.png
 		Length: 39
