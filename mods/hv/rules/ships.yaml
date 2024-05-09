@@ -169,7 +169,7 @@ SUBMARINE2:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, radar
+		Prerequisites: !~harbor.yi, radar
 		BuildPaletteOrder: 30
 		Description: actor-submarine2.description
 	UpdatesPlayerStatistics:
@@ -310,7 +310,7 @@ SUBMARINE:
 		RequiresSelection: true
 		PipCount: 4
 	ReloadAmmoPool:
-		Delay: 100
+		Delay: 135
 		Count: 1
 	MissileSpawnerParent:
 		Actors: slcm
@@ -597,7 +597,7 @@ RADARSHIP:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: harbor, radar
+		Prerequisites: radar
 		BuildPaletteOrder: 90
 		Description: actor-radarship.description
 	UpdatesPlayerStatistics:
@@ -621,3 +621,38 @@ RADARSHIP:
 		Range: 14c0
 		RequiresCondition: !ecm-disabled
 		DetectionTypes: Cloak, Underwater
+
+SONARSUBMARINE:
+	Inherits: ^Submarine
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: actor-submarine-sonar.name
+		GenericName: actor-submarine-sonar.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: techcenter, radar
+		BuildPaletteOrder: 100
+		Description: actor-submarine-sonar.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 90
+		TurnSpeed: 50
+	RevealsShroud:
+		Range: 16c0
+		MinRage: 8c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 8c0
+	RenderDetectionCircle:
+		TrailCount: 16
+	DetectCloaked:
+		Range: 16c0
+		RequiresCondition: !ecm-disabled
+		DetectionTypes: Underwater

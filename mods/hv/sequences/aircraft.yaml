@@ -48,7 +48,7 @@ jet1:
 		Filename: bits/jet1.png
 		Facings: 8
 	muzzle:
-		Filename: muzzle2.png
+		Filename: muzzle3.png
 		Length: 3
 		Facings: 8
 		Tick: 50

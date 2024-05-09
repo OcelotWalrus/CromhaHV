@@ -594,7 +594,7 @@ SAUCER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
 		Prerequisites: ~starport.cc
-		Description: actor-saucer.description
+		Description: actor-saucer2.description
 
 BANSHEE:
 	Inherits: ^Helicopter
@@ -658,7 +658,7 @@ COPTER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 80
-		Prerequisites: ~starport.cc
+		Prerequisites: ~starport.sc
 		Description: actor-copter2.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -710,6 +710,18 @@ COPTER2:
 	-GrantRandomCondition@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
+
+COPTER2CROMHA:
+	Inherits: COPTER2
+	Tooltip:
+		Name: actor-copter2cromha.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 80
+		Prerequisites: ~starport.cc
+		Description: actor-copter2cromha.description
+	RenderSprites:
+		Image: copter2
 
 COPTER2.Husk:
 	Inherits: ^PlaneHusk

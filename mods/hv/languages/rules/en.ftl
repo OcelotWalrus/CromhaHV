@@ -134,6 +134,11 @@ actor-saucer =
    .description = Reconnaissance air unit.
       Unarmed
 
+actor-saucer2 =
+   .name = Hawkeye
+   .description = Reconnaissance air unit.
+      Unarmed
+
 actor-banshee =
    .name = Banshee
    .description = Heavy Helicopter Gunship
@@ -143,7 +148,13 @@ actor-banshee =
 actor-copter2 =
    .name = Transport Helicopter
    .description = Vehicle Transport Helicopter.
-      Can load pods
+      Can load pods and vehicles
+      and lift one vehicle.
+
+actor-copter2cromha =
+   .name = Osprey Loader
+   .description = Vehicle Transport Helicopter.
+      Can load pods and vehicles
       and lift one vehicle.
 
 actor-copter2-husk-name = Crashing Transport Helicopter
@@ -546,9 +557,9 @@ actor-electricpod =
 
 actor-chaingunpod =
    .description = Fast support vehicle.
-    Armed with a machine gun.
+    Armed with a heavy machine gun.
       Strong vs Tanks and Pods
-      Weak vs Aircraft
+      Can't attack Aircraft
    .name = Chaingun Pod
 
 actor-artillerypod =
@@ -669,6 +680,13 @@ actor-radarship =
       Unarmed
    .name = Reconnaissance Vessel
    .deployed--name = Reconnaissance Vessel (deployed)
+
+actor-submarine-sonar =
+   .description = Stealth submarine equipped with a long-range sonar.n
+    Can detect submerged submarines.
+      Unarmed
+   .name = Sonar Submarine
+   .deployed--name = Sonar Submarine (deployed)
 
 actor-waterminelayer =
    .name = Naval Minelayer
