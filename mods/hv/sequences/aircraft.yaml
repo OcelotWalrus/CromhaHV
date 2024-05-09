@@ -45,7 +45,7 @@ plane2:
 
 jet1:
 	idle:
-		Filename: bits/plane1.png
+		Filename: bits/jet1.png
 		Facings: 8
 	muzzle:
 		Filename: muzzle2.png
@@ -54,7 +54,7 @@ jet1:
 		Tick: 50
 	icon:
 		Filename: units-icons.png
-		Start: 49
+		Start: 61
 
 jet2:
 	idle:
