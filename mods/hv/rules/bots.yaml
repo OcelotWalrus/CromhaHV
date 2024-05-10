@@ -3,7 +3,7 @@
 Player:
 	CubePickupBotModule:
 		RequiresCondition: enable-cromha-ai
-		ExcludedUnitTypes: miner, minercromha, tanker1, tanker2, brokerpod
+		ExcludedUnitTypes: miner, minercromha, minership, tanker1, tanker2, brokerpod
 	ModularBot@CromhaAI:
 		Name: Cromha AI
 		Type: cromha
@@ -28,13 +28,14 @@ Player:
 		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
 		ProductionTypes: module, module2, module3, factory3, factory4, factory5, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3, dropzone
 		NavalProductionTypes: harbor, harbor2, harbor3
-		RefineryTypes: storage
+		RefineryTypes: storage, waterrefinery
 		DefenseTypes: turret, turret2, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3, reconstructor, clusterturret, amplifier
 		BuildingLimits:
 			base: 2
 			base2: 2
 			base3: 2
 			storage: 3
+			waterrefinery: 3
 			module: 2
 			module2: 2
 			module3: 2
@@ -69,6 +70,7 @@ Player:
 			base2: 1
 			base3: 1
 			storage: 3
+			waterrefinery: 3
 			module: 1
 			module2: 1
 			module3: 1
@@ -130,11 +132,11 @@ Player:
 	SquadManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		SquadSize: 35
-		ExcludeFromSquadsTypes: miner, minercromha, builder, tanker1, tanker2, tank6, tank8, technician, elitetechnician, brokerpod, waterminelayer, waterminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, minercromha, minership, builder, tanker1, tanker2, tank6, tank8, technician, elitetechnician, brokerpod, waterminelayer, waterminelayer2, bomberpod
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier, radarship, sonarsubmarine, submarine3, waterminelayer, waterminelayer2, waterminelayer3, navaltransport
 		AirUnitsTypes: plane1, plane2, copter, banshee, jet1, jet2, jet3, jet4, jet5, copter2, dropship
 		ConstructionYardTypes: base, base2, base3
-		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, generator2, generator3, nucleargenerator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, generator2, generator3, nucleargenerator, miner2, watersite, waterrefinery, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
 	UnitBuilderBotModule@CromhaAI:
 		IdleBaseUnitsMaximum: 75
 		RequiresCondition: enable-cromha-ai
@@ -142,6 +144,7 @@ Player:
 		UnitsToBuild:
 			miner: 3
 			minercromha: 3
+			minership: 3
 			builder: 3
 			radartank: 2
 			radarship: 2
@@ -199,6 +202,7 @@ Player:
 		UnitLimits:
 			miner: 3
 			minercromha: 3
+			minership: 3
 			builder: 3
 			balloon: 5
 			saucer: 5
@@ -225,13 +229,13 @@ Player:
 	PriorityCaptureManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		CapturingActorTypes: technician, elitetechnician
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, miner3, outpost, outpost2, outpost3, base, base2, base3
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, miner3, watersite, outpost, outpost2, outpost3, base, base2, base3
 		MaximumCaptureTargetOptions: 18
 	MinerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
-		DeployableActorTypes: miner, minercromha
+		DeployableActorTypes: miner, minercromha, minership
 		DeployableTerrainTypes: Ore
-		DeployedActorTypes: miner2, miner3
+		DeployedActorTypes: miner2, miner3, watersite
 		VehiclesQueue: Utility
 	MinelayerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai

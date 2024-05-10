@@ -17,6 +17,9 @@ Terrain:
 	TerrainType@Ore:
 		Type: Ore
 		TargetTypes: Ground
+	TerrainType@WaterOre:
+		Type: WaterOre
+		TargetTypes: Water
 	TerrainType@Crater:
 		Type: Crater
 		TargetTypes: Ground

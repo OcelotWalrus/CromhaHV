@@ -247,7 +247,16 @@ actor-module =
 
 actor-miner2 =
    .name = Mining Tower
-   .encyclopedia = The mining tower is errected by creating a miner in the vehicle queue from either main base or factory and ordering it upon a metal bar symbol on the map where gold is more valueable than iron. Once deployed it will start mining and after certain intervals release a tanker which will carry back to a storage building upon then the credits can be spent. When the resources are depleted, the extraction value drops. Right-click on a mining tower to redeploy it into a miner again to move it onto a different spot.
+   .encyclopedia = The mining tower is errected by creating a miner in the vehicle queue from either main base or factory and ordering it upon a metal bar symbol on the map where gold is more valueable than iron. It can also be deployed on an oil reservoir. Once deployed it will start mining and after certain intervals release a tanker which will carry back to a storage building upon then the credits can be spent. When the resources are depleted, the extraction value drops. Right-click on a mining tower to redeploy it into a miner again to move it onto a different spot.
+
+actor-watersite =
+   .name = Amphibious Mining Site
+   .encyclopedia = The amphibious mining site is errected by creating a miner vessel in the ship queue from a harbor and ordering it upon a oil underwater reservoir. Once deployed it will start extracting and after certain intervals release a tanker vessel which will carry back to a storage building upon then the credits can be spent. When the resources are depleted, the extraction value drops. Right-click on an amphibious mining site to redeploy it into a miner vessel again to move it onto a different spot of the oil reservoir.
+
+actor-waterrefinery =
+   .description = Refines extracted oil and sell it to the open market.
+   .name = Amphibious Oil Refinery
+   .encyclopedia = Amphibious Oil Refinery buildings are the center of amphibious oil operations. Upon fabrication it allows the construction of additional miner vessels in the factory. Once an amphibious oil refinery and an amphibious mining site exists, tanker vessels will automatically deliver resources from extracting operations into the refinery building where the compensation takes place. With no refinery building to drop off available all extracting operations will halt.
 
 actor-starport =
    .name = Starport
@@ -860,6 +869,21 @@ actor-tank13 =
    .description = Moves cash to other players.
       Unarmed
    .name = Money Transport
+
+actor-tankership1 =
+   .description = Transports resources to amphibious refineries.
+      Unarmed
+   .name = Loaded Resource Transporter Vessel
+
+actor-tankership2 =
+   .description = Collects resources at amphibious mining sites.
+      Unarmed
+   .name = Empty Resource Transporter Vessel
+
+actor-minership =
+   .description = Builds oil amphibious facilities.
+      Unarmed
+   .name = Miner Vessel
 
 ## Weapons
 actor-landmine-name = AI Mine

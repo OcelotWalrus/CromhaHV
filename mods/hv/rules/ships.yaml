@@ -656,3 +656,98 @@ SONARSUBMARINE:
 		Range: 16c0
 		RequiresCondition: !ecm-disabled
 		DetectionTypes: Underwater
+
+TANKERSHIP1:
+	Inherits: ^Ship
+	Inherits@Selection: ^SelectableSupportUnit
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: actor-tankership1.name
+		RequiresCondition: !deployed
+	Buildable:
+		Prerequisites: ~disabled
+		Description: actor-tankership1.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: false
+	Health:
+		HP: 13000
+	Armor:
+		Type: Steel
+	Mobile:
+		Speed: 75
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 6c0
+		MinRage: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	SpawnActorOnDeath:
+		Actor: goldball
+	ResourceTransporter:
+		Capacity: 8
+	RenderSprites:
+		Image: tankership1
+
+TANKERSHIP2:
+	Inherits: TANKERSHIP1
+	Buildable:
+		Description: actor-tankership2.description
+	Tooltip:
+		Name: actor-tankership2.name
+	RenderSprites:
+		Image: tankership2
+
+MINERSHIP:
+	Inherits: ^Ship
+	Inherits@Selection: ^SelectableSupportUnit
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: actor-minership.name
+		RequiresCondition: !deployed
+	Buildable:
+		Queue: Utility
+		BuildAtProductionType: Ship
+		BuildPaletteOrder: 70
+		Prerequisites: waterrefinery
+		Description: actor-minership.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: false
+	Health:
+		HP: 13000
+	Armor:
+		Type: Steel
+	Mobile:
+		Speed: 75
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 6c0
+		MinRage: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	GrantConditionOnTerrain:
+		Condition: validterrain
+		TerrainTypes: WaterOre
+	Miner:
+		TerrainTypes: WaterOre
+		Colors:
+			iron: 878787
+			gold: F07000
+			oil: 2E2C2601
+	Transforms:
+		PauseOnCondition: !validterrain
+		IntoActor: watersite
+		Facing: 750
+		Offset: 0,-2
+		NoTransformNotification: BuildingCannotPlaceAudio
+		NoTransformTextNotification: notification-cant-place-building
+		TransformNotification: MinerReady
+		TransformTextNotification: notification-miner-ready
+		TransformSounds: miner_transform.wav
+		Voice: Deploying
+	Voiced:
+		VoiceSet: MinerVoice
+	-Guard:

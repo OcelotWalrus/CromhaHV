@@ -28,6 +28,7 @@
 		TerrainSpeeds:
 			Clear: 100
 			Ore: 100
+			WaterOre: 100
 			Crater: 100
 			Dirt: 100
 			Grass: 100
@@ -53,6 +54,7 @@
 		TerrainSpeeds:
 			Clear: 90
 			Ore: 90
+			WaterOre: 100
 			Crater: 90
 			Dirt: 90
 			Grass: 90
@@ -77,6 +79,7 @@
 		TerrainSpeeds:
 			Clear: 90
 			Ore: 90
+			WaterOre: 100
 			Crater: 90
 			Dirt: 90
 			Grass: 90
@@ -102,6 +105,7 @@
 		TerrainSpeeds:
 			Clear: 100
 			Ore: 100
+			WaterOre: 100
 			Crater: 100
 			Dirt: 100
 			Grass: 100
@@ -125,6 +129,7 @@
 		Name: naval
 		Crushes: Cube, Mine
 		TerrainSpeeds:
+			WaterOre: 100
 			Littoral: 100
 			Pelagic: 100
 			Oceanic: 100
@@ -133,7 +138,7 @@
 		Name: water
 		TerrainSpeeds:
 			Clear: 100
-			Ore: 100
+			WaterOre: 100
 			Crater: 100
 			Snow: 100
 			Grass: 100
@@ -304,7 +309,7 @@ World:
 				MaxDensity: 3
 			oil:
 				ResourceIndex: 10
-				TerrainType: Ore
+				TerrainType: WaterOre
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt, Water, Littoral
 				MaxDensity: 3
 			iron:
@@ -384,10 +389,17 @@ World:
 			bridge-shadow-corner:
 				Sequence: corner
 				Palette: shadow-decoration
-	WithResourceAnimation:
-		Types: gold, iron, oil
+	WithResourceAnimation@Common:
+		Types: gold, iron
 		Ratio: 100
 		Interval: 20, 40
+		Image: twinkle
+		Sequences: twinkle1, twinkle2, twinkle3, twinkle4, twinkle5, twinkle6, twinkle7, twinkle8
+		Palette: effect
+	WithResourceAnimation@Rare:
+		Types: oil
+		Ratio: 50
+		Interval: 120, 150
 		Image: twinkle
 		Sequences: twinkle1, twinkle2, twinkle3, twinkle4, twinkle5, twinkle6, twinkle7, twinkle8
 		Palette: effect

@@ -243,3 +243,29 @@ sonarsubmarine:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 50
+
+tankership1:
+	idle:
+		Filename: bits/tanker.png
+		Start: 8
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 43
+
+tankership2:
+	idle:
+		Filename: bits/tanker.png
+		Start: 0
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 43
+
+minership:
+	idle:
+		Filename: bits/ship1.png
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 34
