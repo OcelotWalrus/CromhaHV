@@ -2,7 +2,7 @@
 
 Player:
 	CubePickupBotModule:
-		RequiresCondition: enable-rogue-ai || enable-cromha-ai
+		RequiresCondition: enable-cromha-ai
 		ExcludedUnitTypes: miner, minercromha, tanker1, tanker2, brokerpod
 	ModularBot@CromhaAI:
 		Name: Cromha AI
@@ -23,7 +23,7 @@ Player:
 		ResourceDistance: 9
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base, base2, base3
-		PowerTypes: generator, generator2, generator3, generatornuclear
+		PowerTypes: generator, generator2, generator3, nucleargenerator
 		BarracksTypes: module, module2, module3
 		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
 		ProductionTypes: module, module2, module3, factory3, factory4, factory5, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3, dropzone
@@ -38,7 +38,7 @@ Player:
 			module: 2
 			module2: 2
 			module3: 2
-			dropzone: 2
+			dropzone: 4
 			reconstructor: 2
 			factory3: 2
 			factory4: 2
@@ -49,15 +49,15 @@ Player:
 			starport: 2
 			starport2: 2
 			starport3: 2
-			oresmelt: 6
-			orepurifier: 6
-			orepurifier2: 6
-			extractor: 3
+			oresmelt: 8
+			orepurifier: 8
+			orepurifier2: 8
+			extractor: 8
 			tradplat: 2
 			techcenter: 2
-			harbor: 1
-			harbor2: 1
-			harbor3: 1
+			harbor: 2
+			harbor2: 2
+			harbor3: 2
 			field: 2
 			howitzer: 1
 			howitzer2: 1
@@ -110,6 +110,9 @@ Player:
 			field: 1
 			silo: 1
 		BuildingDelays:
+			oresmelt: 2500
+			orepurifier: 2500
+			orepurifier2: 2500
 			radar: 4000
 			radar2: 4000
 			radar3: 4000
@@ -128,50 +131,49 @@ Player:
 		RequiresCondition: enable-cromha-ai
 		SquadSize: 35
 		ExcludeFromSquadsTypes: miner, minercromha, builder, tanker1, tanker2, tank6, tank8, technician, elitetechnician, brokerpod, waterminelayer, waterminelayer2, bomberpod
-		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier, radarship
-		AirUnitsTypes: plane1, plane2, copter, banshee, jet1, jet2, jet3, jet4, jet5
+		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier, aircraftcarrier, radarship, sonarsubmarine, submarine3, waterminelayer, waterminelayer2, waterminelayer3, navaltransport
+		AirUnitsTypes: plane1, plane2, copter, banshee, jet1, jet2, jet3, jet4, jet5, copter2, dropship
 		ConstructionYardTypes: base, base2, base3
-		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, generator2, generator3, generatornuclear, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, generator2, generator3, nucleargenerator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory3, factory4, factory5, harbor, harbor2, harbor3, tradplat, starport, starport2, starport3, techcenter, bunker, bunker2, bunker3, turret, turret2, turret3, clusterturret, amplifier, aaturret, aaturret2, aaturret3, howitzer, howitzer2, uplink, orbitalstrike, field, silo, dropzone
 	UnitBuilderBotModule@CromhaAI:
-		IdleBaseUnitsMaximum: 55
+		IdleBaseUnitsMaximum: 75
 		RequiresCondition: enable-cromha-ai
-		UnitQueues: Pod, Utility, Tank, Aircraft, Ship
+		UnitQueues: Pod, Utility, Tank, Aircraft, Ship, Building
 		UnitsToBuild:
 			miner: 3
 			minercromha: 3
-			builder: 1
-			radartank: 1
-			radarship: 1
-			tank1: 3
-			tank2: 3
+			builder: 3
+			radartank: 2
+			radarship: 2
+			sonarsubmarine: 1
+			tank1: 5
+			tank2: 5
 			tank3: 5
 			tank5: 5
-			tank6: 1
-			tank7: 1
-			tank8: 1
-			aatank: 3
-			aatank2: 3
-			tank15: 1
-			tank16: 1
-			chaingunpod: 5
-			artillery: 5
-			cromhabuggy: 3
-			gatlinghawk: 3
-			cromhastealth: 3
-			transprt: 1
-			artil: 5
-			scout1: 1
-			scout2: 1
-			mortarpod: 1
-			flamepod: 1
-			elitepod: 1
-			sniperpod: 1
-			electricpod: 1
-			brokerpod: 9
+			tank6: 3
+			tank7: 3
+			tank8: 3
+			aatank: 4
+			aatank2: 4
+			tank15: 3
+			tank16: 3
+			chaingunpod: 8
+			artillery: 6
+			cromhabuggy: 5
+			gatlinghawk: 5
+			cromhastealth: 5
+			transprt: 3
+			artil: 6
+			mortarpod: 8
+			flamepod: 8
+			elitepod: 8
+			sniperpod: 8
+			electricpod: 8
+			brokerpod: 3
 			technician: 4
-			elitetechnician: 2
-			bomberpod: 1
-			missiletank: 5
+			elitetechnician: 3
+			bomberpod: 4
+			missiletank: 7
 			jet5: 5
 			jet4: 5
 			jet3: 5
@@ -180,46 +182,50 @@ Player:
 			copter: 5
 			copter2: 5
 			banshee: 5
-			balloon: 1
-			saucer: 1
-			boat: 3
-			boat2: 3
-			boat3: 3
-			patrolboat: 3
-			submarine: 2
-			carrier: 2
-			navaltransport: 2
-			waterminelayer: 1
-			waterminelayer2: 1
-			aircraftcarrier: 1
-		UnitLimits:
-			miner: 2
-			minercromha: 2
-			builder: 2
 			balloon: 3
 			saucer: 3
-			radartank: 2
-			radarship: 2
-			tank6: 2
-			tank8: 2
-			boat3: 4
-			submarine: 4
-			submarine2: 1
-			carrier: 4
-			aircraftcarrier: 1
-			waterminelayer: 1
-			waterminelayer2: 1
+			boat: 5
+			boat2: 5
+			boat3: 5
+			patrolboat: 5
+			submarine: 5
+			submarine2: 2
+			submarine3: 2
+			carrier: 5
+			navaltransport: 3
+			waterminelayer: 3
+			waterminelayer2: 3
+			aircraftcarrier: 2
+		UnitLimits:
+			miner: 3
+			minercromha: 3
+			builder: 3
+			balloon: 5
+			saucer: 5
+			radartank: 3
+			radarship: 3
+			sonarsubmarine: 3
+			tank6: 5
+			tank8: 5
+			boat3: 5
+			submarine: 5
+			submarine2: 5
+			carrier: 5
+			aircraftcarrier: 5
+			waterminelayer: 5
+			waterminelayer2: 5
 			technician: 5
-			elitetechnician: 3
-			bomberpod: 4
+			elitetechnician: 5
+			bomberpod: 5
 			brokerpod: 9
-			transprt: 1
+			transprt: 5
 		UnitDelays:
-			builder: 9000
+			jet3: 3000
+			builder: 6500
 	PriorityCaptureManagerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		CapturingActorTypes: technician, elitetechnician
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, miner3, outpost, outpost2, outpost3
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2, miner3, outpost, outpost2, outpost3, base, base2, base3
 		MaximumCaptureTargetOptions: 18
 	MinerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai

@@ -105,6 +105,7 @@ actor-jet2 =
 
 actor-jet3 =
    .description = Fast Stealth Attack Ship
+    Armed with 2 missile guns and a bomb dropper.
       Strong vs Buildings, Air units, Water Units, Ground Units
    .name = Lightning Series 1
 
@@ -118,7 +119,6 @@ actor-jet4 =
 actor-jet5 =
    .description = Stealth Missile Attack Ship
       Strong vs Buildings and Ground Units
-      Weak vs Air Units and Pods
       Can't attack Air Units
       Can detected cloaked submarines
    .name = Nighthawk Series 2

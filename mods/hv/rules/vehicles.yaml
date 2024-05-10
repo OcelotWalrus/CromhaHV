@@ -168,6 +168,7 @@ ARTIL:
 		TurnSpeed: 15
 		Speed: 95
 		Locomotor: wheeled
+		CanMoveBackward: true
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
