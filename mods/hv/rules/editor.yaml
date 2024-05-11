@@ -31,7 +31,7 @@ EditorWorld:
 			oil:
 				ResourceIndex: 10
 				TerrainType: WaterOre
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Dirt, Water, Littoral
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Dirt, Water, Littoral, Pelagic, Oceanic
 				MaxDensity: 3
 			iron:
 				ResourceIndex: 2

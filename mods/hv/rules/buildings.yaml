@@ -3213,7 +3213,7 @@ WATERSITE:
 		Footprint: ++ ++ xx
 		Dimensions: 2,3
 		RequiresBaseProvider: false
-		TerrainTypes: Clear, Water, Littoral, WaterOre, Blocked
+		TerrainTypes: Clear, Water, Littoral, Pelagic, Oceanic, WaterOre, Blocked
 		AllowPlacementOnResources: true
 	Encyclopedia:
 		Description: actor-watersite.encyclopedia
