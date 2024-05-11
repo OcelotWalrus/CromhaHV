@@ -2422,3 +2422,111 @@ flagpost:
 
 watersite:
 	Inherits: miner2
+	Defaults:
+		Filename: watersite
+		ZOffset: 2048
+	make:
+		Filename:
+		Length: 18
+		Tick: 100
+		ShadowStart: 18
+		Combine:
+			0:
+				Filename: bits/watersite.png
+				Length: 18
+				Tick: 100
+			1:
+				Filename: bits/watersite-shadow.png
+				Offset: 15, 36
+				Length: 18
+				Tick: 100
+	idle:
+		Filename:
+		ShadowStart: 1
+		Length: 1
+		Combine:
+			0:
+				Filename: bits/watersite.png
+				Start: 18
+				Length: 1
+			1:
+				Filename: bits/watersite-shadow.png
+				Start: 18
+				Length: 1
+				Offset: 15, 36
+	damaged-idle:
+		Filename:
+		ShadowStart: 1
+		Length: 1
+		Combine:
+			0:
+				Filename: bits/watersite.png
+				Start: 21
+				Length: 1
+			1:
+				Filename: bits/watersite-shadow.png
+				Start: 21
+				Length: 1
+				Offset: 15, 36
+	active:
+		Filename:
+		Length: 3
+		Tick: 300
+		ShadowStart: 3
+		Combine:
+			0:
+				Filename: bits/watersite.png
+				Start: 18
+				Length: 3
+				Tick: 300
+			1:
+				Filename: bits/watersite-shadow.png
+				Start: 18
+				Length: 3
+				Tick: 300
+				Offset: 15, 36
+	depleted:
+		Filename:
+		Length: 3
+		Tick: 600
+		ShadowStart: 3
+		Combine:
+			0:
+				Filename: bits/watersite.png
+				Start: 18
+				Length: 3
+				Tick: 600
+			1:
+				Filename: bits/watersite-shadow.png
+				Start: 18
+				Length: 3
+				Tick: 600
+				Offset: 15, 36
+	damaged-active:
+		Filename:
+		ShadowStart: 1
+		Length: 1
+		Combine:
+			0:
+				Filename: bits/watersite.png
+				Start: 21
+			1:
+				Filename: bits/watersite-shadow.png
+				Start: 21
+				Offset: 15, 36
+	silo:
+		Filename: bits/watersite.png
+		Start: 22
+		Length: 20
+	flame:
+		Filename: bits/flame2.png
+		Offset: 3, 16
+		ZOffset: 3072
+	flame2:
+		Filename: bits/flame2.png
+		Offset: -13, 14
+		ZOffset: 3072
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 16
+		Offset: 0, 0
