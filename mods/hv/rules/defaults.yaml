@@ -192,6 +192,17 @@
 		UseDeathTypeSuffix: false
 		DeathSequencePalette: green
 		FallbackSequence: die
+	GrantConditionOnTerrain:
+		Condition: validterrain
+		TerrainTypes: Tree
+	Cloak:
+		DetectionTypes: Woods
+		InitialDelay: 60
+		CloakDelay: 60
+		CloakSound: stealth_on_humanoide9000.wav
+		UncloakSound: stealth_off_humanoide9000.wav
+		IsPlayerPalette: true
+		PauseOnCondition: !validterrain
 	Crushable:
 		CrushClasses: Pods
 		WarnProbability: 15

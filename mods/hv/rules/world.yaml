@@ -49,7 +49,7 @@
 			Blocked: 100
 	Locomotor@Pod:
 		Name: pod
-		Crushes: Cube, Scrap, Mine
+		Crushes: Cube, Scrap, Mine, Tree
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
@@ -71,6 +71,7 @@
 			Sand Ramp: 80
 			Stone: 100
 			Tech: 100
+			Tree: 80
 			Rail: 80
 			Blocked: 90
 	Locomotor@Wheeled:
