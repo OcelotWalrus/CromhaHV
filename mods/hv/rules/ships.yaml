@@ -753,3 +753,51 @@ MINERSHIP:
 	Voiced:
 		VoiceSet: MinerVoice
 	-Guard:
+
+ROCKETBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: actor-rocketboat.name
+		GenericName: actor-rocketboat.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: radar
+		BuildPaletteOrder: 31
+		Description: actor-rocketboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 90
+		TurnSpeed: 50
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	DetectCloaked:
+		Range: 5c0
+		DetectionTypes: Underwater
+	RenderDetectionCircle:
+	Turreted:
+		TurnSpeed: 60
+		Offset: 150,0,100
+	Armament@Primary:
+		Weapon: ShipRocket
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: RapidShipRocket
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:

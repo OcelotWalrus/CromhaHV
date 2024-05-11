@@ -635,6 +635,13 @@ actor-boat =
       Strong vs Water
       Can't attack Pods, Buildings, Vehicles or Air
 
+actor-rocketboat =
+   .name = Rocket Boat
+   .generic-name = Boat
+   .description = A boat with a rocket launcher turret.
+      Strong vs Water and Pods
+      Can't attack Air
+
 actor-submarine2 =
    .name = Submarine
    .generic-name = Submarine

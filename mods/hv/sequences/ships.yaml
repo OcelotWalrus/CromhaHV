@@ -269,3 +269,20 @@ minership:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 34
+
+rocketboat:
+	idle:
+		Filename: bits/rocketboat.png
+		Facings: 8
+	turret:
+		Filename: bits/rocketboat.png
+		Start: 8
+		Facings: 8
+	muzzle:
+		Filename: bits/muzzle2.png
+		Length: 3
+		Facings: 8
+		Tick: 50
+	icon:
+		Filename: bits/units-icons.png
+		Start: 66
