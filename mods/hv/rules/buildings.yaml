@@ -3284,7 +3284,7 @@ WATERREFINERY:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Power:
-		Amount: -345
+		Amount: -30
 	RenderSprites:
 		Image: storage2
 		FactionImages:

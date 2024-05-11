@@ -234,7 +234,7 @@ Player:
 	MinerBotModule@CromhaAI:
 		RequiresCondition: enable-cromha-ai
 		DeployableActorTypes: miner, minercromha, minership
-		DeployableTerrainTypes: Ore
+		DeployableTerrainTypes: Ore, WaterOre
 		DeployedActorTypes: miner2, miner3, watersite
 		VehiclesQueue: Utility
 	MinelayerBotModule@CromhaAI:

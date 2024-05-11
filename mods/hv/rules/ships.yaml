@@ -367,6 +367,8 @@ CARRIER:
 		BuildPaletteOrder: 60
 		Prerequisites: ~harbor.yi, techcenter
 		Description: actor-carrier.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Valued:
 		Cost: 2500
 	Tooltip:
