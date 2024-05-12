@@ -583,5 +583,5 @@ Actors:
 	Actor168: light
 		Owner: Neutral
 		Location: 115,103
-		
+
 Rules: rules.yaml
