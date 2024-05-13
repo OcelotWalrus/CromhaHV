@@ -207,6 +207,12 @@ Actors:
 	Actor49: generator2
 		Owner: Synapol Corporation
 		Location: 28,2
+	SpawningWaypoint: entry
+		Owner: Neutral
+		Location: 28,2
+	DestinationWaypoint: entry
+		Owner: Neutral
+		Location: 31,61
 	Actor50: module2
 		Owner: Synapol Corporation
 		Location: 30,7

@@ -18,6 +18,11 @@ build-module = Build a module to train pods.
 ## ice-river
 eliminate-all-competitors = Eliminate all competitors in the area.
 
+## magma-breach-claim
+claim-land = Claim the lands Yuruki by eliminating all Synapol units.
+build-all-towers = Build mining towers at all available resource deposits.
+reinforcements-incoming = Synapol reinforcement incoming.
+
 ## crater-defense
 not-too-many-enemies-through-trench = Do not allow too many enemies to exit the trench.
 current-wave = Wave: { $wave } / { $waves }

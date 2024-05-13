@@ -77,6 +77,10 @@ ORESMELT:
 	CashTrickler:
 		ShowTicks: false
 
+OREPURIFIER:
+	CashTrickler:
+		ShowTicks: false
+
 EXTRACTOR:
 	CashTrickler:
 		ShowTicks: false

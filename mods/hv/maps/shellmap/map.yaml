@@ -4,7 +4,7 @@ RequiresMod: hv
 
 Title: Shellmap
 
-Author: Matt, Dzierzan, SiegeSpud
+Author: Matt, Dzierzan, SiegeSpud, Cromha
 
 Tileset: PLANET
 
@@ -26,10 +26,10 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
-	PlayerReference@Yuruki Industries:
-		Name: Yuruki Industries
-		Faction: yi
-		Color: 003897
+	PlayerReference@Cromha Corp:
+		Name: Cromha Corp
+		Faction: cc
+		Color: 00FFFF
 		Enemies: Creeps
 	PlayerReference@Synapol Corporation:
 		Name: Synapol Corporation
@@ -656,7 +656,7 @@ Actors:
 	Actor1: mother
 		Location: 60,90
 		Faction: Random
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 	Actor344: silo
 		Faction: Random
 		Location: 81,22
@@ -1516,9 +1516,6 @@ Actors:
 	Actor662: treegrs10
 		Owner: Neutral
 		Location: 128,100
-	Actor663: treegrs10
-		Owner: Neutral
-		Location: 122,106
 	Actor664: treegrs10
 		Owner: Neutral
 		Location: 119,89
@@ -2046,677 +2043,659 @@ Actors:
 		Owner: Synapol Corporation
 		Location: 84,27
 	Actor935: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,90
 	Actor936: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,96
 	Actor939: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,93
 	Actor940: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,90
 	Actor941: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,93
 	Actor942: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,96
 	Actor945: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 54,87
 	Actor946: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,87
 	Actor947: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 56,87
 	Actor948: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 57,87
 	Actor949: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 58,87
 	Actor952: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 61,87
 	Actor953: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 62,87
 	Actor954: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 64,87
 	Actor955: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 63,87
 	Actor958: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 68,87
 	Actor959: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 67,87
 	Actor960: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,87
 	Actor962: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 71,87
 	Actor963: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,88
 	Actor964: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,89
 	Actor965: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,90
 	Actor967: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,91
 	Actor970: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,96
 	Actor972: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,97
 	Actor973: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,98
 	Actor974: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,99
 	Actor981: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 56,100
 	Actor982: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 54,100
 	Actor983: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,100
 	Actor984: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 57,100
 	Actor987: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 68,100
 	Actor988: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 67,100
 	Actor989: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,100
 	Actor990: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 70,100
 	Actor991: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 71,100
 	Actor992: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,99
 	Actor993: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,98
 	Actor994: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,97
 	Actor995: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,96
 	Actor999: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,91
 	Actor1000: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,91
 	Actor1002: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,90
 	Actor1003: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,88
 	Actor1004: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,89
 	Actor961: hgate
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 64,100
 	Actor977: hgate
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 59,100
 	Actor978: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 58,100
 	Actor979: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 62,100
 	Actor980: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 63,100
 	Actor985: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 70,87
 	Actor943: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 71,88
 	Actor944: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 54,88
 	Actor975: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 54,99
 	Actor976: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 71,99
 	Actor1006: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,86
 	Actor1007: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 52,86
 	Actor1008: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 52,99
 	Actor1009: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,99
 	Actor1010: minipod3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Location: 65,96
 		Facing: 729
 	Actor1011: minipod3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		Location: 65,96
 		SubCell: 2
 	Actor1012: minipod3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		Location: 64,96
 		SubCell: 1
 	Actor1013: minipod3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Location: 60,95
 		Facing: 0
 	Actor1014: minipod3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 65,91
 	Actor1015: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 52,81
 	Actor1016: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,81
 	Actor1023: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 59,81
 	Actor1024: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 61,81
 	Actor1025: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 60,81
 	Actor1028: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 65,81
 	Actor1030: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 66,81
 	Actor1036: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 71,81
 	Actor1019: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 64,81
 	Actor1021: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 61,82
 	Actor1034: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 64,82
 	Actor1046: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 65,86
 	Actor1047: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 59,86
 	Actor950: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 67,88
 	Actor951: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 64,88
 	Actor956: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 65,88
 	Actor957: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 66,88
 	Actor1048: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 58,88
 	Actor1049: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 59,88
 	Actor1050: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 60,88
 	Actor1051: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 61,88
 	Actor986: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,81
 	Actor1005: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 73,81
 	Actor1018: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 74,81
 	Actor1035: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 75,81
 	Actor1052: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 76,80
 	Actor1053: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 78,81
 	Actor1054: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 75,82
 	Actor1055: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 76,82
 	Actor1056: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 77,82
 	Actor1057: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 78,82
 	Actor1058: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 79,81
 	Actor1088: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 51,81
 	Actor1059: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 80,81
 	Actor1061: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 84,81
 	Actor1062: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 85,81
 	Actor1063: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 86,81
 	Actor1064: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 87,80
 	Actor1065: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 89,81
 	Actor1066: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 86,82
 	Actor1067: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 87,82
 	Actor1089: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 88,82
 	Actor1090: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 89,82
 	Actor1091: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 79,80
 	Actor1092: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 85,80
 	Actor1093: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 85,82
 	Actor1094: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 79,82
 	Actor1060: hgate
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 81,81
 	Actor1095: module
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 79,88
 	Actor1096: module
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 79,92
-	Actor1097: starport
-		Owner: Yuruki Industries
-		Location: 89,92
-	Actor1098: starport
-		Owner: Yuruki Industries
-		Location: 92,92
 	Actor1068: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 40,80
 	Actor1069: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 46,80
 	Actor1073: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 40,81
 	Actor1074: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 41,81
 	Actor1075: hgate
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 42,81
 	Actor1076: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 45,81
 	Actor1077: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 46,81
 	Actor1078: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 47,81
 	Actor1079: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 48,80
 	Actor1080: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 50,81
 	Actor1085: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 40,82
 	Actor1086: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 46,82
 	Actor1087: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 47,82
 	Actor1101: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 48,82
 	Actor1102: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 49,82
 	Actor1103: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 50,82
-	Actor1099: starport
-		Owner: Yuruki Industries
-		Location: 89,103
-	Actor1105: base
-		Owner: Yuruki Industries
-		Location: 62,102
-	Actor1106: uplink
-		Owner: Yuruki Industries
-		Location: 68,101
-	Actor1100: radar
-		Owner: Yuruki Industries
-		Location: 92,104
 	Actor1109: factory3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 45,90
 	Actor1110: factory3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 40,90
 	Actor1071: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,80
 		TurretFacing: 103
 	Actor1072: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 32,81
 	Actor1081: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 33,81
 	Actor1082: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 34,81
 	Actor1083: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 35,81
 	Actor1084: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 36,81
 	Actor1111: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 37,80
 	Actor1112: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 39,81
 	Actor1113: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,82
 	Actor1114: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,82
 	Actor1115: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 32,82
 	Actor1116: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 36,82
 	Actor1117: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 37,82
 	Actor1118: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 38,82
 	Actor1119: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 39,82
 	Actor1070: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,83
 	Actor1104: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,84
 	Actor1120: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,85
 	Actor1122: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,85
 	Actor1123: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,86
 	Actor1124: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,87
 	Actor1126: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,88
 	Actor1127: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,89
 	Actor1128: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,90
 	Actor1132: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,92
 	Actor1134: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,93
 	Actor1135: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,94
 	Actor1136: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,95
 	Actor1137: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,95
 	Actor1139: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,96
 	Actor1140: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,97
 	Actor1141: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,97
 	Actor1142: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,98
 	Actor1143: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,99
 	Actor1150: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,103
 	Actor1151: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,104
 	Actor1153: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,105
 	Actor1155: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,106
 	Actor1157: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,107
 	Actor1125: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,87
 	Actor1121: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 29,85
 		TurretFacing: 261
 	Actor1138: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 29,95
 		TurretFacing: 222
 	Actor1041: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 71,82
 	Actor1017: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 54,81
 	Actor1045: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 54,82
 	Actor1020: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 57,81
 	Actor1022: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 58,81
 	Actor1044: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,82
 	Actor1043: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 56,82
 	Actor1042: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 57,82
 	Actor1032: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 67,81
 	Actor1031: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 68,81
 	Actor1038: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 68,82
 	Actor1039: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,82
 	Actor1040: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 70,82
 	Actor1027: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,80
 	Actor1029: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,80
 	Actor1026: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 62,81
 	Actor1033: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 62,81
 	Actor1037: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 63,81
 	Actor1107: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 61,80
 	Actor1108: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 64,80
 	Actor1146: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,91
 	Actor1144: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 29,98
 	Actor1147: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 29,104
 	Actor1131: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 34,84
 	Actor1133: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 41,88
 	Actor1130: vgate
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,100
 	Actor1129: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 32,90
 	Actor1148: storage
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 33,103
 		FreeActor: False
 	Actor1145: storage
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 33,96
 		FreeActor: False
 	Actor1149: tradplat
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 46,85
 	Actor1160: storage
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 45,99
 		FreeActor: False
 	Actor971: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,95
 	Actor969: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,94
 	Actor968: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,93
 	Actor966: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,92
 	Actor998: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,93
 	Actor997: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,94
 	Actor996: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,95
 	Actor1001: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,92
 	Actor1161: prop9
 		Owner: Neutral
@@ -2751,449 +2730,413 @@ Actors:
 		Faction: yi
 		Location: 52,106
 	Actor1170: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 58,107
 	Actor1171: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 67,107
 	Actor1172: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 78,98
 	Actor1173: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 78,101
 	Actor1174: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 78,104
 	Actor1175: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 85,85
 	Actor1176: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 88,85
 	Actor1177: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 93,85
 	Actor1178: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 96,85
 	Actor1179: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 93,80
 	Actor1180: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 96,80
 	Actor1181: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 90,81
 	Actor1182: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 91,81
 	Actor1183: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 92,81
 	Actor1184: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 93,81
 	Actor1185: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 94,81
 	Actor1186: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 95,81
 	Actor1187: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 96,81
 	Actor1188: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 97,81
 	Actor1189: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 98,81
 	Actor1190: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 99,81
 	Actor1191: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 100,81
 	Actor1192: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,80
 		TurretFacing: 927
 	Actor1194: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 93,82
 	Actor1195: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 94,81
 	Actor1196: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 96,82
 	Actor1197: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 100,82
 	Actor1198: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,82
 	Actor1193: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,82
 	Actor1199: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,83
 	Actor1200: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,84
 	Actor1201: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,85
 	Actor1202: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,85
 	Actor1203: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,86
 	Actor1204: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,87
 	Actor1205: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,87
 	Actor1206: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,88
 	Actor1207: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,89
 	Actor1208: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,90
 	Actor1209: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,91
 	Actor1210: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,93
 	Actor1211: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,92
 	Actor1212: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,94
 	Actor1213: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 99,92
 	Actor1214: aaturret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 99,103
 	Actor1215: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,85
 		TurretFacing: 769
 	Actor1216: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 39,104
 	Actor1217: generator
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 39,107
-	Actor1228: generator
-		Owner: Yuruki Industries
-		Location: 37,116
-	Actor1229: generator
-		Owner: Yuruki Industries
-		Location: 40,116
-	Actor1230: generator
-		Owner: Yuruki Industries
-		Location: 40,118
-	Actor1231: generator
-		Owner: Yuruki Industries
-		Location: 37,118
-	Actor1232: generator
-		Owner: Yuruki Industries
-		Location: 58,116
-	Actor1233: generator
-		Owner: Yuruki Industries
-		Location: 61,116
-	Actor1234: generator
-		Owner: Yuruki Industries
-		Location: 58,118
-	Actor1235: generator
-		Owner: Yuruki Industries
-		Location: 61,118
 	Actor1236: treegrs10
 		Owner: Neutral
 		Location: 88,109
-	Actor1237: generator
-		Owner: Yuruki Industries
-		Location: 89,114
-	Actor1238: generator
-		Owner: Yuruki Industries
-		Location: 92,114
-	Actor1239: generator
-		Owner: Yuruki Industries
-		Location: 89,116
-	Actor1240: generator
-		Owner: Yuruki Industries
-		Location: 92,116
 	Actor1220: extractor
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 73,109
 	Actor1218: extractor
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 77,110
 	Actor1219: extractor
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 74,112
 	Actor1152: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,105
 	Actor1154: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 29,105
 		TurretFacing: 269
 	Actor1156: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,107
 	Actor1158: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,108
 	Actor1159: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,109
 	Actor1221: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,110
 	Actor1222: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,111
 	Actor1223: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,112
 	Actor1224: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,113
 	Actor1225: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,114
 	Actor1226: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,115
 	Actor1227: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 29,115
 		TurretFacing: 261
 	Actor1244: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,117
 	Actor1245: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,115
 	Actor1246: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,116
 	Actor1247: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,117
 	Actor1248: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,118
 	Actor1249: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,119
 	Actor1250: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,120
 	Actor1251: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,121
 	Actor1252: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,122
 	Actor1253: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,123
 	Actor1254: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 31,123
 	Actor1255: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 32,123
 	Actor1256: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 32,124
 	Actor1257: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 33,124
 	Actor1258: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 34,124
 	Actor1259: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 35,124
 	Actor1260: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 36,124
 	Actor1261: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 37,124
 	Actor1262: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 38,124
 	Actor1263: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 39,124
 	Actor1264: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 40,124
 	Actor1265: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 41,124
 	Actor1266: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 42,124
 	Actor1267: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 43,124
 	Actor1268: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 45,124
 	Actor1269: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 44,124
 	Actor1270: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 47,124
 	Actor1271: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 48,124
 	Actor1272: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 49,124
 	Actor1273: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 50,124
 	Actor1274: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 51,124
 	Actor1275: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 52,124
 	Actor1276: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 54,124
 	Actor1277: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 53,124
 	Actor1278: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 56,124
 	Actor1279: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 55,124
 	Actor1280: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 57,124
 	Actor1281: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 59,124
 	Actor1282: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 58,124
 	Actor1283: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 61,124
 	Actor1284: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 60,124
 	Actor1285: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 62,124
 	Actor1287: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 64,124
 	Actor1288: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 65,124
 	Actor1289: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 63,124
 	Actor1290: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 66,124
 	Actor1291: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 68,124
 	Actor1292: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 70,124
 	Actor1293: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 72,124
 	Actor1294: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 74,124
 	Actor1295: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 75,124
 	Actor1296: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 73,124
 	Actor1297: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 71,124
 	Actor1298: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 69,124
 	Actor1299: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 67,124
 	Actor1300: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 76,124
 	Actor1301: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 77,124
 	Actor1302: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 78,124
 	Actor1303: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 79,124
 	Actor1304: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 80,124
 	Actor1305: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 81,124
 	Actor1306: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 82,124
 	Actor1307: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 83,124
 	Actor1308: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 84,124
 	Actor1309: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 85,124
 	Actor1310: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 86,124
 	Actor1311: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 87,124
 	Actor1312: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 88,124
 	Actor1313: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 89,124
 	Actor1314: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 46,124
 	Actor1315: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 30,123
 		TurretFacing: 388
 	Actor1316: module2
@@ -3206,174 +3149,168 @@ Actors:
 		Owner: Synapol Corporation
 		Location: 55,9
 	Actor1319: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,95
 	Actor1320: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,95
 	Actor1321: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,96
 	Actor1322: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,97
 	Actor1323: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,97
 	Actor1324: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,98
 	Actor1325: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,99
 	Actor1326: vgate
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,100
 	Actor1327: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,103
 	Actor1328: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,104
 	Actor1329: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,105
 	Actor1330: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,105
 	Actor1331: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,106
 	Actor1332: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,106
 	Actor1333: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,107
 	Actor1334: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,107
 	Actor1335: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,108
 	Actor1336: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,109
 	Actor1338: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,110
 	Actor1339: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,111
 	Actor1341: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,112
 	Actor1342: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,113
 	Actor1343: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,114
 	Actor1344: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,115
 	Actor1345: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,115
 	Actor1346: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,117
 	Actor1347: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,117
 	Actor1348: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,118
 	Actor1349: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,116
 	Actor1350: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,119
 	Actor1351: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,120
 	Actor1352: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,121
 	Actor1353: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,95
 		TurretFacing: 753
 	Actor1354: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,105
 		TurretFacing: 745
 	Actor1355: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,115
 		TurretFacing: 824
 	Actor1356: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 90,124
 	Actor1357: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 94,124
 	Actor1358: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 92,124
 	Actor1359: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 91,124
 	Actor1360: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 93,124
 	Actor1361: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 95,124
 	Actor1362: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 96,124
 	Actor1364: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 97,124
 	Actor1365: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 98,124
 	Actor1366: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 99,124
 	Actor1367: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,122
 	Actor1368: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 102,123
 	Actor1369: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,123
 	Actor1370: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 100,123
 	Actor1371: barrier
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 100,124
 	Actor1372: turret
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 101,123
 		TurretFacing: 586
 	Actor1375: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 103,98
 	Actor1376: bunker
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 103,104
-	Actor1377: generator
-		Owner: Yuruki Industries
-		Location: 95,114
-	Actor1378: generator
-		Owner: Yuruki Industries
-		Location: 95,116
 	Actor1379: base_light
 		Owner: Neutral
 		Location: 63,95
@@ -3446,9 +3383,6 @@ Actors:
 	Actor1403: resourcelight
 		Owner: Neutral
 		Location: 94,81
-	Actor1165: field
-		Owner: Yuruki Industries
-		Location: 49,109
 	Actor1404: resourcelight
 		Owner: Neutral
 		Location: 48,111
@@ -3627,10 +3561,10 @@ Actors:
 		Owner: Neutral
 		Location: 114,110
 	Actor1374: harbor
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 108,111
 	Actor1443: harbor
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 111,111
 	Actor1444: small_blue_light
 		Owner: Neutral
@@ -3924,22 +3858,22 @@ Actors:
 		Owner: Neutral
 		Location: 117,107
 	Actor1467: miner2
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 116,105
 	Actor1466: miner2
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 16,97
 	Actor1511: resourcelight
 		Owner: Neutral
 		Location: 17,99
 	Actor1464: miner2
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 11,92
 	Actor1520: resourcelight
 		Owner: Neutral
 		Location: 12,94
 	Actor1465: miner2
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Location: 16,89
 	Actor1523: resourcelight
 		Owner: Neutral
@@ -3953,7 +3887,7 @@ Actors:
 	Actor1469: miner2
 		Location: 27,119
 		Faction: Random
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 	Actor1536: worm
 		Owner: Neutral
 		Location: 75,52
@@ -3980,95 +3914,95 @@ Actors:
 		Location: 83,4
 	Actor1558: gull2
 		Owner: Neutral
-		Facing: 384
 		Location: 113,122
+		Facing: 384
 	Actor1286: minipod1
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 60,106
 	Actor1337: minipod1
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 87,105
 	Actor1340: minipod5
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 42,96
 	Actor1363: minipod5
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 44,89
 	Actor1562: minipod1
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Location: 87,112
 		Facing: 808
 	Actor1563: minipod4
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 69,117
 	Actor1564: minipod6
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 44,121
 	Actor1565: minipod6
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Location: 43,111
 		Facing: 674
 	Actor1566: minipod4
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 5,59
 	Actor1567: minipod4
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 12,55
 	Actor1568: minipod3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 11,53
 	Actor1569: minipod3
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 7,50
 	Actor1570: minipod6
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 14,57
 	Actor1571: minipod6
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 4,62
 	Actor1572: minipod4
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 3,53
 	Actor1573: minipod4
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 4,49
 	Actor1574: minipod5
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		SubCell: 1
 		Facing: 384
 		Location: 9,55
 	Actor1575: minipod5
-		Owner: Yuruki Industries
+		Owner: Cromha Corp
 		Facing: 384
 		SubCell: 1
 		Location: 9,49
@@ -4141,5 +4075,778 @@ Actors:
 	Actor1588: prop4
 		Owner: Neutral
 		Location: 105,49
+	Actor1589: base3
+		Owner: Cromha Corp
+		Location: 62,102
+	Actor1590: orbitalstrike
+		Owner: Cromha Corp
+		Location: 68,101
+	Actor1591: howitzer2
+		Owner: Cromha Corp
+		Location: 49,108
+		TurretFacing: 924
+	Actor1592: submarine3
+		Owner: Cromha Corp
+		Location: 110,118
+		Facing: 246
+	Actor1593: sonarsubmarine
+		Owner: Cromha Corp
+		Location: 112,117
+		Facing: 500
+	Actor1594: sonarsubmarine
+		Owner: Cromha Corp
+		Location: 110,116
+		Facing: 451
+	Actor1595: radarship
+		Owner: Cromha Corp
+		Location: 113,120
+		Facing: 1023
+	Actor1596: rocketboat
+		Owner: Cromha Corp
+		Location: 109,122
+		Facing: 507
+	Actor1597: rocketboat
+		Owner: Cromha Corp
+		Location: 108,121
+		Facing: 522
+		TurretFacing: 825
+	Actor1598: rocketboat
+		Owner: Cromha Corp
+		Location: 110,120
+		Facing: 384
+		TurretFacing: 232
+	Actor1599: rocketboat
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 110,122
+	Actor1600: boat4
+		Owner: Cromha Corp
+		Location: 115,123
+		Facing: 384
+		TurretFacing: 239
+	Actor1601: boat4
+		Owner: Cromha Corp
+		Location: 114,122
+		Facing: 613
+		TurretFacing: 317
+	Actor1602: boat4
+		Owner: Cromha Corp
+		Location: 116,122
+		Facing: 384
+		TurretFacing: 183
+	Actor1603: carrier2
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 114,127
+	Actor1604: carrier
+		Owner: Cromha Corp
+		Location: 123,120
+		Facing: 275
+	Actor1605: carrier
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 126,119
+	Actor1607: waterrefinery
+		Owner: Cromha Corp
+		Location: 125,123
+	Actor1606: minership
+		Owner: Cromha Corp
+		Location: 125,124
+		Facing: 1001
+	Actor1608: watersite
+		Owner: Cromha Corp
+		Location: 121,123
+	Actor1609: watersite
+		Owner: Cromha Corp
+		Location: 119,121
+	Actor1610: dropzone
+		Owner: Cromha Corp
+		Location: 81,120
+	Actor1611: dropzone
+		Owner: Cromha Corp
+		Location: 77,120
+	Actor1612: dropzone
+		Owner: Cromha Corp
+		Location: 73,120
+	Actor1613: dropzone
+		Owner: Cromha Corp
+		Location: 69,120
+	Actor1615: sparklamp
+		Owner: Cromha Corp
+		Location: 83,120
+	Actor1616: sparklamp
+		Owner: Cromha Corp
+		Location: 81,120
+	Actor1617: sparklamp
+		Owner: Cromha Corp
+		Location: 79,120
+	Actor1618: sparklamp
+		Owner: Cromha Corp
+		Location: 77,120
+	Actor1619: sparklamp
+		Owner: Cromha Corp
+		Location: 75,120
+	Actor1620: sparklamp
+		Owner: Cromha Corp
+		Location: 73,120
+	Actor1621: sparklamp
+		Owner: Cromha Corp
+		Location: 71,120
+	Actor1622: sparklamp
+		Owner: Cromha Corp
+		Location: 69,120
+	Actor1623: sparklamp
+		Owner: Cromha Corp
+		Location: 69,122
+	Actor1624: sparklamp
+		Owner: Cromha Corp
+		Location: 71,122
+	Actor1625: sparklamp
+		Owner: Cromha Corp
+		Location: 73,122
+	Actor1626: sparklamp
+		Owner: Cromha Corp
+		Location: 75,122
+	Actor1627: sparklamp
+		Owner: Cromha Corp
+		Location: 79,122
+	Actor1628: sparklamp
+		Owner: Cromha Corp
+		Location: 81,122
+	Actor1629: sparklamp
+		Owner: Cromha Corp
+		Location: 83,122
+	Actor1614: sparklamp
+		Owner: Cromha Corp
+		Location: 77,122
+	Actor1630: flagpost
+		Owner: Cromha Corp
+		Location: 76,121
+		Health: 97
+	Actor1631: reconstructor
+		Owner: Cromha Corp
+		Location: 71,102
+	Actor1632: crane
+		Owner: Cromha Corp
+		Location: 16,120
+	Actor1633: crane
+		Owner: Cromha Corp
+		Location: 23,122
+	Actor1634: crane2
+		Owner: Cromha Corp
+		Location: 105,121
+	Actor1635: crane2
+		Owner: Cromha Corp
+		Location: 106,113
+	Actor1636: prop5
+		Owner: Cromha Corp
+		Location: 120,115
+	Actor1637: prop5
+		Owner: Cromha Corp
+		Location: 122,114
+	Actor1638: prop5
+		Owner: Cromha Corp
+		Location: 119,112
+	Actor1639: prop6
+		Owner: Cromha Corp
+		Location: 119,115
+	Actor1640: prop6
+		Owner: Cromha Corp
+		Location: 123,113
+	Actor1641: prop6
+		Owner: Cromha Corp
+		Location: 121,113
+	Actor1642: prop6
+		Owner: Cromha Corp
+		Location: 121,115
+	Actor1643: prop8
+		Owner: Cromha Corp
+		Location: 122,114
+	Actor1644: prop7
+		Owner: Cromha Corp
+		Location: 118,114
+	Actor1645: prop9
+		Owner: Cromha Corp
+		Location: 120,113
+	Actor1646: mayanpyramid
+		Owner: Cromha Corp
+		Location: 123,108
+	Actor1647: mayanobelisk
+		Owner: Cromha Corp
+		Location: 122,110
+	Actor1648: mayanobelisk
+		Owner: Cromha Corp
+		Location: 125,110
+	Actor1649: mayanobelisk
+		Owner: Cromha Corp
+		Location: 125,107
+	Actor1650: mayanobelisk
+		Owner: Cromha Corp
+		Location: 122,107
+	Actor1651: mayanpyramid2
+		Owner: Cromha Corp
+		Location: 124,111
+	Actor1652: tradplat
+		Owner: Cromha Corp
+		Location: 104,103
+	Actor1653: tradplat
+		Owner: Cromha Corp
+		Location: 104,97
+	Actor1654: tradplat
+		Owner: Cromha Corp
+		Location: 115,95
+	Actor1655: tradplat
+		Owner: Cromha Corp
+		Location: 110,95
+	Actor1656: jet3
+		Owner: Cromha Corp
+		Location: 105,104
+		Facing: 0
+	Actor1657: jet3
+		Owner: Cromha Corp
+		Location: 105,98
+		Facing: 1008
+	Actor1658: jet1
+		Owner: Cromha Corp
+		Location: 116,96
+		Facing: 1023
+	Actor1659: jet1
+		Owner: Cromha Corp
+		Location: 111,96
+		Facing: 1023
+	Actor1660: minercromha
+		Owner: Cromha Corp
+		Location: 15,94
+		Facing: 176
+	Actor1662: copter2cromha
+		Owner: Cromha Corp
+		Location: 113,104
+		Facing: 1001
+	Actor1661: tradplat
+		Owner: Cromha Corp
+		Location: 112,103
+	Actor1663: radar3
+		Owner: Cromha Corp
+		Location: 92,104
+	Actor1664: starport3
+		Owner: Cromha Corp
+		Location: 89,103
+	Actor1665: starport3
+		Owner: Cromha Corp
+		Location: 89,92
+	Actor1666: starport3
+		Owner: Cromha Corp
+		Location: 92,92
+	Actor1377: nucleargenerator
+		Owner: Cromha Corp
+		Location: 95,114
+	Actor1378: nucleargenerator
+		Owner: Cromha Corp
+		Location: 95,116
+	Actor1667: nucleargenerator
+		Owner: Cromha Corp
+		Location: 93,116
+	Actor1668: nucleargenerator
+		Owner: Cromha Corp
+		Location: 91,116
+	Actor1669: nucleargenerator
+		Owner: Cromha Corp
+		Location: 89,116
+	Actor1670: nucleargenerator
+		Owner: Cromha Corp
+		Location: 89,114
+	Actor1671: nucleargenerator
+		Owner: Cromha Corp
+		Location: 91,114
+	Actor1672: nucleargenerator
+		Owner: Cromha Corp
+		Location: 93,114
+	Actor1673: nucleargenerator
+		Owner: Cromha Corp
+		Location: 61,116
+	Actor1674: nucleargenerator
+		Owner: Cromha Corp
+		Location: 61,118
+	Actor1675: nucleargenerator
+		Owner: Cromha Corp
+		Location: 58,116
+	Actor1676: nucleargenerator
+		Owner: Cromha Corp
+		Location: 58,118
+	Actor1677: nucleargenerator
+		Owner: Cromha Corp
+		Location: 40,116
+	Actor1678: nucleargenerator
+		Owner: Cromha Corp
+		Location: 40,118
+	Actor1679: nucleargenerator
+		Owner: Cromha Corp
+		Location: 37,118
+	Actor1680: nucleargenerator
+		Owner: Cromha Corp
+		Location: 37,116
+	Actor1681: amplifier
+		Owner: Cromha Corp
+		Location: 39,83
+	Actor1682: amplifier
+		Owner: Cromha Corp
+		Location: 47,83
+	Actor1683: amplifier
+		Owner: Cromha Corp
+		Location: 62,83
+	Actor1684: amplifier
+		Owner: Cromha Corp
+		Location: 79,83
+	Actor1685: amplifier
+		Owner: Cromha Corp
+		Location: 85,83
+	Actor1687: clusterturret
+		Owner: Cromha Corp
+		Location: 38,83
+	Actor1688: clusterturret
+		Owner: Cromha Corp
+		Location: 48,83
+	Actor1689: clusterturret
+		Owner: Cromha Corp
+		Location: 64,83
+	Actor1690: clusterturret
+		Owner: Cromha Corp
+		Location: 61,83
+	Actor1691: clusterturret
+		Owner: Cromha Corp
+		Location: 78,83
+	Actor1692: clusterturret
+		Owner: Cromha Corp
+		Location: 86,83
+	Actor1693: clusterturret
+		Owner: Cromha Corp
+		Location: 93,83
+	Actor1686: clusterturret
+		Owner: Cromha Corp
+		Location: 96,83
+	Actor1694: amplifier
+		Owner: Cromha Corp
+		Location: 94,83
+	Actor1695: amplifier
+		Owner: Cromha Corp
+		Location: 32,96
+	Actor1696: amplifier
+		Owner: Cromha Corp
+		Location: 32,86
+	Actor1697: amplifier
+		Owner: Cromha Corp
+		Location: 32,106
+	Actor1698: clusterturret
+		Owner: Cromha Corp
+		Location: 32,107
+	Actor1699: clusterturret
+		Owner: Cromha Corp
+		Location: 32,105
+	Actor1700: clusterturret
+		Owner: Cromha Corp
+		Location: 32,97
+	Actor1701: clusterturret
+		Owner: Cromha Corp
+		Location: 32,95
+	Actor1702: clusterturret
+		Owner: Cromha Corp
+		Location: 32,87
+	Actor1703: clusterturret
+		Owner: Cromha Corp
+		Location: 32,85
+	Actor1704: amplifier
+		Owner: Cromha Corp
+		Location: 100,86
+	Actor1705: amplifier
+		Owner: Cromha Corp
+		Location: 100,96
+	Actor1706: amplifier
+		Owner: Cromha Corp
+		Location: 100,106
+	Actor1707: amplifier
+		Owner: Cromha Corp
+		Location: 100,116
+	Actor1708: clusterturret
+		Owner: Cromha Corp
+		Location: 100,115
+	Actor1709: clusterturret
+		Owner: Cromha Corp
+		Location: 100,117
+	Actor1710: clusterturret
+		Owner: Cromha Corp
+		Location: 100,105
+	Actor1711: clusterturret
+		Owner: Cromha Corp
+		Location: 100,107
+	Actor1712: clusterturret
+		Owner: Cromha Corp
+		Location: 100,97
+	Actor1713: clusterturret
+		Owner: Cromha Corp
+		Location: 100,95
+	Actor1714: clusterturret
+		Owner: Cromha Corp
+		Location: 100,85
+	Actor1715: clusterturret
+		Owner: Cromha Corp
+		Location: 100,87
+	Actor1716: orepurifier
+		Owner: Cromha Corp
+		Location: 72,111
+	Actor1717: orepurifier
+		Owner: Cromha Corp
+		Location: 74,114
+	Actor1718: orepurifier
+		Owner: Cromha Corp
+		Location: 78,112
+	Actor1719: orepurifier
+		Owner: Cromha Corp
+		Location: 76,110
+	Actor1720: orepurifier
+		Owner: Cromha Corp
+		Location: 13,98
+	Actor1721: orepurifier
+		Owner: Cromha Corp
+		Location: 17,95
+	Actor1722: orepurifier
+		Owner: Cromha Corp
+		Location: 14,94
+	Actor1723: orepurifier
+		Owner: Cromha Corp
+		Location: 12,89
+	Actor1724: orepurifier
+		Owner: Cromha Corp
+		Location: 19,88
+	Actor1725: watermine
+		Owner: Cromha Corp
+		Location: 106,127
+	Actor1726: watermine
+		Owner: Cromha Corp
+		Location: 108,128
+	Actor1727: watermine
+		Owner: Cromha Corp
+		Location: 110,126
+	Actor1728: watermine
+		Owner: Cromha Corp
+		Location: 111,127
+	Actor1729: watermine
+		Owner: Cromha Corp
+		Location: 117,125
+	Actor1730: watermine
+		Owner: Cromha Corp
+		Location: 117,127
+	Actor1731: watermine
+		Owner: Cromha Corp
+		Location: 3,124
+	Actor1732: watermine
+		Owner: Cromha Corp
+		Location: 10,128
+	Actor1733: watermine
+		Owner: Cromha Corp
+		Location: 16,126
+	Actor1734: watermine
+		Owner: Cromha Corp
+		Location: 8,123
+	Actor1735: watermine
+		Owner: Cromha Corp
+		Location: 4,121
+	Actor1736: tradplat
+		Owner: Cromha Corp
+		Location: 104,94
+	Actor1737: tradplat
+		Owner: Cromha Corp
+		Location: 104,91
+	Actor1738: tradplat
+		Owner: Cromha Corp
+		Location: 104,107
+	Actor1739: tradplat
+		Owner: Cromha Corp
+		Location: 112,107
+	Actor1740: saucer2
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 105,95
+	Actor1741: saucer2
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 105,92
+	Actor1742: jet5
+		Owner: Cromha Corp
+		Location: 113,108
+		Facing: 1023
+	Actor1743: jet5
+		Owner: Cromha Corp
+		Location: 105,108
+		Facing: 1023
+	Actor1744: transprt
+		Owner: Cromha Corp
+		Location: 49,68
+		Facing: 1023
+	Actor1745: transprt
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 46,63
+	Actor1746: radartank
+		Owner: Cromha Corp
+		Location: 50,63
+		Facing: 515
+		DeployState: Deployed
+	Actor1747: artil
+		Owner: Cromha Corp
+		Location: 47,67
+		Facing: 790
+	Actor1748: artil
+		Owner: Cromha Corp
+		Location: 51,65
+		Facing: 910
+	Actor1749: artil
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 48,62
+	Actor1750: tank16
+		Owner: Cromha Corp
+		Location: 47,65
+		Facing: 797
+	Actor1751: tank16
+		Owner: Cromha Corp
+		Location: 49,66
+		Facing: 987
+	Actor1752: cromhastealth
+		Owner: Cromha Corp
+		Location: 48,64
+		Facing: 839
+	Actor1753: cromhastealth
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 49,62
+	Actor1754: cromhastealth
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 50,64
+	Actor1755: gatlinghawk
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 51,67
+	Actor1756: gatlinghawk
+		Owner: Cromha Corp
+		Location: 52,65
+		Facing: 846
+	Actor1757: gatlinghawk
+		Owner: Cromha Corp
+		Location: 46,66
+		Facing: 903
+	Actor1758: cromhabuggy
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 50,67
+	Actor1759: cromhabuggy
+		Owner: Cromha Corp
+		Location: 49,65
+		TurretFacing: 832
+		Facing: 846
+	Actor1760: tank12
+		Owner: Cromha Corp
+		Location: 51,70
+		Facing: 804
+	Actor1761: tank12
+		Owner: Cromha Corp
+		Location: 52,68
+		Facing: 1001
+	Actor1762: tank12
+		Owner: Cromha Corp
+		Location: 54,65
+		Facing: 1023
+	Actor1763: tank12
+		Owner: Cromha Corp
+		Location: 52,64
+		Facing: 860
+	Actor1764: tank12
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 52,62
+	Actor1765: tank11
+		Owner: Cromha Corp
+		Location: 47,69
+		Facing: 0
+	Actor1766: tank11
+		Owner: Cromha Corp
+		Location: 48,67
+		Facing: 931
+	Actor1767: tank11
+		Owner: Cromha Corp
+		Location: 45,64
+		Facing: 670
+	Actor1768: elitetechnician
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 50,66
+		Facing: 761
+	Actor1769: elitetechnician
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 44,67
+		Facing: 853
+	Actor1770: aatank2
+		Owner: Cromha Corp
+		Location: 50,69
+		TurretFacing: 218
+		Facing: 903
+	Actor1771: aatank2
+		Owner: Cromha Corp
+		Facing: 384
+		Location: 48,66
+	Actor1772: artil3
+		Owner: Cromha Corp
+		Location: 49,70
+		Facing: 769
+	Actor1773: artil3
+		Owner: Cromha Corp
+		Location: 46,64
+		Facing: 903
+	Actor1774: tank8
+		Owner: Cromha Corp
+		Location: 53,66
+		Facing: 1008
+		DeployState: Deployed
+	Actor1775: tank10
+		Owner: Cromha Corp
+		Location: 49,63
+		Facing: 776
+	Actor1776: elitepod
+		Owner: Cromha Corp
+		Location: 54,64
+		Facing: 1023
+	Actor1777: elitepod
+		Owner: Cromha Corp
+		Location: 55,63
+		Facing: 126
+	Actor1778: elitepod
+		Owner: Cromha Corp
+		Location: 53,60
+		Facing: 1023
+	Actor1779: elitepod
+		Owner: Cromha Corp
+		Location: 50,61
+		Facing: 761
+	Actor1780: artillerypod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 53,63
+		Facing: 867
+	Actor1781: artillerypod
+		Owner: Cromha Corp
+		Facing: 384
+		SubCell: 1
+		Location: 55,64
+	Actor1782: artillerypod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 53,61
+		Facing: 119
+	Actor1783: voltagepod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 47,68
+		Facing: 84
+	Actor1784: voltagepod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 44,65
+		Facing: 0
+	Actor1785: voltagepod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 47,64
+		Facing: 606
+	Actor1786: chaingunpod
+		Owner: Cromha Corp
+		Location: 54,62
+		SubCell: 1
+		Facing: 888
+	Actor1787: chaingunpod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 56,63
+		Facing: 1023
+	Actor1788: chaingunpod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 55,61
+		Facing: 874
+	Actor1789: chaingunpod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 52,60
+		Facing: 712
+	Actor1790: chaingunpod
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 48,59
+		Facing: 811
+	Actor1791: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 56,65
+		Facing: 1023
+	Actor1792: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 55,67
+		Facing: 162
+	Actor1793: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 53,69
+		Facing: 712
+	Actor1794: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 55,69
+		Facing: 1023
+	Actor1795: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 52,63
+		Facing: 769
+	Actor1796: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 51,61
+		Facing: 691
+	Actor1797: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 48,61
+		Facing: 790
+	Actor1798: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 46,62
+		Facing: 578
+	Actor1799: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 43,63
+		Facing: 839
+	Actor1800: scout1
+		Owner: Cromha Corp
+		SubCell: 1
+		Location: 45,67
+		Facing: 670
+	Actor1801: radartank
+		Owner: Cromha Corp
+		Location: 100,73
+		Facing: 384
+		DeployState: Deployed
+	Actor1802: radartank
+		Owner: Cromha Corp
+		Location: 65,75
+		Facing: 384
+		DeployState: Deployed
+	Actor1803: radartank
+		Owner: Cromha Corp
+		Location: 26,71
+		Facing: 384
+		DeployState: Deployed
 
 Rules: rules.yaml
