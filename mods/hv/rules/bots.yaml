@@ -11,7 +11,7 @@ Player:
 		RequiresCondition: enable-rogue-ai
 	BuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		BuilderTypes: builder
+		BuilderTypes: builder, constructor
 		MinimumBaseRadius: 15
 	CustomBaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
@@ -19,76 +19,100 @@ Player:
 		MaximumExcessPower: 200
 		ResourceDistance: 6
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
-		ConstructionYardTypes: base, base2
+		ConstructionYardTypes: base, base2, base3
 		PowerTypes: generator
-		BarracksTypes: module, module2
-		VehiclesFactoryTypes: factory, factory2, base, base2
-		ProductionTypes: module, module2, factory, factory2, starport, starport2, harbor, harbor2, base, base2
-		NavalProductionTypes: harbor, harbor2
+		BarracksTypes: module, module2, module3
+		VehiclesFactoryTypes: factory, factory2, factory3, base, base2, base3
+		ProductionTypes: module, module2, factory, factory2, factory3, starport, starport2, starport3, harbor, harbor2, harbor3, base, base2, base3
+		NavalProductionTypes: harbor, harbor2, harbor3
 		RefineryTypes: storage
-		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
+		DefenseTypes: turret, turret2, turret3, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3
 		BuildingLimits:
 			base: 1
 			storage: 1
 			module: 4
 			factory: 4
 			factory2: 4
+			factory3: 4
 			radar: 1
 			radar2: 1
+			radar3: 1
 			starport: 4
 			starport2: 4
+			starport3: 1
 			oresmelt: 4
+			orepurifier: 4
+			oilfacility: 4
 			trader: 1
 			techcenter: 1
+			techcenter3: 1
 			harbor: 1
 			harbor2: 1
+			harbor3: 1
 			field: 1
+			dropzone: 4
 			howitzer: 1
 			uplink: 1
+			uplinkmercenary: 1
 			silo: 1
 		BuildingFractions:
 			base: 1
 			storage: 2
 			module: 1
 			module2: 1
+			module3: 1
 			radar: 1
 			radar2: 1
+			radar3: 1
 			factory: 1
 			factory2: 1
+			factory3: 1
 			harbor: 1
 			harbor2: 1
+			harbor3: 1
 			trader: 1
 			starport: 1
 			starport2: 1
+			starport3: 1
 			techcenter: 1
+			techcenter3: 1
 			oresmelt: 9
+			orepurifier: 9
+			oilfacility: 9
 			bunker: 7
 			bunker2: 7
+			bunker3: 7
 			turret: 5
 			turret2: 5
+			turret3: 5
 			aaturret: 6
 			aaturret2: 6
+			aaturret3: 6
 			howitzer: 1
 			uplink: 1
+			dropzone: 3
+			uplinkmercenary: 1
 			field: 1
 			silo: 1
 		BuildingDelays:
 			radar: 4000
 			radar2: 4000
+			dropzone: 6000
 			howitzer: 8000
 			field: 8000
 			silo: 9000
 			uplink: 9000
+			uplinkmercenary: 9000
 	BuildingRepairBotModule:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
-		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
-		AirUnitsTypes: gunship, jet, copter, banshee
-		ConstructionYardTypes: base, base2
-		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+		ExcludeFromSquadsTypes: miner, builder, constructor, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, missileboat, spiderboat, boomer, submarine, carrier
+		AirUnitsTypes: gunship, jet, bomber2, copter, banshee
+		ConstructionYardTypes: base, base2, base3
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, module, module2, module3, radar, radar2, radar3, factory, factory2, factory3, harbor, harbor2, harbor3, trader, starport, starport2, starport3, techcenter, techcenter3, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
@@ -96,6 +120,7 @@ Player:
 		UnitsToBuild:
 			miner: 3
 			builder: 1
+			constructor: 1
 			radartank: 1
 			buggy: 3
 			bike: 3
@@ -111,6 +136,13 @@ Player:
 			artillery: 5
 			mgpod: 1
 			rocketpod: 1
+			shotgunpod: 1
+			clusterpod: 1
+			tinyhawk: 3
+			enginnertank: 1
+			clustertank: 1
+			merctank: 3
+			dualmerctank: 3
 			mortarpod: 1
 			flamepod: 1
 			elitepod: 1
@@ -120,6 +152,9 @@ Player:
 			technician: 1
 			bomberpod: 1
 			missiletank: 5
+			missiletank2: 3
+			bomber2: 5
+			glider: 5
 			jet: 5
 			gunship: 5
 			copter: 5
@@ -136,6 +171,7 @@ Player:
 		UnitLimits:
 			miner: 1
 			builder: 1
+			constructor: 1
 			balloon: 2
 			saucer: 2
 			radartank: 1
@@ -149,9 +185,12 @@ Player:
 			technician: 1
 			bomberpod: 3
 			brokerpod: 9
+			transprt: 1
+			tinyhawk: 5
 			apc: 1
 		UnitDelays:
 			builder: 15000
+			constructor: 20000
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
@@ -175,8 +214,8 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: apc
-		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod
+		TransportTypes: apc, tinyhawk
+		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod, shotgunpod, clusterpod, technician
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, brokerpod
@@ -213,6 +252,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+			ClusterBomb:
+				OrderName: Bombem
+				MinimumAttractiveness: 1000
+				FineScanRadius: 2
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
 			DropPods:
 				OrderName: EjectPods
 				MinimumAttractiveness: 5
@@ -223,6 +278,27 @@ Player:
 					TargetMetric: None
 					CheckRadius: 8c0
 				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			DropParatroopers:
+				OrderName: FlushParatroopers
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 2
+					TargetMetric: None
+					Check Radius: 8c0
+				Consideration@3:
 					Against: Enemy
 					Types: Water
 					Attractiveness: -5

@@ -206,7 +206,7 @@
 		Range: 1c0
 	-Repairable:
 	RepairableNear:
-		RepairActors: module, module2
+		RepairActors: module, module2, module3
 		CloseEnough: 2c0
 	Targetable@Repair:
 		RequiresCondition: damaged
@@ -292,12 +292,12 @@
 	MustBeDestroyed:
 	HitShape:
 	Repairable:
-		RepairActors: trader
+		RepairActors: trader, starport3
 		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft
 	Repairable:
-		RepairActors: trader
+		RepairActors: trader, starport3
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Explodes:
@@ -904,7 +904,7 @@
 	WithFacingSpriteBody:
 	HitShape:
 	RepairableNear:
-		RepairActors: harbor, harbor2
+		RepairActors: harbor, harbor2, harbor3
 		CloseEnough: 2c0
 	LeavesTrails:
 		Image: watertrail

@@ -117,7 +117,7 @@ APC:
 		Name: actor-apc.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, module
+		Prerequisites: factory, module, ~!structures.gm
 		BuildPaletteOrder: 40
 		Description: actor-apc.description
 	UpdatesPlayerStatistics:
@@ -137,7 +137,7 @@ APC:
 		Range: 3c0
 	Cargo:
 		Types: Pod
-		MaxWeight: 5
+		MaxWeight: 8
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 2048, 1843
@@ -509,8 +509,8 @@ MERCTANK:
 		Class: merctank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~disabled
-		BuildPaletteOrder: 90
+		Prerequisites: ~factory.gm
+		BuildPaletteOrder: 10
 		Description: actor-merctank.description
 	Armament:
 		Weapon: ^Cannon
@@ -540,13 +540,16 @@ MERCTANK:
 DUALMERCTANK:
 	Inherits: MERCTANK
 	Buildable:
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 15
+		Prerequisites:  ~factory.gm, radar
 		Description: actor-dualmerctank-description
 	Selectable:
 		Class: dualmerctank
 	Armament:
 		Weapon: doublecannon
 		LocalOffset: 500,85,50, 500,-85,50
+	Valued:
+		Cost: 950
 	Health:
 		HP: 50000
 	Armor:
@@ -976,6 +979,7 @@ TANKER1:
 		Image: tanker1
 		FactionImages:
 			sc: tanker3
+			gm: tanker5
 
 TANKER2:
 	Inherits: TANKER1
@@ -988,6 +992,7 @@ TANKER2:
 		Image: tanker2
 		FactionImages:
 			sc: tanker4
+			gm: tanker5
 
 CVIT:
 	Inherits: ^Vehicle

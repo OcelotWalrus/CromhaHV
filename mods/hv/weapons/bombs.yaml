@@ -20,7 +20,6 @@ Bomb:
 		Falloff: 100, 50, 25, 12, 6, 3, 0
 		Damage: 10000
 		Versus:
-		Versus:
 			None: 90
 			Steel: 75
 			Light: 75
@@ -35,3 +34,129 @@ Bomb:
 		Explosions: medium
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
+
+LightBomb:
+	Inherits: Bomb
+	ReloadDelay: 120
+	-Burst:
+	-BurstDelays:
+	Warhead@Damage: SpreadDamage
+		Damage: 1550
+	Warhead@Incendiary: TreeDamage
+		Damage: 1250
+	Projectile: GravityBomb
+		Image: propelledbomb
+	Warhead@Cluster1: FireCluster
+		Weapon: ClusterSubProjectiles
+		RandomClusterCount: 4
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
+
+ClusterSubBomb:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 60
+	Range: 55c0
+	Projectile: Bullet
+		Speed: 155
+		Inaccuracy: 6c0
+		Image: bullet13
+		Shadow: true
+		TrailImage: smoke
+		LaunchAngle: 125
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
+	Warhead@Damage: SpreadDamage
+		Spread: 512
+		Falloff: 100, 50, 25, 12, 6, 3, 0
+		Damage: 13000
+		Versus:
+		Versus:
+			None: 90
+			Steel: 75
+			Light: 75
+			Heavy: 125
+			Wood: 75
+	Warhead@Incendiary: TreeDamage
+		Spread: 512
+		Falloff: 100, 50, 25, 12, 6, 3, 0
+		Damage: 13000
+		Percentage: 75
+	Warhead@GroundEffect: CreateEffect
+		Explosions: medium
+		ValidTargets: Ground, Tree
+		ImpactSounds: explosion06.wav
+
+ClusterSubProjectiles:
+	Inherits: SmallArtillery
+	Range: 55c0
+	-MinRange:
+	TargetActorCenter: false
+	Projectile: Bullet
+		Inaccuracy: 2c256
+		LaunchAngle: 105
+
+ClusterSubProjectilesLight:
+	Inherits: SmallArtillery
+	Range: 55c0
+	-MinRange:
+	TargetActorCenter: false
+	Projectile: Bullet
+		Inaccuracy: 3c256
+		LaunchAngle: 105
+	Warhead@Damage: SpreadDamage
+		Damage: 1000
+	Warhead@Incendiary: TreeDamage
+		Damage: 1100
+
+ClusterBomb:
+	ValidTargets: Ground, Air, Tree, Lava, Swamp
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterSubBomb
+		RandomClusterCount: 24
+		Dimensions: 12,12
+		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
+	Warhead@Cluster1: FireCluster
+		Weapon: ClusterSubProjectiles
+		RandomClusterCount: 24
+		Dimensions: 12,12
+		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
+	Warhead@Shake: ShakeScreen
+		Duration: 7
+		Intensity: 5
+		Multiplier: 1,1
+	Warhead@DamageImpact: SpreadDamage
+		Spread: 1c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryImpact: TreeDamage
+		Spread: 1c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		AffectsParent: true
+	Warhead@DamageArea: SpreadDamage
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		Delay: 3
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryArea: TreeDamage
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		AffectsParent: true
+	Warhead@Effect: CreateEffect
+		Image: nuclear_explosion
+		Explosions: idle
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		ImpactSounds: nuke_explosion_cgeffex.wav
+	Warhead@FlashEffect: FlashEffect
+		Duration: 7
+		FlashType: Nuke

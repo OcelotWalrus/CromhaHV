@@ -500,6 +500,29 @@ DROPSHIP.Husk:
 	RenderSprites:
 		Image: dropship
 
+DROPSHIP.REINFORCE:
+	Inherits: DROPSHIP
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	RejectsOrders:
+	Aircraft:
+		IdleBehavior: LeaveMap
+		Repulsable: false
+	-Selectable:
+	Interactable:
+	-MapEditorData:
+	DamageMultiplier@Invulnerable:
+		Modifier: 0
+	UpdatesPlayerStatistics:
+		OverrideActor: dropship
+	-RevealsShroud:
+	-RevealsShroud@Hacked:
+	RenderSprites:
+		Image: dropship
+
 DRONE:
 	Inherits: ^SpawnedPlane
 	Valued:
@@ -707,7 +730,7 @@ AIRLIFTER:
 	Interactable:
 	Aircraft:
 		TurnSpeed: 25
-		Speed: 200
+		Speed: 255
 		VTOL: True
 		Repulsable: False
 		MaximumPitch: 36
@@ -725,6 +748,10 @@ AIRLIFTER:
 		Type: CenterPosition
 	DamageMultiplier@Invulnerable:
 		Modifier: 0
+	ParaDrop:
+	Cargo:
+		MaxWeight: 10
+		Types: Vehicles
 
 MOTHERSHIP:
 	Inherits: ^Helicopter

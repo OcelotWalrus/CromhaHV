@@ -1,0 +1,38 @@
+
+# TODO LIST
+
+- [x] Make factory
+- [x] Make module
+- [x] Make oil facility
+- [x] Make base
+- [x] Make Cluster Pod
+- [x] Make Shotgun Pod
+- [x] Make Cluster Bomb Launch Command
+- [x] Make Cluster Tank
+- [x] Make atmospheric bomber
+- [x] Make Tiny Hawk
+- [x] Make atmospheric glider
+- [x] Make voices for cluster bomb and paratroopers powers
+- [ ] Polish the colors of the AA Turret
+- [ ] Make the building icon for the AA Turret
+- [ ] Make a sprite for the AA Tank
+- [x] Fix factory platform transparency
+- [x] Make the Cluster Bomb Dome damaged sprite craters look less odd
+- [x] Polish the Paratroopers Drop cursor
+- [x] Redo the Atmospheric Glider sprites
+- [x] Make a sprite for the Starport Platform
+- [x] Rework on the Starport Platform
+- [ ] Recheck every unit's armament offset
+- [ ] Correct every wrong diagonal angle spritesheets
+- [ ] Add the Railgun Pod & delete the elitepod2
+- [ ] Make a variation for the artillery?
+- [ ] Remake the base
+- [ ] Remake the outpost
+- [ ] Remake the refinery
+- [ ] Remake the bunker
+- [ ] Remake the turret
+- [x] Fix the Cluster Bomb Dome sprite (roundings)
+- [ ] Start working on the navy units
+- [ ] Do something with the Dreadnought (or not)
+- [ ] Fix the github action errors
+- [ ] Recheck every credit attributions

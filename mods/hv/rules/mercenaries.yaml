@@ -1,0 +1,1309 @@
+## aircraft
+
+BOMBER2:
+	Inherits@Smoke: ^SmokeEmitter
+	Inherits: ^Plane
+	AppearsOnRadar:
+		UseLocation: true
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 40
+		Prerequisites: ~starport.gm, radar, techcenter3
+		Description: actor-bomber2.description
+	Tooltip:
+		Name: actor-bomber2.name
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Valued:
+		Cost: 2500
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: true
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: true
+		OpportunityFire: false
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 165
+		Voice: Move
+		MaximumPitch: 100
+		RepulsionSpeed: 40
+		CruiseAltitude: 4560
+	Armament:
+		Weapon: LightBomb
+		LocalOffset: 250,0,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 4
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	ReloadAmmoPool:
+		Delay: 225
+		Count: 1
+	Voiced:
+		VoiceSet: BomberVoice
+	Tooltip:
+		Name: actor-bomber2.name
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 7
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 7
+		ZOffset: -1000
+	RenderSprites:
+		Image: bomber
+	SpawnActorOnDeath:
+		Actor: BOMBER2.Husk
+		RequiresCondition: airborne
+
+BOMBER2.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-bomber2.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 100
+	LeavesTrails:
+		Offsets: 0,0,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: bomber
+
+GLIDER:
+	Inherits@Smoke: ^SmokeEmitter
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits: ^Plane
+	AppearsOnRadar:
+		UseLocation: true
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: ~starport.gm
+		Description: actor-glider.description
+	Tooltip:
+		Name: actor-glider.name
+	Health:
+		HP: 10000
+	Armor:
+		Type: Steel
+	Valued:
+		Cost: 1000
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: true
+	AttackAircraft:
+		FacingTolerance: 50
+		PersistentTargeting: true
+		OpportunityFire: false
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 165
+		Voice: Move
+		MaximumPitch: 100
+		RepulsionSpeed: 40
+		CruiseAltitude: 4560
+	Armament@Air:
+		Weapon: AircraftMissileAir
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+		PauseOnCondition: !ammo
+	Rearmable:
+		RearmActors: starport3
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+		RearmSound: mine_reload_oneshotofficial.wav
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	Voiced:
+		VoiceSet: GliderVoice
+	Tooltip:
+		Name: actor-glider.name
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
+	SpawnActorOnDeath:
+		Actor: GLIDER.Husk
+		RequiresCondition: airborne
+
+GLIDER.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-glider.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 100
+	LeavesTrails:
+		Offsets: 0,0,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: glider
+
+AIRLIFTERMERCENARY:
+	Inherits: ^Plane
+	Inherits@Smoke: ^SmokeEmitter
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 50
+		Prerequisites: ~starport.gm
+		Description: actor-airlifter.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	OwnerLostAction:
+		Action: Kill
+	AppearsOnRadar:
+		UseLocation: true
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 155
+		Repulsable: False
+		MaximumPitch: 36
+		CruiseAltitude: 2560
+		InitialFacing: 512
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
+	Selectable:
+		DecorationBounds: 2048, 1848
+	Cargo:
+		Types: Pod, Vehicle
+		MaxWeight: 16
+		AfterUnloadDelay: 40
+		UnloadVoice: Unload
+		RequiresCondition: !carrying
+		LoadedCondition: loaded
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	Voiced:
+		VoiceSet: DropshipVoice
+	Tooltip:
+		Name: actor-airlifter.name
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	ParaDrop:
+		ChuteSound: Unload
+	RenderSprites:
+		Image: airlifter
+	SpawnActorOnDeath:
+		Actor: AIRLIFTERMERCENARY.Husk
+		RequiresCondition: airborne
+
+AIRLIFTERMERCENARY.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-airlifter.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 100
+	LeavesTrails@Right:
+		Offsets: 0,150,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Left:
+		Offsets: 0,-150,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: airlifter
+
+BALLOON.MERCENARY:
+	Inherits: BALLOON
+	Valued:
+		Cost: 250
+	Buildable:
+		Prerequisites: ~starport.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: balloon
+	RenderSprites:
+		Image: balloon
+
+## buildings
+
+BASE3:
+	Inherits: BASE
+	-ProvidesPrerequisite@Yuruki:
+	ProvidesPrerequisite@Ginkua:
+		Prerequisite: structures.gm
+	-Buildable:
+	-Encyclopedia:
+
+OUTPOST3:
+	Inherits: OUTPOST
+	-Encyclopedia:
+	-ProvidesPrerequisite@Yuruki:
+	ProvidesPrerequisite@Ginkua:
+		Factions: gm
+		Prerequisite: base.gm
+
+RADAR3:
+	Inherits: RADAR
+	-Encyclopedia:
+	Buildable:
+		Prerequisites: storage, ~structures.gm
+	-AirstrikePower:
+	ParatroopersPower:
+		PauseOnCondition: lowpower || disabled
+		UnitType: airlifter
+		SquadSize: 4
+		ReinforcementsArrivedSpeechNotification: ReinforcementsHaveArrived
+		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
+		QuantizedFacings: 8
+		Cordon: 5c0
+		DropItems: merctank, merctank, merctank, merctank, aatank3, engineertank, dualmerctank, dualmerctank
+		CameraActor: camera
+		ChargeInterval: 4100
+		Icon: airlifterdrop
+		Name: actor-radar3.paratrooperspower-name
+		Description: actor-radar3.paratrooperspower-description
+		Cursor: airlifterdrop
+		SupportPowerPaletteOrder: 35
+		BeginChargeTextNotification: notification-paratroopers-charging
+		BeginChargeSpeechNotification: ParatroopersCharging
+		EndChargeTextNotification: notification-paratroopers-ready
+		EndChargeSpeechNotification: ParatroopersReady
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingTextNotification: notification-paratroopers-incoming
+		IncomingSpeechNotification: ParatroopersIncoming
+		OrderName: FlushParatroopers
+
+TECHCENTER3:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^3x3Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Building:
+		Footprint: _xx_ xxxx xxxx _xx_
+		Dimensions: 4,4
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 110
+		Prerequisites: ~base, radar, ~structures.gm
+		Description: actor-techcenter3.description
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: actor-techcenter3.name
+	Encyclopedia:
+		Description: actor-techcenter3.encyclopedia
+		Order: 81
+		Category: Buildings
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: techcenter3
+		RequiresCondition: !powerdown
+	Health:
+		HP: 105500
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Power:
+		Amount: -220
+	Targetable:
+		TargetTypes: Ground, Structure
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -1024,0,2048
+		Type: Rectangle
+			TopLeft: -1048, 512
+			BottomRight: 1048, 1524
+	WithIdleOverlay@Lights:
+		Sequence: animation
+		RequiresCondition: !disable-lights && !ownerless && !disabled && !build-incomplete
+	GrantConditionOnDamageState@BrokenLights:
+		Condition: disable-lights
+		ValidDamageStates: Heavy, Critical
+
+MODULE3:
+	Inherits: MODULE2
+	Buildable:
+		Prerequisites: ~structures.gm
+	ProvidesPrerequisite@Faction:
+		Prerequisite: module.gm
+		RequiresCondition: !powerdown
+	Health:
+		HP: 65000
+	-Exit@North1:
+	-Exit@North2:
+	Exit@South1:
+		SpawnOffset: 0,0,0
+		ExitCell: 2,3
+		Facing: 740
+	Exit@South2:
+		SpawnOffset: 0,0,0
+		ExitCell: 2,3
+		Facing: 740
+	WithProductionDoorAnimation:
+		ExitCells: 2,3
+	Power:
+		Amount: -25
+	RepairsUnits:
+		Interval: 5
+	RenderSprites:
+		Image: module3
+
+STARPORT3:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^3x3Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Tooltip:
+		Name: actor-starport3.name
+	Encyclopedia:
+		Description: actor-starport3.encyclopedia
+		Order: 61
+		Category: Buildings
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 120
+		Prerequisites: radar, ~structures.gm
+		Description: actor-starport3.description
+	Valued:
+		Cost: 1000
+	Building:
+		Footprint: _xx_ xxxx ==x= _xx_
+		Dimensions: 4,4
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
+	Selectable:
+		Bounds: 2048, 2048
+	Health:
+		HP: 80000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	RallyPoint:
+		CirclesSequence:
+		IsPlayerPalette: true
+		Palette: green
+		LineWidth: 2
+	ProductionAirdrop:
+		Produces: Aircraft, Utility
+		ActorType: cargoship
+		ReadyAudio: ReinforcementsHaveArrived
+		ReadyTextNotification: notification-reinforcementa-arrived
+		PauseOnCondition: disabled
+		BaselineSpawn: True
+	Exit@North:
+		ExitCell: 2,2
+		ProductionTypes: Aircraft
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@South:
+		ExitCell: 0,2
+		ProductionTypes: Utility
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	ExitsDebugOverlay:
+	RepairsUnits:
+		HpPerStep: 800
+		Interval: 8
+		PlayerExperience: 15
+		StartRepairingNotification: Repairing
+		StartRepairingTextNotification: notifications-repairing
+		FinishRepairingNotification: UnitRepaired
+		FinishRepairingTextNotification: notification-unit-repaired
+		RequiresCondition: !disabled
+	Reservable:
+	ProvidesPrerequisite@Generic:
+		Prerequisite: starport
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@Faction:
+		Prerequisite: starport.gm
+		RequiresCondition: !powerdown
+	ProductionBar:
+		ProductionType: Aircraft
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Power:
+		Amount: -115
+	Targetable:
+		TargetTypes: Ground, Structure
+	WithTextDecoration@PRIMARY:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
+		Font: TinyPixel
+	FreeActorWithDelivery:
+		Actor: repairtank
+		DeliveryOffset: 3,3
+		DeliveringActor: dropship.reinforce
+		Facing: 160
+
+FACTORY3:
+	Inherits: FACTORY
+	Inherits@Shape: ^3x3Shape
+	Building:
+		Footprint: +++ +++ xxx xxx
+		Dimensions: 3,4
+	Health:
+		HP: 90000
+	Armor:
+		Type: Concrete
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0
+	Selectable:
+		Bounds: 3072, 2348, 0, -560
+	-WithIdleOverlay@Platform1:
+	-WithMakeOverlay@Platform1:
+	-WithIdleOverlay@Platform2:
+	-WithMakeOverlay@Platform2:
+	-WithIdleOverlay@Platform3:
+	-WithMakeOverlay@Platform3:
+	-WithIdleOverlay@Platform4:
+	-WithMakeOverlay@Platform4:
+	WithIdleOverlay@Platform:
+		Sequence: idle-platform
+		RequiresCondition: !build-incomplete
+	Exit@North1:
+		ExitCell: 0,0
+		SpawnOffset: 0,0,0
+		Facing: 1023
+		ProductionTypes: Tank
+		ExitDelay: 5
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@North1:
+		ExitCell: 0,0
+		Sequence: production-done
+		RequiresCondition: !burning
+	Exit@North2:
+		ExitCell: 1,0
+		SpawnOffset: 0,0,0
+		Facing: 1023
+		ProductionTypes: Tank
+		ExitDelay: 5
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@North2:
+		ExitCell: 1,0
+		Sequence: production-done
+		RequiresCondition: !burning
+	Exit@North3:
+		ExitCell: 2,0
+		SpawnOffset: 0,0,0
+		Facing: 1023
+		ProductionTypes: Tank
+		ExitDelay: 5
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@North3:
+		ExitCell: 2,0
+		Sequence: production-done
+		RequiresCondition: !burning
+	-Exit@South1:
+	-WithProductionExitOverlay@South1:
+	-WithProductionExitOverlay@Done1:
+	-Exit@South2:
+	-WithProductionExitOverlay@South2:
+	-WithProductionExitOverlay@Done2:
+	-Exit@West1:
+	-WithProductionExitOverlay@West1:
+	-WithProductionExitOverlay@Done3:
+	-Exit@West2:
+	-WithProductionExitOverlay@West2:
+	-WithProductionExitOverlay@Done4:
+	-Exit@West3:
+	-WithProductionExitOverlay@West3:
+	-WithProductionExitOverlay@Done5:
+	-Exit@West4:
+	-WithProductionExitOverlay@West4:
+	-WithProductionExitOverlay@Done6:
+	-Exit@East1:
+	-WithProductionExitOverlay@East1:
+	-WithProductionExitOverlay@Done7:
+	-Exit@East2:
+	-WithProductionExitOverlay@East2:
+	-WithProductionExitOverlay@Done8:
+	-Exit@East3:
+	-WithProductionExitOverlay@East3:
+	-WithProductionExitOverlay@Done9:
+	-Exit@East4:
+	-WithProductionExitOverlay@East4:
+	-WithProductionExitOverlay@Done10:
+	Buildable:
+		Prerequisites: module, storage, ~structures.gm
+	ProvidesPrerequisite@Faction:
+		Prerequisite: factory.gm
+		RequiresCondition: !powerdown
+	-Encyclopedia:
+
+BUNKER3:
+	Inherits: BUNKER
+	Buildable:
+		Prerequisites: module, ~structures.gm
+	-Encyclopedia:
+	RenderSprites:
+		Image: bunker
+
+TURRET3:
+	Inherits: TURRET
+	Buildable:
+		Prerequisites: factory, ~structures.gm
+	-Encyclopedia:
+	RenderSprites:
+		Image: turret2
+
+AATURRET3:
+	Inherits: AATURRET2
+	Buildable:
+		Prerequisites: radar, ~structures.gm
+	-Encyclopedia:
+	Valued:
+		Cost: 1100
+	Health:
+		HP: 50500
+	Armament:
+		Weapon: TowerRailgun
+		LocalOffset: 256,375,760, 256,0,760, 256,-375,760
+	Turreted:
+		InitialFacing: 522
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 9c0
+	RevealsShroud:
+		Range: 9c0
+
+HARBOR3:
+	Inherits: HARBOR
+	RenderSprites:
+		Image: harbor2
+	ProvidesPrerequisite@Faction:
+		Prerequisite: harbor.gm
+		RequiresCondition: !powerdown
+	Buildable:
+		Prerequisites: module, ~structures.gm
+	-Encyclopedia:
+	RenderSprites:
+		Image: harbor2
+
+UPLINKMERCENARY:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^3x3Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Selectable:
+		Bounds: 2048, 2457, 0, -204
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: actor-uplink-mercenary.name
+	Encyclopedia:
+		Description: actor-uplink-mercenary.encyclopedia
+		Order: 131
+		Category: Buildings
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: techcenter3, ~structures.gm
+		BuildLimit: 1
+		Description: actor-uplink-mercenary.description
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -1024,0,0
+		Type: Rectangle
+			TopLeft: -1048, 512
+			BottomRight: 1048, 1524
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 4c0
+	SupportPowerChargeBar:
+	Power:
+		Amount: -165
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	NukePower:
+		PauseOnCondition: disabled
+		Cursor: clusterbomb
+		Icon: clusterbomb
+		ChargeInterval: 6500
+		Name: actor-uplink-mercenary.railgun-name
+		Description: actor-uplink-mercenary.railgun-description
+		MissileWeapon: clusterbomb
+		MissileImage: clusterbomb
+		SkipAscent: true
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: true
+		CameraRange: 15c0
+		SupportPowerPaletteOrder: 15
+		DetectedSpeechNotification: ClusterBombDetected
+		DetectedTextNotification: notification-clusterbomb-detected
+		BeginChargeSpeechNotification: ClusterBombCharging
+		BeginChargeTextNotification: notification-clusterbomb-charging
+		EndChargeSpeechNotification: ClusterBombReady
+		EndChargeTextNotification: notification-clusterbomb-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: ClusterBombIncoming
+		IncomingTextNotification: notification-clusterbomb-incoming
+		OrderName: Bombem
+
+OILFACILITY:
+	Inherits: ORESMELT
+	Inherits@Shape: ^2x4Shape
+	Valued:
+		Cost: 1350
+	Health:
+		HP: 53000
+	CashTrickler:
+		Interval: 70
+		Amount: 20
+		RequiresCondition: !build-incomplete && !disabled && !burning
+	GrantConditionOnDamageState:
+		Condition: burning
+		ValidDamageStates: Heavy, Critical
+	Power:
+		Amount: -95
+	Building:
+		Footprint: == == xx xx
+		Dimensions: 2,4
+	Buildable:
+		Prerequisites: ~structures.gm, techcenter3
+	Selectable:
+		Bounds: 1024, 2048, 0, 0
+	Tooltip:
+		Name: actor-oilfacility.name
+	Buildable:
+		Description: actor-oilfacility.description
+	Encyclopedia:
+		Description: actor-oilfacility.encyclopedia
+		Order: 95
+	WithIdleOverlay:
+		Sequence: idle-animation
+		RequiresCondition: !build-incomplete && !disabled && !burning
+	-WithIdleAnimation:
+
+## pods
+
+SHOTGUNPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-shotgunpod.description
+		Prerequisites: ~module.gm
+		BuildPaletteOrder: 20
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: actor-shotgunpod.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	AmmoPool:
+		Ammo: 25
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 55
+		Count: 4
+	Armament@Primary:
+		Weapon: LightShotGun
+		LocalOffset: 35,185,150, 35,-185,150
+		PauseOnCondition: !ammo
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: BunkerShotGun
+		PauseOnCondition: !ammo
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+
+CLUSTERPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-clusterpod.description
+		Prerequisites: ~module.gm, factory
+		BuildPaletteOrder: 40
+	Valued:
+		Cost: 145
+	Tooltip:
+		Name: actor-clusterpod.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightCluster
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightClusterBunker
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+
+RAILGUNPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-railgunpod.description
+		Prerequisites: ~module.gm, factory, techcenter3
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: actor-railgunpod.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightRailgun
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightRailgunBunker
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 120
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Move
+		IsPlayerPalette: true
+		CloakedPalette: cloak
+		CloakStyle: Palette
+	RenderSprites:
+		Image: shotgunpod
+
+CLUSTERPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-clusterpod.description
+		Prerequisites: ~module.gm, factory
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 145
+	Tooltip:
+		Name: actor-clusterpod.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightCluster
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightClusterBunker
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+
+## ships
+
+MISSILEBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: actor-missileboat.name
+		GenericName: actor-missileboat.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.gm
+		BuildPaletteOrder: 30
+		Description: actor-missileboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 125
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 120
+		Offset: 150,0,50
+	Armament@Air:
+		Weapon: MissileShipRocketAir
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+	Armament@Ground:
+		Weapon: MissileShipRocketGround
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+	AttackTurreted:
+		Armaments: primary, secondary
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	Selectable:
+		DecorationBounds: 1536, 1536
+
+BOOMER.MERCENARY:
+	Inherits: BOOMER
+	Buildable:
+		Prerequisites: ~harbor.gm, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: boomer
+	RenderSprites:
+		Image: boomer
+
+LIGHTNINGBOAT.MERCENARY:
+	Inherits: LIGHTNINGBOAT
+	Buildable:
+		Prerequisites: ~harbor.gm, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: lightningboat
+	RenderSprites:
+		Image: lightningboat
+
+SPIDERBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: actor-spiderboat.name
+		GenericName: actor-spiderboat.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.gm
+		BuildPaletteOrder: 10
+		Description: actor-spiderboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 28500
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 140
+		TurnSpeed: 65
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 135
+		Offset: 120,0,20
+	Armament@Air:
+		Weapon: BoatMissileAntiAir
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 250,0,50
+	Armament@Ground:
+		Weapon: BoatMissileAntiGround
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 250,0,50
+	AttackTurreted:
+		Armaments: primary, secondary
+	WithSpriteTurret:
+
+NAVALMINELAYER2.MERCENARY:
+	Inherits: NAVALMINELAYER2
+	Buildable:
+		Prerequisites: ~harbor.gm, tradplat
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: navalminelayer2
+	RenderSprites:
+		Image: navalminelayer2
+
+## vehicles
+
+BUILDER3:
+	Inherits: BUILDER
+	Buildable:
+		Prerequisites: ~structures.gm
+	Transforms:
+		IntoActor: outpost3
+	RenderSprites:
+		Image: builder3
+
+CONSTRUCTOR:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Prerequisites: base.gm
+		Queue: Utility
+		BuildPaletteOrder: 70
+		Description: actor-constructor.description
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: actor-constructor.name
+	Health:
+		HP: 45000
+	Armor:
+		Type: Steel
+	Mobile:
+		TurnSpeed: 30
+		Speed: 80
+	RevealsShroud:
+		Range: 2c768
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	Transforms:
+		IntoActor: base3
+	RenderSprites:
+		Image: builder1
+
+CLUSTERTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: actor-clustertank.name
+	Buildable:
+		Queue: Tank
+		Prerequisites: ~factory.gm, radar, techcenter3
+		BuildPaletteOrder: 70
+		Description: actor-clustertank.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 25500
+	Armor:
+		Type: Steel
+	Mobile:
+		TurnSpeed: 20
+		CanMoveBackward: true
+		Speed: 90
+		Locomotor: tracked
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament:
+		Weapon: HeavyCluster
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		Voice: Attack
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	Selectable:
+		DecorationBounds: 1536, 1536
+
+TINYHAWK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-tinyhawk.name
+	Buildable:
+		Queue: Tank
+		Prerequisites: ~factory.gm, module
+		BuildPaletteOrder: 45
+		Description: actor-tinyhawk.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 20000
+	Armor:
+		Type: Steel
+	Mobile:
+		Speed: 120
+		PauseOnCondition: notmobile || ecm-disabled
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Cargo:
+		Types: Pod
+		MaxWeight: 5
+		LoadingCondition: notmobile
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	WithTeleportEnergyOverlay:
+		Image: energyball
+		Sequence: teleport-large
+	Armament:
+		Weapon: LightShotGun
+		LocalOffset: 400,-50,0
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	-Passenger:
+
+MISSILETANK2:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-missiletank2.name
+	Buildable:
+		Queue: Tank
+		Prerequisites: ~factory.gm, radar, techcenter3
+		BuildPaletteOrder: 80
+		Description: actor-missiletank2.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 24000
+	Armor:
+		Type: Steel
+	Mobile:
+		TurnSpeed: 24
+		CanMoveBackward: true
+		Speed: 94
+		Locomotor: tracked
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Armament:
+		Weapon: MissilePad
+		LocalOffset: 30,85,0
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		Voice: Attack
+		FacingTolerance: 0
+	Selectable:
+		DecorationBounds: 1536, 1536
+
+ENGINEERTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: actor-engineertank.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: ~factory.gm, techcenter3, radar
+		Queue: Tank
+		Description: actor-engineertank.description
+	Mobile:
+		TurnSpeed: 25
+		Speed: 85
+	Health:
+		HP: 44500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Turreted:
+		TurnSpeed: 25
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	AutoTargetPriority@Default:
+		ValidTargets: DamagedVehicle
+	Armament:
+		Weapon: RepairRailgun
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+		LocalOffset: 275,10,95
+	AttackTurreted:
+		PauseOnCondition: ecm-disabled
+	Voiced:
+		VoiceSet: TechnicianVoice
+	WithSpriteTurret:
+	-Guard:
+
+AATANK3:
+	Inherits: AATANK
+	Tooltip:
+		Name: actor-aatank3.name
+	Buildable:
+		Prerequisites: ~factory.gm
+		Description: actor-aatank3.description
+	Armament:
+		Weapon: FlakLight
+		LocalOffset: 250,250,150, 250,-250,150

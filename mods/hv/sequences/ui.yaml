@@ -74,12 +74,16 @@ icon:
 		Filename: bits/shield-icon.png
 	nuke:
 		Filename: bits/nuke-icon.png
+	clusterbomb:
+		Filename: bits/cluster-bomb-icon.png
 	railgun:
 		Filename: bits/railgun-icon.png
 	droppods:
 		Filename: bits/droppods-icon.png
 	airstrike:
 		Filename: bits/airstrike-icon.png
+	airlifterdrop:
+		Filename: bits/airlifterdrop-icon.png
 	radar:
 		Filename: bits/radar-icon.png
 	howitzer:

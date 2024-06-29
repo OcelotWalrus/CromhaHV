@@ -376,3 +376,109 @@ MediumBoatCannon:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
+
+LightCluster:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: blaster_flyingsaucerinvasion.wav
+	ReloadDelay: 35
+	Range: 6c0
+	MinRange: 3c0
+	Projectile: Bullet
+		Speed: 400
+		Inaccuracy: 0c256
+		LaunchAngle: 150
+		Image: bullet12
+		Shadow: false
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectile
+		RandomClusterCount: 5
+		Dimensions: 3,3
+		Footprint: xxx xXx xxx
+		AirThreshold: 0c0
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ImpactActors: false
+
+HeavyCluster:
+	Inherits: LightCluster
+	ReloadDelay: 50
+	Range: 7c512
+	MinRange: 5c0
+	Projectile: Bullet
+		Speed: 385
+		Inaccuracy: 0c512
+		LaunchAngle: 175
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectileStronger
+		RandomClusterCount: 7
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectileHeavy
+		RandomClusterCount: 3
+		Dimensions: 2,2
+		Footprint: xx xx
+
+LightClusterBunker:
+	Inherits: LightCluster
+	ReloadDelay: 25
+	Range: 8c0
+
+ClusterProjectile:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 250
+		Inaccuracy: 0c512
+		Image: bullet3
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 165
+		Damage: 915
+		Versus:
+			None: 135
+			Steel: 70
+			Light: 75
+			Heavy: 65
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 450
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
+
+ClusterProjectileStronger:
+	Inherits: ClusterProjectile
+	Projectile: Bullet
+		Speed: 275
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 25
+		Damage: 1350
+		Versus:
+			None: 100
+			Steel: 75
+			Light: 80
+			Heavy: 70
+
+ClusterProjectileHeavy:
+	Inherits: SmallArtillery
+	Range: 55c0
+	-MinRange:
+	TargetActorCenter: false
+	Projectile: Bullet
+		Inaccuracy: 3c256
+		LaunchAngle: 105
+	Warhead@Damage: SpreadDamage
+		Damage: 2000
+	Warhead@Incendiary: TreeDamage
+		Damage: 2000

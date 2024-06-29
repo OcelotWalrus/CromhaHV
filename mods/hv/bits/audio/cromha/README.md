@@ -1,0 +1,1 @@
+ Contents of this folder were generated using third party text-to-speech tool (https://ttsmaker.com/) TTSMaker, without any copyrighting rights from them.

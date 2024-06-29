@@ -72,6 +72,17 @@ AATANK2.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: aatank2
 
+AATANK3.TRADE:
+	Inherits: AATANK3
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	RenderSprites:
+		Image: aatank3
+	UpdatesPlayerStatistics:
+		OverrideActor: aatank3
+
 APC.TRADE:
 	Inherits: APC
 	Buildable:
@@ -144,6 +155,17 @@ RAILGUNTANK.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: railguntank
 
+ENGINEERTANK.TRADE:
+	Inherits: ENGINEERTANK
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	RenderSprites:
+		Image: engineertank
+	UpdatesPlayerStatistics:
+		OverrideActor: engineertank
+
 LIGHTNINGTANK.TRADE:
 	Inherits: LIGHTNINGTANK
 	Buildable:
@@ -204,6 +226,18 @@ BUILDER2.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: builder2
 
+BUILDER3.TRADE:
+	Inherits: BUILDER3
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: builder3
+	UpdatesPlayerStatistics:
+		OverrideActor: builder3
+
 MINER.TRADE:
 	Inherits: MINER
 	Buildable:
@@ -228,6 +262,17 @@ MISSILETANK.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: missiletank
 
+MISSILETANK2.TRADE:
+	Inherits: MISSILETANK2
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	RenderSprites:
+		Image: missiletank2
+	UpdatesPlayerStatistics:
+		OverrideActor: missiletank2
+
 ECMTANK.TRADE:
 	Inherits: ECMTANK
 	Buildable:
@@ -239,3 +284,27 @@ ECMTANK.TRADE:
 		Image: ecmtank
 	UpdatesPlayerStatistics:
 		OverrideActor: ecmtank
+
+CLUSTERTANK.TRADE:
+	Inherits: CLUSTERTANK
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: clustertank
+	UpdatesPlayerStatistics:
+		OverrideActor: clustertank
+
+TINYHAWK.TRADE:
+	Inherits: TINYHAWK
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tinyhawk
+	UpdatesPlayerStatistics:
+		OverrideActor: tinyhawk

@@ -80,6 +80,15 @@ notification-insufficient-power = Insufficient power.
 notification-televator-charging = Televator charging.
 notification-televator-ready = Televator ready.
 
+notification-paratroopers-incoming = Paratroopers Drop incoming.
+notification-paratroopers-ready = Paratroopers Drop ready.
+notification-paratroopers-charging = Paratroopers Drop charging.
+
+notification-clusterbomb-detected = Cluster Bomb detected.
+notification-clusterbomb-charging = Cluster Bomb charging.
+notification-clusterbomb-ready = Cluster Bomb ready.
+notification-clusterbomb-incoming = Cluster Bomb incoming.
+
 ## Aircraft
 actor-gunship =
    .description = Attack Ship armed with
@@ -131,6 +140,24 @@ actor-dropship =
    .description = Vehicle Transport Shuttle.
       Can load pods
       and lift one vehicle.
+
+actor-airlifter =
+   .name = Heavy Transport Airlifter
+   .description = Vehicle Transport Plane.
+      Can load pods and vehicles.
+      Paradrop loaded units.
+
+actor-bomber2 =
+   .name = Atmospheric Bomber
+   .description = Fast bombing atmospheric glider.
+     Can't attack air units.
+
+actor-glider =
+   .name = Atmospheric Glider
+   .description = Fast atmospheric glider.
+     Armed with a missile launcher.
+     Needs to be rearmed at starport platforms.
+     Can only attack airborne units.
 
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
@@ -192,6 +219,11 @@ actor-radar2 =
    .droppodspower-description = Atmospheric assault reinforcements:
     Small team of pods drops onto target location from orbit.
 
+actor-radar3 =
+   .paratrooperspower-name = Paratroopers Reinforcement
+   .paratrooperspower-description = Atmospheric assault reinforcements:
+    Small team of airlifters drops onto target mercenary tanks.
+
 actor-trader =
    .description = Repairs vehicles and aircraft for credits.
     Allows buying units on the free market.
@@ -209,18 +241,33 @@ actor-miner2 =
 
 actor-starport =
    .name = Starport
-   .encyclopedia = The starport is the base of operations for the air force. Underground facilities construct new aircraft that are self-sufficient for the time of the battle requiring no refueling nor rearming.
+   .encyclopedia = The starport is the base of operations for the air force. Underground facilities construct new aircraft that are self-sufficient for the time of the battle requiring no refueling or rearming.
    .description = Produces aircraft.
+
+actor-starport3 =
+   .name = Starport Platform
+   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Ginkua stock that are self-sufficient for the time of the battle requiring no refueling or rearming. The starport platform is also capable of producing its own auto-target missiles, allowing the Ginkua aircraft to be rearmed in airborne missiles.
+   .description = Orders pre-built aircraft from the U.M.O.G. company.
+     Comes with a pre-ordered repair vehicle
+
+actor-factory-name = Vehicle Factory
 
 actor-factory =
    .description = Builds tanks.
    .name = Vehicle Factory
-   .encyclopedia = The vehicle factory is the source for all armored ground forces. Building multiple ones increases production speed. Right click on a factory to set a primary building whose teleportation pad shall be used for deployment. Righ-click on the ground to set a rally point for new vehicles to gather around.
+   .encyclopedia = The vehicle factory is the source for all armored ground forces. Building multiple ones increases production speed. Right click on a factory to set a primary building whose teleportation pad shall be used for deployment. Right-click on the ground to set a rally point for new vehicles to gather around.
 
 actor-techcenter =
    .description = Grants access to advanced weaponry.
    .name = Technology Download Center
    .encyclopedia = Company policy is that classified technology can not be transported with unguarded colony ships. It has be wired in from an encrypted interstellar connection and stored in a secure facility. Only then the production facilities get access to the blue prints for machinery designed to resolve conflicts fast and efficient. This facilities requires a lot of power to keep the servers running. Powering it down and access to restricted technology is temporarily lost.
+
+actor-techcenter3 =
+   .description = Grants access to advanced weaponry.
+   .name = Research Center
+   .encyclopedia = The base buildings of the U.M.O.G. company are very versatile and are easy to transport through airlifters from a planet to another. But the most advanced technologies that require research therefore can't be easily obtained through satellite connections with the U.M.O.G. company. The Research Center solves that issue.
+
+    The Research Center is a protected dome, filled with city buildings, that are the home of many science labs. Scientists and physicists can then study and look out for new technologies, allow the Ginkua buildings to unlock their more advanced weaponry.
 
 actor-oresmelt =
    .name = Ore Smelter
@@ -232,7 +279,13 @@ actor-orepurifier =
    .name = Ore Purifier
    .description = Ore Purifier.
     Processes resources for extra credits.
-   .encyclopedia = The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore however requires a lot of energy.
+   .encyclopedia = The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore requires a lot of energy.
+
+actor-oilfacility =
+   .name = Oil Facility
+   .description = Oil Extracting Facility.
+    Extracts and processes deep oil for extra credits.
+   .encyclopedia = The oil facility is an economy boosting building for long lasting conflicts. It extracts and processes the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing oil requires a lot of energy.
 
 actor-bunker =
    .description = Light base defense.
@@ -286,7 +339,7 @@ actor-field =
       Requires power to operate.
       Maximum 1 can be built.
    .name = Force Field Generator
-   .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amout of energy.
+   .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amount of energy.
    .force-field-name = Force Field
    .force-field-description = Protective energy shield:
     Reduces damage taken by 75 %
@@ -313,6 +366,17 @@ actor-uplink =
    .railgun-name = Orbital Railgun
    .railgun-description = Initiate a surgical strike.
     Applies instant damage to a small area.
+
+actor-uplink-mercenary =
+   .name = Cluster Bomb Dome Command
+   .encyclopedia = An orbital spaceship that can launch cluster bombs from the atmosphere. It is a faster and more agile strike than the nuclear bomb, but it still does significant damage of the battlefield. Upon impact, the bomb will explode and then release a series of small bombs all over the impact area. It requires a long time to reload and consumes energy in that process.
+   .description = Orders an orbital cluster bomb strike.
+      Requires power to operate.
+      Maximum 1 can be built.
+      Special Ability: Cluster Bomb
+   .railgun-name = Cluster Bomb
+   .railgun-description = Initiate a cluster bomb strike.
+    Applies damage to a large area.
 
 actor-storage =
    .description = Stores excess resources.
@@ -375,6 +439,8 @@ actor-watchtower =
 actor-dropzone =
    .name = Drop Zone
    .description = Airborne reinforcement pad
+   .description-buildable = Airborne reinforcement pad
+     Maximum 3 can be built
    .encyclopedia = Some planets have mercenary forces available. They have their own tank design and have been paid in advance by the company already so you only need to clear and capture their drop in zone which will fly them in one at a time.
 
 actor-flagpost =
@@ -434,6 +500,28 @@ actor-rocketpod =
       Weak vs Pods
    .name = Rocket Pod
 
+actor-shotgunpod =
+   .description = Fast scout vehicle.
+    Armed with shotgun weapon.
+      Strong vs Pods
+      Weak vs Tanks and Buildings
+   .name = Shotgun Pod
+
+actor-clusterpod =
+   .description = Fast scout vehicle.
+    Armed with small cluster artillery.
+    Deals area damage.
+     Strong in groups.
+   .name = Cluster Pod
+
+actor-railgunpod =
+   .description = Fast scout vehicle.
+    Armed with a light railgun cannon.
+    Cloaked when idle.
+     Strong vs Pods and Aircraft
+     Weak vs Tanks and Buildings
+   .name = Railgun Pod
+
 actor-mortarpod =
    .description = Fast support vehicle.
     Armed with portable mortar gun.
@@ -460,6 +548,12 @@ actor-technician =
       Unarmed
    .name = Technician Pod
 
+actor-saboteur =
+   .description = Saboteur.
+    Infiltrates and enemy structures.
+      Unarmed
+   .name = Saboteur
+
 actor-brokerpod =
    .description = Financial analyst.
     Invests into stock market for dividents.
@@ -472,6 +566,13 @@ actor-elitepod =
       Strong vs Pods, Light Vehicles and Aircraft.
       Weak vs Tanks and Buildings.
    .name = Elite Pod
+
+actor-elitepod2 =
+   .description = Elite airborne pod.
+    Armed with a rocket launcher.
+      Strong vs Pods, Buildings and Aircraft.
+      Weak vs Tanks and Light Vehicles.
+   .name = Heli Pod
 
 actor-bomberpod =
    .description = Remote controlled mine.
@@ -528,6 +629,21 @@ actor-patrolboat =
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
 
+actor-missileboat =
+   .name = Missileboat boat
+   .generic-name = Boat
+   .description = Turreted missile launcher boat.
+      Strong vs Aircraft, Navy and Buildings
+      Weak vs Ground
+
+actor-spiderboat =
+   .name = Spider Boat
+   .generic-name = Boat
+   .description = Fast boat.
+    Armed with a small missilelauncher.
+      Strong vs Aircrafts, Navy and Pods
+      Weak vs Vehicles and Buildings
+
 actor-mediumboat =
    .name = Medium Boat
    .generic-name = Boat
@@ -561,6 +677,8 @@ actor-boomer =
       Strong vs Vehicles, Pods and Buildings
 
 actor-slcm-name = Submarine-launched cruise missile
+
+actor-intercontinental-name = Intercontinental Ballistic Missile
 
 actor-carrier =
    .description = Launches aerial autonomous attack vessels.
@@ -600,6 +718,17 @@ actor-aatank2-description = Mobile tank with lightning gun.
       Strong vs Aircraft
       Cannot attack grounds units.
 
+actor-aatank3 =
+   .description = Mobile tank with flak armament.
+      Strong vs Aircraft
+      Cannot attack grounds units.
+   .name = Mobile Flak
+
+actor-tinyhawk =
+   .name = Tiny Hawk
+   .description = Pods transport.
+      Armed with a light chaingun.
+
 actor-apc =
    .name = Transport Tank
    .description = Can transport pods.
@@ -609,6 +738,11 @@ actor-artillery =
    .description = Mobile long range weapon.
       Strong vs Pods and Buildings
       Weak vs Tanks
+
+actor-clustertank =
+   .name = Cluster Tank
+   .description = Mobile medium range weapon.
+      Armed with a cluster bomb launcher.
 
 actor-radartank =
    .description = Can detect cloaked units.n
@@ -666,6 +800,13 @@ actor-ecmtank =
     and obscures the battlefield.
       Disables units for a brief moment.
 
+actor-engineertank =
+   .name = Engineer Tank
+   .generic-name = Engineer Tank
+   .description = Battlefield engineering tank.
+    Effectivly repairs main battle tanks.
+      Unamred
+
 actor-dualartillery =
    .name = Dual Artillery
    .description = Double barreled artillery tank.
@@ -678,6 +819,10 @@ actor-builder =
       Unarmed
    .name = Builder
 
+actor-constructor =
+   .name = Yard Constructor
+   .description = Deploys into base yards.
+
 actor-collector-name = Collector
 
 actor-miner =
@@ -689,6 +834,13 @@ actor-missiletank =
    .name = Missile Tank
    .generic-name = Tank
    .description = A tank which shoots missiles.
+      Strong vs Vehicles and Buildings
+      Weak vs Pods
+
+actor-missiletank2 =
+   .name = Missile Pad Tank
+   .generic-name = Tank
+   .description = A tank which shoots several missiles into the battlefield.
       Strong vs Vehicles and Buildings
       Weak vs Pods
 

@@ -174,6 +174,43 @@ base2:
 		Start: 27
 		Offset: 0, 0
 
+base3:
+	Inherits: base
+	build:
+		Filename: bits/base3.png
+	idle:
+		Filename: bits/base3.png
+	damaged-idle:
+		Filename: bits/base3.png
+	damaged-build:
+		Filename: bits/base3.png
+	production-inprogress:
+		Filename: bits/base3.png
+	idle-platform1:
+		Filename: bits/platform2.png
+	damaged-idle-platform1:
+		Filename: bits/platform2.png
+	make-platform1:
+		Filename: bits/platform2.png
+	active-platform1:
+		Filename: bits/creation-sc.png
+	damaged-active-platform1:
+		Filename: bits/creation2-damaged.png
+	idle-platform2:
+		Filename: bits/platform2.png
+	damaged-idle-platform2:
+		Filename: bits/platform2.png
+	make-platform2:
+		Filename: bits/platform2.png
+	active-platform2:
+		Filename: bits/creation-sc.png
+	damaged-active-platform2:
+		Filename: bits/creation2-damaged.png
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 27
+		Offset: 0, 0
+
 outpost:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
@@ -211,6 +248,14 @@ outpost2:
 		Filename: bits/outpost2.png
 	idle:
 		Filename: bits/outpost2.png
+
+outpost3:
+	Inherits: outpost
+	Inherits@Flame: ^BuildingFlame
+	damaged-idle:
+		Filename: bits/outpost3.png
+	idle:
+		Filename: bits/outpost3.png
 
 generator:
 	Inherits@Flame: ^BuildingFlame2
@@ -271,6 +316,27 @@ generator2:
 		Filename: bits/buildings-icons.png
 		Start: 31
 
+generator3:
+	Inherits: generator
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Filename: generator3
+		Offset: 0, -8
+	idle:
+		Filename: bits/generator3.png
+		Length: 16
+		Tick: 75
+	damaged-idle:
+		Filename: bits/generator3.png
+		Start: 16
+	shadow-overlay:
+		Filename: bits/generator-shadow.png
+		ZOffset: 1768
+		Offset: 11, 11
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 44
+
 radar:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
@@ -320,6 +386,18 @@ radar2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 20
+		Offset: 0, 0
+
+radar3:
+	Inherits: radar
+	idle:
+		Filename: bits/radar3.png
+	damaged-idle:
+		Filename: bits/radar3.png
+		Start: 1
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 39
 		Offset: 0, 0
 
 trader:
@@ -376,6 +454,18 @@ trader2:
 		Filename: bits/trader2.png
 	active:
 		Filename: bits/trader2.png
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 28
+
+trader3:
+	Inherits: trader
+	idle:
+		Filename: bits/trader3.png
+	damaged-idle:
+		Filename: bits/trader3.png
+	active:
+		Filename: bits/trader3.png
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 28
@@ -455,6 +545,28 @@ module2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 30
+		Offset: 0, 0
+
+module3:
+	Inherits: module
+	door:
+		Filename: bits/module3.png
+	idle:
+		Filename: bits/module3.png
+	damaged-idle:
+		Filename: bits/module3.png
+	shadow-overlay:
+		Filename: bits/module3-shadow.png
+		Offset: 4, 6
+	damaged-shadow-overlay:
+		Filename: bits/module3-shadow.png
+		Offset: 4, 6
+	production-inprogress:
+		Filename: bits/module3.png
+		Reverses: True
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 40
 		Offset: 0, 0
 
 miner2:
@@ -662,6 +774,52 @@ starport2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 17
+		Offset: 0, 0
+
+starport3:
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Filename: starport3
+		Offset: 0, 1
+	idle:
+		Filename: bits/starport3.png
+		ZOffset: -1c511
+	shadow-overlay:
+		Filename: bits/starport3-shadow.png
+		Offset: 6, 4
+	damaged-idle:
+		Filename: bits/starport3.png
+		Start: 1
+		ZOffset: -1c511
+	damaged-shadow-overlay:
+		Filename: bits/starport3-shadow.png
+		Start: 1
+		Offset: 6, 4
+	active:
+		Filename: bits/starport3.png
+		#Frames: 1, 2, 3, 2, 1
+		#Length: 5
+		ZOffset: -1c511
+		#Tick: 100
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+	flame:
+		Filename: bits/flame2.png
+		Offset: -2, -6
+	flame2:
+		Filename: bits/flame2.png
+		Offset: 12, -17
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 11
 		Offset: 0, 0
 
 factory:
@@ -928,6 +1086,83 @@ factory2:
 		Start: 1
 		Offset: 0, 0
 
+factory3:
+	Inherits@Flame: ^BuildingFlame2
+	idle:
+		Filename: bits/null.png
+	idle-online:
+		Filename: bits/factory3.png
+	idle-offline:
+		Filename: bits/factory3.png
+	shadow-overlay:
+		Filename: bits/factory3-shadow.png
+		ZOffset: 1768
+		Offset: 5, -1
+	damaged-idle-online:
+		Filename: bits/factory3.png
+		Start: 5
+	damaged-idle-offline:
+		Filename: bits/factory3.png
+		Start: 5
+	damaged-shadow-overlay:
+		Filename: bits/factory3-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 5, -1
+	production-inprogress:
+		Filename: bits/factory3.png
+		Length: 5
+		Reverses: True
+		Tick: 100
+		ZOffset: 1500
+	production-done:
+		Filename: bits/factory3.png
+		Length: 5
+		Reverses: True
+		Tick: 30
+		ZOffset: 1500
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+		Offset: 0, -14
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+		Offset: 0, -14
+	idle-platform:
+		Filename: bits/factory3-platform.png
+		Offset: 0, -17
+		ZOffset: -3c0
+	damaged-idle-platform:
+		Filename: bits/factory3-platform.png
+		Start: 1
+		Offset: 0, -17
+		ZOffset: -3c0
+	active-creation:
+		Filename: bits/creation4.png
+		Length: 28
+		Offset: -1, 17
+		ZOffset: 2048
+	damaged-active-creation:
+		Filename: bits/creation4-damaged.png
+		Length: 28
+		Offset: -1, 17
+		ZOffset: 2048
+	flame:
+		Filename: bits/flame2.png
+		Offset: 0, -25
+	flame2:
+		Filename: bits/flame2.png
+		Offset: 15, -26
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 42
+		Offset: 0, 0
+
 bunker:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
@@ -1127,6 +1362,43 @@ aaturret2:
 		Start: 22
 		Offset: 0, 0
 
+aaturret3:
+	Inherits: aaturret
+	Defaults:
+		Offset: 0, -9
+	idle:
+		Filename: bits/aa-turret3.png
+		Start: 0
+	shadow-overlay:
+		Filename: bits/aa-turret3-shadow.png
+		ZOffset: -1768
+		Offset: 1, -2
+	damaged-shadow-overlay:
+		Filename: bits/aa-turret3-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 1, -2
+	damaged-idle:
+		Filename: bits/aa-turret3.png
+		Start: 1
+	turret:
+		Filename: bits/aa-turret3.png
+		Start: 2
+		Facings: 8
+	shoot:
+		Filename: bits/aa-turret3.png
+		Start: 2
+		Facings: 8
+	charge:
+		Filename: bits/aa-turret3.png
+		Start: 3
+		Length: 4
+		Tick: 25
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 22
+		Offset: 0, 0
+
 field:
 	Inherits@Flame: ^BuildingFlame
 	idle:
@@ -1303,6 +1575,44 @@ uplink:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 24
+		Offset: 0, 0
+
+uplinkmercenary:
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Filename: cluster-bomb-dome
+		Offset: 0, 0
+	idle:
+		Filename: bits/cluster-bomb-dome.png
+		Start: 0
+		ZOffset: 500
+	damaged-idle:
+		Filename: bits/cluster-bomb-dome.png
+		Start: 1
+		ZOffset: 500
+	shadow-overlay:
+		Filename: bits/cluster-bomb-dome-shadow.png
+		ZOffset: 1768
+		Offset: 10, 10
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+	flame:
+		Filename: bits/flame2.png
+		Offset: -5, -22
+	flame2:
+		Filename: bits/flame2.png
+		Offset: 8, -24
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 43
 		Offset: 0, 0
 
 howitzer:
@@ -1893,6 +2203,29 @@ techcenter2:
 		Filename: bits/buildings-icons.png
 		Start: 35
 
+techcenter3:
+	Inherits: techcenter
+	idle:
+		Filename: bits/techcenter3.png
+	shadow-overlay:
+		Filename: bits/techcenter3-shadow.png
+		Offset: 22, 30
+	damaged-shadow-overlay:
+		Filename: bits/techcenter3-shadow.png
+		Offset: 22, 30
+		Start: 1
+	damaged-idle:
+		Filename: bits/techcenter3.png
+	animation:
+		Filename: bits/techcenter3.png
+		Start: 2
+		Length: 6
+		Reverses: True
+		Tick: 200
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 45
+
 reconstructor:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
@@ -2199,7 +2532,18 @@ dropzone:
 		Filename: bits/flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/icon.png
+		Filename: bits/buildings-icons.png
+		Start: 38
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
 
 oresmelt:
 	Inherits@Flame: ^BuildingFlame
@@ -2295,6 +2639,41 @@ orepurifier:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 37
+		Offset: 0, 0
+
+oilfacility:
+	Inherits@Flame: ^BuildingFlame
+	Defaults:
+		ZOffset: 512
+		Offset: 0, -2
+	idle:
+		Filename: bits/oilfacility.png
+		Length: 1
+	idle-animation:
+		Filename: bits/oilfacility.png
+		Length: 5
+		Reverses: True
+		Tick: 140
+	damaged-idle:
+		Filename: bits/oilfacility.png
+		Start: 5
+	shadow-overlay:
+		Filename: bits/oilfacility-shadow.png
+		ZOffset: -1768
+		Offset: 11,22
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 41
 		Offset: 0, 0
 
 flagpost:
