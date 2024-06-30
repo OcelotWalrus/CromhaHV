@@ -31,6 +31,7 @@
 - [ ] Remake the refinery
 - [ ] Remake the bunker
 - [ ] Remake the turret
+- [ ] Make Ginkua starship (super unit)
 - [x] Fix the Cluster Bomb Dome sprite (roundings)
 - [ ] Start working on the navy units
 - [ ] Do something with the Dreadnought (or not)
