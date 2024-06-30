@@ -24,7 +24,7 @@
 - [x] Rework on the Starport Platform
 - [ ] Recheck every unit's armament offset
 - [ ] Correct every wrong diagonal angle spritesheets
-- [ ] Add the Railgun Pod & delete the elitepod2
+- [x] Add the Railgun Pod & delete the elitepod2
 - [ ] Make a variation for the artillery?
 - [ ] Remake the base
 - [ ] Remake the outpost
