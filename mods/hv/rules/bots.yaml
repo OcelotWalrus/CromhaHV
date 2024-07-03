@@ -168,6 +168,8 @@ Player:
 			carrier: 2
 			navalminelayer: 1
 			navalminelayer2: 1
+			missileboat: 1
+			spiderboat: 1
 		UnitLimits:
 			miner: 1
 			builder: 1

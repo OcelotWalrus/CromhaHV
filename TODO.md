@@ -22,8 +22,9 @@
 - [x] Redo the Atmospheric Glider sprites
 - [x] Make a sprite for the Starport Platform
 - [x] Rework on the Starport Platform
-- [ ] Recheck every unit's armament offset
-- [ ] Correct every wrong diagonal angle spritesheets
+- [ ] Rework the Railgun Pod's sprites
+- [x] Recheck every unit's armament offset
+- [x] Correct every wrong diagonal angle spritesheets
 - [x] Add the Railgun Pod & delete the elitepod2
 - [ ] Make a variation for the artillery?
 - [ ] Remake the base

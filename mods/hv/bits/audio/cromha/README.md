@@ -1,1 +1,1 @@
- Contents of this folder were generated using third party text-to-speech tool (https://ttsmaker.com/) TTSMaker, without any copyrighting rights from them.
+Contents of this folder indicate assets made by Cromha, under the default [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/) license.

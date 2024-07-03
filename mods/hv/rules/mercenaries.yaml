@@ -331,6 +331,110 @@ BALLOON.MERCENARY:
 	RenderSprites:
 		Image: balloon
 
+STARSHIP:
+	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: actor-mothership.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 100
+		Prerequisites: ~disabled
+		Description: actor-mothership.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 100000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 12c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 6c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 100
+		CruiseAltitude: 3c0
+		AltitudeVelocity: 0c56
+		InitialFacing: 512
+		CanForceLand: true
+		VTOL: true
+		CanSlide: true
+	HitShape:
+		Type: Circle
+			Radius: 1024
+	Voiced:
+		VoiceSet: DropshipVoice
+	Selectable:
+		DecorationBounds: 2048, 2048
+	SpawnActorOnDeath:
+		Actor: STARSHIP.Husk
+		RequiresCondition: airborne
+	CarrierParent:
+		Actors: drone2, drone2, drone2, drone2, drone2
+		RespawnTicks: 100
+		SpawnAllAtOnce: true
+	WithCarrierParentPipsDecoration:
+	WithCarrierHatchAnimation:
+	Exit:
+		SpawnOffset: 0,0,0
+		Facing: 0
+	Turreted@DroneLauncher:
+		Turret: primary
+		Offset: 0,0,0
+		TurnSpeed: 240
+	Turreted@LaserTurret:
+		Turret: secondary
+		Offset: -200,0,-100
+		TurnSpeed: 120
+	AttackTurreted:
+	Armament@DroneLauncher:
+		Name: primary
+		Weapon: Drone2Launcher
+		LocalOffset: 0,0,-100
+	Armament@LaserTurret:
+		Name: secondary
+		Weapon: MothershipLaser
+		LocalOffset: 500,300,-100, 500,-300,-100
+	Voiced:
+		VoiceSet: MotherShipVoice
+	-GrantRandomCondition@SpawnPilot:
+	-Explodes@SpawnPilot:
+
+STARSHIP.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-mothership-husk.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 86
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 43
+	LeavesTrails:
+		Offsets: -853,0,171
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: starship
+
 ## buildings
 
 BASE3:
@@ -843,7 +947,7 @@ SHOTGUNPOD:
 		Count: 4
 	Armament@Primary:
 		Weapon: LightShotGun
-		LocalOffset: 35,185,150, 35,-185,150
+		LocalOffset: 35,185,150, 35,25,150
 		PauseOnCondition: !ammo
 	Armament@Garrisoned:
 		Name: garrisoned
@@ -921,8 +1025,6 @@ RAILGUNPOD:
 		IsPlayerPalette: true
 		CloakedPalette: cloak
 		CloakStyle: Palette
-	RenderSprites:
-		Image: shotgunpod
 
 CLUSTERPOD:
 	Inherits: ^Pod
@@ -1096,7 +1198,7 @@ CONSTRUCTOR:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
-		Prerequisites: base.gm
+		Prerequisites: outpost, ~base.gm
 		Queue: Utility
 		BuildPaletteOrder: 70
 		Description: actor-constructor.description
@@ -1156,6 +1258,7 @@ CLUSTERTANK:
 	Armament:
 		Weapon: HeavyCluster
 		MuzzleSequence: muzzle
+		LocalOffset: 450,0,750
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
@@ -1204,7 +1307,7 @@ TINYHAWK:
 		Sequence: teleport-large
 	Armament:
 		Weapon: LightShotGun
-		LocalOffset: 400,-50,0
+		LocalOffset: 400,0,100
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
@@ -1241,7 +1344,7 @@ MISSILETANK2:
 		Range: 4c0
 	Armament:
 		Weapon: MissilePad
-		LocalOffset: 30,85,0
+		LocalOffset: 30,0,750
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack

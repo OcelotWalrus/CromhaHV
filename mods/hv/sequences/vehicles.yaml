@@ -724,6 +724,19 @@ shotgunpod:
 		Filename: bits/units-icons.png
 		Start: 60
 
+railgunpod:
+	idle:
+		Filename: bits/railgunpod.png
+		Facings: 8
+	die:
+		Filename: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon:
+		Filename: bits/units-icons.png
+		Start: 60
+
 mbt2:
 	idle:
 		Filename: bits/mbt2.png
