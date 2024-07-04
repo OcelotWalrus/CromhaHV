@@ -48,8 +48,8 @@ LightRailgun:
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
 		ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
-		Damage: 1000
-		Spread: 24
+		Damage: 2000
+		Spread: 12
 		Versus:
 			None: 1500
 			Steel: 35
@@ -570,7 +570,7 @@ MothershipLaser:
 		Speed: 550
 		Blockable: false
 		Inaccuracy: 0
-		Image: 
+		Image:
 		ContrailLength: 4
 		ContrailStartWidth: 0c100
 		ContrailEndWidth: 0c32

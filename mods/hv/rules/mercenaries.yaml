@@ -986,6 +986,18 @@ CLUSTERPOD:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	WithMuzzleOverlay:
+	GrantConditionOnTerrain:
+		Condition: cancloak
+		TerrainTypes: Sand, Sand Ramp, Snow, Snow Ramp
+	Cloak:
+		InitialDelay: 75
+		CloakDelay: 60
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack
+		CloakedPalette: shadow
+		CloakStyle: Palette
+		RequiresCondition: cancloak
 
 RAILGUNPOD:
 	Inherits: ^Pod
@@ -1025,36 +1037,6 @@ RAILGUNPOD:
 		IsPlayerPalette: true
 		CloakedPalette: cloak
 		CloakStyle: Palette
-
-CLUSTERPOD:
-	Inherits: ^Pod
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Pod
-		Description: actor-clusterpod.description
-		Prerequisites: ~module.gm, factory
-		BuildPaletteOrder: 50
-	Valued:
-		Cost: 145
-	Tooltip:
-		Name: actor-clusterpod.name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	RevealsShroud:
-		Range: 6c0
-		MinRange: 3c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 3c0
-	Armament@Primary:
-		Weapon: LightCluster
-	Armament@Garrisoned:
-		Name: garrisoned
-		Weapon: LightClusterBunker
-	AttackFrontal:
-		PauseOnCondition: ecm-disabled
-		FacingTolerance: 0
-	WithMuzzleOverlay:
 
 ## ships
 
