@@ -145,7 +145,6 @@ actor-airlifter =
    .name = Heavy Transport Airlifter
    .description = Vehicle Transport Plane.
       Can load pods and vehicles.
-      Paradrop loaded units.
 
 actor-bomber2 =
    .name = Atmospheric Bomber
