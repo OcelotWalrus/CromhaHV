@@ -44,13 +44,23 @@ LightBomb:
 		Damage: 1550
 	Warhead@Incendiary: TreeDamage
 		Damage: 1250
+		Versus:
+			None: 15
+			Steel: 90
+			Light: 15
+			Heavy: 15
+			Concrete: 90
 	Projectile: GravityBomb
 		Image: propelledbomb
 	Warhead@Cluster1: FireCluster
-		Weapon: ClusterSubProjectiles
+		Weapon: ClusterSubProjectilesLight
 		RandomClusterCount: 4
 		Dimensions: 3,3
 		Footprint: xxx xxx xxx
+	Warhead@GroundEffect: CreateEffect
+		Explosions: energetic_bomb
+		ValidTargets: Ground, Tree
+		ImpactSounds: explosion06.wav
 
 ClusterSubBomb:
 	Inherits: BigSplash
@@ -106,9 +116,19 @@ ClusterSubProjectilesLight:
 		Inaccuracy: 3c256
 		LaunchAngle: 105
 	Warhead@Damage: SpreadDamage
-		Damage: 1000
+		Damage: 1700
+		Versus:
+			None: 15
+			Steel: 90
+			Light: 15
+			Heavy: 15
+			Concrete: 90
 	Warhead@Incendiary: TreeDamage
-		Damage: 1100
+		Damage: 1800
+	Warhead@Effect: CreateEffect
+		Explosions: energetic_bomb
+		ValidTargets: Ground, Tree
+		ImpactSounds: explosion06.wav
 
 ClusterBomb:
 	ValidTargets: Ground, Air, Tree, Lava, Swamp

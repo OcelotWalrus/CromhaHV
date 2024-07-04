@@ -31,6 +31,8 @@ explosion:
 		Offset: 0, -9
 	railgun:
 		Filename: bits/railgun-explosion.png
+	energetic_bomb:
+		Filename: bits/energetic-bomb-explosion.png
 
 nuclear_explosion:
 	idle:
