@@ -163,17 +163,12 @@ GLIDER:
 		LocalOffset: 280,280,0, 280,-280,0
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 16
+		Ammo: 8
 		AmmoCondition: ammo
 		RearmSound: mine_reload_oneshotofficial.wav
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
-		PipCount: 8
 	ReloadAmmoPool:
 		Delay: 225
-		Count: 2
+		Count: 1
 	Voiced:
 		VoiceSet: GliderVoice
 	Tooltip:

@@ -482,3 +482,7 @@ ClusterProjectileHeavy:
 		Damage: 2000
 	Warhead@Incendiary: TreeDamage
 		Damage: 2000
+	Warhead@Effect: CreateEffect
+		Explosions: energetic_bomb
+		ValidTargets: Ground, Tree
+		ImpactSounds: explosion06.wav
