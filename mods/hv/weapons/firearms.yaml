@@ -419,10 +419,10 @@ FlakLight:
 		ValidTargets: Air
 		Versus:
 			None: 120
-			Wood: 90
-			Light: 90
-			Heavy: 75
-			Concrete: 75
+			Wood: 30
+			Light: 75
+			Heavy: 55
+			Concrete: 30
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
 		Damage: 1500
