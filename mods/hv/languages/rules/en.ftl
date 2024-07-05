@@ -642,7 +642,7 @@ actor-spiderboat =
    .name = Spider Boat
    .generic-name = Boat
    .description = Fast boat.
-    Armed with a small missilelauncher.
+    Armed with a light railgun cannon.
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
 

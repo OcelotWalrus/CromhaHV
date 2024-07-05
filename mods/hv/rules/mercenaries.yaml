@@ -1073,11 +1073,13 @@ MISSILEBOAT:
 		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
+		LocalOffset: 575,0,275
 	Armament@Ground:
 		Weapon: MissileShipRocketGround
 		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
+		LocalOffset: 575,0,275
 	AttackTurreted:
 		Armaments: primary, secondary
 	WithSpriteTurret:
@@ -1138,15 +1140,15 @@ SPIDERBOAT:
 		TurnSpeed: 135
 		Offset: 120,0,20
 	Armament@Air:
-		Weapon: BoatMissileAntiAir
+		Weapon: LightRailgun
 		Recoil: 100
 		RecoilRecovery: 38
-		LocalOffset: 250,0,50
+		LocalOffset: 80,0,100
 	Armament@Ground:
-		Weapon: BoatMissileAntiGround
+		Weapon: LightRailgun
 		Recoil: 100
 		RecoilRecovery: 38
-		LocalOffset: 250,0,50
+		LocalOffset: 80,0,100
 	AttackTurreted:
 		Armaments: primary, secondary
 	WithSpriteTurret:
