@@ -36,7 +36,7 @@ BOMBER2:
 		AddToAssetsValue: true
 	AttackAircraft:
 		FacingTolerance: 92
-		PersistentTargeting: true
+		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
 		TurnSpeed: 20
@@ -147,7 +147,7 @@ GLIDER:
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: true
 	AttackAircraft:
-		FacingTolerance: 50
+		FacingTolerance: 10
 		PersistentTargeting: true
 		OpportunityFire: false
 	Aircraft:
