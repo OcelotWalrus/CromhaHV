@@ -15,7 +15,7 @@
 - [x] Make voices for cluster bomb and paratroopers powers
 - [ ] Polish the colors of the AA Turret
 - [ ] Make the building icon for the AA Turret
-- [ ] Make a sprite for the AA Tank
+- [x] Make a sprite for the AA Tank
 - [x] Fix factory platform transparency
 - [x] Make the Cluster Bomb Dome damaged sprite craters look less odd
 - [x] Polish the Paratroopers Drop cursor
