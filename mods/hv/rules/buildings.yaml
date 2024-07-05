@@ -1605,7 +1605,7 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Prerequisites: ~base
+		Prerequisites: ~base, ~!structures.gm
 		Description: actor-storage.description
 	Valued:
 		Cost: 1400
