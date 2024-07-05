@@ -414,13 +414,13 @@ FlakLight:
 		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
 	Warhead@Damage: SpreadDamage
-		Spread: 256
+		Spread: 236
 		Damage: 6500
 		ValidTargets: Air
 		Versus:
 			None: 120
 			Wood: 30
-			Light: 75
+			Light: 65
 			Heavy: 55
 			Concrete: 30
 	Warhead@Incendiary: TreeDamage
