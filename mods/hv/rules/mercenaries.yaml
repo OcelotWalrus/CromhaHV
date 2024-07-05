@@ -162,8 +162,6 @@ GLIDER:
 		MuzzleSequence: muzzle
 		LocalOffset: 280,280,0, 280,-280,0
 		PauseOnCondition: !ammo
-	Rearmable:
-		RearmActors: starport3
 	AmmoPool:
 		Ammo: 16
 		AmmoCondition: ammo
@@ -173,6 +171,9 @@ GLIDER:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 225
+		Count: 2
 	Voiced:
 		VoiceSet: GliderVoice
 	Tooltip:
