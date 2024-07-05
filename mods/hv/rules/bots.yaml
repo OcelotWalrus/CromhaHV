@@ -130,6 +130,7 @@ Player:
 			stealthtank: 1
 			ecmtank: 1
 			aatank: 3
+			aatank3: 3
 			hackertank: 1
 			repairtank: 1
 			apc: 1

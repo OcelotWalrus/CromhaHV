@@ -1389,4 +1389,4 @@ AATANK3:
 		Description: actor-aatank3.description
 	Armament:
 		Weapon: FlakLight
-		LocalOffset: 250,250,150, 250,-250,150
+		LocalOffset: 225,0,285
