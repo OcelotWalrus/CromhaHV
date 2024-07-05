@@ -149,7 +149,9 @@ actor-airlifter =
 actor-bomber2 =
    .name = Atmospheric Bomber
    .description = Fast bombing atmospheric glider.
-     Can't attack air units.
+     Strong vs Buildings
+     Weak vs Tanks and Pods
+     Can't target Aircraft
 
 actor-glider =
    .name = Atmospheric Glider
