@@ -449,6 +449,61 @@ OUTPOST3:
 		Factions: gm
 		Prerequisite: base.gm
 
+STORAGE2:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
+	Selectable:
+		Bounds: 2048, 2048
+	Building:
+		Footprint: ==== +xx+ ++++
+		Dimensions: 4,3
+	Buildable:
+		BuildPaletteOrder: 35
+		Queue: Building
+		Prerequisites: ~base
+		Description: actor-storage.description
+	Valued:
+		Cost: 1400
+	Targetable:
+		TargetTypes: Ground, Structure
+	Tooltip:
+		Name: actor-storage.name
+	Encyclopedia:
+		Description: actor-storage.encyclopedia
+		Order: 10
+		Category: Buildings
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	Power:
+		Amount: -30
+	RenderSprites:
+		Image: refinery
+	ExitsDebugOverlay:
+	Exit:
+		ExitCell: 2,3
+	WithProductionExitOverlay:
+		ExitCell: 2,3
+		Sequence: animation
+		RequiresCondition: !burning
+	AcceptsDeliveredResources:
+		DeliveryVehicleType: tanker2
+	FreeActorWithDelivery:
+		Actor: miner
+		DeliveryOffset: 0,0
+		DeliveringActor: dropship.reinforce
+		Facing: 160
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: storage
+
 RADAR3:
 	Inherits: RADAR
 	-Encyclopedia:
@@ -483,11 +538,11 @@ RADAR3:
 
 TECHCENTER3:
 	Inherits: ^BaseBuilding
-	Inherits@Shape: ^3x3Shape
+	Inherits@Shape: ^2x3Shape
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Building:
-		Footprint: _xx_ xxxx xxxx _xx_
+		Footprint: _xx_ +xx+ +xx+ _xx_
 		Dimensions: 4,4
 	Buildable:
 		Queue: Building
@@ -519,12 +574,6 @@ TECHCENTER3:
 		Amount: -220
 	Targetable:
 		TargetTypes: Ground, Structure
-	HitShape:
-		UseTargetableCellsOffsets: true
-		TargetableOffsets: -1024,0,2048
-		Type: Rectangle
-			TopLeft: -1048, 512
-			BottomRight: 1048, 1524
 	WithIdleOverlay@Lights:
 		Sequence: animation
 		RequiresCondition: !disable-lights && !ownerless && !disabled && !build-incomplete
@@ -579,7 +628,7 @@ STARPORT3:
 	Valued:
 		Cost: 1000
 	Building:
-		Footprint: _xx_ xxxx ==x= _xx_
+		Footprint: =xx= xxxx ==x= =xx=
 		Dimensions: 4,4
 	HitShape:
 		UseTargetableCellsOffsets: False

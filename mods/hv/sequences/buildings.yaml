@@ -2698,3 +2698,51 @@ flagpost:
 		Offset: 3,14
 	icon:
 		Filename: bits/null.png
+
+refinery:
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Filename: refinery
+		Offset: 0, -1
+	idle:
+		Filename: bits/refinery.png
+		Start: 0
+		ZOffset: 1024
+	shadow-overlay:
+		Filename: bits/refinery-shadow.png
+		ZOffset: -1768
+		Offset: 4, 3
+	damaged-shadow-overlay:
+		Filename: bits/refinery-shadow.png
+		ZOffset: -1768
+		Offset: 5, 3
+		Start: 1
+	damaged-idle:
+		Filename: bits/refinery.png
+		Start: 10
+	animation:
+		Filename: bits/refinery.png
+		Start: 0
+		Length: 10
+		Reverses: True
+		Tick: 80
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 3096
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 3096
+	flame:
+		Filename: bits/flame2.png
+		Offset: 4, -18
+	flame2:
+		Filename: bits/flame2.png
+		Offset: 15, 8
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 23
+		Offset: 0, 0
