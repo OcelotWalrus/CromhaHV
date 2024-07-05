@@ -92,6 +92,35 @@ ElectronicCountermeasure:
 		AffectsParent: true
 		ValidTargets: Ground
 
+AircraftRailgunAir:
+	Inherits: Railgun
+	ValidTargets: Air
+	Range: 6c0
+	ReloadDelay: 85
+	Bursts: 2
+	BurstsDelays: 2
+	Report: raygun_newlocknew.wav
+	Projectile: LaserZap
+		Width: 0c90
+		Shape: Cylindrical
+		ZOffset: 2048
+		Color: FE0303
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Air
+		Damage: 7500
+		Spread: 6
+		Versus:
+			Light: 75
+	Warhead@Incendiary: TreeDamage
+		Damage: 7500
+		Spread: 6
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
+
 TowerRailgun:
 	ReloadDelay: 50
 	Burst: 3

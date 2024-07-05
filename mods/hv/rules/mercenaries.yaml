@@ -158,14 +158,14 @@ GLIDER:
 		RepulsionSpeed: 40
 		CruiseAltitude: 4560
 	Armament@Air:
-		Weapon: AircraftMissileAir
+		Weapon: AircraftRailgunAir
 		MuzzleSequence: muzzle
-		LocalOffset: 50,0,0
+		LocalOffset: 280,280,0, 280,-280,0
 		PauseOnCondition: !ammo
 	Rearmable:
 		RearmActors: starport3
 	AmmoPool:
-		Ammo: 8
+		Ammo: 16
 		AmmoCondition: ammo
 		RearmSound: mine_reload_oneshotofficial.wav
 	WithAmmoPipsDecoration:
