@@ -678,6 +678,12 @@ actor-boomer =
    .description = A submarine with powerful long range missiles.
       Strong vs Vehicles, Pods and Buildings
 
+actor-mercsubmarine =
+   .name = Bombing Submarine
+   .generic-name = Submarine
+   .description = A submarine with a powerful bomb launcher pad.
+      Strong vs Vehicles, Pods and Buildings
+
 actor-slcm-name = Submarine-launched cruise missile
 
 actor-intercontinental-name = Intercontinental Ballistic Missile
@@ -729,7 +735,7 @@ actor-aatank3 =
 actor-tinyhawk =
    .name = Tiny Hawk
    .description = Pods transport.
-      Armed with a light chaingun.
+      Armed with an heavy chaingun.
 
 actor-apc =
    .name = Transport Tank

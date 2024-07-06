@@ -449,6 +449,13 @@
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 512
+
+^3x1Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
 

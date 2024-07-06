@@ -451,12 +451,12 @@ OUTPOST3:
 
 STORAGE2:
 	Inherits: ^BaseBuilding
-	Inherits@Shape: ^2x2Shape
+	Inherits@Shape: ^3x1Shape
 	Inherits@Flame: ^BuildingFlame
 	Selectable:
 		Bounds: 2048, 2048
 	Building:
-		Footprint: ==== +xx+ ++++
+		Footprint: ==== xxxx ++++
 		Dimensions: 4,3
 	Buildable:
 		BuildPaletteOrder: 35
@@ -1136,13 +1136,44 @@ MISSILEBOAT:
 	Selectable:
 		DecorationBounds: 1536, 1536
 
-BOOMER.MERCENARY:
-	Inherits: BOOMER
+MERCSUBMARINE:
+	Inherits: ^Submarine
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: actor-mercsubmarine.name
+		GenericName: actor-mercsubmarine.generic-name
 	Buildable:
-		Prerequisites: ~harbor.gm, radar
-	-MapEditorData:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.gm, techcenter3
+		BuildPaletteOrder: 60
+		Description: actor-mercsubmarine.description
 	UpdatesPlayerStatistics:
-		OverrideActor: boomer
+		AddToArmyValue: true
+	Health:
+		HP: 80000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 55
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 1c0
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 1c0
+	AttackFrontal:
+		FacingTolerance: 25
+	WithAttackAnimation:
+		Sequence: shoot
+	Armament:
+		Weapon: ShipBoomingPad
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
 	RenderSprites:
 		Image: boomer
 
@@ -1335,8 +1366,14 @@ TINYHAWK:
 		Image: energyball
 		Sequence: teleport-large
 	Armament:
-		Weapon: LightShotGun
+		Weapon: HeavyShotGun
 		LocalOffset: 400,0,100
+	AmmoPool:
+		Ammo: 33
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 55
+		Count: 4
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0

@@ -346,7 +346,7 @@ LightShotGun:
 	BurstDelays: 1
 	Range: 5c0
 	Projectile: Bullet
-		Image: bullet5
+		Image: bullet10
 		Speed: 800
 		Blockable: false
 		LaunchAngle: 50
