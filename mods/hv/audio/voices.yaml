@@ -125,22 +125,6 @@ SpeederVoice:
 		Action: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_fire_the_missiles, ship1_intercepting_hostiles
 		Guard: guarding
 
-GliderVoice:
-	DefaultVariant: .wav
-	Voices:
-		Select: glider_acknowledged, glider_aeronautics_operational, glider_awaiting_orders, glider_avionics_online
-		Move: glider_closing_in, glider_not_a_problem, glider_roger_that
-		Action: glider_affirmative, glider_shooting_down, glider_firing_missiles, glider_not_a_problem, glider_dogfight_engaged, glider_sweep_the_area
-		Guard: guarding
-
-BomberVoice:
-	DefaultVariant: .wav
-	Voices:
-		Select: bomber2_aeronautics_operational, bomber2_avionics_online, bomber2_awaiting_orders, bomber2_ready_for_action
-		Move: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_not_a_problem, bomber2_thrusters_engaged
-		Action: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_bombing_target, bomber2_dropping_bombs
-		Guard: guarding
-
 DroneVoice:
 	DefaultVariant: .wav
 	Voices:
@@ -235,4 +219,28 @@ MotherShipVoice:
 		Select: mothershipselect1, mothershipselect2, mothershipselect3
 		Move: mothershipaction1, mothershipaction2, mothershipaction3
 		Action: mothershipattack1, mothershipattack2, mothershipattack3
+		Guard: guarding
+
+GliderVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: glider_acknowledged, glider_aeronautics_operational, glider_awaiting_orders, glider_avionics_online
+		Move: glider_closing_in, glider_not_a_problem, glider_roger_that
+		Action: glider_affirmative, glider_shooting_down, glider_firing_missiles, glider_not_a_problem, glider_dogfight_engaged, glider_sweep_the_area
+		Guard: guarding
+
+BomberVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: bomber2_aeronautics_operational, bomber2_avionics_online, bomber2_awaiting_orders, bomber2_ready_for_action
+		Move: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_not_a_problem, bomber2_thrusters_engaged
+		Action: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_bombing_target, bomber2_dropping_bombs
+		Guard: guarding
+
+SonicTankVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: sonictank_orders, sonictank_receiving, sonictank_gotcha
+		Move: sonictank_acknowledged, sonictank_affirmative, sonictank_at_once, sonictank_good_copy, sonictank_gotcha, sonictank_moving, sonictank_quickly
+		Action:sonictank_acknowledged, sonictank_affirmative, sonictank_at_once, sonictank_gotcha, sonictank_consider_it_dead, sonictank_leave_no_survivors, sonictank_shock_waves_barrage, sonictank_shocking_waves, sonictank_target
 		Guard: guarding

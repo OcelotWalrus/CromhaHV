@@ -1447,7 +1447,7 @@ SONICTANK:
 	AttackTurreted:
 		PauseOnCondition: ecm-disabled
 	Voiced:
-		VoiceSet: TechnicianVoice
+		VoiceSet: SonicTankVoice
 	WithSpriteTurret:
 	-Guard:
 

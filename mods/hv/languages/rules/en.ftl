@@ -817,9 +817,8 @@ actor-sonictank =
    .name = Sonic Tank
    .generic-name = Sonic Tank
    .description = Fires sonic shock waves.
-    Strong vs Pods and Vehicles
-    Weak vs Structures
-     Can't target aircraft
+      Strong vs Pods and Vehicles
+      Weak vs Structures
 
 actor-dualartillery =
    .name = Dual Artillery

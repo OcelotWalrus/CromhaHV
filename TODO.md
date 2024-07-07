@@ -39,4 +39,5 @@
 - [x] ~~Do something with the Dreadnought (or not)~~
 - [ ] Fix the github action errors
 - [ ] Recheck every credit attributions
-- [ ] Make Sonic Tank voices
+- [x] Make Sonic Tank voices
+- [x] Make Glider voices
