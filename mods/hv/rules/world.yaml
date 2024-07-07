@@ -164,7 +164,7 @@
 	Faction@Ginkua:
 		Name: Ginkua
 		InternalName: gm
-		Side: Mercenaries
+		Side: Neutral
 		Selectable: true
 		Description: United Mercenaries Of Ginkua\nA large interplanatary company that trains\nmercenaries from all over the universe. They are known for\ntheir fast, agile forces and advanced technologies, who are\noften ordered by coprorations. But they also\noften run humanitarian missions in certain independent colonies which\nhave contracts with them. They are known for their innovative technologies\nand their interplanetary mercenary reinforcements system. They\nhave certain contracts with an alien manufacturer\nwhich designs their building technologies.\n\nFaction Variations:\n    - Orders aircraft from the trade market\n    - Uses gliders as air units\n\nSpecial Units:\n    - Shotgun Pod\n    - Cluster Pod\n    - Railgun Pod\n    - Mercenary Tanks\n    - Cluster Tank\n    - Missile Pad Tank\n    - Engineer Tank\n    - Tiny Hawk\n\nSuperweapon:\n    - Paratroopers Drop\n    - Airborne Reinforcement Pads\n    - Cluster Bomb
 	Faction@Random:
