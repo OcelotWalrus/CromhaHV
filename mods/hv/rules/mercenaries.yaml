@@ -1346,22 +1346,14 @@ TINYHAWK:
 	Armor:
 		Type: Steel
 	Mobile:
-		Speed: 120
-		PauseOnCondition: notmobile || ecm-disabled
+		TurnSpeed: 50
+		Speed: 140
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	Cargo:
-		Types: Pod
-		MaxWeight: 5
-		LoadingCondition: notmobile
-	WithCargoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
 	WithTeleportEnergyOverlay:
 		Image: energyball
 		Sequence: teleport-large

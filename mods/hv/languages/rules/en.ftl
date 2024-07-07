@@ -734,8 +734,9 @@ actor-aatank3 =
 
 actor-tinyhawk =
    .name = Tiny Hawk
-   .description = Pods transport.
-      Armed with an heavy chaingun.
+   .description = Fires an heavy shotgun.
+      Strong vs Pods
+      Weak vs Tanks, Buildings
 
 actor-apc =
    .name = Transport Tank
