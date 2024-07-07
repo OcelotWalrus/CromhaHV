@@ -428,6 +428,6 @@ FlakLight:
 		Damage: 1500
 		Percentage: 90
 	Warhead@Effect: CreateEffect
-		Explosions: small
+		Explosions: medium
 		ImpactSounds: explosion06.wav
-		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
+		ValidTargets: Air

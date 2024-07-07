@@ -1337,7 +1337,7 @@ TINYHAWK:
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.gm, module
-		BuildPaletteOrder: 45
+		BuildPaletteOrder: 30
 		Description: actor-tinyhawk.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true

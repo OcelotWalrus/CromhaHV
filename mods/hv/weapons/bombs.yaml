@@ -204,6 +204,7 @@ ShipBoomingPad:
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		Damage: 3450
+		Spread: 512
 		Versus:
 			None: 15
 			Steel: 55

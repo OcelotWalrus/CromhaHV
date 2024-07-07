@@ -2706,7 +2706,9 @@ refinery:
 		Offset: 0, -1
 	idle:
 		Filename: bits/refinery.png
-		Start: 0
+		Length: 10
+		Reverses: True
+		Tick: 80
 		ZOffset: 1024
 	shadow-overlay:
 		Filename: bits/refinery-shadow.png
@@ -2720,12 +2722,6 @@ refinery:
 	damaged-idle:
 		Filename: bits/refinery.png
 		Start: 10
-	animation:
-		Filename: bits/refinery.png
-		Start: 0
-		Length: 10
-		Reverses: True
-		Tick: 80
 	make:
 		Filename: bits/build.png
 		Length: 39
