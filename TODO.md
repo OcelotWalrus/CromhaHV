@@ -14,7 +14,7 @@
 - [x] Make atmospheric glider
 - [x] Make voices for cluster bomb and paratroopers powers
 - [ ] Polish the colors of the AA Turret
-- [ ] Make the building icon for the AA Turret
+- [x] Make the building icon for the AA Turret
 - [x] Make a sprite for the AA Tank
 - [x] Fix factory platform transparency
 - [x] Make the Cluster Bomb Dome damaged sprite craters look less odd
@@ -29,6 +29,7 @@
 - [ ] Make a variation for the artillery?
 - [ ] Remake the base
 - [ ] Remake the outpost
+- [ ] Remake the radar dome
 - [x] Remake the refinery
 - [ ] Remake the bunker
 - [ ] Remake the turret
