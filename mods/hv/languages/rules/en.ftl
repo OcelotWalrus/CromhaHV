@@ -813,12 +813,13 @@ actor-ecmtank =
     and obscures the battlefield.
       Disables units for a brief moment.
 
-actor-engineertank =
-   .name = Engineer Tank
-   .generic-name = Engineer Tank
-   .description = Battlefield engineering tank.
-    Effectivly repairs main battle tanks.
-      Unamred
+actor-sonictank =
+   .name = Sonic Tank
+   .generic-name = Sonic Tank
+   .description = Fires sonic shock waves.
+    Strong vs Pods and Vehicles
+    Weak vs Structures
+     Can't target aircraft
 
 actor-dualartillery =
    .name = Dual Artillery

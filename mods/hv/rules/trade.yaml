@@ -155,16 +155,16 @@ RAILGUNTANK.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: railguntank
 
-ENGINEERTANK.TRADE:
-	Inherits: ENGINEERTANK
+SONICTANK.TRADE:
+	Inherits: SONICTANK
 	Buildable:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
 	RenderSprites:
-		Image: engineertank
+		Image: sonictank
 	UpdatesPlayerStatistics:
-		OverrideActor: engineertank
+		OverrideActor: sonictank
 
 LIGHTNINGTANK.TRADE:
 	Inherits: LIGHTNINGTANK

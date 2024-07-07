@@ -26,7 +26,7 @@
 - [x] Recheck every unit's armament offset
 - [x] Correct every wrong diagonal angle spritesheets
 - [x] Add the Railgun Pod & delete the elitepod2
-- [ ] Make a variation for the artillery?
+- [x] ~~Make a variation for the artillery?~~
 - [ ] Remake the base
 - [ ] Remake the outpost
 - [ ] Remake the radar dome

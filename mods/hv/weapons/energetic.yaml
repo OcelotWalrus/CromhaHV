@@ -624,3 +624,35 @@ MothershipLaser:
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
+
+SoundShock:  # originallly D2K's "Sound" weapon
+	ReloadDelay: 90
+	Range: 6c512
+	MinRange: 4c0
+	Report: droneaction1.wav, droneaction2.wav, droneaction3.wav, droneaction4.wav,
+	Projectile: AreaBeam
+		Speed: 0c128
+		Inaccuracy: 128
+		InaccuracyType: PerCellIncrement
+		Duration: 4 # Has a length of 0c512
+		DamageInterval: 3 # Travels 0c384 between impacts, will hit a target roughly three times
+		Width: 0c756 # in original d2k width is 2c0, but damage is 100% only at the center and fades out linearly towards the edges
+		Shape: Cylindrical
+		Falloff: 0, 0, 100, 0
+		Range: 0, 0c450, 4c0, 8c0
+		BeyondTargetRange: 1c0
+		MinDistance: 5c0
+		Color: 00FFFFC8
+	Warhead@Damage: SpreadDamage
+		AffectsParent: false
+		Damage: 1050
+		ValidRelationships: Enemy
+		Versus:
+			None: 200
+			Steel: 50
+			Light: 80
+			Heavy: 40
+			Concrete: 35
+		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
+	Warhead@Effect: CreateEffect
+
