@@ -650,8 +650,8 @@ SoundShock:  # originallly D2K's "Sound" weapon
 		Versus:
 			None: 200
 			Steel: 50
-			Light: 80
-			Heavy: 40
+			Light: 140
+			Heavy: 75
 			Concrete: 35
 		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
 	Warhead@Effect: CreateEffect
