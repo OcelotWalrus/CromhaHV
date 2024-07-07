@@ -469,10 +469,6 @@ STORAGE2:
 		TargetTypes: Ground, Structure
 	Tooltip:
 		Name: actor-storage.name
-	Encyclopedia:
-		Description: actor-storage.encyclopedia
-		Order: 10
-		Category: Buildings
 	Health:
 		HP: 100000
 	Armor:
@@ -651,7 +647,7 @@ STARPORT3:
 		Palette: green
 		LineWidth: 2
 	ProductionAirdrop:
-		Produces: Aircraft, Utility
+		Produces: Aircraft, Trade
 		ActorType: cargoship
 		ReadyAudio: ReinforcementsHaveArrived
 		ReadyTextNotification: notification-reinforcementa-arrived
@@ -684,11 +680,17 @@ STARPORT3:
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.gm
 		RequiresCondition: !powerdown
-	ProductionBar:
+	ProvidesPrerequisite@Trader:
+		Prerequisite: trader
+		RequiresCondition: !powerdown
+	ProductionBar@Aircraft:
 		ProductionType: Aircraft
+	ProductionBar@Trade:
+		ProductionType: Trade
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
+		ProductionQueues: Aircraft, Trade
 	Power:
 		Amount: -115
 	Targetable:

@@ -247,8 +247,12 @@ actor-starport =
 
 actor-starport3 =
    .name = Starport Platform
-   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Ginkua stock that are self-sufficient for the time of the battle requiring no refueling or rearming. You can also order utility units from the starport platform, as it is an engineering facility.
+   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Ginkua stock that are self-sufficient for the time of the battle requiring no refueling or rearming.
+
+     The starport platform also provides access to the free market. For a certain amount of credits damaged vehicles can be ordered here and get repaired. Alternatively, select the repair icon on the top right of the command interface and click a damaged vehicle which will then automatically head to the nearest starport platform for repairs. As a tech building the trade platform opens up the tank path. It also serves as an additional vehicle production queue by allowing orders from outside. These vary in price and are more expensive than local production.
    .description = Orders pre-built aircraft and utilities from the U.M.O.G. company.
+     Repairs vehicles and aircraft for credits.
+     Allows buying units on the free market.
      Comes with a pre-ordered repair vehicle
 
 actor-factory-name = Vehicle Factory

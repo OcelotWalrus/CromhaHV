@@ -357,7 +357,7 @@ MINELAYER:
 	Explodes:
 		Weapon: AntiTankMine
 	Rearmable:
-		RearmActors: trader
+		RearmActors: trader, starport3
 	Targetable:
 		TargetTypes: Ground, Vehicle, Mine
 	WithAmmoPipsDecoration:
