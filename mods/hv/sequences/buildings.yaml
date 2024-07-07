@@ -1396,7 +1396,7 @@ aaturret3:
 		Tick: 25
 	icon:
 		Filename: bits/buildings-icons.png
-		Start: 22
+		Start: 47
 		Offset: 0, 0
 
 field:
@@ -2706,8 +2706,8 @@ refinery:
 		Offset: 0, -1
 	idle:
 		Filename: bits/refinery.png
-		Length: 10
-		Reverses: True
+		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 0, 0, 0, 0
+		Length: 19
 		Tick: 80
 		ZOffset: 1024
 	shadow-overlay:
@@ -2721,7 +2721,7 @@ refinery:
 		Start: 1
 	damaged-idle:
 		Filename: bits/refinery.png
-		Start: 10
+		Start: 15
 	make:
 		Filename: bits/build.png
 		Length: 39
