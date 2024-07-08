@@ -627,9 +627,8 @@ MothershipLaser:
 
 SoundShock:  # originallly D2K's "Sound" weapon
 	ReloadDelay: 90
-	Range: 6c512
-	MinRange: 4c0
-	Report: droneaction1.wav, droneaction2.wav, droneaction3.wav, droneaction4.wav,
+	Range: 5c0
+	Report: droneaction1.wav, droneaction2.wav, droneaction3.wav, droneaction4.wav
 	Projectile: AreaBeam
 		Speed: 0c128
 		Inaccuracy: 128
@@ -645,14 +644,19 @@ SoundShock:  # originallly D2K's "Sound" weapon
 		Color: 00FFFFC8
 	Warhead@Damage: SpreadDamage
 		AffectsParent: false
-		Damage: 1050
+		Damage: 1250
 		ValidRelationships: Enemy
+		Spread: 25
 		Versus:
 			None: 200
-			Steel: 50
-			Light: 140
-			Heavy: 75
-			Concrete: 35
+			Steel: 75
+			Light: 160
+			Heavy: 105
+			Concrete: 55
 		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
-	Warhead@Effect: CreateEffect
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 4
+		AffectsParent: false
+		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 
