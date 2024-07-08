@@ -13,7 +13,7 @@
 - [x] Make Tiny Hawk
 - [x] Make atmospheric glider
 - [x] Make voices for cluster bomb and paratroopers powers
-- [ ] Polish the colors of the AA Turret
+- [x] Polish the colors of the AA Turret
 - [x] Make the building icon for the AA Turret
 - [x] Make a sprite for the AA Tank
 - [x] Fix factory platform transparency

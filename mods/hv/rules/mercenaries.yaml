@@ -835,6 +835,8 @@ AATURRET3:
 	Armament:
 		Weapon: TowerRailgun
 		LocalOffset: 256,375,760, 256,0,760, 256,-375,760
+	WithTurretAttackAnimation:
+		Sequence: shoot
 	Turreted:
 		InitialFacing: 522
 	WithRangeCircle:

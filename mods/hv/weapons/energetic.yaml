@@ -124,7 +124,7 @@ AircraftRailgunAir:
 TowerRailgun:
 	ReloadDelay: 50
 	Burst: 3
-	BurstDelays: 10
+	BurstDelays: 25
 	Range: 9c0
 	ValidTargets: Air
 	Report: raygun_newlocknew.wav
