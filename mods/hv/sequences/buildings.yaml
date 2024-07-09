@@ -1588,10 +1588,12 @@ uplinkmercenary:
 	idle:
 		Filename: bits/cluster-bomb-dome.png
 		Start: 0
+		Length: 18
+		Tick: 95
 		ZOffset: 500
 	damaged-idle:
 		Filename: bits/cluster-bomb-dome.png
-		Start: 1
+		Start: 18
 		ZOffset: 500
 	shadow-overlay:
 		Filename: bits/cluster-bomb-dome-shadow.png
