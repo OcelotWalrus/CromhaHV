@@ -735,7 +735,7 @@ railgunpod:
 		Offset: 0,-2
 	icon:
 		Filename: bits/units-icons.png
-		Start: 60
+		Start: 72
 
 mbt2:
 	idle:
