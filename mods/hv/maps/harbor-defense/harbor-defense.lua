@@ -2,8 +2,8 @@ CurrentWave = 1
 LastWave = false
 Won = false
 
-Generic = { "lightboat", "boat" }
-Lightning = { "railgunboat" }
+Generic = { "lightboat", "mediumboat" }
+Lightning = { "lightningboat" }
 Submarine = { "carrier" }
 
 Waves =
