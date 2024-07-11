@@ -262,7 +262,7 @@ GENERATOR:
 		FactionImages:
 			sc: generator2
 			yi: generator
-			gm: generator3
+			ty: generator3
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -369,7 +369,7 @@ TRADER:
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Buildable:
 		Queue: Building
-		Prerequisites: ~base, factory, ~!structures.gm
+		Prerequisites: ~base, factory, ~!structures.ty
 		BuildPaletteOrder: 100
 		Description: actor-trader.description
 	Encyclopedia:
@@ -453,7 +453,7 @@ TRADER:
 		FactionImages:
 			sc: trader2
 			yi: trader
-			gm: trader3
+			ty: trader3
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -987,7 +987,7 @@ TECHCENTER:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: ~base, radar, ~!structures.gm
+		Prerequisites: ~base, radar, ~!structures.ty
 		Description: actor-techcenter.description
 	Valued:
 		Cost: 2000
@@ -1023,7 +1023,7 @@ TECHCENTER:
 		FactionImages:
 			sc: techcenter2
 			yi: techcenter
-			gm: techcenter2
+			ty: techcenter2
 	WithIdleOverlay@ANIMATION:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
@@ -1605,7 +1605,7 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Prerequisites: ~base, ~!structures.gm
+		Prerequisites: ~base, ~!structures.ty
 		Description: actor-storage.description
 	Valued:
 		Cost: 1400
@@ -1634,7 +1634,7 @@ STORAGE:
 		FactionImages:
 			sc: storage
 			yi: storage2
-			gm: storage
+			ty: storage
 	ExitsDebugOverlay:
 	Exit@Top:
 		ExitCell: 2, 0
@@ -2654,7 +2654,7 @@ DROPZONE:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: radar, ~structures.gm
+		Prerequisites: radar, ~structures.ty
 		BuildLimit: 3
 		Description: actor-dropzone.description-buildable
 	HitShape:

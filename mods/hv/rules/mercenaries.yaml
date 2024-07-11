@@ -22,7 +22,7 @@ BOMBER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: ~starport.gm, radar, techcenter3
+		Prerequisites: ~starport.ty, radar, techcenter3
 		Description: actor-bomber2.description
 	Tooltip:
 		Name: actor-bomber2.name
@@ -134,7 +134,7 @@ GLIDER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: ~starport.gm
+		Prerequisites: ~starport.ty
 		Description: actor-glider.description
 	Tooltip:
 		Name: actor-glider.name
@@ -222,7 +222,7 @@ AIRLIFTERMERCENARY:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: ~starport.gm
+		Prerequisites: ~starport.ty
 		Description: actor-airlifter.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -320,7 +320,7 @@ BALLOON.MERCENARY:
 	Valued:
 		Cost: 250
 	Buildable:
-		Prerequisites: ~starport.gm
+		Prerequisites: ~starport.ty
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: balloon
@@ -436,8 +436,8 @@ STARSHIP.Husk:
 BASE3:
 	Inherits: BASE
 	-ProvidesPrerequisite@Yuruki:
-	ProvidesPrerequisite@Ginkua:
-		Prerequisite: structures.gm
+	ProvidesPrerequisite@Tyrian:
+		Prerequisite: structures.ty
 	-Buildable:
 	-Encyclopedia:
 
@@ -445,9 +445,9 @@ OUTPOST3:
 	Inherits: OUTPOST
 	-Encyclopedia:
 	-ProvidesPrerequisite@Yuruki:
-	ProvidesPrerequisite@Ginkua:
-		Factions: gm
-		Prerequisite: base.gm
+	ProvidesPrerequisite@Tyrian:
+		Factions: ty
+		Prerequisite: base.ty
 
 STORAGE2:
 	Inherits: ^BaseBuilding
@@ -461,7 +461,7 @@ STORAGE2:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Prerequisites: ~base, ~structures.gm
+		Prerequisites: ~base, ~structures.ty
 		Description: actor-storage.description
 	Valued:
 		Cost: 1400
@@ -504,7 +504,7 @@ RADAR3:
 	Inherits: RADAR
 	-Encyclopedia:
 	Buildable:
-		Prerequisites: storage, ~structures.gm
+		Prerequisites: storage, ~structures.ty
 	-AirstrikePower:
 	ParatroopersPower:
 		PauseOnCondition: lowpower || disabled
@@ -543,7 +543,7 @@ TECHCENTER3:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: ~base, radar, ~structures.gm
+		Prerequisites: ~base, radar, ~structures.ty
 		Description: actor-techcenter3.description
 	Valued:
 		Cost: 4000
@@ -580,9 +580,9 @@ TECHCENTER3:
 MODULE3:
 	Inherits: MODULE2
 	Buildable:
-		Prerequisites: ~structures.gm
+		Prerequisites: ~structures.ty
 	ProvidesPrerequisite@Faction:
-		Prerequisite: module.gm
+		Prerequisite: module.ty
 		RequiresCondition: !powerdown
 	Health:
 		HP: 65000
@@ -619,7 +619,7 @@ STARPORT3:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 120
-		Prerequisites: radar, ~structures.gm
+		Prerequisites: radar, ~structures.ty
 		Description: actor-starport3.description
 	Valued:
 		Cost: 1000
@@ -678,7 +678,7 @@ STARPORT3:
 		Prerequisite: starport
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
-		Prerequisite: starport.gm
+		Prerequisite: starport.ty
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Trader:
 		Prerequisite: trader
@@ -801,16 +801,16 @@ FACTORY3:
 	-WithProductionExitOverlay@East4:
 	-WithProductionExitOverlay@Done10:
 	Buildable:
-		Prerequisites: module, storage, ~structures.gm
+		Prerequisites: module, storage, ~structures.ty
 	ProvidesPrerequisite@Faction:
-		Prerequisite: factory.gm
+		Prerequisite: factory.ty
 		RequiresCondition: !powerdown
 	-Encyclopedia:
 
 BUNKER3:
 	Inherits: BUNKER
 	Buildable:
-		Prerequisites: module, ~structures.gm
+		Prerequisites: module, ~structures.ty
 	-Encyclopedia:
 	RenderSprites:
 		Image: bunker
@@ -818,7 +818,7 @@ BUNKER3:
 TURRET3:
 	Inherits: TURRET
 	Buildable:
-		Prerequisites: factory, ~structures.gm
+		Prerequisites: factory, ~structures.ty
 	-Encyclopedia:
 	RenderSprites:
 		Image: turret2
@@ -826,7 +826,7 @@ TURRET3:
 AATURRET3:
 	Inherits: AATURRET2
 	Buildable:
-		Prerequisites: radar, ~structures.gm
+		Prerequisites: radar, ~structures.ty
 	-Encyclopedia:
 	Valued:
 		Cost: 1100
@@ -852,10 +852,10 @@ HARBOR3:
 	RenderSprites:
 		Image: harbor2
 	ProvidesPrerequisite@Faction:
-		Prerequisite: harbor.gm
+		Prerequisite: harbor.ty
 		RequiresCondition: !powerdown
 	Buildable:
-		Prerequisites: module, ~structures.gm
+		Prerequisites: module, ~structures.ty
 	-Encyclopedia:
 	RenderSprites:
 		Image: harbor2
@@ -878,7 +878,7 @@ UPLINKMERCENARY:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter3, ~structures.gm
+		Prerequisites: techcenter3, ~structures.ty
 		BuildLimit: 1
 		Description: actor-uplink-mercenary.description
 	Building:
@@ -951,7 +951,7 @@ OILFACILITY:
 		Footprint: == == xx xx
 		Dimensions: 2,4
 	Buildable:
-		Prerequisites: ~structures.gm, techcenter3
+		Prerequisites: ~structures.ty, techcenter3
 	Selectable:
 		Bounds: 1024, 2048, 0, 0
 	Tooltip:
@@ -974,7 +974,7 @@ SHOTGUNPOD:
 	Buildable:
 		Queue: Pod
 		Description: actor-shotgunpod.description
-		Prerequisites: ~module.gm
+		Prerequisites: ~module.ty
 		BuildPaletteOrder: 20
 	Valued:
 		Cost: 120
@@ -1012,7 +1012,7 @@ CLUSTERPOD:
 	Buildable:
 		Queue: Pod
 		Description: actor-clusterpod.description
-		Prerequisites: ~module.gm, factory
+		Prerequisites: ~module.ty, factory
 		BuildPaletteOrder: 40
 	Valued:
 		Cost: 145
@@ -1054,7 +1054,7 @@ RAILGUNPOD:
 	Buildable:
 		Queue: Pod
 		Description: actor-railgunpod.description
-		Prerequisites: ~module.gm, factory, techcenter3
+		Prerequisites: ~module.ty, factory, techcenter3
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 250
@@ -1100,7 +1100,7 @@ MISSILEBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.gm
+		Prerequisites: ~harbor.ty
 		BuildPaletteOrder: 30
 		Description: actor-missileboat.description
 	UpdatesPlayerStatistics:
@@ -1151,7 +1151,7 @@ MERCSUBMARINE:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.gm, techcenter3
+		Prerequisites: ~harbor.ty, techcenter3
 		BuildPaletteOrder: 60
 		Description: actor-mercsubmarine.description
 	UpdatesPlayerStatistics:
@@ -1184,7 +1184,7 @@ MERCSUBMARINE:
 LIGHTNINGBOAT.MERCENARY:
 	Inherits: LIGHTNINGBOAT
 	Buildable:
-		Prerequisites: ~harbor.gm, radar
+		Prerequisites: ~harbor.ty, radar
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: lightningboat
@@ -1202,7 +1202,7 @@ SPIDERBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.gm
+		Prerequisites: ~harbor.ty
 		BuildPaletteOrder: 10
 		Description: actor-spiderboat.description
 	UpdatesPlayerStatistics:
@@ -1240,7 +1240,7 @@ SPIDERBOAT:
 NAVALMINELAYER2.MERCENARY:
 	Inherits: NAVALMINELAYER2
 	Buildable:
-		Prerequisites: ~harbor.gm, tradplat
+		Prerequisites: ~harbor.ty, tradplat
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: navalminelayer2
@@ -1252,7 +1252,7 @@ NAVALMINELAYER2.MERCENARY:
 BUILDER3:
 	Inherits: BUILDER
 	Buildable:
-		Prerequisites: ~structures.gm
+		Prerequisites: ~structures.ty
 	Transforms:
 		IntoActor: outpost3
 	RenderSprites:
@@ -1262,7 +1262,7 @@ CONSTRUCTOR:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
-		Prerequisites: outpost, ~base.gm
+		Prerequisites: outpost, ~base.ty
 		Queue: Utility
 		BuildPaletteOrder: 70
 		Description: actor-constructor.description
@@ -1299,7 +1299,7 @@ CLUSTERTANK:
 		Name: actor-clustertank.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.gm, radar, techcenter3
+		Prerequisites: ~factory.ty, radar, techcenter3
 		BuildPaletteOrder: 70
 		Description: actor-clustertank.description
 	UpdatesPlayerStatistics:
@@ -1340,7 +1340,7 @@ TINYHAWK:
 		Name: actor-tinyhawk.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.gm, module
+		Prerequisites: ~factory.ty, module
 		BuildPaletteOrder: 30
 		Description: actor-tinyhawk.description
 	UpdatesPlayerStatistics:
@@ -1384,7 +1384,7 @@ MISSILETANK2:
 		Name: actor-missiletank2.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.gm, radar, techcenter3
+		Prerequisites: ~factory.ty, radar, techcenter3
 		BuildPaletteOrder: 80
 		Description: actor-missiletank2.description
 	UpdatesPlayerStatistics:
@@ -1425,7 +1425,7 @@ SONICTANK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: ~factory.gm, techcenter3, radar
+		Prerequisites: ~factory.ty, techcenter3, radar
 		Queue: Tank
 		Description: actor-sonictank.description
 	Mobile:
@@ -1458,7 +1458,7 @@ AATANK3:
 	Tooltip:
 		Name: actor-aatank3.name
 	Buildable:
-		Prerequisites: ~factory.gm
+		Prerequisites: ~factory.ty
 		Description: actor-aatank3.description
 	Armament:
 		Weapon: FlakLight

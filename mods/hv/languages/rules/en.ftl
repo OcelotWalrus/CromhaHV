@@ -247,10 +247,10 @@ actor-starport =
 
 actor-starport3 =
    .name = Starport Platform
-   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Ginkua stock that are self-sufficient for the time of the battle requiring no refueling or rearming.
+   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Tyrian stock that are self-sufficient for the time of the battle requiring no refueling or rearming.
 
      The starport platform also provides access to the free market. For a certain amount of credits damaged vehicles can be ordered here and get repaired. Alternatively, select the repair icon on the top right of the command interface and click a damaged vehicle which will then automatically head to the nearest starport platform for repairs. As a tech building the trade platform opens up the tank path. It also serves as an additional vehicle production queue by allowing orders from outside. These vary in price and are more expensive than local production.
-   .description = Orders pre-built aircraft and utilities from the U.M.O.G. company.
+   .description = Orders pre-built aircraft and utilities from the U.M.O.T. company.
      Repairs vehicles and aircraft for credits.
      Allows buying units on the free market.
      Comes with a pre-ordered repair vehicle
@@ -270,9 +270,9 @@ actor-techcenter =
 actor-techcenter3 =
    .description = Grants access to advanced weaponry.
    .name = Research Center
-   .encyclopedia = The base buildings of the U.M.O.G. company are very versatile and are easy to transport through airlifters from a planet to another. But the most advanced technologies that require research therefore can't be easily obtained through satellite connections with the U.M.O.G. company. The Research Center solves that issue.
+   .encyclopedia = The base buildings of the U.M.O.T. company are very versatile and are easy to transport through airlifters from a planet to another. But the most advanced technologies that require research therefore can't be easily obtained through satellite connections with the U.M.O.T. company. The Research Center solves that issue.
 
-    The Research Center is a protected dome, filled with city buildings, that are the home of many science labs. Scientists and physicists can then study and look out for new technologies, allow the Ginkua buildings to unlock their more advanced weaponry.
+    The Research Center is a protected dome, filled with city buildings, that are the home of many science labs. Scientists and physicists can then study and look out for new technologies, allow the Tyrian buildings to unlock their more advanced weaponry.
 
 actor-oresmelt =
    .name = Ore Smelter

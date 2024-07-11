@@ -3,7 +3,7 @@
 Speech:
 	DefaultVariant: .wav
 	Prefixes:
-		gm: gm_
+		ty: ty_
 	Notifications:
 		StartGame:
 		GameLoaded: game_loaded
