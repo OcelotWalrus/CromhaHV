@@ -27,6 +27,7 @@
 - [x] Correct every wrong diagonal angle spritesheets
 - [x] Add the Railgun Pod & delete the elitepod2
 - [x] ~~Make a variation for the artillery?~~
+- [ ] Find the intermediary support power
 - [ ] Remake the base
 - [ ] Remake the outpost
 - [ ] Remake the radar dome

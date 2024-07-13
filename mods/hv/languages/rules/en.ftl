@@ -833,7 +833,7 @@ actor-builder =
    .name = Builder
 
 actor-constructor =
-   .name = Yard Constructor
+   .name = Mobile Yard Constructor
    .description = Deploys into base yards.
 
 actor-collector-name = Collector
