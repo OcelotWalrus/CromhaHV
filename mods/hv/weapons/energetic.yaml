@@ -5,7 +5,7 @@ Railgun:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Range: 8c0
 	ReloadDelay: 50
-	Report: raygun_newlocknew.wav
+	Report: raygun_newlocknew.ogg
 	Projectile: LaserZap
 		Width: 0c100
 		Shape: Cylindrical
@@ -31,7 +31,7 @@ Railgun:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 LightRailgun:
 	Inherits: Railgun
@@ -71,7 +71,7 @@ LightRailgunBunker:
 ElectronicCountermeasure:
 	ReloadDelay: 20
 	Range: 7c0
-	Report: Sonic1.wav, Sonic2.wav, Sonic3.wav
+	Report: Sonic1.ogg, Sonic2.ogg, Sonic3.ogg
 	ValidTargets: Vehicle
 	InvalidTargets: DisabledVehicle
 	Projectile: Bullet
@@ -236,7 +236,7 @@ Plasma:
 	ReloadDelay: 10
 	Range: 8c0
 	MinRange: 1c0
-	Report: lasercannon_newlocknew.wav
+	Report: lasercannon_newlocknew.ogg
 	Projectile: Missile
 		Speed: 350
 		Blockable: false
@@ -259,13 +259,13 @@ Plasma:
 		Damage: 1750
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree
 
 VoltageArc:
 	ReloadDelay: 50
 	Range: 8c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	Projectile: EnergyBolt
 		Radius: 3
 		Duration: 5
@@ -301,7 +301,7 @@ VoltageArc:
 PodVoltageArc:
 	Inherits: VoltageArc
 	Range: 5c512
-	Report: lighting_gun_freqman.wav
+	Report: lighting_gun_freqman.ogg
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	ReloadDelay: 60
 	Projectile: EnergyBolt
@@ -329,7 +329,7 @@ RapidPodVoltageArc:
 LightningBolt:
 	ReloadDelay: 60
 	Range: 9c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	ValidTargets: Air
 	Projectile: EnergyBolt
 		Radius: 3
@@ -357,7 +357,7 @@ LightningBolt:
 		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Air
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
@@ -369,7 +369,7 @@ LightningBoltLight:
 	Inherits: LightningBolt
 	ReloadDelay: 60
 	Range: 8c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 2000
@@ -386,7 +386,7 @@ LightningBoltLight:
 		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 
 ^PixelSpark:
@@ -438,7 +438,7 @@ RailgunVisualStage2:
 		Acceleration: 0,0,-45 # needs to be synced with RailgunStrike
 	Warhead@Effect: CreateEffect
 		Explosions: railgun
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
 RailgunStrike:
@@ -446,7 +446,7 @@ RailgunStrike:
 		Velocity: 0,0,-60 # needs to be synced with RailgunVisualStage2
 		Acceleration: 0,0,-45 # needs to be synced with RailgunVisualStage2
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-	Report: raygun_newlocknew.wav
+	Report: raygun_newlocknew.ogg
 	Warhead@DamageImpact: SpreadDamage
 		Spread: 1c0
 		Damage: 10000
@@ -534,7 +534,7 @@ DroneBlaster:
 	ReloadDelay: 50
 	Range: 5c0
 	MinRange: 3c0
-	Report: blaster1-tutarap.wav, blaster2-tutarap.wav, blaster3-tutarap.wav
+	Report: blaster1-tutarap.ogg, blaster2-tutarap.ogg, blaster3-tutarap.ogg
 	Projectile: Bullet
 		Speed: 350
 		Blockable: false
@@ -561,13 +561,13 @@ DroneBlaster:
 		Percentage: 50
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree
 
 HackBack:
 	ReloadDelay: 160
 	Range: 6c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	ValidTargets: Vehicle
 	Projectile: EnergyBolt
 		Radius: 3
@@ -594,7 +594,7 @@ MothershipLaser:
 	ReloadDelay: 5
 	Range: 8c0
 	MinRange: 1c0
-	Report: laserblaster_newlocknew.wav
+	Report: laserblaster_newlocknew.ogg
 	Projectile: Bullet
 		Speed: 550
 		Blockable: false
@@ -622,7 +622,7 @@ MothershipLaser:
 		Damage: 1750
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree
 
 SoundShock:  # originallly D2K's "Sound" weapon

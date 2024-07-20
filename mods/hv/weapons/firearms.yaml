@@ -37,7 +37,7 @@ LightMachineGun:
 	Inherits: Ricochet
 	Inherits: ^Tracers
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: machinegunburst01.wav, machinegunburst02.wav
+	Report: machinegunburst01.ogg, machinegunburst02.ogg
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
 		Blockable: true
@@ -63,13 +63,13 @@ BunkerChaingun:
 	BurstDelays: 3
 	Range: 8c0
 	-Report:
-	StartBurstReport: heavymgburst01.wav, heavymgburst02.wav
+	StartBurstReport: heavymgburst01.ogg, heavymgburst02.ogg
 
 ^AircraftChainGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
-	Report: ccbysmgfire01.wav
+	Report: ccbysmgfire01.ogg
 	Projectile: Bullet
 		Inaccuracy: 0c256
 		Speed: 2000
@@ -92,7 +92,7 @@ BuggyChainGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	StartBurstReport: machinegun_SuperPhat.wav
+	StartBurstReport: machinegun_SuperPhat.ogg
 	BurstDelays: 1
 	ReloadDelay: 20
 	Range: 6c0
@@ -115,7 +115,7 @@ BuggyChainGun:
 
 BikeChainGun:
 	Inherits: BuggyChainGun
-	StartBurstReport: ccbysmgfire02.wav
+	StartBurstReport: ccbysmgfire02.ogg
 	BurstDelays: 2
 	Range: 7c0
 	Warhead@Damage: SpreadDamage
@@ -205,7 +205,7 @@ ShellCasing:
 
 SniperRifle:
 	Inherits: LightMachineGun
-	Report: twisterman_silenced-gun-1.wav
+	Report: twisterman_silenced-gun-1.ogg
 	Projectile: InstantHit
 	Warhead@Damage: SpreadDamage
 		Spread: 24
@@ -229,7 +229,7 @@ BoatMachineGunGround:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	StartBurstReport: machinegun_SuperPhat.wav
+	StartBurstReport: machinegun_SuperPhat.ogg
 	BurstDelays: 1
 	ReloadDelay: 20
 	Range: 6c0
@@ -253,7 +253,7 @@ BoatMachineGunGround:
 BoatMachineGunAir:
 	Inherits: ^Tracers
 	ValidTargets: Air
-	Report: boatgun_johandeecke.wav
+	Report: boatgun_johandeecke.ogg
 	BurstDelays: 5
 	ReloadDelay: 20
 	Range: 9c0
@@ -271,11 +271,11 @@ BoatMachineGunAir:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Air
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 Flamethrower:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	StartBurstReport: flame_newlocknew.wav
+	StartBurstReport: flame_newlocknew.ogg
 	ReloadDelay: 50
 	Burst: 6
 	BurstDelays: 1
@@ -308,7 +308,7 @@ Flamethrower:
 		Image: lava_splash_small
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
-		ImpactSounds: fire_effect_1_GregorQuendel, fire_effect_2_GregorQuendel, fire_effect_3_GregorQuendel, fire_effect_4_GregorQuendel
+		ImpactSounds: fire_effect_1_GregorQuendel.ogg, fire_effect_2_GregorQuendel.ogg, fire_effect_3_GregorQuendel.ogg, fire_effect_4_GregorQuendel.ogg
 
 BunkerFlamethrower:
 	Inherits: Flamethrower
@@ -318,7 +318,7 @@ BunkerFlamethrower:
 HeavyMachineGun:
 	Inherits: LightMachineGun
 	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-	Report: machine_gun_pgi.wav
+	Report: machine_gun_pgi.ogg
 	ReloadDelay: 20
 	Range: 6c0
 	Burst: 4
@@ -378,7 +378,7 @@ DronePulseGun:
 	Inherits: Ricochet
 	Inherits: ^BlueTracers
 	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-	Report: pulsegun_silverillusionist.wav
+	Report: pulsegun_silverillusionist.ogg
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
 		Blockable: true
