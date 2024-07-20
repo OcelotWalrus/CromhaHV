@@ -15,6 +15,95 @@ checkbox-build-radius =
     .label = Limit Build Area
     .description = Limits structure placement to areas around base and outposts.
 
+### Faction
+faction-yuruki =
+   .name = Yuruki
+   .description = Yuruki Industries
+    A corporation that grew by colonizing new planets.
+    Their colonial defense forces helped paved the way for
+    an aggressive expansion throughout the solar system.
+
+    Faction Variations:
+        - Uses fighter jets as air units
+
+    Special Units:
+        - Electric Pod
+        - Bomber Pod
+        - Sniper Pod
+        - Gatling Bike
+        - Hacker Tank
+        - Lightning Tank
+        - Stealth Tank
+
+    Superweapon:
+        - Air Strike
+        - Field Generator
+        - Orbital Railgun Strike
+
+faction-synapol =
+   .name = Synapol
+   .description = Synapol Corporation
+    A large interplanatary company that manufactures,
+    everything from common household appliances to armaments.
+    Their security department became a large paramilitary force.
+
+    Faction Variations:
+        - Uses helicopters as air units
+
+    Special Units:
+        - Rocket Pod
+        - Flame Pod
+        - Mortar Pod
+        - Ramp Buggy
+        - Countermeasure Tank
+        - Railgun Tank
+        - Missile Tank
+
+    Superweapon:
+        - Drop Pods
+        - Grand Howitzer
+        - Thermonuclear Bomb
+
+faction-tyrian =
+   .name = Tyrian
+   .description = United Mercenaries Of Tyrian (U.M.O.T.)
+   A large interplanatary company that trains mercenaries
+   from all over the galaxy, based on the Tyrian system.
+   They are known for their fast, agile forces and advanced
+   technologies, which are often ordered by coprorations.
+   But they also occasionally run humanitarian missions in
+   certain independent colonies which have contracts with them.
+   They are also recognized for their innovative technologies
+   and their interplanetary mercenary reinforcements system.
+   They have certain contracts with a developed alien manufacturer
+   that designed their building technologies, as mercenaries
+   from this company come from various places of the galaxy.
+   The U.M.O.T. paramilitary forces have operated only a few missions in the solar system.
+
+    Faction Variations:
+        - Uses mobile base constructors
+        - Uses gliders as air units
+        - Main battle tanks are faster but less durable
+
+    Special Units:
+        - Shotgun Pod
+        - Cluster Pod
+        - Railgun Pod
+        - Tiny Hawk
+        - Cluster Tank
+        - Missile Pad Tank
+        - Sonic Tank
+
+    Superweapon:
+        - Paratroopers Drop
+        - Airborne Reinforcement Pads
+        - Cluster Bomb
+
+faction-random =
+   .name = Any
+   .description = Random Corporation
+    A random corporation will be chosen when the game starts.
+
 ## CubeSpawner
 checkbox-crates =
     .label = Cubes
