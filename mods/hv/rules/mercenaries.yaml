@@ -606,107 +606,16 @@ MODULE3:
 		Image: module3
 
 STARPORT3:
-	Inherits: ^BaseBuilding
-	Inherits@Shape: ^3x3Shape
-	Inherits@Flame: ^BuildingFlame2
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
-	Tooltip:
-		Name: actor-starport3.name
-	Encyclopedia:
-		Description: actor-starport3.encyclopedia
-		Order: 61
-		Category: Buildings
+	Inherits: STARPORT
 	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 120
 		Prerequisites: radar, ~structures.ty
-		Description: actor-starport3.description
-	Valued:
-		Cost: 1000
-	Building:
-		Footprint: =xx= xxxx ==x= =xx=
-		Dimensions: 4,4
-	HitShape:
-		UseTargetableCellsOffsets: False
-		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
-	Selectable:
-		Bounds: 2048, 2048
-	Health:
-		HP: 80000
-	Armor:
-		Type: Steel
-	RevealsShroud:
-		Range: 5c0
-		MinRange: 2c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 2c0
-	RallyPoint:
-		CirclesSequence:
-		IsPlayerPalette: true
-		Palette: green
-		LineWidth: 2
-	ProductionAirdrop:
-		Produces: Aircraft, Trade
-		ActorType: cargoship
-		ReadyAudio: ReinforcementsHaveArrived
-		ReadyTextNotification: notification-reinforcementa-arrived
-		PauseOnCondition: disabled
-		BaselineSpawn: True
-	Exit@North:
-		ExitCell: 2,2
-		ProductionTypes: Aircraft
-		Priority: 10
-		RequiresCondition: !being-captured && !build-incomplete
-	Exit@South:
-		ExitCell: 0,2
-		ProductionTypes: Utility
-		Priority: 10
-		RequiresCondition: !being-captured && !build-incomplete
-	ExitsDebugOverlay:
-	RepairsUnits:
-		HpPerStep: 800
-		Interval: 8
-		PlayerExperience: 15
-		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: notifications-repairing
-		FinishRepairingNotification: UnitRepaired
-		FinishRepairingTextNotification: notification-unit-repaired
-		RequiresCondition: !disabled
-	Reservable:
-	ProvidesPrerequisite@Generic:
-		Prerequisite: starport
-		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.ty
 		RequiresCondition: !powerdown
-	ProvidesPrerequisite@Trader:
-		Prerequisite: trader
-		RequiresCondition: !powerdown
-	ProductionBar@Aircraft:
-		ProductionType: Aircraft
-	ProductionBar@Trade:
-		ProductionType: Trade
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
-		ProductionQueues: Aircraft, Trade
-	Power:
-		Amount: -115
-	Targetable:
-		TargetTypes: Ground, Structure
-	WithTextDecoration@PRIMARY:
-		RequiresCondition: primary
-		Position: Top
-		Margin: 0, 5
-		RequiresSelection: true
-		Text: PRIMARY
-		Font: TinyPixel
-	FreeActorWithDelivery:
-		Actor: repairtank
-		DeliveryOffset: 3,3
-		DeliveringActor: dropship.reinforce
-		Facing: 160
+	Exit:
+		Facing: 472
+	-WithProductionExitOverlay:
+	-Encyclopedia:
 
 FACTORY3:
 	Inherits: FACTORY

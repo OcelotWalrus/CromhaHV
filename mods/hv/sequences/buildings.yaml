@@ -783,24 +783,28 @@ starport3:
 		Offset: 0, 1
 	idle:
 		Filename: bits/starport3.png
+		Frames: 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+		Length: 14
+		Tick: 80
 		ZOffset: -1c511
 	shadow-overlay:
 		Filename: bits/starport3-shadow.png
 		Offset: 6, 4
 	damaged-idle:
 		Filename: bits/starport3.png
-		Start: 1
+		Start: 19
 		ZOffset: -1c511
 	damaged-shadow-overlay:
 		Filename: bits/starport3-shadow.png
 		Start: 1
 		Offset: 6, 4
-	active:
+	production-inprogress:
 		Filename: bits/starport3.png
-		#Frames: 1, 2, 3, 2, 1
-		#Length: 5
+		Frames: 1, 2, 3, 4, 5
+		Reverses: True
+		Length: 5
 		ZOffset: -1c511
-		#Tick: 100
+		Tick: 20
 	make:
 		Filename: bits/build.png
 		Length: 39

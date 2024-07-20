@@ -523,12 +523,12 @@ MERCTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 40000
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 25
-		Speed: 90
+		TurnSpeed: 30
+		Speed: 105
 	RevealsShroud:
 		Range: 7c0
 		MinRange: 3c0

@@ -369,7 +369,7 @@ TRADER:
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Buildable:
 		Queue: Building
-		Prerequisites: ~base, factory, ~!structures.ty
+		Prerequisites: ~base, factory
 		BuildPaletteOrder: 100
 		Description: actor-trader.description
 	Encyclopedia:
