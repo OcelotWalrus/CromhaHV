@@ -357,7 +357,7 @@ MINELAYER:
 	Explodes:
 		Weapon: AntiTankMine
 	Rearmable:
-		RearmActors: trader, starport3
+		RearmActors: trader
 	Targetable:
 		TargetTypes: Ground, Vehicle, Mine
 	WithAmmoPipsDecoration:
@@ -509,8 +509,8 @@ MERCTANK:
 		Class: merctank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.ty
-		BuildPaletteOrder: 10
+		Prerequisites: ~disabled
+		BuildPaletteOrder: 90
 		Description: actor-merctank.description
 	Armament:
 		Weapon: ^Cannon
@@ -523,12 +523,12 @@ MERCTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 30
-		Speed: 105
+		TurnSpeed: 25
+		Speed: 90
 	RevealsShroud:
 		Range: 7c0
 		MinRange: 3c0
@@ -540,16 +540,13 @@ MERCTANK:
 DUALMERCTANK:
 	Inherits: MERCTANK
 	Buildable:
-		BuildPaletteOrder: 15
-		Prerequisites: ~disabled
+		BuildPaletteOrder: 90
 		Description: actor-dualmerctank-description
 	Selectable:
 		Class: dualmerctank
 	Armament:
 		Weapon: doublecannon
 		LocalOffset: 500,85,50, 500,-85,50
-	Valued:
-		Cost: 950
 	Health:
 		HP: 50000
 	Armor:

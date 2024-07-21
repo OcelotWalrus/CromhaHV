@@ -1073,3 +1073,6 @@ missiletank2:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 67
+
+mbt3:
+	Inherits: merctank

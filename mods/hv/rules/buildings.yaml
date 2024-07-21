@@ -2635,7 +2635,7 @@ WATCHTOWER:
 		Sticky: true
 
 DROPZONE:
-	Inherits: ^BaseBuilding
+	Inherits: ^Building
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
@@ -2650,12 +2650,6 @@ DROPZONE:
 	Building:
 		Footprint: x+x +++ x+x
 		Dimensions: 3,3
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 90
-		Prerequisites: radar, ~structures.ty
-		BuildLimit: 3
-		Description: actor-dropzone.description-buildable
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
@@ -2664,8 +2658,6 @@ DROPZONE:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
-	Valued:
-		Cost: 1750
 	Health:
 		HP: 80000
 	WithIdleAnimation:

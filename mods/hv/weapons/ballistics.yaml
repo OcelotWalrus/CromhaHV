@@ -43,6 +43,13 @@ CannonYuruki:
 	Projectile: Bullet
 		Image: bullet5
 
+CannonTyrian:
+	Inherits: ^Cannon
+	Projectile: Bullet
+		Image: bullet7
+	Warhead@Damage: SpreadDamage
+		Damage: 4600
+
 ^Artillery:
 	Inherits: ^Cannon
 	Report: howitzerfire01.ogg

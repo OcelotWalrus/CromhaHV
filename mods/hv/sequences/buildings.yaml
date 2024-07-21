@@ -789,15 +789,14 @@ starport3:
 		ZOffset: -1c511
 	shadow-overlay:
 		Filename: bits/starport3-shadow.png
-		Offset: 6, 4
+		Offset: 7, 13
 	damaged-idle:
 		Filename: bits/starport3.png
 		Start: 19
 		ZOffset: -1c511
 	damaged-shadow-overlay:
 		Filename: bits/starport3-shadow.png
-		Start: 1
-		Offset: 6, 4
+		Offset: 7, 13
 	production-inprogress:
 		Filename: bits/starport3.png
 		Frames: 1, 2, 3, 4, 5
@@ -823,7 +822,7 @@ starport3:
 		Offset: 12, -17
 	icon:
 		Filename: bits/buildings-icons.png
-		Start: 11
+		Start: 48
 		Offset: 0, 0
 
 factory:

@@ -514,7 +514,7 @@ RADAR3:
 		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
 		QuantizedFacings: 8
 		Cordon: 5c0
-		DropItems: merctank, merctank, merctank, merctank, aatank3, sonictank, dualmerctank, dualmerctank
+		DropItems: mbt3, mbt3, mbt3, mbt3, aatank3, sonictank
 		CameraActor: camera
 		ChargeInterval: 4100
 		Icon: airlifterdrop
@@ -1200,6 +1200,26 @@ CONSTRUCTOR:
 	RenderSprites:
 		Image: builder1
 
+MBT3:
+	Inherits: MBT
+	Buildable:
+		Prerequisites: ~factory.ty
+	Mobile:
+		TurnSpeed: 30
+		Speed: 105
+	Armament:
+		Weapon: CannonTyrian
+		LocalOffset: 500,0,50
+		-Recoil:
+		-RecoilRecovery:
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		Voice: Attack
+		FacingTolerance: 0
+	-WithSpriteTurret:
+	-Turreted:
+	-AttackTurreted:
+
 CLUSTERTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -1334,7 +1354,7 @@ SONICTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 60
 		Prerequisites: ~factory.ty, techcenter3, radar
 		Queue: Tank
 		Description: actor-sonictank.description

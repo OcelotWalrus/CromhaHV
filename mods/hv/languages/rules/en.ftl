@@ -96,7 +96,6 @@ faction-tyrian =
 
     Superweapon:
         - Paratroopers Drop
-        - Airborne Reinforcement Pads
         - Cluster Bomb
 
 faction-random =
