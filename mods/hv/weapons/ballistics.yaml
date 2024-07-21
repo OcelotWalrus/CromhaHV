@@ -466,7 +466,7 @@ ClusterProjectileStronger:
 		Damage: 1350
 		Versus:
 			None: 100
-			Steel: 75
+			Steel: 325
 			Light: 80
 			Heavy: 70
 
