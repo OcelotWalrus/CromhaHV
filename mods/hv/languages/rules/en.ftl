@@ -715,7 +715,7 @@ actor-patrolboat =
       Weak vs Vehicles and Buildings
 
 actor-missileboat =
-   .name = Missileboat boat
+   .name = Missile boat
    .generic-name = Boat
    .description = Turreted missile launcher boat.
       Strong vs Aircraft, Navy and Buildings

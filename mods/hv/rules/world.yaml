@@ -149,6 +149,19 @@
 			Rapids: 50
 			Shore: 75
 			IceCliff: 75
+	Locomotor@SpiderBoat:
+		Name: spiderboat
+		Crushes: Cube, Mine, Pod, Tree, Scrap
+		TerrainSpeeds:
+			Littoral: 100
+			Pelagic: 100
+			Oceanic: 100
+			Rapids: 50
+			Shore: 75
+			IceCliff: 75
+			Ice: 110
+			Sand: 60
+			Sand Ramp: 55
 	Faction@Yuruki:
 		Name: faction-yuruki.name
 		InternalName: yi

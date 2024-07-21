@@ -1,45 +1,19 @@
-
-# TODO LIST
-
-- [x] Make factory
-- [x] Make module
-- [x] Make oil facility
-- [x] Make base
-- [x] Make Cluster Pod
-- [x] Make Shotgun Pod
-- [x] Make Cluster Bomb Launch Command
-- [x] Make Cluster Tank
-- [x] Make atmospheric bomber
-- [x] Make Tiny Hawk
-- [x] Make atmospheric glider
-- [x] Make voices for cluster bomb and paratroopers powers
-- [x] Polish the colors of the AA Turret
-- [x] Make the building icon for the AA Turret
-- [x] Make a sprite for the AA Tank
-- [x] Fix factory platform transparency
-- [x] Make the Cluster Bomb Dome damaged sprite craters look less odd
-- [x] Polish the Paratroopers Drop cursor
-- [x] Redo the Atmospheric Glider sprites
-- [x] Make a sprite for the Starport Platform
-- [x] Rework on the Starport Platform
-- [x] Rework the Railgun Pod's sprites
-- [x] Recheck every unit's armament offset
-- [x] Correct every wrong diagonal angle spritesheets
-- [x] Add the Railgun Pod & delete the elitepod2
-- [x] ~~Make a variation for the artillery?~~
-- [ ] Find the intermediary support power
-- [ ] Remake the base
-- [ ] Remake the outpost
-- [ ] Remake the radar dome
-- [x] Remake the refinery
-- [ ] Remake the bunker
-- [ ] Remake the turret
-- [ ] Remake the starport's design
-- [ ] Make Tyrian starship (super unit)
-- [x] Fix the Cluster Bomb Dome sprite (roundings)
-- [ ] Start working on the navy units
-- [x] ~~Do something with the Dreadnought (or not)~~
-- [ ] Fix the github action errors
-- [ ] Recheck every credit attributions
-- [x] Make Sonic Tank voices
-- [x] Make Glider voices
+| Unit                   | Yuruki              | Synapol              | Tyrian                                                                                                                                                                                                                                              |
+|------------------------|---------------------|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Second Pod             | Electric Pod        | Rocket Pod           | Shotgun Pod (higher rate - can't target aircraft - cooldown after a certain time - pretty much more powerful than rocket pods in groups - really powerful against pods - strong against tanks)                                                      |
+| Third Pod              | Bomber Pod          | Mortar Pod           | Cluster Tank (deals area damage 3x3 - weak against pods and tanks - strong against buildings - can hide underground [cloak] in sand and snow)                                                                                                       |
+| Fourht Pod             | Sniper Pod          | Flame Pod            | Railgun Tank (sniper pod - powerful against buildings - can target aircraft)                                                                                                                                                                        |
+| Main Battle Tank       | MBT                 | MBT2                 | Mercenary Tank (same weaponry - faster - less durable)                                                                                                                                                                                              |
+| AA Tank                | AA Tank (electric)  | AA Tank (missile)    | Mobile Flak (5 fast bursts - longer reload - less precise - bullet - area damage)                                                                                                                                                                   |
+| Fast Anti-Pod-Tank     | Bike                | Buggy                | Tiny Hawk (shotgun pod but faster, stronger, and higher fire rate)                                                                                                                                                                                  |
+| Tech Tank              | Countermeasure Tank | Hacker Tank          | Sonic Tank (taken from D2K - turreted - slower - long range - area wave damage - doesn't arm allies - capable of crushing multiple stacked pods at once - strong against pods and tanks - weak against structures - can't attack air - slow reload) |
+| Tech Tank 2            | Railgun Tank        | Lightning Tank       | Cluster Tank (area damage 3x3 - medium range - medium reload - strong against buildings - weak against units - can move backward)                                                                                                                   |
+| Missile Tank           | Stealth Tank        | Missile Tank         | Missile Pad Tank (long range - 5 bursts - slow reload - can move backward - inaccurate (about 1.5 cell) - strong against everything except pods)                                                                                                    |
+| Light Boat             | Light Boat          | Patrol Boat          | Spider Boat (fastest boat - less durable - can go on shores, sand and ice - turreted railgun (same weapon as the Railgun Pod) - same strong sides as other light boats)                                                                             |
+| Heavy Boat             | Medium Boat         | Submarine            | Missile Boat (slightly faster - slower reload - same armament as Missile Tank - turreted - less durable - same strong sides as heavy boats)                                                                                                         |
+| Tech Boat              | Lightning Boat      | Railgun Boat         | NONE                                                                                                                                                                                                                                                |
+| Tech Boat 2            | Drone Ship          | Boomer               | Bombing X (slower - slower reload - same strong sides as other tech boats 2 - inaccurate (2.5 celss) - launches lot of small particles onto the target)                                                                                             |
+| Gun Aircraft           | Gun Ship            | Helicopter           | Tyrian Helis (faster - crashes when killed - two canons - railgun armament - helicopter)                                                                                                                                                            |
+| Ground Attack Aircraft | Speeder             | Banshee              | NOnE                                                                                                                                                                                                                                                |
+| Scout                  | Saucer              | Balloon              | Atmospheric Glider (plane - crashes when killed)                                                                                                                                                                                                    |
+| Transport Aircraft     | Dropship            | Transport Helicopter | Airlifter (paradrops cargo - slower - more space - hasn't "carryall" - crashes when killed - plane)                                                                                                                                                 |

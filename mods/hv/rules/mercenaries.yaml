@@ -1123,6 +1123,7 @@ SPIDERBOAT:
 	Mobile:
 		Speed: 140
 		TurnSpeed: 65
+		Locomotor: spiderboat
 	RevealsShroud:
 		Range: 9c0
 		MinRange: 4c0

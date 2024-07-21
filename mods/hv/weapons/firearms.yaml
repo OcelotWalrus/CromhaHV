@@ -406,7 +406,6 @@ FlakLight:
 	ValidTargets: Air
 	Burst: 5
 	BurstDelays: 5
-	Reload: 145
 	Projectile: Bullet
 		Image: bullet7
 		Speed: 1000
