@@ -223,7 +223,7 @@ MotherShipVoice:
 		Guard: guarding
 
 GliderVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: glider_acknowledged, glider_aeronautics_operational, glider_awaiting_orders, glider_avionics_online
 		Move: glider_closing_in, glider_not_a_problem, glider_roger_that
@@ -231,7 +231,7 @@ GliderVoice:
 		Guard: guarding
 
 BomberVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: bomber2_aeronautics_operational, bomber2_avionics_online, bomber2_awaiting_orders, bomber2_ready_for_action
 		Move: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_not_a_problem, bomber2_thrusters_engaged
@@ -239,7 +239,7 @@ BomberVoice:
 		Guard: guarding
 
 SonicTankVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: sonictank_orders, sonictank_receiving, sonictank_gotcha
 		Move: sonictank_acknowledged, sonictank_affirmative, sonictank_at_once, sonictank_good_copy, sonictank_gotcha, sonictank_moving, sonictank_quickly
