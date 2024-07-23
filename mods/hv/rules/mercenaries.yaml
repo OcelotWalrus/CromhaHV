@@ -327,110 +327,6 @@ BALLOON.MERCENARY:
 	RenderSprites:
 		Image: balloon
 
-STARSHIP:
-	Inherits: ^Helicopter
-	Inherits@Smoke: ^SmokeEmitter
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Valued:
-		Cost: 6000
-	Tooltip:
-		Name: actor-mothership.name
-	Buildable:
-		Queue: Aircraft
-		BuildPaletteOrder: 100
-		Prerequisites: ~disabled
-		Description: actor-mothership.description
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 100000
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 12c0
-		MinRange: 4c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 6c0
-		Type: GroundPosition
-	Aircraft:
-		TurnSpeed: 20
-		Speed: 100
-		CruiseAltitude: 3c0
-		AltitudeVelocity: 0c56
-		InitialFacing: 512
-		CanForceLand: true
-		VTOL: true
-		CanSlide: true
-	HitShape:
-		Type: Circle
-			Radius: 1024
-	Voiced:
-		VoiceSet: DropshipVoice
-	Selectable:
-		DecorationBounds: 2048, 2048
-	SpawnActorOnDeath:
-		Actor: STARSHIP.Husk
-		RequiresCondition: airborne
-	CarrierParent:
-		Actors: drone2, drone2, drone2, drone2, drone2
-		RespawnTicks: 100
-		SpawnAllAtOnce: true
-	WithCarrierParentPipsDecoration:
-	WithCarrierHatchAnimation:
-	Exit:
-		SpawnOffset: 0,0,0
-		Facing: 0
-	Turreted@DroneLauncher:
-		Turret: primary
-		Offset: 0,0,0
-		TurnSpeed: 240
-	Turreted@LaserTurret:
-		Turret: secondary
-		Offset: -200,0,-100
-		TurnSpeed: 120
-	AttackTurreted:
-	Armament@DroneLauncher:
-		Name: primary
-		Weapon: Drone2Launcher
-		LocalOffset: 0,0,-100
-	Armament@LaserTurret:
-		Name: secondary
-		Weapon: MothershipLaser
-		LocalOffset: 500,300,-100, 500,-300,-100
-	Voiced:
-		VoiceSet: MotherShipVoice
-	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
-
-STARSHIP.Husk:
-	Inherits: ^PlaneHusk
-	Tooltip:
-		Name: actor-mothership-husk.name
-	Aircraft:
-		TurnSpeed: 24
-		Speed: 86
-	FallsToEarth:
-		Explosion: UnitExplodeLarge
-		Velocity: 43
-	LeavesTrails:
-		Offsets: -853,0,171
-		MovingInterval: 2
-		Image: smoke
-		SpawnAtLastPosition: false
-		Type: CenterPosition
-	RevealsShroud:
-		Range: 4c0
-		MinRange: 2c0
-		Type: GroundPosition
-		RevealGeneratedShroud: false
-	RevealsShroud@Hacked:
-		Range: 2c0
-		Type: GroundPosition
-	RenderSprites:
-		Image: starship
-
 ## buildings
 
 BASE3:
@@ -626,7 +522,7 @@ FACTORY3:
 	Health:
 		HP: 90000
 	Armor:
-		Type: Concrete
+		Type: Steel
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0

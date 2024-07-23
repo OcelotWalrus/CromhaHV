@@ -43,9 +43,7 @@ LightRailgun:
 		Width: 0c90
 		Shape: Cylindrical
 		ZOffset: 2048
-		-Color:
-		BeamPlayerColor: True
-		DamageActorsInLine: True
+		UsePlayerColor: True
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
@@ -134,7 +132,12 @@ TowerRailgun:
 		Width: 0c110
 		Shape: Cylindrical
 		ZOffset: 2048
-		BeamPlayerColor: true
+		UsePlayerColor: True
+		SecondaryBeam: True
+		SecondaryBeamWidth: 0c100
+		SecondaryBeamShape: Cylindrical
+		SecondaryBeamZOffset: 2048
+		SecondaryBeamUsePlayerColor: True
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 40
