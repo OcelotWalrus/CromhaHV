@@ -601,7 +601,7 @@ actor-clusterpod =
 actor-railgunpod =
    .description = Fast scout vehicle.
     Armed with a light railgun cannon.
-    Cloaked when idle.
+    Damages all units struck by the beam.
      Strong vs Pods and Aircraft
      Weak vs Tanks and Buildings
    .name = Railgun Pod
@@ -725,6 +725,8 @@ actor-spiderboat =
    .generic-name = Boat
    .description = Fast boat.
     Armed with a light railgun cannon.
+    Damages all units struck by the beam.
+    Can move on shore, sand and ice terrains.
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
 

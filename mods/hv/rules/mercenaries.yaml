@@ -986,15 +986,6 @@ RAILGUNPOD:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	WithMuzzleOverlay:
-	Cloak:
-		InitialDelay: 250
-		CloakDelay: 120
-		CloakSound:
-		UncloakSound:
-		UncloakOn: Attack, Unload, Move
-		IsPlayerPalette: true
-		CloakedPalette: cloak
-		CloakStyle: Palette
 
 ## ships
 
@@ -1046,8 +1037,6 @@ MISSILEBOAT:
 		Armaments: primary, secondary
 	WithSpriteTurret:
 	WithMuzzleOverlay:
-	Selectable:
-		DecorationBounds: 1536, 1536
 
 MERCSUBMARINE:
 	Inherits: ^Submarine

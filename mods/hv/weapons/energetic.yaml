@@ -43,7 +43,9 @@ LightRailgun:
 		Width: 0c90
 		Shape: Cylindrical
 		ZOffset: 2048
-		Color: FE0303
+		-Color:
+		BeamPlayerColor: True
+		DamageActorsInLine: True
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
@@ -132,7 +134,7 @@ TowerRailgun:
 		Width: 0c110
 		Shape: Cylindrical
 		ZOffset: 2048
-		Color: FE0303
+		BeamPlayerColor: true
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 40
@@ -642,6 +644,7 @@ SoundShock:  # originallly D2K's "Sound" weapon
 		BeyondTargetRange: 1c0
 		MinDistance: 5c0
 		Color: 00FFFFC8
+		UsePlayerColor: true
 	Warhead@Damage: SpreadDamage
 		AffectsParent: false
 		Damage: 1250
