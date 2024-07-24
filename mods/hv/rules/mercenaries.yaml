@@ -875,6 +875,7 @@ RAILGUNPOD:
 		Range: 3c0
 	Armament@Primary:
 		Weapon: LightRailgun
+		LocalOffset: 200,-300,0
 	Armament@Garrisoned:
 		Name: garrisoned
 		Weapon: LightRailgunBunker
