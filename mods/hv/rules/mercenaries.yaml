@@ -1124,7 +1124,7 @@ BUILDER3:
 	Transforms:
 		IntoActor: outpost3
 	RenderSprites:
-		Image: builder3
+		Image: builder5
 
 CONSTRUCTOR:
 	Inherits: ^Vehicle
