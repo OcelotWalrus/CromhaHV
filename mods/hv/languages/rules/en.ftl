@@ -67,10 +67,10 @@ faction-synapol =
 faction-tyrian =
    .name = Tyrian
    .description = United Mercenaries Of Tyrian (U.M.O.T.)
-   A large interplanatary company that trains mercenaries
+   A large interplanetary company that trains mercenaries
    from all over the galaxy, based on the Tyrian system.
    They are known for their fast, agile forces and advanced
-   technologies, which are often ordered by coprorations.
+   technologies, which are often ordered by corporations.
    But they also occasionally run humanitarian missions in
    certain independent colonies which have contracts with them.
    They are also recognized for their innovative technologies
@@ -78,12 +78,14 @@ faction-tyrian =
    They have certain contracts with a developed alien manufacturer
    that designed their building technologies, as mercenaries
    from this company come from various places of the galaxy.
-   The U.M.O.T. paramilitary forces have operated only a few missions in the solar system.
+   The U.M.O.T. paramilitary forces have operated only a few
+   missions in the solar system. Their armament department
+   specially specialized in railgun weaponry.
 
     Faction Variations:
         - Uses mobile base constructors
         - Uses gliders as air units
-        - Main battle tanks are faster but less durable
+        - Main battle tanks and boats are faster but less durable
 
     Special Units:
         - Shotgun Pod
@@ -91,11 +93,12 @@ faction-tyrian =
         - Railgun Pod
         - Tiny Hawk
         - Cluster Tank
-        - Missile Pad Tank
         - Sonic Tank
+        - Missile Pad Tank
 
     Superweapon:
         - Paratroopers Drop
+        - Cloak Device
         - Cluster Bomb
 
 faction-random =
@@ -176,6 +179,11 @@ notification-clusterbomb-detected = Cluster Bomb detected.
 notification-clusterbomb-charging = Cluster Bomb charging.
 notification-clusterbomb-ready = Cluster Bomb ready.
 notification-clusterbomb-incoming = Cluster Bomb incoming.
+
+notification-cloakdevice-detected = Cloak Device detected.
+notification-cloakdevice-charging = Cloak Device charging.
+notification-cloakdevice-ready = Cloak Device ready.
+notification-cloakdevice-engaged = Cloak Device engaged.
 
 ## Aircraft
 actor-gunship =
@@ -460,6 +468,19 @@ actor-uplink-mercenary =
    .railgun-name = Cluster Bomb
    .railgun-description = Initiate a cluster bomb strike.
     Applies damage to a large area.
+
+actor-cloakdevice =
+   .description = Erects an electromagnetic cloak
+    around a group of units
+    for a short time.
+      Requires power to operate.
+      Maximum 1 can be built.
+   .name = Cloak Field Device
+   .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amount of energy.
+   .cloakdevice-name = Cloak Field
+   .cloakdevice-description = Energy cloak:
+    Grants invisibility and increases speed by 15%
+    to a group of units for 45 seconds.
 
 actor-storage =
    .description = Stores excess resources.
@@ -830,10 +851,11 @@ actor-artillery =
       Strong vs Pods and Buildings
       Weak vs Tanks
 
-actor-clustertank =
-   .name = Cluster Tank
-   .description = Mobile medium range weapon.
-      Armed with a cluster bomb launcher.
+actor-fieldtank =
+   .name = Field Tank
+   .description = Provides healing to nearby units.
+    Jams incoming missiles.
+      Unarmed.
 
 actor-radartank =
    .description = Can detect cloaked units.n

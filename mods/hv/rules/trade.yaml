@@ -285,17 +285,17 @@ ECMTANK.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: ecmtank
 
-CLUSTERTANK.TRADE:
-	Inherits: CLUSTERTANK
+FIELDTANK.TRADE:
+	Inherits: FIELDTANK
 	Buildable:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
 	-MapEditorData:
 	RenderSprites:
-		Image: clustertank
+		Image: tank4
 	UpdatesPlayerStatistics:
-		OverrideActor: clustertank
+		OverrideActor: fieldtank
 
 TINYHAWK.TRADE:
 	Inherits: TINYHAWK

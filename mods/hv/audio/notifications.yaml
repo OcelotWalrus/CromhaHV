@@ -49,6 +49,10 @@ Speech:
 		ForceFieldReady: force_field_ready
 		ForceFieldDetected: force_field_detected
 		ForceFieldEngaged: force_field_engaged
+		CloakDeviceCharging: cloak_device_charging
+		CloakDeviceReady: cloak_device_ready
+		CloakDeviceDetected: cloak_device_detected
+		CloakDeviceEngaged: cloak_device_engaged
 		NewOptions: new_construction_options
 		OnHold: on_hold
 		OrbitalRailgunDetected: railgun_detected

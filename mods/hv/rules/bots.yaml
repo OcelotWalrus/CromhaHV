@@ -55,6 +55,7 @@ Player:
 			howitzer: 1
 			uplink: 1
 			uplinkmercenary: 1
+			cloakdevice: 1
 			silo: 1
 		BuildingFractions:
 			base: 1
@@ -94,14 +95,16 @@ Player:
 			uplink: 1
 			dropzone: 3
 			uplinkmercenary: 1
+			cloakdevice: 1
 			field: 1
 			silo: 1
 		BuildingDelays:
 			radar: 4000
 			radar2: 4000
-			dropzone: 6000
+			radar3: 4000
 			howitzer: 8000
 			field: 8000
+			cloakdevice: 8000
 			silo: 9000
 			uplink: 9000
 			uplinkmercenary: 9000
@@ -114,7 +117,7 @@ Player:
 		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, missileboat, spiderboat, boomer, mercsubmarine, submarine, carrier
 		AirUnitsTypes: gunship, jet, bomber2, copter, banshee
 		ConstructionYardTypes: base, base2, base3
-		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, storage2, module, module2, module3, radar, radar2, radar3, factory, factory2, factory3, harbor, harbor2, harbor3, trader, starport, starport2, starport3, techcenter, techcenter3, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, field, silo
+		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, storage2, module, module2, module3, radar, radar2, radar3, factory, factory2, factory3, harbor, harbor2, harbor3, trader, starport, starport2, starport3, techcenter, techcenter3, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, uplinkmerceary, cloakdevice, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
@@ -241,9 +244,12 @@ Player:
 			bomberpod: 30
 		ValidTargets: Structure, Vehicle
 		InvalidTargets: Air, Water
-	ExternalConditionPowerBotModule:
+	ExternalConditionPowerBotModule@Field:
 		RequiresCondition: enable-rogue-ai
 		OrderName: ShieldsUp
+	ExternalConditionPowerBotModule@CloakDevice:
+		RequiresCondition: enable-rogue-ai
+		OrderName: CloakDevice
 	SupportPowerBotModule:
 		RequiresCondition: enable-rogue-ai
 		Decisions:

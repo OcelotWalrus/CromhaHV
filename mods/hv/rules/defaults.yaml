@@ -98,6 +98,7 @@
 	Inherits@Selection: ^SelectableCombatUnit
 	Inherits@Decoration: ^SelectionDecorations
 	Inherits@Shield: ^ForceFieldCompatible
+	Inherits@Cloak: ^CloakDeviceCompatible
 	Inherits@ECM: ^DisabledByECM
 	Inherits@Cloak: ^Cloakable
 	Inherits@Parachute: ^Parachutable
@@ -253,6 +254,7 @@
 	Inherits@Selection: ^SelectableCombatUnit
 	Inherits@Decoration: ^SelectionDecorations
 	Inherits@Shield: ^ForceFieldCompatible
+	Inherits@Cloak: ^CloakDeviceCompatible
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
 	Huntable:
@@ -845,6 +847,29 @@
 	ExternalCondition@ForceField:
 		Condition: shield
 
+^CloakDeviceCompatible:
+	Cloak@CloakDevice:
+		InitialDelay: 0
+		CloakDelay: 90
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled || ecm-disabled
+		CloakedPalette: cloak
+		CloakStyle: Palette
+		RequiresCondition: cloakdevice
+	SpeedMultiplier@CloakDevice:
+		Modifier: 115
+		RequiresCondition: cloakdevice
+	GrantConditionOnDamageState@UNCLOAKCloakDevice:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	TimedConditionBar:
+		Condition: cloakdevice
+		Color: 0000FF
+	ExternalCondition@CloakDevice:
+		Condition: cloakdevice
+
 ^Tree:
 	Inherits@Shape: ^1x1Shape
 	Interactable:
@@ -905,6 +930,7 @@
 	Inherits@Selection: ^SelectableCombatUnit
 	Inherits@Decoration: ^SelectionDecorations
 	Inherits@Shield: ^ForceFieldCompatible
+	Inherits@Cloak: ^CloakDeviceCompatible
 	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps

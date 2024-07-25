@@ -22,7 +22,7 @@ BOMBER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: ~starport.ty, radar, techcenter3
+		Prerequisites: ~starport.ty, radar, techcenter
 		Description: actor-bomber2.description
 	Tooltip:
 		Name: actor-bomber2.name
@@ -450,7 +450,7 @@ TECHCENTER3:
 		Order: 81
 		Category: Buildings
 	ProvidesPrerequisite@BuildingName:
-		Prerequisite: techcenter3
+		Prerequisite: techcenter
 		RequiresCondition: !powerdown
 	Health:
 		HP: 105500
@@ -683,7 +683,7 @@ UPLINKMERCENARY:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter3, ~structures.ty
+		Prerequisites: techcenter, ~structures.ty
 		BuildLimit: 1
 		Description: actor-uplink-mercenary.description
 	Building:
@@ -736,6 +736,78 @@ UPLINKMERCENARY:
 		IncomingTextNotification: notification-clusterbomb-incoming
 		OrderName: Bombem
 
+CLOAKDEVICE:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: radar, ~structures.ty
+		BuildLimit: 1
+		Description: actor-cloakdevice.description
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-cloakdevice.name
+	Encyclopedia:
+		Description: actor-cloakdevice.encyclopedia
+		Order: 120
+		Category: Buildings
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 2048, 2048
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	GrantExternalConditionPower@ForceField:
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+		ChargeInterval: 4500
+		Name: actor-cloakdevice.cloakdevice-name
+		Description: actor-cloakdevice.cloakdevice-description
+		Duration: 1350
+		DisplayRadarPing: true
+		Condition: cloakdevice
+		Sequence: end
+		SupportPowerPaletteOrder: 20
+		Icon: shield
+		Cursor: force-field
+		BlockedCursor: force-field-blocked
+		DetectedSpeechNotification: CloakDeviceDetected
+		DetectedTextNotification: notification-cloakdevice-detected
+		BeginChargeSpeechNotification: CloakDeviceCharging
+		BeginChargeTextNotification: notification-cloakdevice-charging
+		EndChargeSpeechNotification: CloakDeviceReady
+		EndChargeTextNotification: notification-cloakdevice-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: CloakDeviceEngaged
+		IncomingTextNotification: notification-cloakdevice-engaged
+		Dimensions: 3, 3
+		Footprint: xxx xxx xxx
+		OrderName: CloakDevice
+		LaunchSound: force_field_autistic-lucario.ogg
+	SupportPowerChargeBar:
+	WithSupportPowerChargedAnimation:
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	Power:
+		Amount: -200
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	RenderSprites:
+		Image: field
+
 OILFACILITY:
 	Inherits: ORESMELT
 	Inherits@Shape: ^2x4Shape
@@ -756,7 +828,7 @@ OILFACILITY:
 		Footprint: == == xx xx
 		Dimensions: 2,4
 	Buildable:
-		Prerequisites: ~structures.ty, techcenter3
+		Prerequisites: ~structures.ty, techcenter
 	Selectable:
 		Bounds: 1024, 2048, 0, 0
 	Tooltip:
@@ -859,7 +931,7 @@ RAILGUNPOD:
 	Buildable:
 		Queue: Pod
 		Description: actor-railgunpod.description
-		Prerequisites: ~module.ty, factory, techcenter3
+		Prerequisites: ~module.ty, factory, techcenter
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 250
@@ -917,7 +989,7 @@ MISSILEBOAT:
 		Range: 4c0
 	Turreted:
 		TurnSpeed: 120
-		Offset: 150,0,50
+		Offset: -150,0,50
 	Armament@Air:
 		Weapon: MissileShipRocketAir
 		MuzzleSequence: muzzle
@@ -946,7 +1018,7 @@ MERCSUBMARINE:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.ty, techcenter3
+		Prerequisites: ~harbor.ty, techcenter
 		BuildPaletteOrder: 60
 		Description: actor-mercsubmarine.description
 	UpdatesPlayerStatistics:
@@ -1106,29 +1178,28 @@ MBT3:
 	-Turreted:
 	-AttackTurreted:
 
-CLUSTERTANK:
+FIELDTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1100
+		Cost: 1000
 	Tooltip:
-		Name: actor-clustertank.name
+		Name: actor-fieldtank.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.ty, radar, techcenter3
-		BuildPaletteOrder: 70
-		Description: actor-clustertank.description
+		Prerequisites: ~factory.ty, radar, techcenter
+		BuildPaletteOrder: 60
+		Description: actor-fieldtank.description
+	Selectable:
+		Class: fieldtank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25500
+		HP: 10000
 	Armor:
-		Type: Steel
+		Type: Heavy
 	Mobile:
-		TurnSpeed: 20
-		CanMoveBackward: true
-		Speed: 90
-		Locomotor: tracked
+		Speed: 120
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -1136,22 +1207,37 @@ CLUSTERTANK:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	Armament:
-		Weapon: HeavyCluster
-		MuzzleSequence: muzzle
-		LocalOffset: 450,0,750
-	AttackFrontal:
+		#Weapon: FieldHeal
+		Weapon: CannonTyrian
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+	WithRangeCircle:
+		Type: Turret
+		Width: 1
+		BorderWidth: 2
+		Range: 4c0
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	AutoTargetPriority@Default:
+		ValidTargets: DamagedVehicle, DamagedPod
+	Turreted:
+		TurnSpeed: 25
+	AttackTurreted:
 		PauseOnCondition: ecm-disabled
-		Voice: Attack
-		FacingTolerance: 0
-	WithMuzzleOverlay:
-	Selectable:
-		DecorationBounds: 1536, 1536
+	JamsMissiles:
+		Range: 5c0
+		DeflectionRelationships: Neutral, Enemy
+	RenderSprites:
+		Image: tank4
 
 TINYHAWK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 650
+		Cost: 400
 	Tooltip:
 		Name: actor-tinyhawk.name
 	Buildable:
@@ -1159,15 +1245,17 @@ TINYHAWK:
 		Prerequisites: ~factory.ty, module
 		BuildPaletteOrder: 30
 		Description: actor-tinyhawk.description
+	Selectable:
+		Class: tinyhawk
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 9500
 	Armor:
-		Type: Steel
+		Type: Light
 	Mobile:
-		TurnSpeed: 50
-		Speed: 140
+		TurnSpeed: 75
+		Speed: 150
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -1195,20 +1283,22 @@ MISSILETANK2:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1250
+		Cost: 1200
 	Tooltip:
 		Name: actor-missiletank2.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.ty, radar, techcenter3
+		Prerequisites: ~factory.ty, radar, techcenter
 		BuildPaletteOrder: 80
 		Description: actor-missiletank2.description
+	Selectable:
+		Class: missiletank2
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 24000
+		HP: 45000
 	Armor:
-		Type: Steel
+		Type: Heavy
 	Mobile:
 		TurnSpeed: 24
 		CanMoveBackward: true
@@ -1234,21 +1324,23 @@ SONICTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1050
+		Cost: 1500
 	Tooltip:
 		Name: actor-sonictank.name
+	Selectable:
+		Class: sonictank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 60
-		Prerequisites: ~factory.ty, techcenter3, radar
+		BuildPaletteOrder: 70
+		Prerequisites: ~factory.ty, techcenter, radar
 		Queue: Tank
 		Description: actor-sonictank.description
 	Mobile:
 		TurnSpeed: 25
 		Speed: 80
 	Health:
-		HP: 44500
+		HP: 50000
 	Armor:
 		Type: Heavy
 	RevealsShroud:

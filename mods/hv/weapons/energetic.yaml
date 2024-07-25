@@ -53,7 +53,7 @@ LightRailgun:
 		Versus:
 			None: 1500
 			Steel: 35
-			Light: 75
+			Light: 80
 			Heavy: 25
 			Concrete: 15
 	Warhead@Incendiary: TreeDamage
@@ -213,27 +213,16 @@ RepairTorch:
 		ValidTargets: DamagedPod
 		Spread: 1
 
-RepairRailgun:
-	ReloadDelay: 5
-	Range: 5c0
-	MinRange: 1c0
-	ValidTargets: DamagedVehicle
-	TargetActorCenter: true
-	Projectile: LaserZap
-		Width: 0c100
-		Shape: Cylindrical
-		ZOffset: 2048
-		Color: DFEB00
-	Warhead@Repair: TargetDamage
-		DebugOverlayColor: 00FF00
-		Damage: -375
-		ValidTargets: DamagedVehicle
-		Spread: 15
-	Warhead@Sparks: FireShrapnel
-		Weapon: ElectricSpark
-		Amount: 4
-		AffectsParent: true
-		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
+#FieldHeal:
+#	ReloadDelay: 1
+#	Range: 6c0
+#	ValidTargets: DamagedPod, DamagedVehicle
+#	Projectile: InstantHit
+#	Warhead@Repair: GrantExternalConditionWarhead
+#		ValidTargets: DamagedPod, DamagedVehicle
+#		ValidRelationships: Ally
+#		Condition: reconstructor
+#		Duration: 2
 
 Plasma:
 	Inherits: BigSplash
