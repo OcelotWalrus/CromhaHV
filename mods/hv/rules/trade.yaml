@@ -234,7 +234,7 @@ BUILDER3.TRADE:
 		Queues: Trade
 	-MapEditorData:
 	RenderSprites:
-		Image: builder3
+		Image: builder5
 	UpdatesPlayerStatistics:
 		OverrideActor: builder3
 

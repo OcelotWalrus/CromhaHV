@@ -222,12 +222,28 @@ MotherShipVoice:
 		Action: mothershipattack1, mothershipattack2, mothershipattack3
 		Guard: guarding
 
-GliderVoice:
+SonicTankVoice:
 	DefaultVariant: .ogg
 	Voices:
-		Select: glider_acknowledged, glider_aeronautics_operational, glider_awaiting_orders, glider_avionics_online
-		Move: glider_closing_in, glider_not_a_problem, glider_roger_that
-		Action: glider_affirmative, glider_shooting_down, glider_firing_missiles, glider_not_a_problem, glider_dogfight_engaged, glider_sweep_the_area
+		Select: sonictank_orders, sonictank_receiving, sonictank_gotcha
+		Move: sonictank_acknowledged, sonictank_affirmative, sonictank_at_once, sonictank_good_copy, sonictank_gotcha, sonictank_moving, sonictank_quickly
+		Action:sonictank_acknowledged, sonictank_affirmative, sonictank_at_once, sonictank_gotcha, sonictank_consider_it_dead, sonictank_leave_no_survivors, sonictank_shock_waves_barrage, sonictank_shocking_waves, sonictank_target
+		Guard: guarding
+
+MisssilePadTankVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: missilepadtank_orders, missilepadtank_receiving, missilepadtank_gotcha
+		Move: missilepadtank_acknowledged, missilepadtank_affirmative, missilepadtank_at_once, missilepadtank_good_copy, missilepadtank_gotcha, missilepadtank_moving, missilepadtank_quickly
+		Action:missilepadtank_acknowledged, missilepadtank_affirmative, missilepadtank_at_once, missilepadtank_gotcha, missilepadtank_consider_that_dead, missilepadtank_leave_no_survivors, missilepadtank_engaging, missilepadtank_launching_the_missiles, missilepadtank_target_acquired
+		Guard: guarding
+
+TyrianHelisVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: tyrianhelis_acknowledged, tyrianhelis_aeronautics_operational, tyrianhelis_awaiting_orders, tyrianhelis_avionics_online
+		Move: tyrianhelis_closing_in, tyrianhelis_not_a_problem, tyrianhelis_roger_that
+		Action: tyrianhelis_affirmative, tyrianhelis_shooting_down, tyrianhelis_firing_missiles, tyrianhelis_not_a_problem, tyrianhelis_dogfight_engaged, tyrianhelis_sweep_the_area
 		Guard: guarding
 
 BomberVoice:
@@ -236,12 +252,4 @@ BomberVoice:
 		Select: bomber2_aeronautics_operational, bomber2_avionics_online, bomber2_awaiting_orders, bomber2_ready_for_action
 		Move: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_not_a_problem, bomber2_thrusters_engaged
 		Action: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_bombing_target, bomber2_dropping_bombs
-		Guard: guarding
-
-SonicTankVoice:
-	DefaultVariant: .ogg
-	Voices:
-		Select: sonictank_orders, sonictank_receiving, sonictank_gotcha
-		Move: sonictank_acknowledged, sonictank_affirmative, sonictank_at_once, sonictank_good_copy, sonictank_gotcha, sonictank_moving, sonictank_quickly
-		Action:sonictank_acknowledged, sonictank_affirmative, sonictank_at_once, sonictank_gotcha, sonictank_consider_it_dead, sonictank_leave_no_survivors, sonictank_shock_waves_barrage, sonictank_shocking_waves, sonictank_target
 		Guard: guarding

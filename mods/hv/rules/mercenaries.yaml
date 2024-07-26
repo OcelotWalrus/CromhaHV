@@ -111,93 +111,65 @@ BOMBER2.Husk:
 	RenderSprites:
 		Image: bomber
 
-GLIDER:
-	Inherits@Smoke: ^SmokeEmitter
+TYRIANHELIS:
+	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Inherits: ^Plane
-	AppearsOnRadar:
-		UseLocation: true
-	WithShadow:
-		Offset: 356, 256, 0
-		ZOffset: -256
-	WithFacingSpriteBody:
+	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@Smoke: ^SmokeEmitter
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-tyrianhelis.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: ~starport.ty
+		Description: actor-tyrianhelis.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 9000
 	RevealsShroud:
-		Range: 8c0
+		Range: 10c0
 		MinRange: 4c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Buildable:
-		Queue: Aircraft
-		BuildPaletteOrder: 30
-		Prerequisites: ~starport.ty
-		Description: actor-glider.description
-	Tooltip:
-		Name: actor-glider.name
-	Health:
-		HP: 10000
-	Armor:
-		Type: Steel
-	Valued:
-		Cost: 1000
-	UpdatesPlayerStatistics:
-		AddToAssetsValue: true
-	AttackAircraft:
-		FacingTolerance: 10
-		PersistentTargeting: true
-		OpportunityFire: false
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 165
-		Voice: Move
-		MaximumPitch: 100
-		RepulsionSpeed: 40
-		CruiseAltitude: 4560
-	Armament@Air:
-		Weapon: AircraftRailgunAir
-		MuzzleSequence: muzzle
-		LocalOffset: 280,280,0, 280,-280,0
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 8
-		AmmoCondition: ammo
-		RearmSound: mine_reload_oneshotofficial.wav
-	ReloadAmmoPool:
-		Delay: 225
-		Count: 1
+		TurnSpeed: 30
+		Speed: 145
 	Voiced:
-		VoiceSet: GliderVoice
-	Tooltip:
-		Name: actor-glider.name
-	AutoTarget:
-		InitialStance: Defend
-		InitialStanceAI: AttackAnything
-	Contrail@Right:
-		Offset: -298,-164,0
-		TrailLength: 12
-		ZOffset: -1000
-	Contrail@Left:
-		Offset: -298,164,0
-		TrailLength: 12
-		ZOffset: -1000
+		VoiceSet: TyrianHelisVoice
+	Turreted:
+		TurnSpeed: 80
+		Offset: 200,0,-100
+	AttackTurreted:
+		RequiresCondition: airborne
+	Armament@Ground:
+		Weapon: LightRailgunAircraftGround
+		LocalOffset: 50,125,0, 50,-125,0
+	Armament@Air:
+		Weapon: LightRailgunAircraftAir
+		LocalOffset: 50,125,0, 50,-125,0
+	Selectable:
+		Bounds: 1228, 1228
 	SpawnActorOnDeath:
-		Actor: GLIDER.Husk
+		Actor: TYRIANHELIS.Husk
 		RequiresCondition: airborne
 
-GLIDER.Husk:
+TYRIANHELIS.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: actor-glider.name
+		Name: actor-tyrianhelis.name
 	Aircraft:
 		TurnSpeed: 24
 		Speed: 200
 		MaximumPitch: 200
 	FallsToEarth:
 		Explosion: UnitExplodeLarge
+		MaximumSpinSpeed: 10
 		Velocity: 100
 	LeavesTrails:
 		Offsets: 0,0,0
@@ -214,7 +186,7 @@ GLIDER.Husk:
 		Range: 2c0
 		Type: GroundPosition
 	RenderSprites:
-		Image: glider
+		Image: tyrianhelis
 
 AIRLIFTERMERCENARY:
 	Inherits: ^Plane

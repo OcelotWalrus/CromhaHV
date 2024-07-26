@@ -26,7 +26,8 @@ Packages:
 	hv|bits/audio/cromha/announcer/tyrian
 	hv|bits/audio/cromha/bomber2
 	hv|bits/audio/cromha/sonictank
-	hv|bits/audio/cromha/glider
+	hv|bits/audio/cromha/tyrianhelis
+	hv|bits/audio/cromha/missilepadtank
 	hv|bits/audio/graion
 	hv|bits/audio/dzierzan
 	hv|bits/audio/dzierzan/miner

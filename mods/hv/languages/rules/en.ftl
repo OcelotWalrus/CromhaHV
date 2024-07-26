@@ -84,8 +84,8 @@ faction-tyrian =
 
     Faction Variations:
         - Uses mobile base constructors
-        - Uses gliders as air units
-        - Main battle tanks and boats are faster but less durable
+        - Uses helicopters as air units
+        - Main battle tanks, boats and helicopters are faster but less durable
 
     Special Units:
         - Shotgun Pod
@@ -249,12 +249,12 @@ actor-bomber2 =
      Weak vs Tanks and Pods
      Can't target Aircraft
 
-actor-glider =
-   .name = Atmospheric Glider
-   .description = Fast atmospheric glider.
-     Armed with a heavy Anti-Air railgun.
-     Takes time to recharge.
-     Can only attack airborne units.
+actor-tyrianhelis =
+   .name = Tyrian Helis
+   .description = Fast attack helicopter.
+    Equipped with two railgun cannons.
+      Strong vs Pods, Buildings and Aircraft
+      Weak vs Tanks
 
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
