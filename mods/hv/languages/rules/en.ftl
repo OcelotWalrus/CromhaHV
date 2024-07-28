@@ -67,24 +67,19 @@ faction-synapol =
 faction-tyrian =
    .name = Tyrian
    .description = United Mercenaries Of Tyrian (U.M.O.T.)
-   A large interplanetary company that trains mercenaries
-   from all over the galaxy, based on the Tyrian system.
-   They are known for their fast, agile forces and advanced
-   technologies, which are often ordered by corporations.
-   But they also occasionally run humanitarian missions in
-   certain independent colonies which have contracts with them.
-   They are also recognized for their innovative technologies
-   and their interplanetary mercenary reinforcements system.
-   They have certain contracts with a developed alien manufacturer
-   that designed their building technologies, as mercenaries
-   from this company come from various places of the galaxy.
-   The U.M.O.T. paramilitary forces have operated only a few
-   missions in the solar system. Their armament department
-   specially specialized in railgun weaponry.
+   A large alien interplanetary company that trains mercenaries
+   from all over the galaxy, based on the Tyrian binary star
+   system. They are known for their fast and agile forces,
+   their advanced technologies, which are often ordered by
+   huge corporations. But they also occasionally run humanitarian
+   missions in certain independent colonies which have contracts
+   with them. The U.M.O.T. paramilitary forces have operated
+   only a few missions in the solar system though. Their
+   armament department specialized in railgun weaponry.
 
     Faction Variations:
         - Uses mobile base constructors
-        - Uses helicopters as air units
+        - Uses both helicopters and jets as air units
         - Main battle tanks, boats and helicopters are faster but less durable
 
     Special Units:
@@ -92,7 +87,7 @@ faction-tyrian =
         - Cluster Pod
         - Railgun Pod
         - Tiny Hawk
-        - Cluster Tank
+        - Field Tank
         - Sonic Tank
         - Missile Pad Tank
 
