@@ -210,7 +210,7 @@ BUILDER.TRADE:
 		Queues: Trade
 	-MapEditorData:
 	RenderSprites:
-		Image: builder4
+		Image: builder3
 	UpdatesPlayerStatistics:
 		OverrideActor: builder
 

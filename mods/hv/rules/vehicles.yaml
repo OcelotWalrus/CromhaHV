@@ -39,7 +39,7 @@ MBT:
 		MuzzleSequence: muzzle
 		LocalOffset: 500,-50,-50
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
@@ -92,7 +92,7 @@ AATANK:
 		RecoilRecovery: 38
 		LocalOffset: 250,250,150, 250,-250,150
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 
@@ -111,6 +111,7 @@ AATANK2:
 
 APC:
 	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -128,7 +129,7 @@ APC:
 		Type: Heavy
 	Mobile:
 		Speed: 110
-		PauseOnCondition: notmobile || ecm-disabled
+		PauseOnCondition: immobile || jammed
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -137,8 +138,20 @@ APC:
 		Range: 3c0
 	Cargo:
 		Types: Pod
-		MaxWeight: 8
-		LoadingCondition: notmobile
+		MaxWeight: 5
+		LoadingCondition: immobile
+		PassengerConditions:
+			mgpod: loaded
+			rocketpod: loaded
+			mortarpod: loaded
+			flamepod: loaded
+			sniperpod: loaded
+			electricpod: loaded
+	AttackOpenTopped:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PauseOnCondition: jammed
+		RequiresCondition: loaded
+		Armaments: primary
 	Selectable:
 		DecorationBounds: 2048, 1843
 		Class: apc
@@ -189,7 +202,7 @@ ARTILLERY:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	WithMuzzleOverlay:
@@ -241,7 +254,7 @@ RADARTANK:
 		Sequence: extend
 		BodyNames: deployed
 	GrantConditionOnDeploy:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
@@ -261,11 +274,11 @@ RADARTANK:
 		RequiresCondition: undeployed
 	DetectCloaked:
 		Range: 8c0
-		RequiresCondition: !ecm-disabled && undeployed
+		RequiresCondition: !jammed && undeployed
 		DetectionTypes: Cloak, Underwater
 	DetectCloaked@Deployed:
 		Range: 14c0
-		RequiresCondition: !ecm-disabled && !undeployed
+		RequiresCondition: !jammed && !undeployed
 		DetectionTypes: Cloak, Underwater
 
 REPAIRTANK:
@@ -290,7 +303,7 @@ REPAIRTANK:
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -386,7 +399,7 @@ RAILGUNTANK:
 		Weapon: railgun
 		LocalOffset: 325,400,0
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -437,9 +450,9 @@ LIGHTNINGTANK:
 		Range: 4c0
 	Armament:
 		Weapon: VoltageArc
-		LocalOffset: 300,0,0
+		LocalOffset: 400,0,0
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	WithAttackAnimation:
@@ -466,7 +479,7 @@ STEALTHTANK:
 	Armor:
 		Type: Heavy
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Action
 		FacingTolerance: 0
 	Armament:
@@ -486,7 +499,7 @@ STEALTHTANK:
 		CloakSound: stealth_on_humanoide9000.ogg
 		UncloakSound: stealth_off_humanoide9000.ogg
 		IsPlayerPalette: true
-		PauseOnCondition: cloak-force-disabled || ecm-disabled
+		PauseOnCondition: cloak-force-disabled || jammed
 		CloakedPalette: cloak
 		CloakStyle: Palette
 	GrantConditionOnDamageState@UNCLOAK:
@@ -513,11 +526,11 @@ MERCTANK:
 		BuildPaletteOrder: 90
 		Description: actor-merctank.description
 	Armament:
-		Weapon: ^Cannon
+		Weapon: TankCannon
 		MuzzleSequence: muzzle
 		LocalOffset: 500,0,50
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -545,7 +558,7 @@ DUALMERCTANK:
 	Selectable:
 		Class: dualmerctank
 	Armament:
-		Weapon: doublecannon
+		Weapon: DoubleCannon
 		LocalOffset: 500,85,50, 500,-85,50
 	Health:
 		HP: 50000
@@ -573,7 +586,7 @@ ECMTANK:
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -638,7 +651,7 @@ DUALARTILLERY:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	WithAttackAnimation:
@@ -679,7 +692,7 @@ BUILDER:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	RenderSprites:
-		Image: builder4
+		Image: builder3
 	GrantConditionOnTerrain:
 		Condition: validterrain
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
@@ -705,6 +718,8 @@ BUILDER2:
 		IntoActor: outpost2
 	Selectable:
 		Class: builder
+	RenderSprites:
+		Image: builder4
 
 COLLECTOR:
 	Inherits: ^Vehicle
@@ -820,14 +835,13 @@ MISSILETANK:
 		Weapon: MissileTankRocket
 		LocalOffset: 500,0,0
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
 HACKERTANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
@@ -856,9 +870,20 @@ HACKERTANK:
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
+	Hacker:
+		ControllingCondition: controlling
+	WithHackerPipsDecoration:
+		Position: BottomLeft
+	WithHackedConnectionArc:
+		UsePlayerColor: true
+		Offset: 0,512,960
 	Armament:
 		Weapon: HackBack
 	AttackFrontal:
+	AutoTarget:
+	AutoTargetPriority@Default:
+		ValidTargets: Vulnerability
+		RequiresCondition: !controlling
 
 BUGGY:
 	Inherits: ^Vehicle
@@ -879,7 +904,7 @@ BUGGY:
 		TurnSpeed: 40
 		Offset: 0,0,150
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 	Armament:
@@ -919,7 +944,7 @@ BIKE:
 		BuildPaletteOrder: 30
 		Description: actor-bike.description
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	Armament:
@@ -969,9 +994,8 @@ TANKER1:
 		Range: 2c0
 	ResourceTransporter:
 		Capacity: 8
-	SpawnActorOnDeath:
-		Actor: goldball
-	-SpawnScrapOnDeath:
+	SpawnScrapOnDeath:
+		Actors: goldball
 	RenderSprites:
 		Image: tanker1
 		FactionImages:
@@ -984,7 +1008,7 @@ TANKER2:
 		Description: actor-tanker2.description
 	Tooltip:
 		Name: actor-tanker2.name
-	-SpawnActorOnDeath:
+	-SpawnScrapOnDeath:
 	RenderSprites:
 		Image: tanker2
 		FactionImages:

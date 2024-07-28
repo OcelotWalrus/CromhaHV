@@ -11,13 +11,13 @@ Player:
 		RequiresCondition: enable-rogue-ai
 	BuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		BuilderTypes: builder, builder3, constructor
+		BuilderTypes: builder, builder2, builder3, constructor
 		MinimumBaseRadius: 15
-	CustomBaseBuilderBotModule@RogueAI:
+	BaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		MinimumExcessPower: 40
 		MaximumExcessPower: 200
-		ResourceDistance: 6
+		AdditionalMinimumRefineryCount: 0
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base, base2, base3
 		PowerTypes: generator
@@ -113,8 +113,8 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, builder3, constructor, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
-		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, missileboat, spiderboat, boomer, mercsubmarine, submarine, carrier
+		ExcludeFromSquadsTypes: miner, builder, builder2, builder3, constructor, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, missileboat, spiderboat, boomer, mercsubmarine, submarine, carrier
 		AirUnitsTypes: gunship, jet, bomber2, copter, banshee
 		ConstructionYardTypes: base, base2, base3
 		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, storage2, module, module2, module3, radar, radar2, radar3, factory, factory2, factory3, harbor, harbor2, harbor3, trader, starport, starport2, starport3, techcenter, techcenter3, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, uplinkmerceary, cloakdevice, field, silo
@@ -125,6 +125,7 @@ Player:
 		UnitsToBuild:
 			miner: 3
 			builder: 1
+			builder2: 1
 			builder3: 1
 			constructor: 1
 			radartank: 1
@@ -168,7 +169,7 @@ Player:
 			banshee: 5
 			balloon: 1
 			saucer: 1
-			mediumboat: 1
+			torpedoboat: 1
 			railgunboat: 1
 			lightboat: 1
 			boomer: 2
@@ -181,6 +182,7 @@ Player:
 		UnitLimits:
 			miner: 1
 			builder: 1
+			builder2: 1
 			builder3: 1
 			constructor: 1
 			balloon: 2
@@ -202,6 +204,7 @@ Player:
 			apc: 1
 		UnitDelays:
 			builder: 15000
+			builder2: 15000
 			builder3: 15000
 			constructor: 20000
 	PriorityCaptureManagerBotModule:

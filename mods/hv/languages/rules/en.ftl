@@ -749,12 +749,19 @@ actor-spiderboat =
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
 
-actor-mediumboat =
-   .name = Medium Boat
+actor-mercboat =
+   .name = Mercenary Boat
    .generic-name = Boat
    .description = A boat with a turret.
+      Strong vs Vehicles
+      Weak vs Pods
+
+actor-torpedoboat =
+   .name = Torpedo Boat
+   .generic-name = Boat
+   .description = A boat with torpedo launchers.
       Strong vs Water
-      Can't attack Pods, Buildings, Vehicles or Air
+      Can't attack Ground or Air
 
 actor-submarine =
    .name = Submarine
@@ -844,6 +851,7 @@ actor-tinyhawk =
 actor-apc =
    .name = Transport Tank
    .description = Can transport pods.
+      Has fireports for garrisoned units.
 
 actor-artillery =
    .name = Artillery

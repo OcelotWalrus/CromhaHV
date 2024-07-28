@@ -93,20 +93,62 @@ PATROLBOAT:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-MEDIUMBOAT:
+MERCBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: actor-mediumboat.name
-		GenericName: actor-mediumboat.generic-name
+		Name: actor-mercboat.name
+		GenericName: actor-mercboat.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~disabled
+		BuildPaletteOrder: 90
+		Description: actor-mercboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 100
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Turreted:
+		TurnSpeed: 60
+		Offset: 150,0,100
+	Armament:
+		Weapon: TankCannon
+		Recoil: 125
+		RecoilRecovery: 38
+		MuzzleSequence: muzzle
+		LocalOffset: 200,0,-50
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+
+TORPEDOBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: actor-torpedoboat.name
+		GenericName: actor-torpedoboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
-		Description: actor-mediumboat.description
+		Description: actor-torpedoboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -126,18 +168,11 @@ MEDIUMBOAT:
 		Range: 5c0
 		DetectionTypes: Underwater
 	RenderDetectionCircle:
-	Turreted:
-		TurnSpeed: 60
-		Offset: 150,0,100
 	Armament:
-		Weapon: MediumBoatCannon
-		Recoil: 125
-		RecoilRecovery: 38
-		MuzzleSequence: muzzle
-		LocalOffset: 200,0,-50
-	AttackTurreted:
-	WithSpriteTurret:
-	WithMuzzleOverlay:
+		Weapon: Torpedo
+		LocalOffset: 200,300,0, 200,-300,0
+	AttackFrontal:
+		FacingTolerance: 25
 
 SUBMARINE:
 	Inherits: ^Submarine

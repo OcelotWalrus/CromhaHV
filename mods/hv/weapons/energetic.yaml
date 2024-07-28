@@ -112,7 +112,7 @@ ElectronicCountermeasure:
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 40
-		Condition: ecm-disabled
+		Condition: jammed
 		ValidTargets: Vehicle
 	Warhead@Damage: SpreadDamage
 		Spread: 1
@@ -179,6 +179,7 @@ ElectronicCounterMeasureEffect:
 RepairBeam:
 	ReloadDelay: 5
 	Range: 2c0
+	Report: weld1.ogg, weld2.ogg, weld3.ogg, weld4.ogg
 	Projectile: LaserZap
 		ZOffset: 2047
 		Color: fffff2
@@ -195,10 +196,16 @@ RepairBeam:
 		Damage: -250
 		ValidTargets: DamagedVehicle
 		Spread: 1
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 1
+		AffectsParent: true
+		ValidTargets: Ground, Vehicle
 
 RepairTorch:
 	ReloadDelay: 3
 	Range: 1c0
+	Report: weld1.ogg, weld2.ogg, weld3.ogg, weld4.ogg
 	Projectile: LaserZap
 		ZOffset: 2047
 		Color: fffff2
@@ -215,6 +222,11 @@ RepairTorch:
 		Damage: -50
 		ValidTargets: DamagedPod
 		Spread: 1
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 1
+		AffectsParent: true
+		ValidTargets: Ground, Vehicle
 
 #FieldHeal:
 #	ReloadDelay: 1
@@ -565,7 +577,7 @@ HackBack:
 	ReloadDelay: 160
 	Range: 6c0
 	Report: lightningbolt.ogg
-	ValidTargets: Vehicle
+	ValidTargets: Vulnerability
 	Projectile: EnergyBolt
 		Radius: 3
 		Duration: 7
@@ -579,11 +591,6 @@ HackBack:
 	Warhead@Damage: SpreadDamage
 		Damage: 1000
 		Spread: 480
-	Warhead@Hack: ChangeOwner
-		Range: 512
-		Duration: 375
-		InvalidTargets: Structure
-		ValidRelationships: Enemy, Neutral
 
 MothershipLaser:
 	Inherits: BigSplash
