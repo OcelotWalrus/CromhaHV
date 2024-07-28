@@ -1093,20 +1093,18 @@ factory3:
 	Inherits@Flame: ^BuildingFlame2
 	idle:
 		Filename: bits/null.png
-	idle-online:
+	idle:
 		Filename: bits/factory3.png
-	idle-offline:
-		Filename: bits/factory3.png
+		Frames: 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 0, 0, 0
+		Length: *
+		Tick: 80
 	shadow-overlay:
 		Filename: bits/factory3-shadow.png
 		ZOffset: 1768
 		Offset: 5, -1
-	damaged-idle-online:
+	damaged-idle:
 		Filename: bits/factory3.png
-		Start: 5
-	damaged-idle-offline:
-		Filename: bits/factory3.png
-		Start: 5
+		Start: 19
 	damaged-shadow-overlay:
 		Filename: bits/factory3-shadow.png
 		Start: 1
@@ -1114,15 +1112,10 @@ factory3:
 		Offset: 5, -1
 	production-inprogress:
 		Filename: bits/factory3.png
+		Start: 1
 		Length: 5
 		Reverses: True
-		Tick: 100
-		ZOffset: 1500
-	production-done:
-		Filename: bits/factory3.png
-		Length: 5
-		Reverses: True
-		Tick: 30
+		Tick: 80
 		ZOffset: 1500
 	make:
 		Filename: bits/build.png
@@ -1136,25 +1129,6 @@ factory3:
 		Tick: 30
 		ZOffset: 2048
 		Offset: 0, -14
-	idle-platform:
-		Filename: bits/factory3-platform.png
-		Offset: 0, -17
-		ZOffset: -3c0
-	damaged-idle-platform:
-		Filename: bits/factory3-platform.png
-		Start: 1
-		Offset: 0, -17
-		ZOffset: -3c0
-	active-creation:
-		Filename: bits/creation4.png
-		Length: 28
-		Offset: -1, 17
-		ZOffset: 2048
-	damaged-active-creation:
-		Filename: bits/creation4-damaged.png
-		Length: 28
-		Offset: -1, 17
-		ZOffset: 2048
 	flame:
 		Filename: bits/flame2.png
 		Offset: 0, -25
