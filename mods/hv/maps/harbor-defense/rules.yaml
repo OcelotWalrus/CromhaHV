@@ -23,7 +23,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, harbor-defense.lua
 	MissionData:
-		Briefing: Commander! The great Synapol harbor of the Crater Lake, who's responsible for the major Synapol vehicle production of the planet, will soon be attacked by a Yuruki naval covet. Use the power railway and all resources at your disposition to build the necessary defenses to resist to the attack. Try to save at least 65% of the buildings to accomplish your mission.
+		Briefing: Commander! The great Synapol harbor of the Crater Lake, which is responsible for the major Synapol vehicle production of the planet, will soon be attacked by a Yuruki naval covet. Use the power railway and all resources at your disposition to build the necessary defenses to resist to the attack. Try to save at least 65% of the buildings to accomplish your mission. Feel free to produce naval units to defend the base.
 	-MapStartingLocations:
 	-CubeSpawner:
 	StartingUnits@BaseYI:
@@ -259,14 +259,14 @@ AMPLIFIER:
 	ExternalCondition:
 		Condition: weapon-range-upgrade
 
-^Ship:
-	SpawnScrapOnDeath:
-		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
-		TerrainTypes: Water
-
 EXTRACTOR:
 	Health:
 		HP: 100000
+	-CashTrickler:
+	-CashTricklerBar:
+
+OREMSLET:
+	-CashTrickler:
 
 HARBOR2:
 	Health:
@@ -275,18 +275,25 @@ HARBOR2:
 MODULE2:
 	Health:
 		HP: 101000
+	-Production:
+	-ProductionBar:
 
 FACTORY2:
 	Health:
 		HP: 110000
+	-Production:
+	-ProductionBar:
+	-ProductionSound:
 
 RADAR2:
 	Health:
 		HP: 120000
+	-DropPodsPower:
 
 COMLINK:
 	Health:
 		HP: 125000
+	-SpawnActorPower:
 
 AATURRET:
 	Buildable:

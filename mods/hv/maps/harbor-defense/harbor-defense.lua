@@ -75,6 +75,21 @@ SendNextWave = function()
 	Trigger.AfterDelay(wave.delay, function()
 		Utils.Do(wave.units, function(units)
 			Attackers = Reinforcements.Reinforce(EnemyPlayer, units, { entrylocation , extitlocation })
+			Media.PlaySound("new_wave_approaching.ogg")
+			Trigger.OnAnyKilled(Attackers, function(a)
+				if a.Type == "lightboat" then
+					HumanPlayer.Cash = HumanPlayer.Cash + 35
+				end
+				if a.Type == "torpedoboat" then
+					HumanPlayer.Cash = HumanPlayer.Cash + 60
+				end
+				if a.Type == "lightningboat" then
+					HumanPlayer.Cash = HumanPlayer.Cash + 85
+				end
+				if a.Type == "carrier" then
+					HumanPlayer.Cash = HumanPlayer.Cash + 145
+				end
+			end)
 		end)
 		UpdateGameStateText()
 		if CurrentWave < #Waves then
