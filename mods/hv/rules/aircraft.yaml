@@ -511,6 +511,7 @@ DROPSHIP.REINFORCE:
 	Aircraft:
 		IdleBehavior: LeaveMap
 		Repulsable: false
+		Speed: 215
 	-Selectable:
 	Interactable:
 	-MapEditorData:

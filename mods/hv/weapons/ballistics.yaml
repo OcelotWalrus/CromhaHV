@@ -96,6 +96,14 @@ SmallArtillery:
 		Versus:
 			None: 60
 
+SmallArtilleryTyrian:
+	Inherits: SmallArtillery
+	Report: ccbygrenadelaunch01.ogg
+	MinRange: 4c0
+	Projectile: Bullet
+		Image: bullet12
+		LaunchAngle: 165
+
 DoubleBarrelledArtillery:
 	Inherits: ^Artillery
 	ReloadDelay: 200

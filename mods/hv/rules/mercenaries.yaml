@@ -1333,6 +1333,18 @@ SONICTANK:
 	WithSpriteTurret:
 	-Guard:
 
+ARTILLERY2:
+	Inherits: ARTILLERY
+	Buildable:
+		Prerequisites: factory, radar, ~structures.ty
+	Mobile:
+		TurnSpeed: 25
+		Speed: 110
+	Armament:
+		Weapon: SmallArtilleryTyrian
+		-MuzzleSequence:
+		LocalOffset: 500,0,100
+
 AATANK3:
 	Inherits: AATANK
 	Tooltip:

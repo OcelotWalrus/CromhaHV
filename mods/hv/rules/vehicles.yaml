@@ -178,7 +178,7 @@ ARTILLERY:
 		Class: artillery
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, radar
+		Prerequisites: factory, radar, ~!structures.ty
 		BuildPaletteOrder: 50
 		Description: actor-artillery.description
 	UpdatesPlayerStatistics:
