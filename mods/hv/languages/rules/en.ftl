@@ -70,17 +70,17 @@ faction-tyrian =
    A large alien interplanetary company that trains mercenaries
    from all over the galaxy, based on the Tyrian binary star
    system. They are known for their fast and agile forces,
-   their advanced technologies, which are often ordered by
+   their advanced technologies, that are often ordered by
    huge corporations. But they also occasionally run humanitarian
-   missions in certain independent colonies which have contracts
-   with them. The U.M.O.T. paramilitary forces have operated
-   only a few missions in the solar system though. Their
-   armament department specialized in railgun weaponry.
+   missions in certain independent colonies, that they have
+   contracts with. The U.M.O.T. paramilitary forces have
+   operated only a few missions in the solar system though.
+   Their armament department specialized in railgun weaponry.
 
     Faction Variations:
         - Uses mobile base constructors
         - Uses both helicopters and jets as air units
-        - Main battle tanks, boats and helicopters are faster but less durable
+        - Assault units are faster but less durable
 
     Special Units:
         - Shotgun Pod
