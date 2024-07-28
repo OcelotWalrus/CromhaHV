@@ -573,7 +573,6 @@ DUALMERCTANK:
 
 ECMTANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -592,6 +591,10 @@ ECMTANK:
 		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
+	AutoTarget:
+	AutoTargetPriority@Default:
+		ValidTargets: Jammable
+	-Targetable@ECM:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -606,13 +609,9 @@ ECMTANK:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-	CreatesShroud:
-		Range: 9c0
-		RequiresCondition: deployed
-	RenderShroudCircle:
-		RequiresCondition: deployed
+	JamsMissiles:
+		Range: 5c0
+		DeflectionRelationships: Neutral, Enemy
 	DetectCloaked:
 		Range: 2c0
 
@@ -870,9 +869,8 @@ HACKERTANK:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	JamsMissiles:
-		Range: 5c0
-		DeflectionRelationships: Neutral, Enemy
+	-Targetable@SecurityVulnerability:
+	-Hackable:
 	Hacker:
 		ControllingCondition: controlling
 	WithHackerPipsDecoration:
@@ -887,6 +885,13 @@ HACKERTANK:
 	AutoTargetPriority@Default:
 		ValidTargets: Vulnerability
 		RequiresCondition: !controlling
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	CreatesShroud:
+		Range: 9c0
+		RequiresCondition: deployed
+	RenderShroudCircle:
+		RequiresCondition: deployed
 
 BUGGY:
 	Inherits: ^Vehicle
