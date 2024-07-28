@@ -147,6 +147,9 @@ APC:
 			flamepod: loaded
 			sniperpod: loaded
 			electricpod: loaded
+			shotgunpod: loaded
+			clusterpod: loaded
+			railgunpod: loaded
 	AttackOpenTopped:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PauseOnCondition: jammed
