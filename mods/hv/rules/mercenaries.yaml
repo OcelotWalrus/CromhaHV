@@ -491,7 +491,7 @@ FACTORY3:
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^3x3Shape
 	Building:
-		Footprint: ___ ___ xxx xxx =x= === ===
+		Footprint: ___ ___ xxx xxx xxx +++ +++
 		Dimensions: 3,7
 	Buildable:
 		Prerequisites: module, storage, ~structures.ty
@@ -541,64 +541,154 @@ FACTORY3:
 	ProductionSound:
 		Files: Quedicemipez__teleportation.ogg
 	Exit@1:
-		ExitCell: 1,6
+		ExitCell: -1,6
 		SpawnOffset: -50,3000,0
 		Facing: 256
 		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@2:
-		ExitCell: 2,6
+		ExitCell: 0,6
 		SpawnOffset: -50,3000,0
 		Facing: 256
 		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@3:
-		ExitCell: 3,6
+		ExitCell: 1,6
 		SpawnOffset: -50,3000,0
 		Facing: 256
 		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@4:
-		ExitCell: 1,7
+		ExitCell: 2,6
 		SpawnOffset: -50,3000,0
 		Facing: 256
 		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@5:
-		ExitCell: 2,7
+		ExitCell: 3,6
 		SpawnOffset: -50,3000,0
 		Facing: 256
 		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@6:
+		ExitCell: -1,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@7:
+		ExitCell: 0,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@8:
+		ExitCell: 1,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@9:
+		ExitCell: 2,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@10:
 		ExitCell: 3,7
 		SpawnOffset: -50,3000,0
 		Facing: 256
 		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
+	Exit@11:
+		ExitCell: -1,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@12:
+		ExitCell: 0,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@13:
+		ExitCell: 1,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@14:
+		ExitCell: 2,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@15:
+		ExitCell: 3,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@1:
-		ExitCell: 1,6
+		ExitCell: -1,6
 		Sequence: active-creation
 	WithProductionExitOverlay@2:
-		ExitCell: 2,6
+		ExitCell: 0,6
 		Sequence: active-creation
 	WithProductionExitOverlay@3:
-		ExitCell: 3,6
+		ExitCell: 1,6
 		Sequence: active-creation
 	WithProductionExitOverlay@4:
-		ExitCell: 1,7
+		ExitCell: 2,6
 		Sequence: active-creation
 	WithProductionExitOverlay@5:
-		ExitCell: 2,7
+		ExitCell: 3,6
 		Sequence: active-creation
 	WithProductionExitOverlay@6:
+		ExitCell: -1,7
+		Sequence: active-creation
+	WithProductionExitOverlay@7:
+		ExitCell: 0,7
+		Sequence: active-creation
+	WithProductionExitOverlay@8:
+		ExitCell: 1,7
+		Sequence: active-creation
+	WithProductionExitOverlay@9:
+		ExitCell: 2,7
+		Sequence: active-creation
+	WithProductionExitOverlay@10:
 		ExitCell: 3,7
+		Sequence: active-creation
+	WithProductionExitOverlay@11:
+		ExitCell: -1,8
+		Sequence: active-creation
+	WithProductionExitOverlay@12:
+		ExitCell: 0,8
+		Sequence: active-creation
+	WithProductionExitOverlay@13:
+		ExitCell: 1,8
+		Sequence: active-creation
+	WithProductionExitOverlay@14:
+		ExitCell: 2,8
+		Sequence: active-creation
+	WithProductionExitOverlay@15:
+		ExitCell: 3,8
 		Sequence: active-creation
 	PrimaryBuilding:
 		PrimaryCondition: primary

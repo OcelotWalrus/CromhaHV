@@ -1101,15 +1101,14 @@ factory3:
 	shadow-overlay:
 		Filename: bits/factory3-shadow.png
 		ZOffset: 1768
-		Offset: 5, -1
+		Offset: 2, 3
 	damaged-idle:
 		Filename: bits/factory3.png
 		Start: 19
 	damaged-shadow-overlay:
 		Filename: bits/factory3-shadow.png
-		Start: 1
 		ZOffset: 1768
-		Offset: 5, -1
+		Offset: 2, 3
 	production-inprogress:
 		Filename: bits/factory3.png
 		Start: 1
@@ -1118,11 +1117,11 @@ factory3:
 		Tick: 80
 		ZOffset: 1500
 	active-creation:
-		Filename: bits/teleprt3.png
+		Filename: bits/teleprt2.png
 		Offset: 0,60
 		Length: 9
-		Tick: 80
-		ZOffset: 2048
+		Tick: 50
+		ZOffset: 4096
 	make:
 		Filename: bits/build.png
 		Length: 39
