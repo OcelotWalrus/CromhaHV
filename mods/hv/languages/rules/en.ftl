@@ -857,7 +857,7 @@ actor-artillery =
 actor-fieldtank =
    .name = Field Tank
    .description = Provides healing to nearby units.
-    Reduce accuracy of nearby enemy units
+    Disrupts nearby enemy units aiming.
       Unarmed.
 
 actor-radartank =
@@ -919,8 +919,7 @@ actor-sonictank =
    .name = Sonic Tank
    .generic-name = Sonic Tank
    .description = Fires sonic shock waves.
-      Strong vs Pods and Vehicles
-      Weak vs Structures
+      Strong vs Pods, Vehicles and Buildings
 
 actor-dualartillery =
    .name = Dual Artillery

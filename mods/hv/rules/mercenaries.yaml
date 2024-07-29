@@ -1369,7 +1369,7 @@ SONICTANK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: ~factory.ty, techcenter, radar
+		Prerequisites: ~factory.ty, techcenter
 		Queue: Tank
 		Description: actor-sonictank.description
 	Mobile:
@@ -1428,16 +1428,14 @@ FIELDTANK:
 		Width: 2
 		BorderWidth: 3
 		Range: 5c0
-	ProximityExternalCondition@InaccurayLoss:
+	ProximityExternalCondition@AccurayLoss:
 		Condition: fieldjammed
-		Range: 5c0
-		ValidRelationShips: Enemy
-		RequiresConditon: !jammed
+		Range: 8c0
+		ValidRelationships: Enemy
 	ProximityExternalCondition@Healing:
 		Condition: fieldhealed
 		Range: 5c0
-		ValidRelationShips: Ally
-		RequiresConditon: !jammed
+		ValidRelationships: Ally
 	RenderSprites:
 		Image: tank4
 

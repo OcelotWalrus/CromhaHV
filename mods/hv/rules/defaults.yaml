@@ -884,11 +884,6 @@
 	ExternalCondition@CloakDevice:
 		Condition: cloakdevice
 
-^LosesAccuracyWithFieldTank:
-	InaccuracyMultiplier@FieldTank:
-		Modifier: 125
-		RequiresCondition: fieldjammed
-
 ^Tree:
 	Inherits@Shape: ^1x1Shape
 	Interactable:
@@ -1194,11 +1189,11 @@
 
 ^FieldTankHeal:
 	ChangesHealth@FieldTank:
-		PercentageStep: 5
+		PercentageStep: 8
 		Step: 0
-		Delay: 75
+		Delay: 25
 		StartIfBelow: 100
-		DamageCooldown: 125
+		DamageCooldown: 0
 		RequiresCondition: fieldhealed
 	WithDecoration@FieldTank:
 		Image: pips
@@ -1207,9 +1202,15 @@
 		Position: TopRight
 		RequiresCondition: fieldhealed
 		ValidRelationships: Ally
-	GrantConditionOnPrerequisite@FieldTank:
+	ExternalCondition@FieldTankHeal:
 		Condition: fieldhealed
-		Prerequisites: fieldhealed
+
+^LosesAccuracyWithFieldTank:
+	InaccuracyMultiplier@FieldTank:
+		Modifier: 220
+		RequiresCondition: fieldjammed
+	ExternalCondition@FieldTankJammed:
+		Condition: fieldjammed
 
 ^DropShellCasing:
 	SpawnsShrapnel@shell:

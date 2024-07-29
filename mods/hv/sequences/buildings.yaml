@@ -1120,6 +1120,7 @@ factory3:
 		Filename: bits/teleprt2.png
 		Offset: 0,60
 		Length: 9
+		Reverses: true
 		Tick: 50
 		ZOffset: 4096
 	make:
