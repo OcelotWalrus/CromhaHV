@@ -491,8 +491,8 @@ FACTORY3:
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^3x3Shape
 	Building:
-		Footprint: _x_ xxx xxx _x_ ===
-		Dimensions: 3,5
+		Footprint: ___ ___ xxx xxx =x= === ===
+		Dimensions: 3,7
 	Buildable:
 		Prerequisites: module, storage, ~structures.ty
 		Queue: Building
@@ -540,6 +540,66 @@ FACTORY3:
 		ProductionType: Tank
 	ProductionSound:
 		Files: Quedicemipez__teleportation.ogg
+	Exit@1:
+		ExitCell: 1,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@2:
+		ExitCell: 2,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@3:
+		ExitCell: 3,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@4:
+		ExitCell: 1,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@5:
+		ExitCell: 2,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@6:
+		ExitCell: 3,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@1:
+		ExitCell: 1,6
+		Sequence: active-creation
+	WithProductionExitOverlay@2:
+		ExitCell: 2,6
+		Sequence: active-creation
+	WithProductionExitOverlay@3:
+		ExitCell: 3,6
+		Sequence: active-creation
+	WithProductionExitOverlay@4:
+		ExitCell: 1,7
+		Sequence: active-creation
+	WithProductionExitOverlay@5:
+		ExitCell: 2,7
+		Sequence: active-creation
+	WithProductionExitOverlay@6:
+		ExitCell: 3,7
+		Sequence: active-creation
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected

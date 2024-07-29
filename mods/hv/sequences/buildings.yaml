@@ -1117,6 +1117,12 @@ factory3:
 		Reverses: True
 		Tick: 80
 		ZOffset: 1500
+	active-creation:
+		Filename: bits/teleprt3.png
+		Offset: 0,60
+		Length: 9
+		Tick: 80
+		ZOffset: 2048
 	make:
 		Filename: bits/build.png
 		Length: 39
