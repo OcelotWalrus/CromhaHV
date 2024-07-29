@@ -144,7 +144,7 @@ TowerRailgun:
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 40
-		Condition: ecm-disabled
+		Condition: jammed
 		ValidTargets: Air
 	Warhead@Damage: SpreadDamage
 		Spread: 128
@@ -664,4 +664,3 @@ SoundShock:  # originallly D2K's "Sound" weapon
 		Amount: 4
 		AffectsParent: false
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
-

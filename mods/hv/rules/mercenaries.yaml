@@ -114,7 +114,6 @@ BOMBER2.Husk:
 TYRIANHELIS:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Inherits@MagazineCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
 		Cost: 1000
@@ -972,7 +971,7 @@ SHOTGUNPOD:
 		Weapon: BunkerShotGun
 		PauseOnCondition: !ammo
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 
 CLUSTERPOD:
@@ -1001,7 +1000,7 @@ CLUSTERPOD:
 		Name: garrisoned
 		Weapon: LightClusterBunker
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 	GrantConditionOnTerrain:
@@ -1044,7 +1043,7 @@ RAILGUNPOD:
 		Name: garrisoned
 		Weapon: LightRailgunBunker
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
@@ -1222,7 +1221,7 @@ CONSTRUCTOR:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
-		Prerequisites: outpost, ~base.ty
+		Prerequisites: ~base.ty, storage, radar
 		Queue: Utility
 		BuildPaletteOrder: 70
 		Description: actor-constructor.description
@@ -1263,67 +1262,12 @@ MBT3:
 		-Recoil:
 		-RecoilRecovery:
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	-WithSpriteTurret:
 	-Turreted:
 	-AttackTurreted:
-
-FIELDTANK:
-	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: actor-fieldtank.name
-	Buildable:
-		Queue: Tank
-		Prerequisites: ~factory.ty, radar, techcenter
-		BuildPaletteOrder: 60
-		Description: actor-fieldtank.description
-	Selectable:
-		Class: fieldtank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 10000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 120
-	RevealsShroud:
-		Range: 6c0
-		MinRange: 3c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 3c0
-	Armament:
-		#Weapon: FieldHeal
-		Weapon: CannonTyrian
-		Cursor: repair
-		OutsideRangeCursor: repair
-		TargetRelationships: Ally
-		ForceTargetRelationships: None
-	WithRangeCircle:
-		Type: Turret
-		Width: 1
-		BorderWidth: 2
-		Range: 4c0
-	AutoTarget:
-		ScanRadius: 4
-		InitialStance: AttackAnything
-	AutoTargetPriority@Default:
-		ValidTargets: DamagedVehicle, DamagedPod
-	Turreted:
-		TurnSpeed: 25
-	AttackTurreted:
-		PauseOnCondition: ecm-disabled
-	JamsMissiles:
-		Range: 5c0
-		DeflectionRelationships: Neutral, Enemy
-	RenderSprites:
-		Image: tank4
 
 TINYHAWK:
 	Inherits: ^TrackedVehicle
@@ -1367,7 +1311,7 @@ TINYHAWK:
 		Delay: 55
 		Count: 4
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	-Passenger:
 
@@ -1406,7 +1350,7 @@ MISSILETANK2:
 		Weapon: MissilePad
 		LocalOffset: 30,0,750
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	Selectable:
@@ -1447,11 +1391,55 @@ SONICTANK:
 		Weapon: SoundShock
 		LocalOffset: 275,10,95
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 	Voiced:
 		VoiceSet: SonicTankVoice
 	WithSpriteTurret:
-	-Guard:
+
+FIELDTANK:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-fieldtank.name
+	Selectable:
+		Class: fieldtank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: ~factory.ty, radar, trader
+		Queue: Tank
+		Description: actor-fieldtank.description
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 150
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 5c0
+	ProximityExternalCondition@InaccurayLoss:
+		Condition: fieldjammed
+		Range: 5c0
+		ValidRelationShips: Enemy
+		RequiresConditon: !jammed
+	ProximityExternalCondition@Healing:
+		Condition: fieldhealed
+		Range: 5c0
+		ValidRelationShips: Ally
+		RequiresConditon: !jammed
+	RenderSprites:
+		Image: tank4
 
 ARTILLERY2:
 	Inherits: ARTILLERY

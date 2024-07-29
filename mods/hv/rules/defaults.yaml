@@ -110,10 +110,12 @@
 	Inherits@Shield: ^ForceFieldCompatible
 	Inherits@Cloak: ^CloakDeviceCompatible
 	Inherits@ECM: ^Jammable
+	Inherits@FieldTank: ^LosesAccuracyWithFieldTank
 	Inherits@Cloak: ^Cloakable
 	Inherits@Parachute: ^Parachutable
 	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
+	Inherits@FieldTankHeal: ^FieldTankHeal
 	Inherits@Handicaps: ^PlayerHandicaps
 	Inherits@Vulnerabilities: ^Hackable
 	Huntable:
@@ -267,6 +269,7 @@
 	Inherits@Shield: ^ForceFieldCompatible
 	Inherits@Cloak: ^CloakDeviceCompatible
 	Inherits@Reconstructor: ^ReconstructorHeal
+	Inherits@FieldTankHeal: ^FieldTankHeal
 	Inherits@Handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
@@ -865,7 +868,7 @@
 		CloakSound: stealth_on_humanoide9000.ogg
 		UncloakSound: stealth_off_humanoide9000.ogg
 		IsPlayerPalette: true
-		PauseOnCondition: cloak-force-disabled || ecm-disabled
+		PauseOnCondition: cloak-force-disabled || jammed
 		CloakedPalette: cloak
 		CloakStyle: Palette
 		RequiresCondition: cloakdevice
@@ -880,6 +883,11 @@
 		Color: 0000FF
 	ExternalCondition@CloakDevice:
 		Condition: cloakdevice
+
+^LosesAccuracyWithFieldTank:
+	InaccuracyMultiplier@FieldTank:
+		Modifier: 125
+		RequiresCondition: fieldjammed
 
 ^Tree:
 	Inherits@Shape: ^1x1Shape
@@ -944,6 +952,7 @@
 	Inherits@Cloak: ^CloakDeviceCompatible
 	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
+	Inherits@FieldTankHeal: ^FieldTankHeal
 	Inherits@Handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
@@ -1182,6 +1191,25 @@
 	GrantConditionOnPrerequisite@Reconstructor:
 		Condition: reconstructor
 		Prerequisites: reconstructor
+
+^FieldTankHeal:
+	ChangesHealth@FieldTank:
+		PercentageStep: 5
+		Step: 0
+		Delay: 75
+		StartIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: fieldhealed
+	WithDecoration@FieldTank:
+		Image: pips
+		Sequence: pip-reconstructor
+		Palette: chrome
+		Position: TopRight
+		RequiresCondition: fieldhealed
+		ValidRelationships: Ally
+	GrantConditionOnPrerequisite@FieldTank:
+		Condition: fieldhealed
+		Prerequisites: fieldhealed
 
 ^DropShellCasing:
 	SpawnsShrapnel@shell:

@@ -246,7 +246,7 @@ actor-bomber2 =
 
 actor-tyrianhelis =
    .name = Tyrian Helis
-   .description = Fast attack helicopter.
+   .description = Fast assault helicopter.
     Equipped with two railgun cannons.
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
@@ -857,7 +857,7 @@ actor-artillery =
 actor-fieldtank =
    .name = Field Tank
    .description = Provides healing to nearby units.
-    Jams incoming missiles.
+    Reduce accuracy of nearby enemy units
       Unarmed.
 
 actor-radartank =
