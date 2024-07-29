@@ -244,6 +244,9 @@ clusterbomb:
 		Filename: bits/blank.png
 	down:
 		Filename: bits/cluster_bomb.png
+		Frames: 0, 1, 2, 3, 0, 0
+		Length: *
+		Tick: 95
 		ZOffset: 2030
 
 smoke:
