@@ -457,13 +457,13 @@ ClusterProjectile:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 165
-		Damage: 1450
+		Damage: 2000
 		Versus:
-			None: 60
-			Steel: 75
-			Light: 70
-			Heavy: 110
-			Concrete: 50
+			None: 20
+			Steel: 80
+			Light: 25
+			Heavy: 15
+			Wood: 20
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
 		Damage: 450
@@ -482,7 +482,6 @@ ClusterProjectileStronger:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 25
-		Damage: 1350
 		Versus:
 			None: 100
 			Steel: 325

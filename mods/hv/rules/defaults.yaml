@@ -1207,7 +1207,7 @@
 
 ^LosesAccuracyWithFieldTank:
 	InaccuracyMultiplier@FieldTank:
-		Modifier: 220
+		Modifier: 350
 		RequiresCondition: fieldjammed
 	ExternalCondition@FieldTankJammed:
 		Condition: fieldjammed

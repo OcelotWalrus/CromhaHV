@@ -611,14 +611,15 @@ actor-clusterpod =
     Armed with small cluster artillery.
     Can hide underground in sand and snow.
     Deals area damage.
-     Strong in groups.
+     Strong vs Buildings
+     Weak vs Pods And Tanks
    .name = Cluster Pod
 
 actor-railgunpod =
    .description = Fast scout vehicle.
     Armed with a light railgun cannon.
-     Strong vs Pods and Aircraft
-     Weak vs Tanks and Buildings
+     Strong vs Tanks and Aircraft
+     Weak vs Pods
    .name = Railgun Pod
 
 actor-mortarpod =

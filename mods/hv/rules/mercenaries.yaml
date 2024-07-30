@@ -943,11 +943,13 @@ SHOTGUNPOD:
 		Queue: Pod
 		Description: actor-shotgunpod.description
 		Prerequisites: ~module.ty
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 50
 	Valued:
-		Cost: 120
+		Cost: 350
 	Tooltip:
 		Name: actor-shotgunpod.name
+	Health:
+		HP: 15000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -983,7 +985,9 @@ CLUSTERPOD:
 		Prerequisites: ~module.ty, factory
 		BuildPaletteOrder: 40
 	Valued:
-		Cost: 145
+		Cost: 500
+	Health:
+		HP: 15000
 	Tooltip:
 		Name: actor-clusterpod.name
 	UpdatesPlayerStatistics:
@@ -1023,9 +1027,9 @@ RAILGUNPOD:
 		Queue: Pod
 		Description: actor-railgunpod.description
 		Prerequisites: ~module.ty, factory, techcenter
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 20
 	Valued:
-		Cost: 250
+		Cost: 225
 	Tooltip:
 		Name: actor-railgunpod.name
 	UpdatesPlayerStatistics:
@@ -1286,12 +1290,12 @@ TINYHAWK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9500
+		HP: 8800
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 75
-		Speed: 150
+		TurnSpeed: 120
+		Speed: 190
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -1305,7 +1309,7 @@ TINYHAWK:
 		Weapon: HeavyShotGun
 		LocalOffset: 400,0,100
 	AmmoPool:
-		Ammo: 33
+		Ammo: 35
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		Delay: 55
