@@ -1,6 +1,6 @@
 ## aircraft
 
-BOMBER2:
+GLIDER:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits: ^Plane
 	AppearsOnRadar:
@@ -23,9 +23,9 @@ BOMBER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
 		Prerequisites: ~starport.ty, radar, techcenter
-		Description: actor-bomber2.description
+		Description: actor-glider.description
 	Tooltip:
-		Name: actor-bomber2.name
+		Name: actor-glider.name
 	Health:
 		HP: 12500
 	Armor:
@@ -63,7 +63,7 @@ BOMBER2:
 	Voiced:
 		VoiceSet: BomberVoice
 	Tooltip:
-		Name: actor-bomber2.name
+		Name: actor-glider.name
 	AutoTarget:
 		InitialStance: Defend
 		InitialStanceAI: AttackAnything
@@ -77,16 +77,14 @@ BOMBER2:
 		Offset: -298,164,0
 		TrailLength: 7
 		ZOffset: -1000
-	RenderSprites:
-		Image: bomber
 	SpawnActorOnDeath:
-		Actor: BOMBER2.Husk
+		Actor: GLIDER.Husk
 		RequiresCondition: airborne
 
-BOMBER2.Husk:
+GLIDER.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: actor-bomber2.name
+		Name: actor-glider.name
 	Aircraft:
 		TurnSpeed: 24
 		Speed: 200
@@ -109,7 +107,7 @@ BOMBER2.Husk:
 		Range: 2c0
 		Type: GroundPosition
 	RenderSprites:
-		Image: bomber
+		Image: glider
 
 TYRIANHELIS:
 	Inherits: ^Helicopter
@@ -303,12 +301,12 @@ AIRSHIP:
 	Health:
 		HP: 8000
 	RevealsShroud:
-		Range: 22c0
-		MinRange: 8c0
+		Range: 30c0
+		MinRange: 15c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 8c0
+		Range: 15c0
 		Type: GroundPosition
 	Aircraft:
 		Speed: 60
@@ -350,10 +348,10 @@ OUTPOST3:
 
 STORAGE2:
 	Inherits: ^BaseBuilding
-	Inherits@Shape: ^3x1Shape
+	Inherits@Shape: ^4x2Shape
 	Inherits@Flame: ^BuildingFlame
 	Selectable:
-		Bounds: 2048, 2048
+		Bounds: 4096, 2048
 	Building:
 		Footprint: ==== xxxx ++++
 		Dimensions: 4,3
@@ -531,7 +529,7 @@ FACTORY3:
 		Description: actor-factory.description
 	HitShape:
 		UseTargetableCellsOffsets: False
-		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0
+		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0,   -488,-806,0,   -488,-50,0,   -488,706,0
 	Selectable:
 		Bounds: 3072, 2348, 0, -560
 	Valued:
@@ -812,12 +810,6 @@ UPLINKMERCENARY:
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
-	HitShape:
-		UseTargetableCellsOffsets: true
-		TargetableOffsets: -1024,0,0
-		Type: Rectangle
-			TopLeft: -1048, 512
-			BottomRight: 1048, 1524
 	Health:
 		HP: 100000
 	Armor:

@@ -494,8 +494,8 @@
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
-			TopLeft: -1536, -512
-			BottomRight: 1536, 512
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
 
 ^3x1Shape:
 	HitShape:
@@ -503,6 +503,13 @@
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
+
+^4x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1024
+			BottomRight: 2048, 1024
 
 ^6x8Shape:
 	HitShape:

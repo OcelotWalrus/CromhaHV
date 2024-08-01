@@ -115,7 +115,7 @@ Player:
 		SquadSize: 20
 		ExcludeFromSquadsTypes: miner, builder, builder2, builder3, constructor, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
 		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, missileboat, spiderboat, boomer, mercsubmarine, submarine, carrier
-		AirUnitsTypes: gunship, jet, bomber2, copter, banshee
+		AirUnitsTypes: gunship, jet, copter, banshee, tyrianhelis, glider
 		ConstructionYardTypes: base, base2, base3
 		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, storage2, module, module2, module3, radar, radar2, radar3, factory, factory2, factory3, harbor, harbor2, harbor3, trader, starport, starport2, starport3, techcenter, techcenter3, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, uplinkmerceary, cloakdevice, field, silo
 	UnitBuilderBotModule@RogueAI:
@@ -161,7 +161,7 @@ Player:
 			bomberpod: 1
 			missiletank: 5
 			missiletank2: 3
-			bomber2: 5
+			glider: 5
 			tyriancopter: 5
 			jet: 5
 			gunship: 5

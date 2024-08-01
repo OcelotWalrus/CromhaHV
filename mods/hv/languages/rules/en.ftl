@@ -242,7 +242,7 @@ actor-airlifter =
    .description = Vehicle Transport Plane.
       Can load pods and vehicles.
 
-actor-bomber2 =
+actor-glider =
    .name = Atmospheric Bomber
    .description = Fast bombing atmospheric glider.
      Strong vs Buildings
