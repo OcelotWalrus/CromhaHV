@@ -168,6 +168,7 @@ Player:
 			copter: 5
 			banshee: 5
 			balloon: 1
+			airship: 1
 			saucer: 1
 			torpedoboat: 1
 			railgunboat: 1
@@ -186,6 +187,7 @@ Player:
 			builder3: 1
 			constructor: 1
 			balloon: 2
+			airship: 2
 			saucer: 2
 			radartank: 1
 			minelayer: 1
@@ -238,7 +240,7 @@ Player:
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
-		ScoutActorTypes: balloon, saucer
+		ScoutActorTypes: balloon, saucer, airship
 		MoveRadius: 20
 		RequiresCondition: enable-rogue-ai
 	SendUnitToAttackBotModule:

@@ -27,7 +27,7 @@ BOMBER2:
 	Tooltip:
 		Name: actor-bomber2.name
 	Health:
-		HP: 10000
+		HP: 12500
 	Armor:
 		Type: Light
 	Valued:
@@ -39,8 +39,8 @@ BOMBER2:
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 165
+		TurnSpeed: 25
+		Speed: 175
 		Voice: Move
 		MaximumPitch: 100
 		RepulsionSpeed: 40
@@ -286,15 +286,47 @@ AIRLIFTERMERCENARY.Husk:
 	RenderSprites:
 		Image: airlifter
 
-BALLOON.MERCENARY:
+AIRSHIP:
 	Inherits: BALLOON
+	Inherits: ^Helicopter
 	Valued:
-		Cost: 250
+		Cost: 400
+	Tooltip:
+		Name: actor-airship.name
 	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 20
 		Prerequisites: ~starport.ty
-	-MapEditorData:
+		Description: actor-airship.description
 	UpdatesPlayerStatistics:
-		OverrideActor: balloon
+		AddToArmyValue: true
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 22c0
+		MinRange: 8c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 8c0
+		Type: GroundPosition
+	Aircraft:
+		Speed: 60
+		CanForceLand: false
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
+	Voiced:
+		VoiceSet: BalloonVoice
+	Guard:
+		Voice: Guard
+	Repairable:
+		Voice: Move
+	Selectable:
+		DecorationBounds: 1228, 1638
+	-WithShadow:
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
 	RenderSprites:
 		Image: balloon
 

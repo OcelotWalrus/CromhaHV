@@ -533,7 +533,7 @@ World:
 		ClassName: options-starting-units.base-scout
 		Factions: ty
 		BaseActor: constructor
-		SupportActors: balloon
+		SupportActors: airship
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnStartingUnits:

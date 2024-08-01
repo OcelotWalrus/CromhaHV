@@ -226,6 +226,11 @@ actor-balloon =
    .description = Reconnaissance air unit.
      Unarmed
 
+actor-airship =
+   .name = Scout Airship
+   .description = Reconnaissance air unit.
+     Unarmed
+
 actor-dropship =
    .name = Heavy Transport Dropship
    .description = Vehicle Transport Shuttle.

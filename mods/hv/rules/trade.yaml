@@ -78,6 +78,7 @@ AATANK3.TRADE:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
+	-MapEditorData:
 	RenderSprites:
 		Image: aatank3
 	UpdatesPlayerStatistics:
@@ -161,6 +162,7 @@ SONICTANK.TRADE:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
+	-MapEditorData:
 	RenderSprites:
 		Image: sonictank
 	UpdatesPlayerStatistics:
@@ -268,6 +270,7 @@ MISSILETANK2.TRADE:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
+	-MapEditorData:
 	RenderSprites:
 		Image: missiletank2
 	UpdatesPlayerStatistics:
