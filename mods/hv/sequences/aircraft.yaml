@@ -296,7 +296,7 @@ tyrianhelis:
 		Filename: bits/tyrianhelis.png
 		Facings: 8
 		Length: 4
-		Tick: 50
+		Tick: 40
 	icon:
 		Filename: units-icons.png
 		Start: 23

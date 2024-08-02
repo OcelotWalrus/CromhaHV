@@ -141,6 +141,7 @@ Player:
 			hackertank: 1
 			repairtank: 1
 			apc: 1
+			apc3: 1
 			artillery: 5
 			mgpod: 1
 			rocketpod: 1
@@ -204,6 +205,7 @@ Player:
 			transprt: 1
 			tinyhawk: 5
 			apc: 1
+			apc3: 1
 		UnitDelays:
 			builder: 15000
 			builder2: 15000
@@ -232,7 +234,7 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: apc, tinyhawk
+		TransportTypes: apc, apc3
 		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod, shotgunpod, clusterpod, technician
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai

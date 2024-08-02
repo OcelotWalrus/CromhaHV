@@ -35,11 +35,15 @@ Bomb:
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
 
-LightBomb:
+PropelledBomb:
 	Inherits: Bomb
 	ReloadDelay: 120
 	-Burst:
 	-BurstDelays:
+	Projectile: GravityBomb
+		Image: propelledbomb
+		Velocity: 72, 0, -75
+		Acceleration: 0, 0, -2
 	Warhead@Damage: SpreadDamage
 		Damage: 1550
 	Warhead@Incendiary: TreeDamage
@@ -50,8 +54,6 @@ LightBomb:
 			Light: 15
 			Heavy: 15
 			Concrete: 90
-	Projectile: GravityBomb
-		Image: propelledbomb
 	Warhead@Cluster1: FireCluster
 		Weapon: ClusterSubProjectilesLight
 		RandomClusterCount: 4

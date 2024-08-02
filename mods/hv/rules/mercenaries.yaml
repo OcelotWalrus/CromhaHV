@@ -6,7 +6,7 @@ GLIDER:
 	AppearsOnRadar:
 		UseLocation: true
 	WithShadow:
-		Offset: 356, 256, 0
+		Offset: 356, 512, 0
 		ZOffset: -256
 	WithFacingSpriteBody:
 	RevealsShroud:
@@ -22,7 +22,7 @@ GLIDER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: ~starport.ty, radar, techcenter
+		Prerequisites: ~starport.ty, techcenter
 		Description: actor-glider.description
 	Tooltip:
 		Name: actor-glider.name
@@ -46,8 +46,8 @@ GLIDER:
 		RepulsionSpeed: 40
 		CruiseAltitude: 4560
 	Armament:
-		Weapon: LightBomb
-		LocalOffset: 250,0,0
+		Weapon: PropelledBomb
+		LocalOffset: -250,-256,0, -250,256,0
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 4
@@ -285,7 +285,6 @@ AIRLIFTERMERCENARY.Husk:
 		Image: airlifter
 
 AIRSHIP:
-	Inherits: BALLOON
 	Inherits: ^Helicopter
 	Valued:
 		Cost: 400
@@ -966,7 +965,7 @@ SHOTGUNPOD:
 	Buildable:
 		Queue: Pod
 		Description: actor-shotgunpod.description
-		Prerequisites: ~module.ty
+		Prerequisites: ~module.ty, factory
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 350
@@ -1050,7 +1049,7 @@ RAILGUNPOD:
 	Buildable:
 		Queue: Pod
 		Description: actor-railgunpod.description
-		Prerequisites: ~module.ty, factory, techcenter
+		Prerequisites: ~module.ty
 		BuildPaletteOrder: 20
 	Valued:
 		Cost: 225
@@ -1467,13 +1466,29 @@ FIELDTANK:
 	RenderSprites:
 		Image: tank4
 
+APC3:
+	Inherits: APC
+	Buildable:
+		Prerequisites: factory.ty, module
+	Mobile:
+		Speed: 95
+	Cargo:
+		MaxWeight: 10
+	AttackOpenTopped:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,-128,128, -384,0,128, -384,128,128, -224,341,128, 224,341,128
+	-MapEditorData:
+	RenderSprites:
+		Image: apc
+
 ARTILLERY2:
 	Inherits: ARTILLERY
 	Buildable:
 		Prerequisites: factory, radar, ~structures.ty
+	Health:
+		HP: 14000
 	Mobile:
-		TurnSpeed: 25
-		Speed: 110
+		TurnSpeed: 20
+		Speed: 105
 	Armament:
 		Weapon: SmallArtilleryTyrian
 		-MuzzleSequence:
