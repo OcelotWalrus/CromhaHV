@@ -402,6 +402,33 @@ DronePulseGun:
 	Range: 6c0
 	Burst: 10
 
+Drone3Blaster:
+	Inherits: SmallSplash
+	Inherits: Ricochet
+	Inherits: ^BlueTracers
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: pulsegun_silverillusionist.ogg
+	Projectile: InstantHitWithTracers
+		Inaccuracy: 0c256
+		Blockable: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 750
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Versus:
+			None: 100
+			Wood: 50
+			Light: 75
+			Heavy: 75
+			Concrete: 50
+	Warhead@Incendiary: TreeDamage
+		Spread: 24
+		Damage: 1000
+	ReloadDelay: 10
+	Range: 6c0
+	Burst: 10
+
 FlakLight:
 	ReloadDelay: 70
 	Range: 8c0

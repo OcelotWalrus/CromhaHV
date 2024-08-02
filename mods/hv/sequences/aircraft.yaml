@@ -254,6 +254,7 @@ glider:
 	idle:
 		Filename: bits/glider.png
 		Facings: 8
+		ZOffset: 512
 	icon:
 		Filename: units-icons.png
 		Start: 63

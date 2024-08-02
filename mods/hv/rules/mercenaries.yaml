@@ -1125,46 +1125,98 @@ MISSILEBOAT:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-MERCSUBMARINE:
-	Inherits: ^Submarine
+AIRCRAFTCARRIER:
+	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildPaletteOrder: 60
+		Prerequisites: ~harbor.ty, techcenter
+		Description: actor-aircraftcarrier.description
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: actor-mercsubmarine.name
-		GenericName: actor-mercsubmarine.generic-name
-	Buildable:
-		Queue: Ship
-		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.ty, techcenter
-		BuildPaletteOrder: 60
-		Description: actor-mercsubmarine.description
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
+		Name: actor-aircraftcarrier.name
 	Health:
-		HP: 80000
+		HP: 73500
 	Armor:
 		Type: Heavy
-	Mobile:
-		Speed: 55
-		TurnSpeed: 40
 	RevealsShroud:
 		Range: 7c0
-		MinRange: 1c0
+		MinRange: 3c0
+		Type: CenterPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Mobile:
+		InitialFacing: 0
+		TurnSpeed: 25
+		Speed: 85
+		Voice: Move
+	RevealsShroud:
+		Range: 7c0
 		RevealGeneratedShroud: false
 	RevealsShroud@Hacked:
-		Range: 1c0
+		Range: 3c0
 	AttackFrontal:
-		FacingTolerance: 25
-	WithAttackAnimation:
-		Sequence: shoot
+		FacingTolerance: 360
+	CarrierParent:
+		Actors: drone3, drone3, drone3
+		RespawnTicks: 300
+		SpawnAllAtOnce: true
+	WithCarrierParentPipsDecoration:
+	Exit:
+		SpawnOffset: 350,0,0
+		Facing: 0
 	Armament:
-		Weapon: ShipBoomingPad
-	AutoTarget:
-		InitialStance: HoldFire
-		InitialStanceAI: ReturnFire
+		Weapon: BombersLauncher
+	Voiced:
+		VoiceSet: DroneVoice
+
+DRONE3:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: actor-drone-name
+	Health:
+		HP: 4500
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Armament:
+		Weapon: Drone3Blaster
+		LocalOffset: 250,-256,0, 250,256,0
+		PauseOnCondition: !ammo
+	Aircraft:
+		TurnSpeed: 30
+		Speed: 200
+		VTOL: false
+		MaximumPitch: 36
+		CruiseAltitude: 2560
+		TurnToLand: False
+		Repulsable: false
+	AttackAircraft:
+		FacingTolerance: 92
+		Voice: Attack
+	AmmoPool:
+		Ammo: 20
+		AmmoCondition: ammo
+	CarrierChild:
+		LandingDistance: 8c0
+	Rearmable:
+		RearmActors: aircraftcarrier
+	-MapEditorData:
 	RenderSprites:
-		Image: boomer
+		Image: glider
 
 LIGHTNINGBOAT.MERCENARY:
 	Inherits: LIGHTNINGBOAT
@@ -1473,10 +1525,9 @@ APC3:
 	Mobile:
 		Speed: 95
 	Cargo:
-		MaxWeight: 10
+		MaxWeight: 7
 	AttackOpenTopped:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,-128,128, -384,0,128, -384,128,128, -224,341,128, 224,341,128
-	-MapEditorData:
 	RenderSprites:
 		Image: apc
 

@@ -789,12 +789,6 @@ actor-boomer =
    .description = A submarine with powerful long range missiles.
       Strong vs Vehicles, Pods and Buildings
 
-actor-mercsubmarine =
-   .name = Bombing Submarine
-   .generic-name = Submarine
-   .description = A submarine with a powerful bomb launcher pad.
-      Strong vs Vehicles, Pods and Buildings
-
 actor-slcm-name = Submarine-launched cruise missile
 
 actor-intercontinental-name = Intercontinental Ballistic Missile
@@ -803,6 +797,11 @@ actor-carrier =
    .description = Launches aerial autonomous attack vessels.
       Strong vs Vehicles, Pods and Buildings
    .name = Drone Ship
+
+actor-aircraftcarrier =
+   .description = Launches aerial bombing aircraft.
+      Strong vs Vehicles, Pods and Buildings
+   .name = Aircraft Carrier
 
 actor-navaltransport =
    .name = Naval Transporter

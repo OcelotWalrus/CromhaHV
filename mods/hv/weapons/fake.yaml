@@ -24,3 +24,12 @@ MissileLauncher:
 	Projectile: InstantHit
 	Warhead@Damage: TargetDamage
 		ValidTargets: Ground, Water
+
+BombersLauncher:
+	ReloadDelay: 50
+	Range: 25c0
+	MinRange: 5c0
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
+	Projectile: InstantHit
+	Warhead@Damage: TargetDamage
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
