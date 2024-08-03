@@ -324,14 +324,15 @@ generator3:
 		Offset: 0, -8
 	idle:
 		Filename: bits/generator3.png
-		Length: 16
-		Tick: 75
+		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 0
+		Length: *
+		Tick: 80
 	damaged-idle:
 		Filename: bits/generator3.png
-		Start: 16
+		Start: 11
 	shadow-overlay:
 		Filename: bits/generator-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 11, 11
 	icon:
 		Filename: bits/buildings-icons.png
@@ -805,7 +806,7 @@ starport3:
 		Reverses: True
 		Length: 5
 		ZOffset: -1c511
-		Tick: 20
+		Tick: 80
 		Offset: -4,0
 	make:
 		Filename: bits/build.png
