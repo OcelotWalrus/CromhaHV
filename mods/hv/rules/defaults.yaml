@@ -190,7 +190,7 @@
 		TurnSpeed: 100
 		Speed: 80
 		Locomotor: pod
-		Voice: Action
+		Voice: Move
 	Voiced:
 		VoiceSet: GenericVoice2
 	Health:
@@ -783,6 +783,8 @@
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Vehicle, Defense, Ship, Mine
@@ -803,6 +805,8 @@
 
 ^AutoTargetAir:
 	AutoTarget:
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		ValidTargets: Air
 		InvalidTargets: NoAutoTarget
@@ -810,6 +814,8 @@
 ^AutoTargetAll:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Vehicle, Air, Ship, Mine, Defense
@@ -1377,4 +1383,4 @@
 	Selectable:
 		Bounds: 512, 512
 	Voiced:
-		VoiceSet: CivilianPodVoice
+		VoiceSet: CivilianVoice

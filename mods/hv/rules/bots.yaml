@@ -113,11 +113,11 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, builder2, builder3, constructor, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
-		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, missileboat, spiderboat, boomer, mercsubmarine, submarine, carrier
-		AirUnitsTypes: gunship, jet, copter, banshee, tyrianhelis, glider
-		ConstructionYardTypes: base, base2, base3
-		ProtectionTypes: base, base2, base3, outpost, outpost2, outpost3, generator, miner2, storage, storage2, module, module2, module3, radar, radar2, radar3, factory, factory2, factory3, harbor, harbor2, harbor3, trader, starport, starport2, starport3, techcenter, techcenter3, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, uplinkmerceary, cloakdevice, field, silo
+		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, ecmtank, technician, broker, navalminelayer, navalminelayer2, blaster
+		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
+		AirUnitsTypes: gunship, jet, copter, banshee
+		ConstructionYardTypes: base, base2
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
@@ -143,23 +143,16 @@ Player:
 			apc: 1
 			apc3: 1
 			artillery: 5
-			mgpod: 1
-			rocketpod: 1
-			shotgunpod: 1
-			clusterpod: 1
-			tinyhawk: 3
-			enginnertank: 1
-			clustertank: 1
-			merctank: 3
-			dualmerctank: 3
-			mortarpod: 1
-			flamepod: 1
-			elitepod: 1
-			sniperpod: 1
-			electricpod: 1
-			brokerpod: 9
+			rifleman: 1
+			rocketeer: 1
+			mortar: 1
+			flamer: 1
+			jetpacker: 1
+			sniper: 1
+			shocker: 1
+			broker: 9
 			technician: 1
-			bomberpod: 1
+			blaster: 1
 			missiletank: 5
 			missiletank2: 3
 			glider: 5
@@ -200,10 +193,8 @@ Player:
 			navalminelayer: 1
 			navalminelayer2: 1
 			technician: 1
-			bomberpod: 3
-			brokerpod: 9
-			transprt: 1
-			tinyhawk: 5
+			blaster: 3
+			broker: 9
 			apc: 1
 			apc3: 1
 		UnitDelays:
@@ -231,14 +222,14 @@ Player:
 		AwayFromEnemyTargetTypes: Structure, Defense
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai
-		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
-	LoadCargoBotModule:
+		ExcludedUnitTypes: miner, tanker1, tanker2, broker
+	CargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: apc, apc3
-		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod, shotgunpod, clusterpod, technician
+		TransportTypes: apc
+		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: radartank, brokerpod
+		DeployableActorTypes: radartank, broker
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
@@ -248,7 +239,7 @@ Player:
 	SendUnitToAttackBotModule:
 		RequiresCondition: enable-rogue-ai
 		ActorTypesAndAttackDesire:
-			bomberpod: 30
+			blaster: 30
 		ValidTargets: Structure, Vehicle
 		InvalidTargets: Air, Water
 	ExternalConditionPowerBotModule@Field:

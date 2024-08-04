@@ -423,3 +423,12 @@ MissilePad:
 			Concrete: 75
 	Warhead@Incendiary: TreeDamage
 		Damage: 1500
+		ImpactSounds: explosion06.ogg
+
+BoatTorpedo:
+	Inherits: Torpedo
+	ReloadDelay: 42
+	Burst: 2
+	BurstDelays: 8
+	Warhead@Damage: SpreadDamage
+		Damage: 5000

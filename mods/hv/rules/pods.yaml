@@ -1,17 +1,17 @@
 # License: CC-BY-SA-4.0
 
-MGPOD:
+RIFLEMAN:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-mgpod.description
+		Description: actor-rifleman.description
 		Prerequisites: ~module
 		BuildPaletteOrder: 10
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: actor-mgpod.name
+		Name: actor-rifleman.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -32,21 +32,22 @@ MGPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
 		IgnoreOffset: true
 
-ROCKETPOD:
+ROCKETEER:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-rocketpod.description
+		Description: actor-rocketeer.description
 		Prerequisites: ~module.sc
 		BuildPaletteOrder: 20
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: actor-rocketpod.name
+		Name: actor-rocketeer.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -66,20 +67,21 @@ ROCKETPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
 
-MORTARPOD:
+MORTAR:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-mortarpod.description
+		Description: actor-mortar.description
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 150
 	Tooltip:
-		Name: actor-mortarpod.name
+		Name: actor-mortar.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -99,20 +101,23 @@ MORTARPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
+	Voiced:
+		VoiceSet: GenericVoice1
 
-SNIPERPOD:
+SNIPER:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-sniperpod.description
+		Description: actor-sniper.description
 		Prerequisites: ~module.yi, radar
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: actor-sniperpod.name
+		Name: actor-sniper.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -136,6 +141,7 @@ SNIPERPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
 	Cloak:
 		InitialDelay: 250
@@ -147,26 +153,24 @@ SNIPERPOD:
 		CloakedPalette: cloak
 		CloakStyle: Palette
 
-FLAMEPOD:
+FLAMER:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-flamepod.description
+		Description: actor-flamer.description
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 40
 	Valued:
 		Cost: 350
 	Tooltip:
-		Name: actor-flamepod.name
+		Name: actor-flamer.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 15000
 	Mobile:
 		Speed: 70
-		Locomotor: pod
-		Voice: Move
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -182,8 +186,9 @@ FLAMEPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 10
+		Voice: Attack
 	Voiced:
-		VoiceSet: FlamePodVoice
+		VoiceSet: FlameVoice
 
 TECHNICIAN:
 	Inherits: ^Pod
@@ -221,10 +226,11 @@ TECHNICIAN:
 		HP: 12500
 	Mobile:
 		Speed: 70
-		Voice: Move
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		ValidTargets: DamagedPod
 	Armament:
@@ -240,18 +246,18 @@ TECHNICIAN:
 	DetectCloaked:
 		Range: 2c0
 
-BROKERPOD:
+BROKER:
 	Inherits: ^Pod
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Pod
-		Description: actor-brokerpod.description
-		Prerequisites: ~disabled
-		BuildPaletteOrder: 6
+		Description: actor-broker.description
+		Prerequisites: trader
+		BuildPaletteOrder: 70
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: actor-brokerpod.name
+		Name: actor-broker.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -262,8 +268,6 @@ BROKERPOD:
 		Range: 2c0
 	Health:
 		HP: 17500
-	Mobile:
-		Voice: Move
 	GrantConditionOnDeploy:
 		PauseOnCondition: jammed
 		DeployedCondition: deployed
@@ -271,8 +275,8 @@ BROKERPOD:
 		UndeployOnMove: true
 		UndeployOnPickup: true
 		Facing: 512
-		DeploySounds: brokerpod_deploy_mincedbeats.ogg
-		UndeploySounds: brokerpod_undeploy_mincedbeats.ogg
+		DeploySounds: broker_deploy_mincedbeats.ogg
+		UndeploySounds: broker_undeploy_mincedbeats.ogg
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
 		Voice: Deploying
 	WithMakeAnimation:
@@ -289,20 +293,20 @@ BROKERPOD:
 		Amount: 5
 		RequiresCondition: deployed
 	Voiced:
-		VoiceSet: BrokerPodVoice
+		VoiceSet: BrokerVoice
 
-ELITEPOD:
+JETPACKER:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-elitepod.description
+		Description: actor-jetpacker.description
 		Prerequisites: ~module, techcenter
 		BuildPaletteOrder: 60
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: actor-elitepod.name
+		Name: actor-jetpacker.name
 	Health:
 		HP: 9000
 	Aircraft:
@@ -318,6 +322,7 @@ ELITEPOD:
 		LocalOffset: 0,-300,0,   0,300,0
 	AttackFrontal:
 		FacingTolerance: 10
+		Voice: Attack
 	WithMuzzleOverlay:
 	WithMoveAnimation:
 	-Explodes@SpawnPilot:
@@ -331,20 +336,20 @@ ELITEPOD:
 		Range: 4c0
 		Type: GroundPosition
 	Voiced:
-		VoiceSet: ElitePodVoice
+		VoiceSet: JetpackerVoice
 
-BOMBERPOD:
+BLASTER:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-bomberpod.description
+		Description: actor-blaster.description
 		Prerequisites: ~module.yi, radar
 		BuildPaletteOrder: 40
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: actor-bomberpod.name
+		Name: actor-blaster.name
 	Health:
 		HP: 10000
 	UpdatesPlayerStatistics:
@@ -361,16 +366,15 @@ BOMBERPOD:
 		Sequences: animation
 	Mobile:
 		Speed: 110
-		Voice: Move
 	Voiced:
-		VoiceSet: BomberPodVoice
+		VoiceSet: BlasterVoice
 	Explodes:
-		Weapon: BomberPodExplosion
-		EmptyWeapon: BomberPodExplosion
+		Weapon: BlasterExplosion
+		EmptyWeapon: BlasterExplosion
 		DamageSource: Killer
 	AttackFrontal:
 	Armament:
-		Weapon: BomberPodWeapon
+		Weapon: BlasterWeapon
 		MuzzlePalette:
 	GrantConditionOnAttack:
 		Condition: triggered
@@ -381,22 +385,20 @@ BOMBERPOD:
 		InitialStance: HoldFire
 	-WithDeathAnimation:
 
-ELECTRICPOD:
+SHOCKER:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-electricpod.description
+		Description: actor-shocker.description
 		Prerequisites: ~module.yi
 		BuildPaletteOrder: 20
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: actor-electricpod.name
-	Mobile:
-		Voice: Move
+		Name: actor-shocker.name
 	Voiced:
-		VoiceSet: ElectricPodVoice
+		VoiceSet: ShockerVoice
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -414,6 +416,7 @@ ELECTRICPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithAttackAnimation:
 		Sequence: shoot
 

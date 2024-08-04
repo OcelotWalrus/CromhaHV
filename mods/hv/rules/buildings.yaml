@@ -44,7 +44,7 @@ BASE:
 		Prerequisite: bots
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 900
+		BuildPaletteOrder: 160
 		BuildLimit: 1
 		Description: actor-base.description
 		Prerequisites: outpost, ~base.yi
@@ -1043,6 +1043,7 @@ ORESMELT:
 		Category: Buildings
 	Buildable:
 		Queue: Building
+		BuildPaletteOrder: 130
 		Description: actor-oresmelt.description
 		Prerequisites: ~structures.sc, techcenter
 	HitShape:
@@ -1058,13 +1059,12 @@ ORESMELT:
 		Dimensions: 1,2
 	RevealsShroud:
 		Range: 4c0
-	CashTrickler:
-		Interval: 50
-		Amount: 10
+	ResourceYieldMultiplier:
+		Modifier: 10
 		RequiresCondition: !build-incomplete && !disabled
 	WithIdleAnimation:
 		Interval: 40
-		RequiresCondition: !build-incomplete && !disabled
+		RequiresCondition: !build-incomplete && !disabled && !burning
 
 OREPURIFIER:
 	Inherits: ORESMELT
@@ -1119,7 +1119,7 @@ BUNKER:
 	Cargo:
 		Types: Pod
 		MaxWeight: 1
-		InitialUnits: mgpod
+		InitialUnits: rifleman
 	AttackGarrisoned:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
