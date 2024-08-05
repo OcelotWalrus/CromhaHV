@@ -549,22 +549,47 @@ module2:
 		Offset: 0, 0
 
 module3:
-	Inherits: module
-	door:
-		Filename: bits/module3.png
+	Inherits@Flame: ^BuildingFlame2
 	idle:
 		Filename: bits/module3.png
+		Frames: 0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 0, 0, 0
+		Length: *
+		Tick: 75
 	damaged-idle:
 		Filename: bits/module3.png
+		Start: 15
 	shadow-overlay:
 		Filename: bits/module3-shadow.png
-		Offset: 4, 6
+		Offset: 1, 8
 	damaged-shadow-overlay:
 		Filename: bits/module3-shadow.png
-		Offset: 4, 6
+		Start: 1
+		Offset: 1, 8
 	production-inprogress:
 		Filename: bits/module3.png
-		Reverses: True
+		Frames: 1, 2, 3, 4
+		Reverses: true
+		Length: *
+		ZOffset: 1024
+		Tick: 80
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+	flame:
+		Filename: bits/flame2.png
+		Offset: 8, 6
+		ZOffset: 1769
+	flame2:
+		Filename: bits/flame2.png
+		Offset: -7, -11
+		ZOffset: 1769
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 40
