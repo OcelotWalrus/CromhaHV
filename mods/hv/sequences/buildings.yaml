@@ -179,7 +179,7 @@ base3:
 	build:
 		Filename: bits/base3.png
 	idle:
-		Filename: bits/base3.png
+		Filename: bits/brain.png
 	damaged-idle:
 		Filename: bits/base3.png
 	damaged-build:
