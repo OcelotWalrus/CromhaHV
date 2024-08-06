@@ -202,9 +202,30 @@ base3:
 		Filename: bits/base3.png
 		Start: 21
 		Length: 1
-	produced-overlay:
-		Filename: bits/teleprt4.png
-		Offset: 0,60
+	produced-overlay1:
+		Filename: bits/teleport.png
+		Offset: -20,60
+		Length: 9
+		Reverses: true
+		Tick: 50
+		ZOffset: 4096
+	produced-overlay2:
+		Filename: bits/teleport.png
+		Offset: -10,60
+		Length: 9
+		Reverses: true
+		Tick: 50
+		ZOffset: 4096
+	produced-overlay3:
+		Filename: bits/teleport.png
+		Offset: 10,60
+		Length: 9
+		Reverses: true
+		Tick: 50
+		ZOffset: 4096
+	produced-overlay4:
+		Filename: bits/teleport.png
+		Offset: 20,60
 		Length: 9
 		Reverses: true
 		Tick: 50

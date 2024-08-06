@@ -398,7 +398,7 @@ BASE3:
 		Priority: 10
 	WithProductionExitOverlay@South1:
 		ExitCell: 0,5
-		Sequence: produced-overlay
+		Sequence: produced-overlay1
 	Exit@South2:
 		RequiresCondition: !being-captured
 		ExitCell: 1,5
@@ -409,7 +409,7 @@ BASE3:
 		Priority: 10
 	WithProductionExitOverlay@South2:
 		ExitCell: 1,5
-		Sequence: produced-overlay
+		Sequence: produced-overlay2
 	Exit@South3:
 		RequiresCondition: !being-captured
 		ExitCell: 2,5
@@ -420,7 +420,7 @@ BASE3:
 		Priority: 10
 	WithProductionExitOverlay@South3:
 		ExitCell: 2,5
-		Sequence: produced-overlay
+		Sequence: produced-overlay3
 	Exit@South4:
 		RequiresCondition: !being-captured
 		ExitCell: 3,5
@@ -431,7 +431,7 @@ BASE3:
 		Priority: 10
 	WithProductionExitOverlay@South4:
 		ExitCell: 3,5
-		Sequence: produced-overlay
+		Sequence: produced-overlay4
 	WithProductionOverlay@Base:
 		Sequence: production-inprogress
 		RequiresCondition: !burning
