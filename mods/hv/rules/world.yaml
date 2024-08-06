@@ -177,7 +177,7 @@
 	Faction@Tyrian:
 		Name: faction-tyrian.name
 		InternalName: ty
-		Side: Neutral
+		Side: Federations
 		Selectable: true
 		Description: faction-tyrian.description
 	Faction@Random:
@@ -497,7 +497,8 @@ World:
 		Class: none
 		ClassName: options-starting-units.base-only
 		Factions: ty
-		BaseActor: constructor
+		BaseActor: base3
+		BaseActorOffset: -1, -1
 	StartingUnits@MinerYI:
 		Class: miner
 		ClassName: options-starting-units.base-miner
@@ -514,7 +515,8 @@ World:
 		Class: miner
 		ClassName: options-starting-units.base-miner
 		Factions: ty
-		BaseActor: constructor
+		BaseActor: base3
+		BaseActorOffset: -1, -1
 		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
@@ -532,7 +534,8 @@ World:
 		Class: scout
 		ClassName: options-starting-units.base-scout
 		Factions: ty
-		BaseActor: constructor
+		BaseActor: base3
+		BaseActorOffset: -1, -1
 		SupportActors: airship
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6

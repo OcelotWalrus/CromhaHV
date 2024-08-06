@@ -330,12 +330,111 @@ AIRSHIP:
 ## buildings
 
 BASE3:
-	Inherits: BASE
-	-ProvidesPrerequisite@Yuruki:
+	Inherits: ^BaseBuilding
+	Inherits@Flame: ^BuildingFlame3
+	Inherits@Shape: ^4x4Shape
+	Selectable:
+		Bounds: 4096, 4096
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: actor-base.name
+	Building:
+		Footprint: ____ xxxx xxxx xxxx xxxx ====
+		Dimensions: 4,6
+	Health:
+		HP: 250000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	BaseBuilding:
+	BaseProvider:
+		Range: 14c0
+		CircleWidth: 2
+		CircleBorderWidth: 4
+	Power:
+		Amount: 120
+	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Tyrian:
 		Prerequisite: structures.ty
-	-Buildable:
-	-Encyclopedia:
+	TechPrerequisiteWithBots:
+		Prerequisite: bots
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 160
+		BuildLimit: 1
+		Description: actor-base.description
+		Prerequisites: outpost, ~base.ty
+	GrantExternalConditionToOwner@Base:
+		Condition: base
+	Production:
+		Produces: Building, Defense, Utility
+	ProductionBar@Building:
+		ProductionType: Building
+	ProductionBar@Defense:
+		ProductionType: Defense
+	ProductionBar@Utility:
+		ProductionType: Utility
+	ProductionSound:
+		Files: Quedicemipez__teleportation.ogg
+	RallyPoint:
+		CirclesSequence:
+		IsPlayerPalette: true
+		Palette: green
+		LineWidth: 2
+	ExitsDebugOverlay:
+	Exit@South1:
+		RequiresCondition: !being-captured
+		ExitCell: 0,5
+		SpawnOffset: -1024,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South1:
+		ExitCell: 0,5
+		Sequence: produced-overlay
+	Exit@South2:
+		RequiresCondition: !being-captured
+		ExitCell: 1,5
+		SpawnOffset: -512,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South2:
+		ExitCell: 1,5
+		Sequence: produced-overlay
+	Exit@South3:
+		RequiresCondition: !being-captured
+		ExitCell: 2,5
+		SpawnOffset: 512,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South3:
+		ExitCell: 2,5
+		Sequence: produced-overlay
+	Exit@South4:
+		RequiresCondition: !being-captured
+		ExitCell: 3,5
+		SpawnOffset: 1024,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South4:
+		ExitCell: 3,5
+		Sequence: produced-overlay
+	WithProductionOverlay@Base:
+		Sequence: production-inprogress
+		RequiresCondition: !burning
 
 OUTPOST3:
 	Inherits: OUTPOST
@@ -1363,38 +1462,6 @@ BUILDER3:
 		IntoActor: outpost3
 	RenderSprites:
 		Image: builder5
-
-CONSTRUCTOR:
-	Inherits: ^Vehicle
-	Inherits@selection: ^SelectableSupportUnit
-	Buildable:
-		Prerequisites: ~base.ty, storage, radar
-		Queue: Utility
-		BuildPaletteOrder: 70
-		Description: actor-constructor.description
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: actor-constructor.name
-	Health:
-		HP: 45000
-	Armor:
-		Type: Steel
-	Mobile:
-		TurnSpeed: 30
-		Speed: 80
-	RevealsShroud:
-		Range: 2c768
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	BaseBuilding:
-	Explodes:
-		Weapon: UnitExplodeLarge
-		EmptyWeapon: UnitExplodeLarge
-	Transforms:
-		IntoActor: base3
-	RenderSprites:
-		Image: builder1
 
 MBT3:
 	Inherits: MBT

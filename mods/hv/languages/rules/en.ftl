@@ -79,7 +79,6 @@ faction-tyrian =
    Their armament department specialized in railgun weaponry.
 
     Faction Variations:
-        - Uses mobile base constructors
         - Uses both helicopters and jets as air units
         - Assault units are faster but less durable
 
