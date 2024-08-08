@@ -332,7 +332,7 @@ AIRSHIP:
 BASE3:
 	Inherits: ^BaseBuilding
 	Inherits@Flame: ^BuildingFlame3
-	Inherits@Shape: ^4x4Shape
+	Inherits@Shape: ^4x3Shape
 	Selectable:
 		Bounds: 4096, 4096
 	Valued:

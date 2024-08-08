@@ -511,6 +511,13 @@
 			TopLeft: -2048, -1024
 			BottomRight: 2048, 1024
 
+^4x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
+
 ^4x4Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true

@@ -498,7 +498,7 @@ World:
 		ClassName: options-starting-units.base-only
 		Factions: ty
 		BaseActor: base3
-		BaseActorOffset: -1, -1
+		BaseActorOffset: -1, -2
 	StartingUnits@MinerYI:
 		Class: miner
 		ClassName: options-starting-units.base-miner
@@ -516,7 +516,7 @@ World:
 		ClassName: options-starting-units.base-miner
 		Factions: ty
 		BaseActor: base3
-		BaseActorOffset: -1, -1
+		BaseActorOffset: -1, -2
 		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
@@ -535,7 +535,7 @@ World:
 		ClassName: options-starting-units.base-scout
 		Factions: ty
 		BaseActor: base3
-		BaseActorOffset: -1, -1
+		BaseActorOffset: -1, -2
 		SupportActors: airship
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6

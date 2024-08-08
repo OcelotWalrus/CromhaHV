@@ -184,7 +184,7 @@ base3:
 		Length: *
 		Tick: 80
 		Reverses: true
-		ZOffset: 2048
+		ZOffset: 1768
 	idle:
 		Filename: bits/base3.png
 		Frames: 0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 0, 0, 0, 0, 0
@@ -192,7 +192,7 @@ base3:
 		Tick: 80
 	shadow-overlay:
 		Filename: bits/base3-shadow.png
-		ZOffset: 1768
+		ZOffset: 2048
 		Offset: 2, 13
 	damaged-idle:
 		Filename: bits/base3.png
@@ -236,17 +236,17 @@ base3:
 		Length: *
 		Tick: 80
 		Reverses: true
-		ZOffset: 2048
+		ZOffset: 1768
 	make:
 		Filename: bits/build.png
 		Length: 39
 		Tick: 30
-		ZOffset: 2048
+		ZOffset: 4096
 	make-overlay:
 		Filename: bits/build-vanish.png
 		Length: 26
 		Tick: 30
-		ZOffset: 2048
+		ZOffset: 4096
 	flame:
 		Filename: bits/flame2.png
 		Offset: -10, -35
