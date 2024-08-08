@@ -67,16 +67,18 @@ faction-synapol =
 
 faction-tyrian =
    .name = Tyrian
-   .description = United Mercenaries Of Tyrian (U.M.O.T.)
-   A large alien interplanetary company that trains mercenaries
-   from all over the galaxy, based on the Tyrian binary star
-   system. They are known for their fast and agile forces,
-   their advanced technologies, that are often ordered by
-   huge corporations. But they also occasionally run humanitarian
-   missions in certain independent colonies, that they have
-   contracts with. The U.M.O.T. paramilitary forces have
-   operated only a few missions in the solar system though.
-   Their armament department specialized in railgun weaponry.
+   .description = Federation Of Tyrian
+   A large alien interplanetary federation, that has both
+   strong political and military influence. Based on the
+   Tyrian binary start system, it has over 25 embassies
+   over the galaxy. They are known for their fast and agile
+   forces, and they futuristic/alien-ish looking structures.
+   They always kept their technology from everyone: none knows
+   about their strange energy kind they use... They also
+   oftentimes run humanitarian missions in independent colonies,
+   which have contracts with them. Their forces operated only
+   a few missions in the solar system though. Their armament
+   department specialized in railgun weaponry over the years.
 
     Faction Variations:
         - Uses both helicopters and jets as air units
