@@ -497,6 +497,12 @@ STORAGE2:
 
 RADAR3:
 	Inherits: RADAR
+	Inherits@Shape: ^3x3Shape
+	Selectable:
+		Bounds: 2048, 2457, 0, -204
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
 	-Encyclopedia:
 	Buildable:
 		Prerequisites: storage, ~structures.ty
