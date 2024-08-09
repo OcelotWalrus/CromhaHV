@@ -65,6 +65,37 @@ faction-synapol =
         - Grand Howitzer
         - Thermonuclear Bomb
 
+faction-tyrian =
+   .name = Tyrian
+   .description = Federation Of Tyrian
+   A large alien interplanetary federation, that has both
+   strong political and military influence. Based on the
+   Tyrian binary start system, it has over 25 embassies
+   over the galaxy. They are known for their fast and agile
+   forces, and they futuristic/alien-ish looking structures.
+   They always kept their technology from everyone: none knows
+   about their strange energy kind they use... They also
+   oftentimes run humanitarian missions in independent colonies,
+   which have contracts with them. Their forces operated only
+   a few missions in the solar system though. Their armament
+   department specialized in railgun weaponry over the years.
+
+    Faction Variations:
+        - Uses both helicopters and jets as air units
+        - Assault units are faster but less durable
+    Special Units:
+        - Shotgun Pod
+        - Cluster Pod
+        - Railgun Pod
+        - Tiny Hawk
+        - Field Tank
+        - Sonic Tank
+        - Missile Pad Tank
+    Superweapon:
+        - Paratroopers Drop
+        - Cloak Device
+        - Cluster Bomb
+
 faction-random =
    .name = Any
    .description = Random Corporation
@@ -144,6 +175,20 @@ notification-insufficient-power = Insufficient power.
 notification-televator-charging = Televator charging.
 notification-televator-ready = Televator ready.
 
+notification-paratroopers-incoming = Paratroopers Drop incoming.
+notification-paratroopers-ready = Paratroopers Drop ready.
+notification-paratroopers-charging = Paratroopers Drop charging.
+
+notification-clusterbomb-detected = Cluster Bomb detected.
+notification-clusterbomb-charging = Cluster Bomb charging.
+notification-clusterbomb-ready = Cluster Bomb ready.
+notification-clusterbomb-incoming = Cluster Bomb incoming.
+
+notification-cloakdevice-detected = Cloak Device detected.
+notification-cloakdevice-charging = Cloak Device charging.
+notification-cloakdevice-ready = Cloak Device ready.
+notification-cloakdevice-engaged = Cloak Device engaged.
+
 ## Aircraft
 actor-gunship =
    .description = Attack Ship armed with
@@ -195,6 +240,26 @@ actor-dropship =
    .description = Vehicle Transport Shuttle.
       Can load pods
       and lift one vehicle.
+
+actor-airship =
+   .name = Scout Airship
+   .description = Reconnaissance air unit.
+     Unarmed
+
+
+actor-glider =
+   .name = Atmospheric Bomber
+   .description = Fast bombing atmospheric glider.
+     Strong vs Buildings
+     Weak vs Tanks and Pods
+     Can't target Aircraft
+
+actor-tyrianhelis =
+   .name = Tyrian Helis
+   .description = Fast assault helicopter.
+    Equipped with two railgun cannons.
+      Strong vs Pods, Buildings and Aircraft
+      Weak vs Tanks
 
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
@@ -256,6 +321,12 @@ actor-radar2 =
    .droppodspower-description = Atmospheric assault reinforcements:
     Small team of pods drops onto target location from orbit.
 
+actor-radar3 =
+   .paratrooperspower-name = Paratroopers Reinforcement
+   .paratrooperspower-description = Atmospheric assault reinforcements:
+    Small team of airlifters drops onto target mercenary tanks.
+
+
 actor-trader =
    .description = Repairs vehicles and aircraft for credits.
     Allows buying units on the free market.
@@ -285,6 +356,10 @@ actor-techcenter =
    .description = Grants access to advanced weaponry.
    .name = Technology Download Center
    .encyclopedia = Company policy is that classified technology can not be transported with unguarded colony ships. It has be wired in from an encrypted interstellar connection and stored in a secure facility. Only then the production facilities get access to the blue prints for machinery designed to resolve conflicts fast and efficient. This facilities requires a lot of power to keep the servers running. Powering it down and access to restricted technology is temporarily lost.
+
+actor-techcenter3 =
+   .description = Grants access to advanced weaponry.
+   .name = Research Center
 
 actor-oresmelt =
    .name = Ore Smelter
@@ -377,6 +452,30 @@ actor-uplink =
    .railgun-name = Orbital Railgun
    .railgun-description = Initiate a surgical strike.
     Applies instant damage to a small area.
+
+actor-uplink-mercenary =
+   .name = Cluster Bomb Dome Command
+   .encyclopedia = An orbital spaceship that can launch cluster bombs from the atmosphere. It is a faster and more agile strike than the nuclear bomb, but it still does significant damage of the battlefield. Upon impact, the bomb will explode and then release a series of small bombs all over the impact area. It requires a long time to reload and consumes energy in that process.
+   .description = Orders an orbital cluster bomb strike.
+      Requires power to operate.
+      Maximum 1 can be built.
+      Special Ability: Cluster Bomb
+   .railgun-name = Cluster Bomb
+   .railgun-description = Initiate a cluster bomb strike.
+    Applies damage to a large area.
+
+actor-cloakdevice =
+   .description = Erects an electromagnetic cloak
+    around a group of units
+    for a short time.
+      Requires power to operate.
+      Maximum 1 can be built.
+   .name = Cloak Field Device
+   .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amount of energy.
+   .cloakdevice-name = Cloak Field
+   .cloakdevice-description = Energy cloak:
+    Grants invisibility and increases speed by 15%
+    to a group of units for 45 seconds.
 
 actor-storage =
    .description = Stores excess resources.
@@ -556,6 +655,27 @@ meta-minipod =
    .name = Civilian
    .generic-name = Civilian
 
+actor-shotgunpod =
+   .description = Fast scout vehicle.
+    Armed with shotgun weapon.
+      Strong vs Pods
+      Weak vs Tanks and Buildings
+   .name = Shotgun Pod
+actor-clusterpod =
+   .description = Fast scout vehicle.
+    Armed with small cluster artillery.
+    Can hide underground in sand and snow.
+    Deals area damage.
+     Strong vs Buildings
+     Weak vs Pods And Tanks
+   .name = Cluster Pod
+actor-railgunpod =
+   .description = Fast scout vehicle.
+    Armed with a light railgun cannon.
+     Strong vs Tanks and Aircraft
+     Weak vs Pods
+   .name = Railgun Pod
+
 ## Props
 actor-lamppost-name = Lamp Post
 actor-sparklamp-name = Spark Lamp
@@ -656,6 +776,22 @@ actor-mineship =
     while avoiding ally units.
       Can detect enemy mines.
       Unarmed
+
+actor-missileboat =
+   .name = Missile boat
+   .generic-name = Boat
+   .description = Turreted missile launcher boat.
+      Strong vs Aircraft, Navy and Buildings
+      Weak vs Ground
+
+actor-spiderboat =
+   .name = Spider Boat
+   .generic-name = Boat
+   .description = Fast boat.
+    Armed with a light railgun cannon.
+    Can move on shore, sand and ice terrains.
+      Strong vs Aircrafts, Navy and Pods
+      Weak vs Vehicles and Buildings
 
 ## Vehicles
 actor-mbt =
@@ -800,6 +936,38 @@ actor-cvit =
    .description = Moves cash to other players.
       Unarmed
    .name = Money Transport
+
+actor-aatank3 =
+   .description = Mobile tank with flak armament.
+      Strong vs Aircraft
+      Cannot attack grounds units.
+   .name = Mobile Flak
+
+actor-tinyhawk =
+   .name = Tiny Hawk
+   .description = Fires an heavy shotgun.
+      Strong vs Pods
+      Weak vs Tanks, Buildings
+
+ctor-fieldtank =
+   .name = Field Tank
+   .description = Provides healing to nearby units.
+    Disrupts nearby enemy units aiming.
+      Unarmed.
+
+actor-sonictank =
+   .name = Sonic Tank
+   .generic-name = Sonic Tank
+   .description = Fires sonic shock waves.
+    Doesn't affect allied units.
+      Strong vs Pods, Vehicles and Buildings
+
+actor-missiletank2 =
+   .name = Missile Pad Tank
+   .generic-name = Tank
+   .description = A tank which shoots several missiles into the battlefield.
+      Strong vs Vehicles and Buildings
+      Weak vs Pods  
 
 actor-mothership =
    .name = Mothership

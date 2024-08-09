@@ -2,6 +2,8 @@
 
 Speech:
 	DefaultVariant: .ogg
+	Prefixes:
+		ty: ty_
 	Notifications:
 		StartGame:
 		GameLoaded: game_loaded
@@ -63,6 +65,17 @@ Speech:
 		TelevatorCharging: televator_charging
 		TelevatorReady: televator_ready
 		InsufficientPower: insufficient_power
+		ParatroopersIncoming: paratroopers_incoming
+		ParatroopersReady: paratroopers_ready
+		ParatroopersCharging: paratroopers_charging
+		ClusterBombIncoming: clusterbomb_incoming
+		ClusterBombReady: clusterbomb_ready
+		ClusterBombCharging: clusterbomb_charging
+		ClusterBombDetected: clusterbomb_detected
+		CloakDeviceCharging: cloak_device_charging
+		CloakDeviceReady: cloak_device_ready
+		CloakDeviceDetected: cloak_device_detected
+		CloakDeviceEngaged: cloak_device_engaged
 
 Sounds:
 	DefaultVariant: .ogg

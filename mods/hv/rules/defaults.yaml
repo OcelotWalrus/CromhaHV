@@ -115,6 +115,9 @@
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
 	Inherits@Vulnerabilities: ^Hackable
+	Inherits@FieldTankHeal: ^FieldTankHeal
+	Inherits@FieldTank: ^LosesAccuracyWithFieldTank
+	Inherits@Cloak: ^CloakDeviceCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -217,7 +220,7 @@
 		Range: 1c0
 	-Repairable:
 	RepairableNear:
-		RepairActors: module, module2
+		RepairActors: module, module2, module3
 		CloseEnough: 2c0
 	Targetable@Repair:
 		RequiresCondition: damaged
@@ -266,6 +269,8 @@
 	Inherits@Shield: ^ForceFieldCompatible
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
+	Inherits@FieldTankHeal: ^FieldTankHeal
+	Inherits@Cloak: ^CloakDeviceCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -491,6 +496,27 @@
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
+
+^4x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1024
+			BottomRight: 2048, 1024
+
+^4x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
+
+^4x4Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048
 
 ^6x8Shape:
 	HitShape:
@@ -918,6 +944,8 @@
 	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
+	Inherits@FieldTankHeal: ^FieldTankHeal
+	Inherits@Cloak: ^CloakDeviceCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -950,7 +978,7 @@
 	WithFacingSpriteBody:
 	HitShape:
 	RepairableNear:
-		RepairActors: harbor, harbor2
+		RepairActors: harbor, harbor2, harbor3
 		CloseEnough: 2c0
 	LeavesTrails:
 		Image: watertrail
@@ -1315,3 +1343,51 @@
 		Bounds: 512, 512
 	Voiced:
 		VoiceSet: CivilianVoice
+
+^FieldTankHeal:
+	ChangesHealth@FieldTank:
+		PercentageStep: 8
+		Step: 0
+		Delay: 25
+		StartIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: fieldhealed
+	WithDecoration@FieldTank:
+		Image: pips
+		Sequence: pip-reconstructor
+		Palette: chrome
+		Position: TopRight
+		RequiresCondition: fieldhealed
+		ValidRelationships: Ally
+	ExternalCondition@FieldTankHeal:
+		Condition: fieldhealed
+
+^LosesAccuracyWithFieldTank:
+	InaccuracyMultiplier@FieldTank:
+		Modifier: 350
+		RequiresCondition: fieldjammed
+	ExternalCondition@FieldTankJammed:
+		Condition: fieldjammed
+
+^CloakDeviceCompatible:
+	Cloak@CloakDevice:
+		InitialDelay: 0
+		CloakDelay: 90
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled || jammed
+		CloakedPalette: cloak
+		CloakStyle: Palette
+		RequiresCondition: cloakdevice
+	SpeedMultiplier@CloakDevice:
+		Modifier: 115
+		RequiresCondition: cloakdevice
+	GrantConditionOnDamageState@UNCLOAKCloakDevice:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	TimedConditionBar:
+		Condition: cloakdevice
+		Color: 0000FF
+	ExternalCondition@CloakDevice:
+		Condition: cloakdevice

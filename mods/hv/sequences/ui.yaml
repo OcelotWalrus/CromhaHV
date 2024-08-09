@@ -87,6 +87,10 @@ icon:
 	televator:
 		Filename: bits/televator-icon.png
 		Offset: 1,1
+	airlifterdrop:
+		Filename: bits/airlifterdrop-icon.png
+	clusterbomb:
+		Filename: bits/cluster-bomb-icon.png
 	null:
 		Filename: bits/null.png
 

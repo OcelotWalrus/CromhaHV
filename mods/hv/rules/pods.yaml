@@ -462,3 +462,118 @@ MINIPOD5:
 
 MINIPOD6:
 	Inherits: ^MINIPOD
+
+RAILGUNPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-railgunpod.description
+		Prerequisites: ~module.ty
+		BuildPaletteOrder: 20
+	Valued:
+		Cost: 225
+	Tooltip:
+		Name: actor-railgunpod.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightRailgun
+		LocalOffset: 200,-300,0
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightRailgunBunker
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+
+CLUSTERPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-clusterpod.description
+		Prerequisites: ~module.ty, factory
+		BuildPaletteOrder: 40
+	Valued:
+		Cost: 500
+	Health:
+		HP: 15000
+	Tooltip:
+		Name: actor-clusterpod.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightCluster
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightClusterBunker
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	GrantConditionOnTerrain@HiddenUnderSandAndSnow:
+		Condition: cancloak
+		TerrainTypes: Sand, Sand Ramp, Snow, Snow Ramp
+	Cloak@HiddenUnderSandAndSnow:
+		InitialDelay: 75
+		CloakDelay: 60
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack
+		CloakedPalette: shadow
+		CloakStyle: Palette
+		RequiresCondition: cancloak
+
+SHOTGUNPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-shotgunpod.description
+		Prerequisites: ~module.ty, factory
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: actor-shotgunpod.name
+	Health:
+		HP: 15000
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	AmmoPool:
+		Ammo: 25
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 55
+		Count: 4
+	Armament@Primary:
+		Weapon: LightShotGun
+		LocalOffset: 35,185,150, 35,25,150
+		PauseOnCondition: !ammo
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: BunkerShotGun
+		PauseOnCondition: !ammo
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
