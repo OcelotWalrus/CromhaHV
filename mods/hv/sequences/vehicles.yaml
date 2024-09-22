@@ -205,14 +205,6 @@ ecmtank:
 		Filename: bits/units-icons.png
 		Start: 9
 
-tank9:
-	idle:
-		Filename: bits/tank9.png
-		Facings: 8
-	icon:
-		Filename: bits/units-icons.png
-		Start: 27
-
 lightningtank:
 	idle:
 		Filename: bits/lightningtank.png
@@ -600,6 +592,9 @@ tanker4:
 		Filename: bits/units-icons.png
 		Start: 18
 
+tanker5:
+	Inherits: cvit
+
 aatank:
 	idle:
 		Filename: bits/aatank.png
@@ -681,3 +676,50 @@ energyball:
 		Length: *
 		Tick: 100
 		ZOffset: 2048
+
+sonictank:
+	idle:
+		Filename: bits/sonictank.png
+		Facings: 8
+	turret:
+		Filename: bits/sonictank.png
+		Start: 8
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 0
+
+aatank3:
+	idle:
+		Filename: bits/aatank3.png
+		Start: 0
+		Facings: 8
+	turret:
+		Filename: bits/aatank3.png
+		Start: 8
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 0
+
+tinyhawk:
+	Inherits: tank14
+
+missiletank2:
+	idle:
+		Filename: bits/missiletank2.png
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 0
+
+mbt3:
+	Inherits: merctank
+
+artillery2:
+	idle:
+		Filename: bits/artillery2.png
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 0

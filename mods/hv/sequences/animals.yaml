@@ -114,3 +114,22 @@ flyingmonster:
 		Tick: 100
 	icon:
 		Filename: bits/icon.png
+
+mutant:
+	idle:
+		Filename: bits/mutant.png
+		Frames: 0, 3, 6, 9, 12, 15, 17, 20
+		Length: 1
+		Facings: 8
+	move:
+		Filename: bits/mutant.png
+		Tick: 135
+		Length: 3
+		Facings: 8
+	die:
+		Filename: bits/beast-die.png
+		Length: 12
+		Tick: 120
+	icon:
+		Filename: bits/units-icons.png
+		Start: 0

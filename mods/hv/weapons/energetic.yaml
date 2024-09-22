@@ -576,3 +576,249 @@ PlasmaMachineGun:
 		Explosions: hit1, hit2, hit3
 		ValidTargets: Air, Ground
 		ImpactSounds: plasma_explosion_1.ogg, plasma_explosion_2.ogg, plasma_explosion_3.ogg
+
+LightRailgun:
+	Inherits: Railgun
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+	Range: 6c0
+	ReloadDelay: 50
+	Report: raygun_newlocknew.ogg
+	Projectile: LaserZap
+		Width: 0c90
+		Shape: Cylindrical
+		ZOffset: 2048
+		UsePlayerColor: True
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+		Spread: 128
+		Damage: 2800
+		Versus:
+			None: 65
+			Steel: 75
+			Light: 70
+			Heavy: 110
+			Concrete: 50
+	Warhead@Incendiary: TreeDamage
+		Damage: 500
+		Spread: 24
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.ogg
+
+LightRailgunBunker:
+	Range: 8c0
+	Inherits: LightRailgun
+
+LightRailgunAircraftGround:
+	Range: 7c512
+	Inherits: LightRailgun
+	Burst: 2
+	BurstDelays: 5
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Damage: 2000
+		Spread: 12
+		Versus:
+			None: 740
+			Steel: 50
+			Light: 315
+			Heavy: 40
+			Concrete: 20
+
+LightRailgunAircraftAir:
+	Range: 7c512
+	Inherits: LightRailgun
+	Burst: 2
+	BurstDelays: 5
+	ValidTargets: Air
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Air
+		Damage: 2000
+		Spread: 12
+		Versus:
+			None: 800
+			Heavy: 30
+
+TowerRailgun:
+	ReloadDelay: 50
+	Burst: 3
+	BurstDelays: 25
+	Range: 9c0
+	ValidTargets: Air
+	Report: raygun_newlocknew.ogg
+	Projectile: LaserZap
+		Width: 0c110
+		Shape: Cylindrical
+		ZOffset: 2048
+		UsePlayerColor: True
+		SecondaryBeam: True
+		SecondaryBeamWidth: 0c100
+		SecondaryBeamShape: Cylindrical
+		SecondaryBeamZOffset: 2048
+		SecondaryBeamUsePlayerColor: True
+	Warhead@ECM: GrantExternalCondition
+		Range: 1c0
+		Duration: 40
+		Condition: jammed
+		ValidTargets: Air
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 1500
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 3250
+		Percentage: 90
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion08.ogg
+		ImpactActors: false
+
+SoundShock:  # originallly D2K's "Sound" weapon
+	ReloadDelay: 90
+	Range: 5c0
+	Report: droneaction1.ogg, droneaction2.ogg, droneaction3.ogg, droneaction4.ogg
+	Projectile: AreaBeam
+		Speed: 0c128
+		Inaccuracy: 128
+		InaccuracyType: PerCellIncrement
+		Duration: 4 # Has a length of 0c512
+		DamageInterval: 3 # Travels 0c384 between impacts, will hit a target roughly three times
+		Width: 0c756 # in original d2k width is 2c0, but damage is 100% only at the center and fades out linearly toward the edges
+		Shape: Cylindrical
+		Falloff: 0, 0, 100, 0
+		Range: 0, 0c450, 4c0, 8c0
+		BeyondTargetRange: 1c0
+		MinDistance: 5c0
+		Color: 00FFFFC8
+		UsePlayerColor: true
+	Warhead@Damage: SpreadDamage
+		AffectsParent: false
+		Damage: 1250
+		ValidRelationships: Enemy
+		Spread: 25
+		Versus:
+			None: 200
+			Steel: 75
+			Light: 160
+			Heavy: 105
+			Concrete: 55
+		DamageTypes: Prone50Percent, TriggerProne, SoundDeath
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 4
+		AffectsParent: false
+		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
+
+SatelliteRailgunSetup:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@DamageDelivery: FireCluster
+		Weapon: SatelliteRailgunStrike
+		Dimensions: 1,1
+		Footprint: X
+		AirThreshold: 0c0
+	Warhead@Visual: FireRadius
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Weapon: SatelliteRailgunVisualStage1
+		Amount: 1
+		TransferAltitude: true
+
+SatelliteRailgunVisualStage1:
+	Projectile: InstantHit
+	Range: 1280
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@Visual: FireShrapnel
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Weapon: SatelliteRailgunVisualStage2
+
+SatelliteRailgunVisualStage2:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Projectile: GravityBomb
+		Image: satellite-railgun
+		Sequences: idle
+		Velocity: 0,0,-60 # needs to be synced with SatelliteRailgunStrike
+		Acceleration: 0,0,-45 # needs to be synced with SatelliteRailgunStrike
+	Warhead@Effect: CreateEffect
+		Explosions: medium
+		ImpactSounds: explosion06.ogg
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+
+SatelliteRailgunStrike:
+	Projectile: GravityBomb
+		Velocity: 0,0,-60 # needs to be synced with SatelliteRailgunVisualStage2
+		Acceleration: 0,0,-45 # needs to be synced with SatelliteRailgunVisualStage2
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Report: raygun_newlocknew.ogg
+	Warhead@DamageImpact: SpreadDamage
+		Spread: 512
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryImpact: TreeDamage
+		Spread: 512
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		AffectsParent: true
+	Warhead@DamageArea: SpreadDamage
+		Spread: 512
+		Damage: 2000
+		Falloff: 100, 50, 25, 0
+		Delay: 3
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryArea: TreeDamage
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Spread: 512
+		Damage: 2000
+		Falloff: 100, 50, 25, 0
+		AffectsParent: true
+
+StarshipBeam:
+	ReloadDelay: 135
+	Range: 10c256
+	Report: droneaction1.ogg, droneaction2.ogg, droneaction3.ogg, droneaction4.ogg
+	MinRange: 3c256
+	Range: 8c512
+	ValidTargets: Vehicle, Pod, Ship
+	Projectile: AreaBeam
+		Speed: 0c384
+		Inaccuracy: 128
+		InaccuracyType: PerCellIncrement
+		Duration: 6 # Has a length of 0c512
+		DamageInterval: 5 # Travels 0c384 between impacts, will hit a target roughly three times
+		Width: 1c756 # in original d2k width is 2c0, but damage is 100% only at the center and fades out linearly toward the edges
+		Shape: Cylindrical
+		Falloff: 0, 0, 100, 0
+		Range: 0, 0c450, 4c0, 8c0
+		BeyondTargetRange: 1c0
+		MinDistance: 5c0
+		Color: 00FFFFC8
+		UsePlayerColor: true
+	Warhead@SlowsDown: GrantExternalCondition
+		Range: 2c128
+		Duration: 150
+		Condition: slowed-down
+		ValidTargets: Vehicle, Pod, Ship
+	Warhead@Bleeds: GrantExternalCondition
+		Range: 2c128
+		Duration: 150
+		Condition: bleeding
+		ValidTargets: Vehicle, Pod, Ship
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 5
+		AffectsParent: false
+		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
