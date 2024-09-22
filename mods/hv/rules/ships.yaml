@@ -571,4 +571,110 @@ MINESHIP2:
 	Inherits: MINESHIP
 	Buildable:
 		Prerequisites: ~harbor.yi, trader
-	-Encyclopedia:
+
+SPIDERBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: actor-spiderboat.name
+		GenericName: actor-spiderboat.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.ty
+		BuildPaletteOrder: 10
+		Description: actor-spiderboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 28500
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 140
+		TurnSpeed: 65
+		Locomotor: spiderboat
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 135
+		Offset: 120,0,20
+	Armament@Air:
+		Weapon: LightRailgun
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 80,0,100
+	Armament@Ground:
+		Weapon: LightRailgun
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 80,0,100
+	AttackTurreted:
+		Armaments: primary, secondary
+	WithSpriteTurret:
+
+MISSILEBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: actor-missileboat.name
+		GenericName: actor-missileboat.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.ty
+		BuildPaletteOrder: 30
+		Description: actor-missileboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 125
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 120
+		Offset: -150,0,50
+	Armament@Air:
+		Weapon: MissileShipRocketAir
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 575,0,275
+	Armament@Ground:
+		Weapon: MissileShipRocketGround
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 575,0,275
+	AttackTurreted:
+		Armaments: primary, secondary
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+
+LIGHTNINGBOAT.MERCENARY:
+	Inherits: LIGHTNINGBOAT
+	Buildable:
+		Prerequisites: ~harbor.ty, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: lightningboat
+	RenderSprites:
+		Image: lightningboat
+>>>>>>> 902d818f (Added a new faction: Federation Of Tyrian)

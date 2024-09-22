@@ -694,6 +694,31 @@ DROPSHIP.Husk:
 	RenderSprites:
 		Image: dropship
 
+DROPSHIP.REINFORCE:
+	Inherits: DROPSHIP
+	#-Encyclopedia:
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	RejectsOrders:
+	Aircraft:
+		IdleBehavior: LeaveMap
+		Repulsable: false
+		Speed: 215
+	-Selectable:
+	Interactable:
+	-MapEditorData:
+	DamageMultiplier@Invulnerable:
+		Modifier: 0
+	UpdatesPlayerStatistics:
+		OverrideActor: dropship
+	-RevealsShroud:
+	-RevealsShroud@Hacked:
+	RenderSprites:
+		Image: dropship
+
 DRONE:
 	Inherits: ^SpawnedPlane
 	Valued:
@@ -1175,3 +1200,444 @@ BATTLESHIP.Husk:
 		MaxThrowRange: 0c0
 		MinThrowAngle: 0
 		MaxThrowAngle: 0
+
+GLIDER:
+	Inherits@Smoke: ^SmokeEmitter
+	Inherits: ^Plane
+	AppearsOnRadar:
+		UseLocation: true
+	WithShadow:
+		Offset: 356, 512, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 40
+		Prerequisites: ~starport.ty, techcenter
+		Description: actor-glider.description
+	Tooltip:
+		Name: actor-glider.name
+	Health:
+		HP: 12500
+	Armor:
+		Type: Light
+	Valued:
+		Cost: 1500
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: true
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		TurnSpeed: 25
+		Speed: 175
+		Voice: Move
+		MaximumPitch: 100
+		RepulsionSpeed: 40
+		CruiseAltitude: 4560
+	Armament:
+		Weapon: PropelledBomb
+		LocalOffset: -250,-256,0, -250,256,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 4
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	ReloadAmmoPool:
+		Delay: 225
+		Count: 1
+	Voiced:
+		VoiceSet: BomberVoice
+	Tooltip:
+		Name: actor-glider.name
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 7
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 7
+		ZOffset: -1000
+	SpawnActorOnDeath:
+		Actor: GLIDER.Husk
+		RequiresCondition: airborne
+
+GLIDER.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-glider.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 100
+	LeavesTrails:
+		Offsets: 0,0,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: glider
+
+TYRIANHELIS:
+	Inherits: ^Helicopter
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@Smoke: ^SmokeEmitter
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-tyrianhelis.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: ~starport.ty
+		Description: actor-tyrianhelis.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 9000
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 30
+		Speed: 145
+	Voiced:
+		VoiceSet: TyrianHelisVoice
+	Turreted:
+		TurnSpeed: 80
+		Offset: 200,0,-100
+	AttackTurreted:
+		RequiresCondition: airborne
+	Armament@Ground:
+		Weapon: LightRailgunAircraftGround
+		LocalOffset: 50,125,0, 50,-125,0
+	Armament@Air:
+		Weapon: LightRailgunAircraftAir
+		LocalOffset: 50,125,0, 50,-125,0
+	Selectable:
+		Bounds: 1228, 1228
+	SpawnActorOnDeath:
+		Actor: TYRIANHELIS.Husk
+		RequiresCondition: airborne
+
+TYRIANHELIS.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-tyrianhelis.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		MaximumSpinSpeed: 10
+		Velocity: 100
+	LeavesTrails:
+		Offsets: 0,0,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: tyrianhelis
+
+AIRSHIP:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: actor-airship.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 20
+		Prerequisites: ~starport.ty
+		Description: actor-airship.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 30c0
+		MinRange: 15c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 15c0
+		Type: GroundPosition
+	Aircraft:
+		Speed: 60
+		CanForceLand: false
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
+	Voiced:
+		VoiceSet: BalloonVoice
+	Guard:
+		Voice: Guard
+	Repairable:
+		Voice: Move
+	Selectable:
+		DecorationBounds: 1228, 1638
+	-WithShadow:
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
+	RenderSprites:
+		Image: balloon
+
+STARSHIP:
+	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: actor-starship.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 100
+		BuildLimit: 1
+		Prerequisites: radar, trader, techcenter, ~starport.ty
+		Description: actor-starship.description
+	Encyclopedia:
+		Description: actor-starship.encyclopedia
+		Order: 45
+		Category: Aircraft
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 250000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 16c0
+		MinRange: 8c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 8c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 90
+		CruiseAltitude: 4c0
+		AltitudeVelocity: 0c56
+		InitialFacing: 512
+	HitShape:
+		Type: Circle
+			Radius: 1024
+	Selectable:
+		DecorationBounds: 2048, 2048
+	SpawnActorOnDeath:
+		Actor: STARSHIP.Husk
+		RequiresCondition: airborne
+	Turreted@Primary:
+		Turret: primary
+		Offset: -300,-700,200
+		TurnSpeed: 80
+	Turreted@Secondary:
+		Turret: secondary
+		Offset: -300,700,200
+		TurnSpeed: 80
+	AttackTurreted:
+		Turrets: primary, secondary
+	WithSpriteTurret@Primary:
+		Turret: primary
+	WithSpriteTurret@Secondary:
+		Turret: secondary
+	Armament@Primary:
+		Turret: primary
+		Name: primary
+		Weapon: StarshipBeam
+		Recoil: 125
+		RecoilRecovery: 38
+		MuzzleSequence: muzzle
+		LocalOffset: 600,0,0
+	Armament@Secondary:
+		Turret: secondary
+		Name: secondary
+		Weapon: StarshipBeam
+		Recoil: 125
+		RecoilRecovery: 38
+		MuzzleSequence: muzzle
+		LocalOffset: 600,0,0
+	ProximityExternalCondition@FirepowerIncrease:
+		Condition: firepower-increased
+		Range: 5c0
+		ValidRelationships: Ally
+	Exit:
+		SpawnOffset: 0,0,0
+		Facing: 0
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 5c0
+	Voiced:
+		VoiceSet: BattleShipVoice
+	WithMuzzleOverlay:
+	-WithShadow:
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
+	-GrantRandomCondition@SpawnPilot:
+	-Explodes@SpawnPilot:
+	RenderSprites:
+		Image: battleship
+
+STARSHIP.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-starship-husk.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 86
+	FallsToEarth:
+		Explosion: SuperUnitExplode
+		Velocity: 43
+	LeavesTrails@Smoke1:
+		Offsets: -700,-300,170
+		MovingInterval: 4
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Smoke2:
+		Offsets: -800,300,170
+		MovingInterval: 3
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Smoke3:
+		Offsets: 500,0,170
+		MovingInterval: 3
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Explosion:
+		Offsets: 0,0,171
+		MovingInterval: 10
+		Image: explosion
+		Sequences: medium_3
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	AmbientSound:
+		SoundFiles: explosion02.ogg, explosion03.ogg
+		Interval: 5
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: battleship
+	-WithShadow:
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
+	ThrowsParticle@PrimaryTurret:
+		Anim: turret
+		Offset: -700,300,200
+		MinThrowRange: 0c0
+		MaxThrowRange: 0c0
+		MinThrowAngle: 85
+		MaxThrowAngle: 170
+	ThrowsParticle@SecondaryTurret:
+		Anim: turret
+		Offset: 700,300,200
+		MinThrowRange: 0c0
+		MaxThrowRange: 0c0
+		MinThrowAngle: 0
+		MaxThrowAngle: 0
+
+DRONE3:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: actor-drone2.name
+	Health:
+		HP: 7500
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Armament:
+		Weapon: DronePulseGun
+		MuzzleSequence: muzzle
+		LocalOffset: -75,75,0, -75,-75,0
+		PauseOnCondition: !ammo
+	Aircraft:
+		Speed: 200
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+	AttackAircraft:
+		FacingTolerance: 256
+		Voice: Attack
+	AmmoPool:
+		Ammo: 250
+		ReloadCount: 15
+		AmmoCondition: ammo
+	CarrierChild:
+		LandingDistance: 16c0
+	Rearmable:
+		RearmActors: starship
+	WithMuzzleOverlay:
+	-MapEditorData:
+	RenderSprites:
+		Image: drone2
