@@ -341,3 +341,23 @@ observer:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 66
+
+tyrianhelis:
+	idle:
+		Filename: bits/tyrianhelis.png
+		Facings: 8
+		Length: 4
+		Tick: 40
+	icon:
+		Filename: units-icons.png
+		Start: 0
+
+glider:
+	idle:
+		Filename: bits/glider.png
+		Facings: 8
+		ZOffset: 512
+	icon:
+		Filename: units-icons.png
+		Start: 0
+>>>>>>> ad233adc (Added a new faction: Tyrian Federation)

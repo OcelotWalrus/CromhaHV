@@ -67,10 +67,76 @@ faction-synapol =
         - Grand Howitzer
         - Thermonuclear Bomb
 
+faction-tyrian =
+   .name = Tyrian
+   .description = Tyrian Federation
+    A large alien interplanetary federation, that has both strong
+    political and military influence. Based on the Tyrian binary
+    start system, inhabited by the Quargs, it has over 25 embassies
+    over the galaxy. It's known for their fast and agile forces,
+    and they futuristic looking structures. It always kept their
+    technology from everyone: none knows about the strange energy
+    kind they use... They also oftentimes run humanitarian missions
+    in independent colonies, that got contracts with them. Their
+    forces though operated only a few missions in the solar system.
+    Their armament department specialized in railgun and particle
+    weaponry over the years, and started studies of DNA processing.
+   
+    The Quargs are unique aquatic beings: their body resembles
+    to an aquatic creature with fins and measures approximately
+    13 feet of length. They also have arms, allowing them to swim
+    and move around their structures. Their structures are for
+    sure unique: every compartment is filled with water for its
+    crew. However, there's at least one room that can be used to
+    host humanoid beings, with breathable air and a window to talk
+    to the crew. Quargs are complicated and enigmatic beings, that
+    are know for over-analyzing and taking an excruciatingly long
+    period of time to come to decisions. They though admire boldness
+    and confidence, and treat hushed tones with suspicion. Quargs have
+    three fingers on each forelimb, ending in short fingernail-like
+    claws, with webbing in between for easier swimming. Their skin
+    is a greenish shade and have blotches of olive. They have tails
+    for maneuverability and their hind limbs are fins. Their way of
+    communication is highly complex: as underwater beings, they do
+    not use their mouth to communicate, but rather high pitch sounds.
+    To use the past tense, they switch to sonar.
+   
+    The Tyrian binary system is made out of a a blue giant, and and
+    white dwarf, at a perfect position, allowing life in the system.
+    Only one planet is present in the system, the quarg homeworld: Enif
+    Enif is a humongous planet, split in three regions: a desert and
+    arid region under terraformation, covering one fourth of the planet's
+    surface; a great and deep ocean where the Quargs live, covering two
+    and a half fourth of the planet's surface; and finally a gigantic
+    rainforest, covering the remaining one half fourth of the planet's
+    surface. Due to its size, the planet as four moons orbiting around
+    it, all terraformed by the Quargs, making them huge "balls of oceans".
+
+    Faction Variations:
+        - Uses both helicopters and jets as air units
+        - Assault units are generally faster but less durable
+        - Navy units are amphibious: can deploy onto shores, sand and ice
+   
+    Special Units:
+        - Blasterman
+        - Shotgun Pod
+        - Cluster Pod
+        - Railgun Pod
+        - Tiny Hawk
+        - Field Tank
+        - Sonic Tank
+        - Missile Pad Tank
+        - Starship
+    
+    Superweapons:
+        - Satellite Railgun Strike
+        - Mutant Breeder
+        - Cluster Bomb
+
 faction-random =
    .name = Any
-   .description = Random Corporation
-    A random corporation will be chosen when the game starts.
+   .description = Random Faction
+    A random faction will be chosen when the game starts.
 
 ## CubeSpawner
 checkbox-crates =
@@ -145,6 +211,20 @@ notification-railgun-ready = Orbital Railgun ready.
 notification-insufficient-power = Insufficient power.
 notification-televator-charging = Televator charging.
 notification-televator-ready = Televator ready.
+
+notification-satelllite-railgun-charging = Satellite Railgun charging.
+notification-satelllite-railgun-ready = Satellite Railgun ready.
+notification-satelllite-railgun-incoming = Satellite Railgun incoming.
+
+notification-clusterbomb-detected = Cluster Bomb detected.
+notification-clusterbomb-charging = Cluster Bomb charging.
+notification-clusterbomb-ready = Cluster Bomb ready.
+notification-clusterbomb-incoming = Cluster Bomb incoming.
+
+notification-researchlab-detected = Research Lab detected.
+notification-researchlab-charging = Research Lab prepping.
+notification-researchlab-ready = Research Lab ready.
+notification-researchlab-engaged = Mutant breeder released.
 
 ## Aircraft
 actor-gunship =
@@ -270,6 +350,26 @@ actor-dropship =
 
      Availability: Yuruki
 
+actor-airship =
+   .name = Scout Airship
+   .description = Reconnaissance air unit.
+     Unarmed
+
+
+actor-glider =
+   .name = Atmospheric Bomber
+   .description = Fast bombing atmospheric glider.
+     Strong vs Buildings
+     Weak vs Tanks and Pods
+     Can't target Aircraft
+
+actor-tyrianhelis =
+   .name = Tyrian Helis
+   .description = Fast assault helicopter.
+    Equipped with two railgun cannons.
+      Strong vs Pods, Buildings and Aircraft
+      Weak vs Tanks
+
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
 actor-landedpod-name = Landed Pod
@@ -297,6 +397,10 @@ actor-airlifter-encyclopedia = The airlifter paradrops loaded units onto the gro
 actor-beast =
    .name = Critter
    .generic-name = Beast
+
+actor-mutant =
+   .name = Mutant
+   .generic-name = Mutant
 
 actor-crow-name = Crows
 actor-crow2-name = Crow
@@ -346,6 +450,13 @@ actor-radar2 =
    .droppodspower-description = Atmospheric assault reinforcements:
     Small team of pods drops onto target location from orbit.
 
+actor-radar3 =
+   .satellite-railgun-power-name = Satellite Railgun
+   .satellite-railgun-power-description = Atmospheric satellite support:
+    Initiates a satellite's railgun canon. The beam is precise and
+    only damages the target
+
+
 actor-trader =
    .description = Repairs vehicles and aircraft for credits.
     Allows buying units on the free market.
@@ -387,6 +498,12 @@ actor-orepurifier =
    .description = Ore Purifier.
     Processes resources for extra credits.
    .encyclopedia = The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore however requires a lot of energy.
+
+actor-oresynthesizer =
+   .name = Ore Synthesizer
+   .encyclopedia = The ore synthesizer is an economy boosting building for long lasting conflicts. It uses refined resources waste to synthesize metals, which yields extra profits and creates an independent stream of income. However, heating up the waste requires a lot of energy.
+   .description = Ore Synthesizer
+    Uses refined resources waste to synthesize metals for extra credits.
 
 actor-bunker =
    .description = Light base defense.
@@ -468,6 +585,30 @@ actor-uplink =
    .railgun-description = Initiate a surgical strike.
     Applies instant damage to a small area.
 
+actor-uplink-mercenary =
+   .name = Cluster Bomb Dome Command
+   .encyclopedia = An orbital spaceship that can launch cluster bombs from the atmosphere. It is a faster and more agile strike than the nuclear bomb, but it still does significant damage of the battlefield. Upon impact, the bomb will explode and then release a series of small bombs all over the impact area. It requires a long time to reload and consumes energy in that process.
+   .description = Orders an orbital cluster bomb strike.
+      Requires power to operate.
+      Maximum 1 can be built.
+      Special Ability: Cluster Bomb
+   .railgun-name = Cluster Bomb
+   .railgun-description = Initiate a cluster bomb strike.
+    Applies damage to a large area.
+
+actor-cloakdevice =
+   .description = Erects an electromagnetic cloak
+    around a group of units
+    for a short time.
+      Requires power to operate.
+      Maximum 1 can be built.
+   .name = Cloak Field Device
+   .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amount of energy.
+   .cloakdevice-name = Cloak Field
+   .cloakdevice-description = Energy cloak:
+    Grants invisibility and increases speed by 15%
+    to a group of units for 45 seconds.
+
 actor-storage =
    .description = Stores excess resources.
    .name = Storage
@@ -534,6 +675,25 @@ actor-dropzone =
 actor-flagpost =
    .name = Flagpost
    .encyclopedia = This flag marks an objective that has to be controlled for a certain amount of time in order to gain strategic victory over your opponent.
+
+actor-mutantbreeder =
+   .name = Mutant Breeder
+   .description = Breeds mutant creatures, attacking enemies. Capable of self-defense.
+
+actor-researchlab =
+   .description = Produces mutant breeding creatures.
+    Once deployed, mutant breeders
+    periodically breeds mutants,
+    to defend your base.
+      Requires power to operate.
+      Maximum 1 can be built.
+   .name = Research Lab
+   .encyclopedia = The research lab is a Tyrian structure developed to create mutant breeders. Mutant breeders are static creatures, that breed mutant monsters from flying creatures embryos and bear DNA, creating powerful creatures, wandering and crawling around the mutant breeder to defend the location by releasing acid spit out of his mouth.
+   .power-name = Mutant Breeder
+   .power-description = Release a mutant breeder
+    at the target location. The breeder
+    will start breeding mutants to
+    defend the location.
 
 ## Defaults
 meta-vehicle-generic-name = Vehicle
@@ -702,6 +862,27 @@ meta-minipod =
 
      Availability: Universal/Non-trainable
 
+actor-shotgunner =
+   .description = Fast scout vehicle.
+    Armed with shotgun weapon.
+      Strong vs Pods
+      Weak vs Tanks and Buildings
+   .name = Shotgunner
+actor-clusterman =
+   .description = Fast scout vehicle.
+    Armed with small cluster artillery.
+    Can hide underground in sand and snow.
+    Deals area damage.
+     Strong vs Buildings
+     Weak vs Pods And Tanks
+   .name = Clusterman
+actor-railguneer =
+   .description = Fast scout vehicle.
+    Armed with a light railgun cannon.
+     Strong vs Tanks and Aircraft
+     Weak vs Pods
+   .name = Railguneer
+
 ## Props
 actor-lamppost-name = Lamp Post
 actor-sparklamp-name = Spark Lamp
@@ -857,6 +1038,22 @@ actor-mineship =
      Unarmed
 
      Availability: Universal/Faction design can vary
+
+actor-missileboat =
+   .name = Missile boat
+   .generic-name = Boat
+   .description = Turreted missile launcher boat.
+      Strong vs Aircraft, Navy and Buildings
+      Weak vs Ground
+
+actor-spiderboat =
+   .name = Spider Boat
+   .generic-name = Boat
+   .description = Fast boat.
+    Armed with a light railgun cannon.
+    Can move on shore, sand and ice terrains.
+      Strong vs Aircrafts, Navy and Pods
+      Weak vs Vehicles and Buildings
 
 ## Vehicles
 actor-mbt =
@@ -1110,6 +1307,38 @@ actor-cvit =
 
      Availability: Universal
 
+actor-aatank3 =
+   .description = Mobile tank with flak armament.
+      Strong vs Aircraft
+      Cannot attack grounds units.
+   .name = Mobile Flak
+
+actor-tinyhawk =
+   .name = Tiny Hawk
+   .description = Fires an heavy shotgun.
+      Strong vs Pods
+      Weak vs Tanks, Buildings
+
+ctor-fieldtank =
+   .name = Field Tank
+   .description = Provides healing to nearby units.
+    Disrupts nearby enemy units aiming.
+      Unarmed.
+
+actor-sonictank =
+   .name = Sonic Tank
+   .generic-name = Sonic Tank
+   .description = Fires sonic shock waves.
+    Doesn't affect allied units.
+      Strong vs Pods, Vehicles and Buildings
+
+actor-missiletank2 =
+   .name = Missile Pad Tank
+   .generic-name = Tank
+   .description = A tank which shoots several missiles into the battlefield.
+      Strong vs Vehicles and Buildings
+      Weak vs Pods
+
 actor-mothership =
    .name = Mothership
    .description = Launches aerial autonomous attack vessels.
@@ -1141,6 +1370,23 @@ actor-battleship =
 
 actor-battleship-husk =
    .name = Battleship Husk
+
+actor-starship =
+   .name = Starship
+   .description = Aerial support behemoth.
+      Fires area beam affecting targets' integrity.
+      Increases ally units' firepower in range.
+      Only one can be built.
+      Strong vs Ground Units
+      Can't attack Structures and Aircraft
+   .encyclopedia = The starship is Tyrian Federation's greatest technology. This 150,000 tons giant is capable of lifting itself at an incredible speed, while still being self-sufficient. A starship once went to an hazardous region of space, and got reported lost: 35 years later, it returned home! The starship is also equipped with hyperdrive technology, allowing him to travel between worlds like no human vessel can. This starcraft is a real city: it can lodge up to 2,755 quargs, and even has quarters for humanoid visitors. While it's got an incredible logistic, it also has powerful armaments and support technologies. The starship is armed with two sonic canons, that can target any ground or water unit, affecting their structure, slowing them down and slowing draining their health. In plus of weapons, it has support technologies, allowing surrounding troops to fetch a way in enemy territory: ally units in a certain range are granted healing effects on their vehicles.
+
+     {actor-starship.description}
+
+     Availability: Tyrian
+
+actor-starship-husk =
+   .name = Starship Husk
 
 ## Weapons
 actor-landmine-name = AI Mine

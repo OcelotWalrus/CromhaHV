@@ -179,6 +179,113 @@ BASE2:
 		Prerequisites: outpost2, ~base.sc
 	-Encyclopedia:
 
+BASE3:
+	Inherits: ^BaseBuilding
+	Inherits@Flame: ^BuildingFlame3
+	Inherits@Shape: ^4x3Shape
+	Selectable:
+		Bounds: 4096, 4096
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: actor-base.name
+	Building:
+		Footprint: ____ xxxx xxxx xxxx xxxx ====
+		Dimensions: 4,6
+	Health:
+		HP: 250000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	BaseBuilding:
+	BaseProvider:
+		Range: 14c0
+		CircleWidth: 2
+		CircleBorderWidth: 4
+	Power:
+		Amount: 120
+	ProvidesPrerequisite@BuildingName:
+	ProvidesPrerequisite@Tyrian:
+		Prerequisite: structures.ty
+	TechPrerequisiteWithBots:
+		Prerequisite: bots
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 160
+		BuildLimit: 1
+		Description: actor-base.description
+		Prerequisites: outpost, ~base.ty
+	GrantExternalConditionToOwner@Base:
+		Condition: base
+	Production:
+		Produces: Building, Defense, Utility
+	ProductionBar@Building:
+		ProductionType: Building
+	ProductionBar@Defense:
+		ProductionType: Defense
+	ProductionBar@Utility:
+		ProductionType: Utility
+	ProductionSound:
+		Files: Quedicemipez__teleportation.ogg
+	RallyPoint:
+		CirclesSequence:
+		IsPlayerPalette: true
+		Palette: green
+		LineWidth: 2
+	ExitsDebugOverlay:
+	Exit@South1:
+		RequiresCondition: !being-captured
+		ExitCell: 0,5
+		SpawnOffset: -1024,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South1:
+		ExitCell: 0,5
+		Sequence: produced-overlay1
+	Exit@South2:
+		RequiresCondition: !being-captured
+		ExitCell: 1,5
+		SpawnOffset: -512,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South2:
+		ExitCell: 1,5
+		Sequence: produced-overlay2
+	Exit@South3:
+		RequiresCondition: !being-captured
+		ExitCell: 2,5
+		SpawnOffset: 512,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South3:
+		ExitCell: 2,5
+		Sequence: produced-overlay3
+	Exit@South4:
+		RequiresCondition: !being-captured
+		ExitCell: 3,5
+		SpawnOffset: 1024,3072,0
+		Facing: 512
+		ProductionTypes: Utility
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South4:
+		ExitCell: 3,5
+		Sequence: produced-overlay4
+	WithProductionOverlay@Base:
+		Sequence: production-inprogress
+		RequiresCondition: !burning
+
 OUTPOST:
 	Inherits: ^BaseBuilding
 	Valued:
@@ -220,6 +327,14 @@ OUTPOST2:
 		Factions: sc
 		Prerequisite: base.sc
 	-Encyclopedia:
+
+OUTPOST3:
+	Inherits: OUTPOST
+	-Encyclopedia:
+	-ProvidesPrerequisite@Yuruki:
+	ProvidesPrerequisite@Tyrian:
+		Factions: ty
+		Prerequisite: base.ty
 
 GENERATOR:
 	Inherits: ^BaseBuilding
@@ -264,6 +379,7 @@ GENERATOR:
 		FactionImages:
 			sc: generator2
 			yi: generator
+			ty: generator3
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -364,6 +480,45 @@ RADAR2:
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Black Sand, Black Sand Ramp, Stone, Tech, Dirt
 	-Encyclopedia:
 
+RADAR3:
+	Inherits: RADAR
+	Inherits@Shape: ^3x3Shape
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 512,-512,0, 512,512,0, 0,-1024,0, 0,-512,0, 0,512,0, 0,1024,0, -512,-1024,0, -512,-512,0, -512,512,0, -512,1024,0
+	Selectable:
+		Bounds: 2048, 2457, 0, -204
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	-Encyclopedia:
+	Buildable:
+		Prerequisites: storage, ~structures.ty
+	-AirstrikePower:
+	DetonateWeaponPower:
+		OrderName: SatelliteRailgun
+		PauseOnCondition: lowpower
+		Icon: satellite-railgun
+		Cursor: railgun
+		ChargeInterval: 3750
+		Name: actor-radar3.satellite-railgun-power-name
+		Description: actor-radar3.satellite-railgun-power-description
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: true
+		CameraRange: 5c0
+		SupportPowerPaletteOrder: 10
+		BeginChargeSpeechNotification: SatelliteRailgunCharging
+		BeginChargeTextNotification: notification-satelllite-railgun-charging
+		EndChargeSpeechNotification: SatelliteRailgunReady
+		EndChargeTextNotification: notification-satelllite-railgun-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: SatelliteRailgunIncoming
+		IncomingTextNotification: notification-satelllite-railgun-incoming
+		AirburstAltitude: 40c0
+		Weapon: SatelliteRailgunSetup
+		ActivationDelay: 20
+
 TRADER:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
@@ -371,7 +526,7 @@ TRADER:
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Buildable:
 		Queue: Building
-		Prerequisites: ~base, factory
+		Prerequisites: ~base, factory, ~!structures.ty
 		BuildPaletteOrder: 100
 		Description: actor-trader.description
 	Encyclopedia:
@@ -455,6 +610,24 @@ TRADER:
 		FactionImages:
 			sc: trader2
 			yi: trader
+			ty: trader3
+
+TRADER2:
+	Inherits: TRADER
+	Buildable:
+		Prerequisites: ~base, factory, ~structures.ty
+	Building:
+		Footprint: +++ +++ xxx
+	WithIdleOverlay@Animation:
+		Sequence: active
+		RequiresCondition: !build-incomplete && !burning && !selling
+	-Exit@South:
+	-WithResupplyAnimation:
+	ProvidesPrerequisite@Generic:
+		Prerequisite: trader
+		RequiresCondition: !powerdown
+	RenderSprites:
+		Image: trader3
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -573,6 +746,99 @@ MODULE2:
 	RenderSprites:
 		Image: module2
 	-Encyclopedia:
+
+MODULE3:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Selectable:
+		Bounds: 2048, 2448
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 30
+		Prerequisites: ~structures.ty
+		Description: actor-module.description
+	Encyclopedia:
+		Description: actor-module.encyclopedia
+		Order: 50
+		Category: Buildings
+	ProvidesPrerequisite@Faction:
+		Prerequisite: module.ty
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@Generic:
+		Prerequisite: module
+		RequiresCondition: !powerdown
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: actor-module.name
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	RallyPoint:
+		CirclesSequence:
+		IsPlayerPalette: true
+		Palette: green
+		LineWidth: 2
+	ExitsDebugOverlay:
+	Exit@South1:
+		SpawnOffset: 0,600,0
+		ExitCell: 1,2
+		ProductionTypes: Pod
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@South2:
+		SpawnOffset: 0,600,0
+		ExitCell: 0,2
+		ProductionTypes: Pod
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	Production:
+		Produces: Pod
+		RequiresCondition: !powerdown
+	GrantExternalConditionToProduced:
+		Condition: produced
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	ProductionBar:
+		ProductionType: Pod
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@BuildingName:
+	Targetable:
+		TargetTypes: Ground, Structure
+	WithTextDecoration@PRIMARY:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
+		Font: TinyPixel
+	WithProductionOverlay:
+		RequiresCondition: !build-incomplete && !burning
+		Sequence: production-inprogress
+	RepairsUnits:
+		HpPerStep: 1000
+		Interval: 7
+		PlayerExperience: 15
+		StartRepairingNotification: Repairing
+		StartRepairingTextNotification: notifications-repairing
+		FinishRepairingNotification: UnitRepaired
+		FinishRepairingTextNotification: notification-unit-repaired
+		RequiresCondition: !powerdown
 
 MINER2:
 	Inherits: ^Building
@@ -724,6 +990,18 @@ STARPORT2:
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.sc
 		RequiresCondition: !powerdown
+	-WithProductionExitOverlay:
+	-Encyclopedia:
+
+STARPORT3:
+	Inherits: STARPORT
+	Buildable:
+		Prerequisites: radar, ~structures.ty
+	ProvidesPrerequisite@Faction:
+		Prerequisite: starport.ty
+		RequiresCondition: !powerdown
+	Exit:
+		Facing: 472
 	-WithProductionExitOverlay:
 	-Encyclopedia:
 
@@ -978,6 +1256,228 @@ FACTORY2:
 		Image: factory2
 	-Encyclopedia:
 
+FACTORY3:
+	Inherits: ^BaseBuilding
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^3x3Shape
+	Building:
+		Footprint: ___ ___ xxx xxx xxx +++ +++
+		Dimensions: 3,7
+	ProductionTimeMultiplier:
+		Multiplier: 130
+		Queue: Tank
+	Buildable:
+		Prerequisites: module, storage, ~structures.ty
+		Queue: Building
+		BuildPaletteOrder: 90
+		Description: actor-factory.description
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0,   -488,-806,0,   -488,-50,0,   -488,706,0
+	Selectable:
+		Bounds: 3072, 2348, 0, -560
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-factory.name
+	Health:
+		HP: 80000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@BuildingName:
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@Generic:
+		Prerequisite: factory
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@Faction:
+		Prerequisite: factory.ty
+		RequiresCondition: !powerdown
+	RallyPoint:
+		CirclesSequence:
+		IsPlayerPalette: true
+		Palette: green
+		LineWidth: 2
+	ExitsDebugOverlay:
+	Production:
+		Produces: Tank
+		RequiresCondition: !powerdown
+	ProductionBar:
+		ProductionType: Tank
+	ProductionSound:
+		Files: Quedicemipez__teleportation.ogg
+	Exit@1:
+		ExitCell: -1,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@2:
+		ExitCell: 0,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@3:
+		ExitCell: 1,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@4:
+		ExitCell: 2,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@5:
+		ExitCell: 3,6
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@6:
+		ExitCell: -1,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@7:
+		ExitCell: 0,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@8:
+		ExitCell: 1,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@9:
+		ExitCell: 2,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@10:
+		ExitCell: 3,7
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@11:
+		ExitCell: -1,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@12:
+		ExitCell: 0,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@13:
+		ExitCell: 1,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@14:
+		ExitCell: 2,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@15:
+		ExitCell: 3,8
+		SpawnOffset: -50,3000,0
+		Facing: 256
+		ProductionTypes: Tank
+		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@1:
+		ExitCell: -1,6
+		Sequence: active-creation
+	WithProductionExitOverlay@2:
+		ExitCell: 0,6
+		Sequence: active-creation
+	WithProductionExitOverlay@3:
+		ExitCell: 1,6
+		Sequence: active-creation
+	WithProductionExitOverlay@4:
+		ExitCell: 2,6
+		Sequence: active-creation
+	WithProductionExitOverlay@5:
+		ExitCell: 3,6
+		Sequence: active-creation
+	WithProductionExitOverlay@6:
+		ExitCell: -1,7
+		Sequence: active-creation
+	WithProductionExitOverlay@7:
+		ExitCell: 0,7
+		Sequence: active-creation
+	WithProductionExitOverlay@8:
+		ExitCell: 1,7
+		Sequence: active-creation
+	WithProductionExitOverlay@9:
+		ExitCell: 2,7
+		Sequence: active-creation
+	WithProductionExitOverlay@10:
+		ExitCell: 3,7
+		Sequence: active-creation
+	WithProductionExitOverlay@11:
+		ExitCell: -1,8
+		Sequence: active-creation
+	WithProductionExitOverlay@12:
+		ExitCell: 0,8
+		Sequence: active-creation
+	WithProductionExitOverlay@13:
+		ExitCell: 1,8
+		Sequence: active-creation
+	WithProductionExitOverlay@14:
+		ExitCell: 2,8
+		Sequence: active-creation
+	WithProductionExitOverlay@15:
+		ExitCell: 3,8
+		Sequence: active-creation
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	WithTextDecoration@PRIMARY:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
+		Font: TinyPixel
+	WithProductionOverlay@base:
+		RequiresCondition: !build-incomplete && !burning
+		Sequence: production-inprogress
+
 TECHCENTER:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
@@ -988,7 +1488,7 @@ TECHCENTER:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: ~base, radar
+		Prerequisites: ~base, radar, ~!structures.ty
 		Description: actor-techcenter.description
 	Valued:
 		Cost: 2000
@@ -1024,9 +1524,18 @@ TECHCENTER:
 		FactionImages:
 			sc: techcenter2
 			yi: techcenter
+			ty: techcenter3
 	WithIdleOverlay@ANIMATION:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
+
+TECHCENTER3:
+	Inherits: TECHCENTER
+	Inherits@Shape: ^2x1Shape
+	RenderSprites:
+		Image: techcenter3
+	Buildable:
+		Prerequisites: ~base, radar, ~structures.ty
 
 ORESMELT:
 	Inherits: ^BaseBuilding
@@ -1080,6 +1589,23 @@ OREPURIFIER:
 	-WithIdleOverlay@Shadow:
 	WithIdleAnimation:
 		Interval: 35
+
+ORESYNTHESIZER:
+	Inherits: ORESMELT
+	Tooltip:
+		Name: actor-oresynthesizer.name
+	Buildable:
+		Description: actor-oresynthesizer.description
+		Prerequisites: ~structures.ty, techcenter
+	Encyclopedia:
+		Description: actor-oresynthesizer.encyclopedia
+	WithIdleAnimation:
+		Sequence: active
+		RequiresCondition: !build-incomplete && !disabled && !burning && !selling
+		Interval: 50
+	WithIdleOverlay:
+		Sequence: idle-overlay
+		RequiresCondition: !build-incomplete && !disabled && !burning && !selling
 
 BUNKER:
 	Inherits: ^DefenseBuilding
@@ -1137,6 +1663,16 @@ BUNKER2:
 	AttackGarrisoned:
 		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
 	-Encyclopedia:
+
+BUNKER3:
+	Inherits: BUNKER
+	Buildable:
+		Prerequisites: module, ~structures.ty
+	AttackGarrisoned:
+		PortOffsets: 155,0,350, 125,-400,175, -125,-400,175, 0,0,200, -125,400,175, 125,400,175
+	-Encyclopedia:
+	Cargo:
+		InitialUnits: blasterman
 
 TURRET:
 	Inherits: ^DefenseBuilding
@@ -1213,6 +1749,14 @@ TURRET2:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
 		Sequence: shoot
+
+TURRET3:
+	Inherits: TURRET
+	Buildable:
+		Prerequisites: factory, ~structures.ty
+	-Encyclopedia:
+	RenderSprites:
+		Image: turret2
 
 AATURRET:
 	Inherits: ^DefenseBuilding
@@ -1301,6 +1845,45 @@ AATURRET2:
 	AttackTurreted:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
+
+AATURRET3:
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetAir
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: radar, ~structures.ty
+		Description: actor-aaturret2.description
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-aaturret2.name
+	Health:
+		HP: 55000
+	Armament:
+		Weapon: TowerMissileTyrian
+		LocalOffset: 650,600,0, 650,-600,0
+		MuzzleSequence: muzzle
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 14c0
+	RevealsShroud:
+		Range: 10c0
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	Turreted:
+		TurnSpeed: 1023
+		RealignDelay: -1
+		RequiresCondition: !build-incomplete
+		Offset: 450,0,0
+		InitialFacing: 550
+	AttackTurreted:
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithIdleOverlay:
+		Sequence: overlay
+		RequiresCondition: !build-incomplete && !selling && !disabled
 
 HOWITZER:
 	Inherits: ^DefenseBuilding
@@ -1609,7 +2192,7 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Prerequisites: ~base
+		Prerequisites: ~base, ~!structures.ty
 		Description: actor-storage.description
 	Valued:
 		Cost: 1400
@@ -1678,6 +2261,55 @@ STORAGE:
 		RequiresCondition: !build-incomplete
 	WithMakeOverlay@Platform4:
 		Sequence: make-platform4
+
+STORAGE3:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^4x2Shape
+	Inherits@Flame: ^BuildingFlame
+	Selectable:
+		Bounds: 4096, 2048
+	Building:
+		Footprint: ==== xxxx ++++
+		Dimensions: 4,3
+	Buildable:
+		BuildPaletteOrder: 35
+		Queue: Building
+		Prerequisites: ~base, ~structures.ty
+		Description: actor-storage.description
+	Valued:
+		Cost: 1400
+	Targetable:
+		TargetTypes: Ground, Structure
+	Tooltip:
+		Name: actor-storage.name
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	Power:
+		Amount: -30
+	ExitsDebugOverlay:
+	Exit:
+		ExitCell: 2,3
+	WithProductionExitOverlay:
+		ExitCell: 2,3
+		Sequence: animation
+		RequiresCondition: !burning
+	AcceptsDeliveredResources:
+		DeliveryVehicleType: tanker2
+	FreeActorWithDelivery:
+		Actor: minerty
+		DeliveryOffset: 0,0
+		DeliveringActor: dropship.reinforce
+		Facing: 160
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: storage
 
 TELEVATOR:
 	Inherits: ^BaseBuilding
@@ -1894,6 +2526,42 @@ HARBOR2:
 		RequiresCondition: !powerdown
 	Buildable:
 		Prerequisites: module, ~structures.sc
+	-Encyclopedia:
+
+HARBOR3:
+	Inherits: HARBOR
+	ProvidesPrerequisite@Faction:
+		Prerequisite: harbor.ty
+		RequiresCondition: !powerdown
+	Buildable:
+		Prerequisites: module, ~structures.ty
+	Exit@Front:
+		ExitCell: 1,2
+		ProductionTypes: Ship
+		Facing: 512
+		Priority: 2
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@Front1:
+		ExitCell: 1,3
+		ProductionTypes: Ship
+		Facing: 512
+		Priority: 2
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@Front2:
+		ExitCell: 1,3
+		ProductionTypes: Ship
+		Facing: 512
+		Priority: 2
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@Front3:
+		ExitCell: 1,3
+		ProductionTypes: Ship
+		Facing: 512
+		Priority: 2
+		RequiresCondition: !being-captured && !build-incomplete
+	-Exit@Back:
+	-Exit@Right:
+	-Exit@Left:
 	-Encyclopedia:
 
 BARRIER:
@@ -2742,3 +3410,320 @@ FLAGPOST:
 	WithIdleOverlay@Flag:
 		Sequence: flag
 		RequiresCondition: !ownerless
+
+UPLINKMERCENARY:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^3x3Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Selectable:
+		Bounds: 2048, 2457, 0, -204
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: actor-uplink-mercenary.name
+	Encyclopedia:
+		Description: actor-uplink-mercenary.encyclopedia
+		Order: 131
+		Category: Buildings
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: techcenter, ~structures.ty
+		BuildLimit: 1
+		Description: actor-uplink-mercenary.description
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 4c0
+	SupportPowerChargeBar:
+	Power:
+		Amount: -165
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	NukePower:
+		PauseOnCondition: disabled
+		Cursor: clusterbomb
+		Icon: clusterbomb
+		ChargeInterval: 6500
+		Name: actor-uplink-mercenary.railgun-name
+		Description: actor-uplink-mercenary.railgun-description
+		MissileWeapon: clusterbomb
+		MissileImage: clusterbomb
+		SkipAscent: true
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: true
+		CameraRange: 15c0
+		SupportPowerPaletteOrder: 15
+		DetectedSpeechNotification: ClusterBombDetected
+		DetectedTextNotification: notification-clusterbomb-detected
+		BeginChargeSpeechNotification: ClusterBombCharging
+		BeginChargeTextNotification: notification-clusterbomb-charging
+		EndChargeSpeechNotification: ClusterBombReady
+		EndChargeTextNotification: notification-clusterbomb-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: ClusterBombIncoming
+		IncomingTextNotification: notification-clusterbomb-incoming
+		OrderName: Bombem
+
+RESEARCHLAB:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: radar, ~structures.ty
+		BuildLimit: 1
+		Description: actor-researchlab.description
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-researchlab.name
+	Encyclopedia:
+		Description: actor-researchlab.encyclopedia
+		Order: 120
+		Category: Buildings
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 2048, 2048
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	SpawnActorPower:
+		Icon: research-lab
+		Name: actor-researchlab.power-name
+		Description: actor-researchlab.power-description
+		ChargeInterval: 4500
+		Actor: mutantbreeder
+		Terrain: Crater, Grass, Grass Pit, Road, Mountain, Rock, Ice, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Dirt
+		AllowUnderShroud: false
+		DisplayRadarPing: true
+		LifeTime: -1
+		EffectImage: mutantbreeder_crawling
+		EffectSequence: idle
+		EffectPalette: effect
+		SupportPowerPaletteOrder: 20
+		LaunchSound: force_field_autistic-lucario.ogg
+		DetectedSpeechNotification: ResearchLabDetected
+		DetectedTextNotification: notification-researchlab-detected
+		BeginChargeSpeechNotification: ResearchLabCharging
+		BeginChargeTextNotification: notification-researchlab-charging
+		EndChargeSpeechNotification: ResearchLabReady
+		EndChargeTextNotification: notification-researchlab-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: ResearchLabEngaged
+		IncomingTextNotification: notification-researchlab-engaged
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+		OrderName: ReleaseBreeder
+	SupportPowerChargeBar:
+	WithIdleOverlay:
+		Sequence: charging
+		RequiresCondition: !powerdown && !disabled && !burning && !build-incomplete
+	Power:
+		Amount: -200
+	MustBeDestroyed:
+		RequiredForShortGame: false
+
+MUTANTBREEDER:
+	Inherits: ^Building
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Tooltip:
+		Name: actor-mutantbreeder.name
+	TooltipDescription:
+		Description: actor-mutantbreeder.description
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
+	Selectable:
+		Bounds: 2048, 2048
+	Health:
+		HP: 150000
+	Valued:
+		Cost: 800
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	GrantConditionOnNeutralOwner:
+		Condition: ownerless
+	PeriodicProducer:
+		Actors: mutant
+		Type: Reinforcements
+		ChargeDuration: 500
+		ShowSelectionBar: true
+		BlockedAudio: NoRoom
+		RequiresCondition: !disabled
+	AutoTargetPriority@Default:
+		ValidTargets: DamagedMutant
+	Armament:
+		Weapon: MotherMutantSpit
+	Armament@Heal:
+		Weapon: MotherMutantSpitHeal
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+	AttackTurreted:
+		RequiresCondition: !build-incomplete && !disabled
+	Turreted:
+		TurnSpeed: 60
+		RequiresCondition: !build-incomplete
+		RealignDelay: -1
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	Exit@South1:
+		ExitCell: 1,2
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@South2:
+		ExitCell: 0,2
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@South3:
+		ExitCell: -1,2
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@South4:
+		ExitCell: 2,2
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@North1:
+		ExitCell: 1,-1
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@North2:
+		ExitCell: 0,-1
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@North3:
+		ExitCell: -1,-1
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@North4:
+		ExitCell: 2,-1
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@East1:
+		ExitCell: 2,0
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@East2:
+		ExitCell: 2,1
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@West1:
+		ExitCell: -1,0
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	Exit@West2:
+		ExitCell: -1,1
+		ProductionTypes: Reinforcements
+		RequiresCondition: !being-captured
+	ExitsDebugOverlay:
+	Production:
+		Produces: Reinforcements
+		RequiresCondition: !powerdown
+	WithIdleAnimation:
+		Sequences: out
+		Interval: 20
+	WithIdleOverlay@Shadow:
+		StartSequence: shadow-overlay-removal
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+
+MINER2TY:
+	Inherits: ^Building
+	Inherits@Shape: ^2x3Shape
+	Inherits@Flame: ^BuildingFlame2
+	Selectable:
+		Bounds: 2048, 3072, 0, 0
+	Tooltip:
+		Name: actor-miner2.name
+	Building:
+		UndeploySounds: miner_building_transform.ogg
+	Encyclopedia:
+		Description: actor-miner2.encyclopedia
+		Order: 50
+		Category: Buildings
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 45000
+	ProvidesPrerequisite@Generic:
+		Prerequisite: miner2
+	ResourceCollector:
+		InitialDelay: 100
+		Interval: 75
+		Amount: 80
+		Capacity: 800
+		DepletionModifier: 25
+		MinimumReserves: 700
+		DeliveryVehicleType: tanker1
+		Deposits:
+			iron: 50000
+			gold: 75000
+		DepletionNotification: ResourcesDepleted
+		Colors:
+			iron: 878787
+			gold: F07000
+		RequiresCondition: !build-incomplete
+	Exit:
+	WithSpriteBody:
+	WithIdleOverlay@Shadow:
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithIdleOverlay:
+		Sequence: lighting-overlay
+		RequiresCondition: !build-incomplete && !critical && !burning
+	Building:
+		Footprint: x+ x+ x+
+		Dimensions: 2,3
+		RequiresBaseProvider: false
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Black Sand, Stone, Tech, Dirt, Blocked
+		AllowPlacementOnResources: true
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	GrantConditionOnDamageState@Critical:
+		Condition: critical
+		ValidDamageStates: Critical
+	WithResourceCollectorOverlay:
+		Palette: green
+		IsPlayerPalette: true
+		RequiresCondition: !build-incomplete && !critical && !burning
+	Transforms:
+		PauseOnCondition: build-incomplete || being-captured
+		IntoActor: minerty
+		Offset: 0,2
+		Facing: 750

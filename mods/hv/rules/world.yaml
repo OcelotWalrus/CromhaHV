@@ -159,6 +159,21 @@
 			Rapids: 50
 			Shore: 75
 			IceCliff: 75
+	Locomotor@SpiderBoat:
+		Name: spiderboat
+		Crushes: Cube, Mine, Pod, Tree, Scrap
+		TerrainSpeeds:
+			Littoral: 100
+			Pelagic: 100
+			Oceanic: 100
+			Rapids: 50
+			Shore: 75
+			IceCliff: 75
+			Ice: 110
+			Sand: 60
+			Sand Ramp: 55
+			Black Sand: 60
+			Black Sand Ramp: 55
 	Faction@Yuruki:
 		Name: faction-yuruki.name
 		InternalName: yi
@@ -171,10 +186,16 @@
 		Side: Corporations
 		Selectable: true
 		Description: faction-synapol.description
+	Faction@Tyrian:
+		Name: faction-tyrian.name
+		InternalName: ty
+		Side: Federations
+		Selectable: true
+		Description: faction-tyrian.description
 	Faction@Random:
 		Name: faction-random.name
 		InternalName: Random
-		RandomFactionMembers: yi, sc
+		RandomFactionMembers: yi, sc, ty
 		Side: Random
 		Description: faction-random.description
 	PaletteFromGimpOrJascFile@Terrain:
@@ -484,17 +505,30 @@ World:
 		ClassName: options-starting-units.base-only
 		Factions: sc
 		BaseActor: base2
+	StartingUnits@BaseTY:
+		Class: none
+		ClassName: options-starting-units.base-only
+		Factions: ty
+		BaseActor: base3
+		BaseActorOffset: -1, -2
 	StartingUnits@MinerYI:
 		Class: miner
 		ClassName: options-starting-units.base-miner
 		Factions: yi
 		BaseActor: base
-		SupportActors: miner
+		SupportActors: minerty
 	StartingUnits@MinerSC:
 		Class: miner
 		ClassName: options-starting-units.base-miner
 		Factions: sc
 		BaseActor: base2
+		SupportActors: miner
+	StartingUnits@MinerTY:
+		Class: miner
+		ClassName: options-starting-units.base-miner
+		Factions: ty
+		BaseActor: base3
+		BaseActorOffset: -1, -2
 		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
@@ -508,6 +542,13 @@ World:
 		Factions: sc
 		BaseActor: base2
 		SupportActors: observer
+	StartingUnits@ScoutTY:
+		Class: scout
+		ClassName: options-starting-units.base-scout
+		Factions: ty
+		BaseActor: base3
+		BaseActorOffset: -1, -2
+		SupportActors: airship
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnStartingUnits:

@@ -61,6 +61,26 @@ MBT2:
 		Weapon: CannonSynapol
 		LocalOffset: 550,-50,0
 
+MBT3:
+	Inherits: MBT
+	Buildable:
+		Prerequisites: ~factory.ty
+	Mobile:
+		TurnSpeed: 30
+		Speed: 105
+	Armament:
+		Weapon: CannonTyrian
+		LocalOffset: 500,0,50
+		-Recoil:
+		-RecoilRecovery:
+	AttackFrontal:
+		PauseOnCondition: jammed
+		Voice: Attack
+		FacingTolerance: 0
+	-WithSpriteTurret:
+	-Turreted:
+	-AttackTurreted:
+
 AATANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetAirAssaultMove
@@ -124,6 +144,17 @@ AATANK2:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 
+AATANK3:
+	Inherits: AATANK
+	Tooltip:
+		Name: actor-aatank3.name
+	Buildable:
+		Prerequisites: ~factory.ty
+		Description: actor-aatank3.description
+	Armament:
+		Weapon: FlakLight
+		LocalOffset: 225,0,285
+
 APC:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -166,6 +197,9 @@ APC:
 			flamer: loaded
 			sniper: loaded
 			shocker: loaded
+			railguneer: loaded
+			clusterman: loaded
+			shotgunner: loaded
 	AttackOpenTopped:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PauseOnCondition: jammed
@@ -183,6 +217,19 @@ APC:
 		Sequence: teleport-large
 	-Passenger:
 
+APC3:
+	Inherits: APC
+	Buildable:
+		Prerequisites: factory.ty, module
+	Mobile:
+		Speed: 95
+	Cargo:
+		MaxWeight: 7
+	AttackOpenTopped:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,-128,128, -384,0,128, -384,128,128, -224,341,128, 224,341,128
+	RenderSprites:
+		Image: apc
+
 ARTILLERY:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -194,7 +241,7 @@ ARTILLERY:
 		Class: artillery
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, radar
+		Prerequisites: factory, radar, ~!structures.ty
 		BuildPaletteOrder: 50
 		Description: actor-artillery.description
 	Encyclopedia:
@@ -233,6 +280,20 @@ ARTILLERY:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
+
+ARTILLERY2:
+	Inherits: ARTILLERY
+	Buildable:
+		Prerequisites: factory, radar, ~structures.ty
+	Health:
+		HP: 14000
+	Mobile:
+		TurnSpeed: 20
+		Speed: 105
+	Armament:
+		Weapon: SmallArtilleryTyrian
+		-MuzzleSequence:
+		LocalOffset: 500,0,100
 
 RADARTANK:
 	Inherits: ^TrackedVehicle
@@ -401,7 +462,7 @@ MINELAYER:
 	Explodes:
 		Weapon: AntiTankMine
 	Rearmable:
-		RearmActors: trader
+		RearmActors: trader, trader2
 	Targetable:
 		TargetTypes: Ground, Vehicle, Mine
 	WithAmmoPipsDecoration:
@@ -784,6 +845,15 @@ BUILDER2:
 	RenderSprites:
 		Image: builder4
 
+BUILDER3:
+	Inherits: BUILDER
+	Buildable:
+		Prerequisites: ~structures.ty
+	Transforms:
+		IntoActor: outpost3
+	RenderSprites:
+		Image: builder5
+
 COLLECTOR:
 	Inherits: ^Vehicle
 	Tooltip:
@@ -817,7 +887,7 @@ MINER:
 		Queue: Utility
 		BuildPaletteOrder: 20
 		Description: actor-miner.description
-		Prerequisites: storage
+		Prerequisites: storagem, ~!structures.ty
 	Encyclopedia:
 		Description: actor-miner.encyclopedia
 		Order: 20
@@ -1091,6 +1161,7 @@ TANKER1:
 		Image: tanker1
 		FactionImages:
 			sc: tanker3
+			ty: tanker5
 
 TANKER2:
 	Inherits: TANKER1
@@ -1110,6 +1181,7 @@ TANKER2:
 		Image: tanker2
 		FactionImages:
 			sc: tanker4
+			ty: tanker5
 
 CVIT:
 	Inherits: ^Vehicle
@@ -1142,3 +1214,231 @@ CVIT:
 		PlayerExperience: 5
 	SpawnActorOnDeath:
 		Actor: moneycube
+
+TINYHAWK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: actor-tinyhawk.name
+	Buildable:
+		Queue: Tank
+		Prerequisites: ~factory.ty, module
+		BuildPaletteOrder: 30
+		Description: actor-tinyhawk.description
+	Selectable:
+		Class: tinyhawk
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 8800
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 120
+		Speed: 190
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	WithTeleportEnergyOverlay:
+		Image: energyball
+		Sequence: teleport-large
+	Armament:
+		Weapon: HeavyShotGun
+		LocalOffset: 400,0,100
+	AmmoPool:
+		Ammo: 35
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 55
+		Count: 4
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
+	-Passenger:
+
+MISSILETANK2:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: actor-missiletank2.name
+	Buildable:
+		Queue: Tank
+		Prerequisites: ~factory.ty, radar, techcenter
+		BuildPaletteOrder: 80
+		Description: actor-missiletank2.description
+	Selectable:
+		Class: missiletank2
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 24
+		CanMoveBackward: true
+		Speed: 94
+		Locomotor: tracked
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Armament:
+		Weapon: MissilePad
+		LocalOffset: 30,0,750
+	AttackFrontal:
+		PauseOnCondition: jammed
+		Voice: Attack
+		FacingTolerance: 0
+	Selectable:
+		DecorationBounds: 1536, 1536
+
+SONICTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-sonictank.name
+	Selectable:
+		Class: sonictank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: ~factory.ty, techcenter
+		Queue: Tank
+		Description: actor-sonictank.description
+	Mobile:
+		TurnSpeed: 25
+		Speed: 80
+	Health:
+		HP: 50000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Turreted:
+		TurnSpeed: 25
+	Armament:
+		Weapon: SoundShock
+		LocalOffset: 275,10,95
+	AttackTurreted:
+		PauseOnCondition: jammed
+	Voiced:
+		VoiceSet: SonicTankVoice
+	WithSpriteTurret:
+
+FIELDTANK:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-fieldtank.name
+	Selectable:
+		Class: fieldtank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: ~factory.ty, radar, trader
+		Queue: Tank
+		Description: actor-fieldtank.description
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 150
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 5c0
+	ProximityExternalCondition@AccurayLoss:
+		Condition: fieldjammed
+		Range: 8c0
+		ValidRelationships: Enemy
+	ProximityExternalCondition@Healing:
+		Condition: fieldhealed
+		Range: 5c0
+		ValidRelationships: Ally
+	RenderSprites:
+		Image: tank4
+
+MINERTY:
+	Inherits: ^Vehicle
+	Inherits@Selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Utility
+		BuildPaletteOrder: 20
+		Description: actor-miner.description
+		Prerequisites: storage, structures.ty
+	Encyclopedia:
+		Description: actor-miner.encyclopedia
+		Order: 20
+		Category: Utilities
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: actor-miner.name
+	Selectable:
+		Class: miner
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12250
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 40
+		Speed: 90
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	GrantConditionOnTerrain:
+		Condition: deposits
+		TerrainTypes: Ore
+	Miner:
+		TerrainTypes: Ore
+		Colors:
+			iron: 878787
+			gold: F07000
+	Transforms:
+		PauseOnCondition: !deposits
+		IntoActor: miner2ty
+		Facing: 750
+		Offset: 0,-2
+		NoTransformNotification: BuildingCannotPlaceAudio
+		NoTransformTextNotification: notification-cant-place-building
+		TransformNotification: MinerReady
+		TransformTextNotification: notification-miner-ready
+		TransformSounds: miner_transform.ogg
+		Voice: Deploying
+	Voiced:
+		VoiceSet: MinerVoice
+	-Guard:
+	RenderSprites:
+		Image: miner

@@ -115,6 +115,11 @@
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
 	Inherits@Vulnerabilities: ^Hackable
+	Inherits@FieldTankHeal: ^FieldTankHeal
+	Inherits@FieldTank: ^LosesAccuracyWithFieldTank
+	Inherits@StarshipBeamSlowsDown: ^SlowsDownByStarshipBeam
+	Inherits@StarshipBeamBleeds: ^BleedsByStarshipBeam
+	Inherits@FirepowerIncrease: ^StarshipFirepowerIncreaseCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -143,7 +148,7 @@
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
 	Repairable:
-		RepairActors: trader
+		RepairActors: trader, trader2
 		HpPerStep: 2000
 	AttackMove:
 	HiddenUnderFog:
@@ -216,7 +221,7 @@
 		Range: 1c0
 	-Repairable:
 	RepairableNear:
-		RepairActors: module, module2
+		RepairActors: module, module2, module3
 		CloseEnough: 2c0
 	Targetable@Repair:
 		RequiresCondition: damaged
@@ -270,6 +275,8 @@
 	Inherits@Shield: ^ForceFieldCompatible
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
+	Inherits@FieldTankHeal: ^FieldTankHeal
+	Inherits@FirepowerIncrease: ^StarshipFirepowerIncreaseCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -308,12 +315,12 @@
 	MustBeDestroyed:
 	HitShape:
 	Repairable:
-		RepairActors: trader
+		RepairActors: trader, trader2
 		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft
 	Repairable:
-		RepairActors: trader
+		RepairActors: trader, trader2
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Explodes:
@@ -495,6 +502,27 @@
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
+
+^4x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1024
+			BottomRight: 2048, 1024
+
+^4x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
+
+^4x4Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048
 
 ^6x8Shape:
 	HitShape:
@@ -944,6 +972,10 @@
 	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
+	Inherits@FieldTankHeal: ^FieldTankHeal
+	Inherits@StarshipBeamSlowsDown: ^SlowsDownByStarshipBeam
+	Inherits@StarshipBeamBleeds: ^BleedsByStarshipBeam
+	Inherits@FirepowerIncrease: ^StarshipFirepowerIncreaseCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -976,7 +1008,7 @@
 	WithFacingSpriteBody:
 	HitShape:
 	RepairableNear:
-		RepairActors: harbor, harbor2
+		RepairActors: harbor, harbor2, harbor3
 		CloseEnough: 2c0
 	LeavesTrails:
 		Image: watertrail
@@ -1340,3 +1372,52 @@
 		Bounds: 512, 512
 	Voiced:
 		VoiceSet: CivilianVoice
+
+^FieldTankHeal:
+	ChangesHealth@FieldTank:
+		PercentageStep: 8
+		Step: 0
+		Delay: 25
+		StartIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: fieldhealed
+	WithDecoration@FieldTank:
+		Image: pips
+		Sequence: pip-reconstructor
+		Palette: chrome
+		Position: TopRight
+		RequiresCondition: fieldhealed
+		ValidRelationships: Ally
+	ExternalCondition@FieldTankHeal:
+		Condition: fieldhealed
+
+^LosesAccuracyWithFieldTank:
+	InaccuracyMultiplier@FieldTank:
+		Modifier: 350
+		RequiresCondition: fieldjammed
+	ExternalCondition@FieldTankJammed:
+		Condition: fieldjammed
+
+^StarshipFirepowerIncreaseCompatible:
+	FirepowerMultiplier@FirepowerIncrease:
+		Modifier: 200
+		RequiresCondition: firepower-increased
+	ExternalCondition@FirepowerIncrease:
+		Condition: firepower-increased
+
+^SlowsDownByStarshipBeam:
+	ReloadDelayMultiplier@SlowedDownByStarshipBeam:
+		Modifier: 160
+		RequiresCondition: slowed-down
+	ExternalCondition@SlowedDownByStarshipBeam:
+		Condition: slowed-down
+
+^BleedsByStarshipBeam:
+	ChangesHealth@BleedingByStarshipBeam:
+		Step: 0
+		PercentageStep: -10
+		Delay: 25
+		StartIfBelow: 101
+		RequiresCondition: bleeding
+	ExternalCondition@BleedingByStarshipBeam:
+		Condition: bleeding

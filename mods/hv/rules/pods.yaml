@@ -6,7 +6,7 @@ RIFLEMAN:
 	Buildable:
 		Queue: Pod
 		Description: actor-rifleman.description
-		Prerequisites: ~module
+		Prerequisites: ~module, ~!structures.ty
 		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-rifleman.encyclopedia
@@ -482,3 +482,159 @@ MINIPOD5:
 
 MINIPOD6:
 	Inherits: ^MINIPOD
+
+BLASTERMAN:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-blasterman.description
+		Prerequisites: ~module, ~structures.ty
+		BuildPaletteOrder: 10
+	Encyclopedia:
+		Description: actor-blasterman.encyclopedia
+		Order: 1
+		Category: Pods
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: actor-blasterman.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightBlasterGun
+		MuzzleSequence: muzzle
+		LocalOffset: 200,0,0
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: BunkerBlastergun
+		MuzzleSequence: muzzle
+		LocalOffset: 200,0,0
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
+		Voice: Attack
+	WithMuzzleOverlay:
+		IgnoreOffset: true
+
+
+RAILGUNEER:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-railguneer.description
+		Prerequisites: ~module.ty
+		BuildPaletteOrder: 20
+	Valued:
+		Cost: 225
+	Tooltip:
+		Name: actor-railguneer.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightRailgun
+		LocalOffset: 200,-300,0
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightRailgunBunker
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+
+CLUSTERMAN:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-clusterman.description
+		Prerequisites: ~module.ty, factory
+		BuildPaletteOrder: 40
+	Valued:
+		Cost: 500
+	Health:
+		HP: 15000
+	Tooltip:
+		Name: actor-clusterman.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightCluster
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightClusterBunker
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	GrantConditionOnTerrain@HiddenUnderSandAndSnow:
+		Condition: cancloak
+		TerrainTypes: Sand, Sand Ramp, Snow, Snow Ramp, Black Sand, Black Sand Ramp
+	Cloak@HiddenUnderSandAndSnow:
+		InitialDelay: 75
+		CloakDelay: 60
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack
+		CloakedPalette: shadow
+		CloakStyle: Palette
+		RequiresCondition: cancloak
+
+SHOTGUNNER:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-shotgunner.description
+		Prerequisites: ~module.ty, factory
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: actor-shotgunner.name
+	Health:
+		HP: 15000
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	AmmoPool:
+		Ammo: 25
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		Delay: 55
+		Count: 4
+	Armament@Primary:
+		Weapon: LightShotGun
+		LocalOffset: 35,185,150, 35,25,150
+		PauseOnCondition: !ammo
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: BunkerShotGun
+		PauseOnCondition: !ammo
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0

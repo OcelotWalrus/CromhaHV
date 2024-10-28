@@ -2,6 +2,8 @@
 
 Speech:
 	DefaultVariant: .ogg
+	Prefixes:
+		ty: ty_
 	Notifications:
 		StartGame:
 		GameLoaded: game_loaded
@@ -63,6 +65,17 @@ Speech:
 		TelevatorCharging: televator_charging
 		TelevatorReady: televator_ready
 		InsufficientPower: insufficient_power
+		SatelliteRailgunReady: satellite_railgun_ready
+		SatelliteRailgunCharging: satellite_railgun_charging
+		SatelliteRailgunIncoming: satellite_railgun_incoming
+		ClusterBombIncoming: clusterbomb_incoming
+		ClusterBombReady: clusterbomb_ready
+		ClusterBombCharging: clusterbomb_charging
+		ClusterBombDetected: clusterbomb_detected
+		ResearchLabCharging: researchlab_charging
+		ResearchLabReady: researchlab_ready
+		ResearchLabDetected: researchlab_detected
+		ResearchLabEngaged: researchlab_engaged
 
 Sounds:
 	DefaultVariant: .ogg
