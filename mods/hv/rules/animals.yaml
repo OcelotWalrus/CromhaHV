@@ -197,3 +197,63 @@ FLYINGMONSTER:
 	-Selectable:
 	Interactable:
 	-ProximityCaptor:
+
+MUTANT:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: actor-mutant.name
+		GenericName: actor-mutant.generic-name
+	Health:
+		HP: 160000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 70
+		Speed: 65
+		Voice: Action
+		Locomotor: foot
+	WithDeathAnimation:
+		FallbackSequence: die
+	DeathSounds:
+	WithMoveAnimation:
+	Wanders:
+		WanderMoveRadius: 5
+		MinMoveDelay: 75
+		MaxMoveDelay: 200
+	WithShadow:
+		Offset: 50,50,0
+		ZOffset: -1000
+	Voiced:
+		VoiceSet: BeastVoice
+	Armament:
+		Weapon: MutantSpit
+		LocalOffset: 500,-100,0, 500,-50,0, 500,0,0, 500,50,0, 500,100,0
+	AttackFrontal:
+		PauseOnCondition: jammed
+		FacingTolerance: 0
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	Targetable@Repair:
+		RequiresCondition: damaged
+		TargetTypes: DamagedMutant
+	-Selectable:
+	Interactable:
+	-Guard:
+	-Repairable:
+	-MustBeDestroyed:
+	-Explodes:
+	-TeleportNetworkTransportable:
+	-WithTeleportEnergyOverlay:
+	-SpawnScrapOnDeath:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
+	-ProximityCaptor:

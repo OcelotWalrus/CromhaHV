@@ -87,6 +87,12 @@ icon:
 	televator:
 		Filename: bits/televator-icon.png
 		Offset: 1,1
+	satellite-railgun:
+		Filename: bits/satellite-railgun-icon.png
+	clusterbomb:
+		Filename: bits/cluster-bomb-icon.png
+	research-lab:
+		Filename: bits/research-lab-power-icon.png
 	null:
 		Filename: bits/null.png
 
@@ -206,3 +212,12 @@ surveillance_effect:
 		Length: 25
 		Tick: 40
 		ZOffset: 2047
+
+mutantbreeder_crawling:
+	idle:
+		Filename: bits/mutant-breeder-crawling.png
+		Frames: 6, 5, 4, 3, 2, 1, 0
+		Length: *
+		Tick: 110
+		ZOffset: 2048
+		Offset: 10, 10

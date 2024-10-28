@@ -216,9 +216,12 @@ Player:
 			blaster: 30
 		ValidTargets: Structure, Vehicle
 		InvalidTargets: Air, Water
-	ExternalConditionPowerBotModule:
+	ExternalConditionPowerBotModule@Field:
 		RequiresCondition: enable-rogue-ai
 		OrderName: ShieldsUp
+	ExternalConditionPowerBotModule@CloakDevice:
+		RequiresCondition: enable-rogue-ai
+		OrderName: CloakDevice
 	SupportPowerBotModule:
 		RequiresCondition: enable-rogue-ai
 		Decisions:
@@ -292,3 +295,40 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 3c0
+			ClusterBomb:
+				OrderName: Bombem
+				MinimumAttractiveness: 1000
+				FineScanRadius: 2
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
+			DropParatroopers:
+				OrderName: FlushParatroopers
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 2
+					TargetMetric: None
+					Check Radius: 8c0
+				Consideration@3:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0

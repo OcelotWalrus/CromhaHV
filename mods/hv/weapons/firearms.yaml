@@ -362,3 +362,107 @@ DronePulseGun:
 	Range: 6c0
 	MinRange: 0c0
 	Burst: 10
+
+LightShotGun:
+	Inherits: SmallSplash
+	Inherits: Ricochet
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: machinegunburst01.ogg, machinegunburst02.ogg
+	ReloadDelay: 35
+	Burst: 6
+	BurstDelays: 3
+	Range: 5c0
+	Projectile: Bullet
+		Image: bullet10
+		Speed: 800
+		Blockable: true
+		LaunchAngle: 50
+		Inaccuracy: 1c5
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Damage: 385
+		Versus:
+			None: 375
+			Steel: 25
+			Light: 30
+			Heavy: 20
+			Concrete: 5
+
+HeavyShotGun:
+	Inherits: LightShotGun
+	ReloadDelay: 75
+	Burst: 20
+	BurstDelays: 1
+	Range: 7c512
+	MinRange: 2c0
+	Warhead@Damage: SpreadDamage
+		Damage: 485
+
+BunkerShotGun:
+	Inherits: LightShotGun
+	ReloadDelay: 25
+	Range: 8c0
+
+FlakLight:
+	ReloadDelay: 70
+	Range: 8c0
+	Report: rocketlaunch03.ogg
+	ValidTargets: Air
+	Burst: 5
+	BurstDelays: 5
+	Projectile: Bullet
+		Image: bullet7
+		Speed: 1000
+		ContrailLength: 3
+		ContrailStartWidth: 0c32
+		ContrailStartColor: F4AC00
+	Warhead@Damage: SpreadDamage
+		Spread: 236
+		Damage: 6500
+		ValidTargets: Air
+		Versus:
+			None: 120
+			Wood: 30
+			Light: 65
+			Heavy: 55
+			Concrete: 30
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 1500
+		Percentage: 90
+	Warhead@Effect: CreateEffect
+		Explosions: medium
+		ImpactSounds: explosion06.ogg
+		ValidTargets: Air
+
+LightBlasterGun:
+	Inherits: SmallSplash
+	Inherits: Ricochet
+	Inherits: ^BlueTracers
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: pulsegun_silverillusionist.ogg
+	Projectile: InstantHitWithTracers
+		Inaccuracy: 0c256
+		Blockable: true
+	Warhead@Damage: SpreadDamage
+		Spread: 24
+		Damage: 1000
+		Versus:
+			None: 150
+			Steel: 10
+			Light: 30
+			Heavy: 10
+			Concrete: 5
+	Warhead@Incendiary: TreeDamage
+		Spread: 24
+		Damage: 1000
+	ReloadDelay: 20
+	Range: 5c0
+	Burst: 2
+
+BunkerBlastergun:
+	Inherits: LightBlasterGun
+	ReloadDelay: 10
+	BurstDelays: 3
+	Range: 8c0
+	StartBurstReport: heavymgburst01.ogg, heavymgburst02.ogg

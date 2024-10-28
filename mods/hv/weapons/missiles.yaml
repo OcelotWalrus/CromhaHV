@@ -418,3 +418,85 @@ DiscThrower:
 		Explosions: small
 		ImpactSounds: explosion06.ogg
 		ValidTargets: Air
+
+MissileShipRocketGround:
+	Inherits: MissileTankRocket
+
+MissileShipRocketAir:
+	Inherits: MissileShipRocketGround
+	Inherits: ^AntiAirMissile
+	Projectile: Missile
+		Speed: 340
+
+MissilePad:
+	Inherits: SmallSplash
+	Inherits: ^AntiGroundMissile
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
+	Range: 9c512
+	MinRange: 5c0
+	ReloadDelay: 85
+	Burst: 5
+	BurstDelays: 5
+	Projectile: Bullet
+		Image: bullet2
+		Speed: 300
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
+		LaunchAngle: 180
+		Inaccuracy: 1c512
+		Blockable: false
+		Shadow: true
+		Acceleration: 96
+		AllowSnapping: true
+		TrailImage: small_smoke
+	Warhead@Damage: SpreadDamage
+		Damage: 4000
+		Versus:
+			None: 8
+			Steel: 75
+			Light: 75
+			Heavy: 75
+			Concrete: 75
+	Warhead@Incendiary: TreeDamage
+		Damage: 1500
+
+TowerMissileTyrian:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 120
+	Range: 14c0
+	Report: rocketlaunch03.ogg
+	ValidTargets: Air
+	Projectile: Missile
+		Image: bullet14
+		VerticalRateOfTurn: 15
+		Speed: 450
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
+		Blockable: false
+		Shadow: true
+		HorizontalRateOfTurn: 70
+		Acceleration: 75
+		MinimumLaunchAngle: 128
+		MaximumLaunchAngle: 192
+		CruiseAltitude: 3c256
+		AllowSnapping: true
+		CloseEnough: 350
+		TrailImage: smoke_blue
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 6000
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 300
+			Concrete: 100
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 6500
+		Percentage: 90
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion08.ogg
+		ImpactActors: false
