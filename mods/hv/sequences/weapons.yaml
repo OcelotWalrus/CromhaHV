@@ -528,6 +528,19 @@ watermine:
 		ZOffset: -1024
 
 
+waterball:
+	idle:
+		Filename: bits/waterball.png
+		Length: *
+		Facings: 1
+		ZOffset: 2030
+
+waterball-trail:
+	Inherits: waterball
+	idle:
+		Tick: 5
+
+
 clusterbomb:
 	up:
 		Filename: bits/blank.png

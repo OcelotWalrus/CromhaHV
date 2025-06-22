@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -21,10 +21,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 {
 	public class CustomMainMenuLogic : ChromeLogic
 	{
-		[TranslationReference]
+		[FluentReference]
 		const string LoadingNews = "label-loading-news";
 
-		[TranslationReference("author", "datetime")]
+		[FluentReference("author", "datetime")]
 		const string AuthorDateTime = "label-author-datetime";
 
 		protected enum MenuType { Main, Singleplayer, Extras, MapEditor, StartupPrompts, None }
@@ -55,7 +55,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		public CustomMainMenuLogic(Widget widget, World world, ModData modData)
 		{
 			rootMenu = widget;
-			rootMenu.Get<LabelWidget>("VERSION_LABEL").Text = modData.Manifest.Metadata.Version;
 
 			// Menu buttons
 			var mainMenu = widget.Get("MAIN_MENU");
@@ -193,7 +192,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				newsPanel.RemoveChild(newsTemplate);
 
 				newsStatus = newsPanel.Get<LabelWidget>("NEWS_STATUS");
-				SetNewsStatus(TranslationProvider.GetString(LoadingNews));
+				SetNewsStatus(FluentProvider.GetMessage(LoadingNews));
 			}
 
 			Game.OnRemoteDirectConnect += OnRemoteDirectConnect;
@@ -276,9 +275,9 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			titleLabel.GetText = () => newsItem.Title;
 
 			var authorDateTimeLabel = newsWidget.Get<LabelWidget>("AUTHOR_DATETIME");
-			var authorDateTime = TranslationProvider.GetString(AuthorDateTime, Translation.Arguments(
+			var authorDateTime = FluentProvider.GetMessage(AuthorDateTime,
 					"author", newsItem.Author,
-					"datetime", newsItem.DateTime.ToLocalTime()));
+					"datetime", newsItem.DateTime.ToLocalTime());
 
 			authorDateTimeLabel.GetText = () => authorDateTime;
 

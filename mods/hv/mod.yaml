@@ -1,52 +1,53 @@
 # License: CC-BY-SA-4.0
 
 Metadata:
-	Title: OpenHV
+	Title: mod-title
 	Version: {DEV_VERSION}
 	Website: https://www.openhv.net
 	WebIcon32: https://www.openhv.net/images/web/icon.png
-	WindowTitle: OpenHV
+	WindowTitle: mod-windowtitle
 
 ModCredits:
 	ModTabTitle: OpenHV
 	ModCreditsFile: hv|CREDITS
 
-Packages:
-	^EngineDir
-	$hv: hv
-	^EngineDir|mods/common: common
-	hv|bits
-	hv|bits/terrain
-	hv|bits/audio
-	hv|bits/audio/cc0
-	hv|bits/audio/cc-by-30
-	hv|bits/audio/cc-by-40
-	hv|bits/audio/cromha
-	hv|bits/audio/cromha/announcer
-	hv|bits/audio/cromha/announcer/tyrian
-	hv|bits/audio/cromha/bomber2
-	hv|bits/audio/cromha/sonictank
-	hv|bits/audio/cromha/tyrianhelis
-	hv|bits/audio/cromha/missilepadtank
-	hv|bits/audio/graion
-	hv|bits/audio/dzierzan
-	hv|bits/audio/dzierzan/miner
-	hv|bits/audio/dzierzan/technician
-	hv|bits/audio/dzierzan/announcer
-	hv|bits/audio/dzierzan/stealthtank
-	hv|bits/audio/dzierzan/beast
-	hv|bits/audio/dzierzan/seed
-	hv|bits/audio/dzierzan/builder
-	hv|bits/audio/dzierzan/flamer
-	hv|bits/audio/dzierzan/broker
-	hv|bits/audio/dzierzan/jetpacker
-	hv|bits/audio/dzierzan/civilian
-	hv|bits/audio/dzierzan/shocker
-	hv|bits/audio/dzierzan/common
-	hv|bits/audio/dzierzan/assaulttank
-	hv|bits/audio/flamewh33l/
-	hv|bits/audio/timbeek/
-	hv|bits/audio/pd/
+FileSystem: DefaultFileSystem
+	Packages:
+		^EngineDir
+		$hv: hv
+		^EngineDir|mods/common: common
+		hv|bits
+		hv|bits/terrain
+		hv|bits/audio
+		hv|bits/audio/cc0
+		hv|bits/audio/cc-by-30
+		hv|bits/audio/cc-by-40
+	    hv|bits/audio/cromha
+	    hv|bits/audio/cromha/announcer
+	    hv|bits/audio/cromha/announcer/tyrian
+	    hv|bits/audio/cromha/bomber2
+	    hv|bits/audio/cromha/sonictank
+	    hv|bits/audio/cromha/tyrianhelis
+	    hv|bits/audio/cromha/missilepadtank
+		hv|bits/audio/graion
+		hv|bits/audio/dzierzan
+		hv|bits/audio/dzierzan/miner
+		hv|bits/audio/dzierzan/technician
+		hv|bits/audio/dzierzan/announcer
+		hv|bits/audio/dzierzan/stealthtank
+		hv|bits/audio/dzierzan/beast
+		hv|bits/audio/dzierzan/seed
+		hv|bits/audio/dzierzan/builder
+		hv|bits/audio/dzierzan/flamer
+		hv|bits/audio/dzierzan/broker
+		hv|bits/audio/dzierzan/jetpacker
+		hv|bits/audio/dzierzan/civilian
+		hv|bits/audio/dzierzan/shocker
+		hv|bits/audio/dzierzan/common
+		hv|bits/audio/dzierzan/assaulttank
+		hv|bits/audio/flamewh33l/
+		hv|bits/audio/timbeek/
+		hv|bits/audio/pd/
 
 MapFolders:
 	hv|maps: System
@@ -94,6 +95,7 @@ Weapons:
 	hv|weapons/debris.yaml
 	hv|weapons/fake.yaml
 	hv|weapons/common.yaml
+	hv|weapons/firefighting.yaml
 
 TileSets:
 	hv|tileset.yaml
@@ -107,9 +109,7 @@ Chrome:
 Missions:
 	hv|missions.yaml
 
-Assemblies:
-	^BinDir|OpenRA.Mods.Common.dll
-	^BinDir|OpenRA.Mods.HV.dll
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.HV.dll
 
 ChromeLayout:
 	hv|chrome/ingame.yaml
@@ -170,13 +170,15 @@ ChromeLayout:
 	hv|chrome/gamesave-loading.yaml
 	hv|chrome/unused.yaml
 
-Translations:
-	common|languages/en.ftl
-	hv|languages/en.ftl
-	common|languages/rules/en.ftl
-	hv|languages/rules/en.ftl
-	common|languages/chrome/en.ftl
-	hv|languages/chrome/en.ftl
+FluentMessages:
+	common|fluent/common.ftl
+	hv|fluent/common.ftl
+	common|fluent/chrome.ftl
+	hv|fluent/chrome.ftl
+	common|fluent/hotkeys.ftl
+	hv|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	hv|fluent/rules.ftl
 
 Music:
 	hv|audio/music.yaml

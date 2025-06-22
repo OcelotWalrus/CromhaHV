@@ -16,7 +16,8 @@ PatrolPoints = { PatrolPoint1.Location, PatrolPoint2.Location, PatrolPoint3.Loca
 OpeningAttack = { Ship1, Ship2, Ship3, Ship4 }
 
 
-Warning = UserInterface.Translate("warning")
+Warning = UserInterface.GetFluentMessage("warning")
+Radar = UserInterface.GetFluentMessage("radar")
 
 SummonPatrolTroops = function()
 	TroopFirst = Reinforcements.Reinforce(Enemy, PatrolTroop, PatrolPoints)
@@ -69,6 +70,7 @@ end
 SendExtractionDropship = function()
 	Dropship = Reinforcements.ReinforceWithTransport(Human, "dropship", nil, ExtractionPath)[1]
 	Beacon.New(Human, RescuePoint.CenterPosition)
+	Media.DisplayMessage(UserInterface.GetFluentMessage("dropzone-revealed"), Radar)
 	if not Scientist.IsDead then
 		Trigger.OnRemovedFromWorld(Scientist, EvacuateDropship)
 	end
@@ -94,8 +96,8 @@ end
 
 CreateScientist = function()
 	Human.MarkCompletedObjective(FindScientistObjective)
-	Media.DisplayMessage(UserInterface.Translate("scientist-escaped"), Warning)
-	Scientist = Actor.Create("minipod4", true, { Location = ScientistSpawnPoint.Location, Owner = Human })
+	Media.DisplayMessage(UserInterface.GetFluentMessage("scientist-escaped"), Warning)
+	Scientist = Actor.Create("minipod4.scientist", true, { Location = ScientistSpawnPoint.Location, Owner = Human })
 	Trigger.OnKilled(Scientist, RescueFailed)
 end
 

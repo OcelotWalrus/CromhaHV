@@ -12,7 +12,6 @@ label-save-map-panel-directory = Directory:
 label-save-map-panel-filename = Filename:
 button-save-map-panel = Save
 label-actor-edit-panel-id = ID
-button-container-delete = Delete
 button-container-ok = OK
 label-tiles-bg-search = Search:
 label-actors-bg-search = Search:
@@ -119,7 +118,6 @@ button-command-bar-force-move =
      - Default activity for the target is suppressed
      - Vehicles will attempt to crush enemies at the target location
      - Helicopters will land at the target location
-     - Chrono Tanks will teleport towards the target location
 
     Left-click icon then right-click on target.
     Hold <(Alt)> to activate temporarily while commanding units.

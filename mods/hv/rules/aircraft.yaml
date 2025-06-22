@@ -13,6 +13,7 @@ GUNSHIP:
 	Encyclopedia:
 		Description: actor-gunship.encyclopedia
 		Order: 2
+		Scale: 3
 		Category: Aircraft
 	Valued:
 		Cost: 2000
@@ -78,6 +79,7 @@ JET:
 	Encyclopedia:
 		Description: actor-jet.encyclopedia
 		Order: 10
+		Scale: 3
 		Category: Aircraft
 	Valued:
 		Cost: 1500
@@ -137,6 +139,7 @@ JET2:
 	Encyclopedia:
 		Description: actor-jet2.encyclopedia
 		Order: 10
+		Scale: 3
 		Category: Aircraft
 	Valued:
 		Cost: 3000
@@ -221,6 +224,7 @@ COPTER:
 	Encyclopedia:
 		Description: actor-copter.encyclopedia
 		Order: 5
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -270,6 +274,7 @@ SAUCER:
 	Encyclopedia:
 		Description: actor-saucer.encyclopedia
 		Order: 0
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -312,6 +317,7 @@ OBSERVER:
 	Encyclopedia:
 		Description: actor-observer.encyclopedia
 		Order: 0
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -357,6 +363,7 @@ BANSHEE:
 	Encyclopedia:
 		Description: actor-banshee.encyclopedia
 		Order: 15
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -414,6 +421,7 @@ TURTLE:
 	Encyclopedia:
 		Description: actor-turtle.encyclopedia
 		Order: 10
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -467,6 +475,7 @@ CHOPPER:
 	Encyclopedia:
 		Description: actor-chopper.encyclopedia
 		Order: 25
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -516,7 +525,7 @@ CHOPPER:
 	SpawnActorOnDeath:
 		Actor: chopper.Husk
 		RequiresCondition: airborne
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
@@ -563,6 +572,7 @@ BALLOON:
 	Encyclopedia:
 		Description: actor-balloon.encyclopedia
 		Order: 1
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -609,6 +619,7 @@ DROPSHIP:
 	Encyclopedia:
 		Description: actor-dropship.encyclopedia
 		Order: 20
+		Scale: 3
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -663,7 +674,7 @@ DROPSHIP:
 		Actor: DROPSHIP.Husk
 		RequiresCondition: airborne
 	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
 
@@ -815,7 +826,7 @@ DROPPOD2:
 
 LANDEDPOD:
 	Inherits: ^Prop
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: DropPodExplode
 		EmptyWeapon: DropPodExplode
 	ChangesHealth:
@@ -830,7 +841,7 @@ LANDEDPOD:
 	Armor:
 		Type: Heavy
 	-ShakeOnDeath:
-	-ThrowsShrapnel:
+	-FireProjectilesOnDeath:
 	-MapEditorData:
 	-WithIdleOverlay@Shadow:
 
@@ -848,6 +859,7 @@ BOMBER:
 	Encyclopedia:
 		Description: actor-bomber-encyclopedia
 		Order: 30
+		Scale: 3
 		Category: Aircraft
 	WithFacingSpriteBody:
 	WithShadow:
@@ -879,6 +891,7 @@ CARGOSHIP:
 	Encyclopedia:
 		Description: actor-cargoship-encyclopedia
 		Order: 35
+		Scale: 3
 		Category: Aircraft
 	Aircraft:
 		TurnSpeed: 20
@@ -898,6 +911,7 @@ AIRLIFTER:
 	Encyclopedia:
 		Description: actor-airlifter-encyclopedia
 		Order: 40
+		Scale: 3
 		Category: Aircraft
 	Aircraft:
 		TurnSpeed: 25
@@ -928,6 +942,7 @@ MOTHERSHIP:
 	Encyclopedia:
 		Description: actor-mothership.encyclopedia
 		Order: 50
+		Scale: 2
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -992,7 +1007,7 @@ MOTHERSHIP:
 	Voiced:
 		VoiceSet: MotherShipVoice
 	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 
 MOTHERSHIP.Husk:
 	Inherits: ^PlaneHusk
@@ -1060,6 +1075,7 @@ BATTLESHIP:
 	Encyclopedia:
 		Description: actor-battleship.encyclopedia
 		Order: 45
+		Scale: 2
 		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -1131,7 +1147,7 @@ BATTLESHIP:
 		Sequence: shadow-overlay
 		Palette: shadow
 	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 
 BATTLESHIP.Husk:
 	Inherits: ^PlaneHusk

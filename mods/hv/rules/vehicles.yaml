@@ -19,6 +19,7 @@ MBT:
 	Encyclopedia:
 		Description: actor-mbt.encyclopedia
 		Order: 0
+		Scale: 3
 		Category: Tanks
 	Mobile:
 		TurnSpeed: 25
@@ -92,6 +93,7 @@ AATANK:
 	Encyclopedia:
 		Description: actor-aatank.encyclopedia
 		Order: 6
+		Scale: 3
 		Category: Tanks
 	Valued:
 		Cost: 1000
@@ -135,6 +137,7 @@ AATANK2:
 	Encyclopedia:
 		Description: actor-aatank2.encyclopedia
 		Order: 5
+		Scale: 3
 		Category: Tanks
 	Armament:
 		Weapon: LightningBoltLight
@@ -171,6 +174,7 @@ APC:
 		Description: actor-apc.encyclopedia
 		Order: 10
 		Category: Tanks
+		Scale: 3
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -247,6 +251,7 @@ ARTILLERY:
 	Encyclopedia:
 		Description: actor-artillery.encyclopedia
 		Order: 15
+		Scale: 3
 		Category: Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -276,7 +281,7 @@ ARTILLERY:
 		Voice: Attack
 		FacingTolerance: 0
 	WithMuzzleOverlay:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
@@ -307,6 +312,7 @@ RADARTANK:
 	Encyclopedia:
 		Description: actor-radartank.encyclopedia
 		Order: 0
+		Scale: 3
 		Category: Utilities
 	Valued:
 		Cost: 800
@@ -383,6 +389,7 @@ REPAIRTANK:
 	Encyclopedia:
 		Description: actor-repairtank.encyclopedia
 		Order: 5
+		Scale: 3
 		Category: Utilities
 	Armament:
 		Weapon: RepairBeam
@@ -425,6 +432,7 @@ MINELAYER:
 	Encyclopedia:
 		Description: actor-minelayer.encyclopedia
 		Order: 10
+		Scale: 3
 		Category: Utilities
 	Valued:
 		Cost: 1400
@@ -459,7 +467,7 @@ MINELAYER:
 		Range: 5c0
 		DetectionTypes: Mine
 	RenderDetectionCircle:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: AntiTankMine
 	Rearmable:
 		RearmActors: trader, trader2
@@ -483,6 +491,7 @@ RAILGUNTANK:
 	Encyclopedia:
 		Description: actor-railguntank.encyclopedia
 		Order: 25
+		Scale: 3
 		Category: Tanks
 	Selectable:
 		Class: railguntank
@@ -525,6 +534,7 @@ LIGHTNINGTANK:
 	Encyclopedia:
 		Description: actor-lightningtank.encyclopedia
 		Order: 20
+		Scale: 3
 		Category: Tanks
 	Valued:
 		Cost: 3000
@@ -569,6 +579,7 @@ STEALTHTANK:
 	Encyclopedia:
 		Description: actor-stealthtank.encyclopedia
 		Order: 30
+		Scale: 3
 		Category: Tanks
 	Valued:
 		Cost: 2400
@@ -632,6 +643,7 @@ MERCTANK:
 	Encyclopedia:
 		Description: actor-merctank.encyclopedia
 		Order: 50
+		Scale: 3
 		Category: Tanks
 	Armament:
 		Weapon: TankCannon
@@ -696,6 +708,7 @@ ECMTANK:
 	Encyclopedia:
 		Description: actor-ecmtank.encyclopedia
 		Order: 40
+		Scale: 3
 		Category: Tanks
 	Armament:
 		Weapon: ElectronicCountermeasure
@@ -747,6 +760,7 @@ DUALARTILLERY:
 	Encyclopedia:
 		Description: actor-dualartillery.encyclopedia
 		Order: 55
+		Scale: 3
 		Category: Tanks
 	Health:
 		HP: 35000
@@ -791,6 +805,7 @@ BUILDER:
 	Encyclopedia:
 		Description: actor-builder.encyclopedia
 		Order: 15
+		Scale: 3
 		Category: Utilities
 	Valued:
 		Cost: 1000
@@ -891,6 +906,7 @@ MINER:
 	Encyclopedia:
 		Description: actor-miner.encyclopedia
 		Order: 20
+		Scale: 3
 		Category: Utilities
 	Valued:
 		Cost: 1100
@@ -954,6 +970,7 @@ MISSILETANK:
 	Encyclopedia:
 		Description: actor-missiletank.encyclopedia
 		Order: 35
+		Scale: 3
 		Category: Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -991,6 +1008,7 @@ HACKERTANK:
 	Encyclopedia:
 		Description: actor-hackertank.encyclopedia
 		Order: 45
+		Scale: 3
 		Category: Tanks
 	Valued:
 		Cost: 2500
@@ -1056,6 +1074,7 @@ BUGGY:
 	Encyclopedia:
 		Description: actor-buggy.encyclopedia
 		Order: 7
+		Scale: 3
 		Category: Tanks
 	Turreted:
 		TurnSpeed: 40
@@ -1103,6 +1122,7 @@ BIKE:
 	Encyclopedia:
 		Description: actor-bike.encyclopedia
 		Order: 6
+		Scale: 3
 		Category: Tanks
 	AttackFrontal:
 		PauseOnCondition: jammed
@@ -1170,6 +1190,7 @@ TANKER2:
 	Encyclopedia:
 		Description: actor-tanker2.encyclopedia
 		Order: 30
+		Scale: 3
 		Category: Utilities
 	Tooltip:
 		Name: actor-tanker2.name
@@ -1194,6 +1215,7 @@ CVIT:
 	Encyclopedia:
 		Description: actor-cvit.encyclopedia
 		Order: 25
+		Scale: 3
 		Category: Utilities
 	Valued:
 		Cost: 500
@@ -1214,6 +1236,105 @@ CVIT:
 		PlayerExperience: 5
 	SpawnActorOnDeath:
 		Actor: moneycube
+
+\
+FIRETRUCK:
+	Inherits: ^Vehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: actor-firetruck.name
+		GenericName: actor-firetruck.generic-name
+	Armament:
+		Weapon: WaterCannon
+		LocalOffset: 400,-50,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 500
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	AttackMove:
+		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10
+	AttackTurreted:
+		Voice: Action
+		TargetLineColor: 0000FF
+	Turreted:
+		TurnSpeed: 25
+		Offset: 200,0,150
+	WithSpriteTurret:
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 6c0
+	Voiced:
+		VoiceSet: CarVoice
+
+WATERTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-watertank.name
+		GenericName: actor-watertank.generic-name
+	Armament:
+		Weapon: WaterSuperCannon
+		Recoil: 125
+		RecoilRecovery: 38
+		LocalOffset: 400,-100,0, 400,100,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 100
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 5
+	AttackTurreted:
+		Voice: Action
+		TargetLineColor: 0000FF
+	Turreted:
+		TurnSpeed: 25
+		Offset: 200,0,180
+	WithSpriteTurret:
+	AttackMove:
+		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Voiced:
+		VoiceSet: CarVoice
 
 TINYHAWK:
 	Inherits: ^TrackedVehicle

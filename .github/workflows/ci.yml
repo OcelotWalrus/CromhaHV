@@ -16,18 +16,26 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v4
 
+      - name: Remove System .NET
+        run: sudo apt-get remove -y dotnet*
+
       - name: Install .NET 6
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0.x'
 
-      - name: Retrieve Changes
-        id: changed-files
-        uses: tj-actions/changed-files@v44
-        with:
-          files_yaml: |
-            sprites:
-              - mods/hv/bits/**.png
+      - name: Retrieve Changed Files
+        id: changes
+        run: |
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            git fetch origin main --depth=1
+            git diff --name-only origin/main ${{ github.sha }} > changed_files.txt
+          else
+            git fetch origin ${{ github.event.before }} --depth=1
+            git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+          fi
+          grep -E 'mods/hv/bits/.*\.png' changed_files.txt > sprites_changed_files.txt || true
+          echo "sprites=$(cat sprites_changed_files.txt | tr '\n' ' ')" >> $GITHUB_OUTPUT
 
       - name: Check Code
         run: |
@@ -35,7 +43,7 @@ jobs:
 
       - name: Check Sprites
         env:
-            ALL_CHANGED_SPRITES: ${{ steps.changed-files.outputs.sprites_all_changed_files }}
+            ALL_CHANGED_SPRITES: ${{ steps.changes.outputs.sprites }}
         run: |
           make check-sprites SPRITE_FILES="${ALL_CHANGED_SPRITES}"
           sudo apt-get install pngcheck
@@ -85,14 +93,11 @@ jobs:
       - name: Check Code
         shell: powershell
         run: |
-          # Work around runtime failures on the GH Actions runner
-          dotnet nuget locals all --clear
-          echo "::remove-matcher owner=csc::"
           .\make.ps1 check
 
       - name: Check Mods
         run: |
-          choco install lua --version 5.1.5.52
+          choco install lua --version 5.1.5.52 --no-progress
           $ENV:Path = $ENV:Path + ";C:\Program Files (x86)\Lua\5.1\"
           .\make.ps1 check-scripts
           .\make.ps1 test

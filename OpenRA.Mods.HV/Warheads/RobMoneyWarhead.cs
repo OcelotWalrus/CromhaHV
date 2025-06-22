@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Warheads
 		[Desc("Sound the victim will hear when they get robbed.")]
 		public readonly string RobbedNotification = null;
 
-		[TranslationReference(optional: true)]
+		[FluentReference(optional: true)]
 		[Desc("Text notification the victim will see when they get robbed.")]
 		public readonly string RobbedTextNotification = null;
 
@@ -43,7 +43,7 @@ namespace OpenRA.Mods.HV.Warheads
 		[Desc("Sound the perpetrator will hear after successful leeching.")]
 		public readonly string RobNotification = null;
 
-		[TranslationReference(optional: true)]
+		[FluentReference(optional: true)]
 		[Desc("Text notification the perpetrator will see after successful leeching.")]
 		public readonly string RobTextNotification = null;
 
@@ -96,7 +96,8 @@ namespace OpenRA.Mods.HV.Warheads
 
 				if (ShowTicks)
 				{
-					world.AddFrameEndTask(w => w.Add(new FloatingText(actor.CenterPosition, firedBy.Owner.Color, FloatingText.FormatCashTick(stolen * PercentageGranted / 100), 30)));
+					world.AddFrameEndTask(w =>
+						w.Add(new FloatingText(actor.CenterPosition, firedBy.Owner.Color, FloatingText.FormatCashTick(stolen * PercentageGranted / 100), 30)));
 				}
 			}
 		}

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2023-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BeaconLib;
+using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Network;
@@ -27,67 +28,70 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 {
 	public class CustomServerListLogic : ChromeLogic
 	{
-		[TranslationReference]
+		[FluentReference]
 		const string SearchStatusFailed = "label-search-status-failed";
 
-		[TranslationReference]
+		[FluentReference]
 		const string SearchStatusNoGames = "label-search-status-no-games";
 
-		[TranslationReference("players")]
+		[FluentReference("players")]
 		const string PlayersOnline = "label-players-online-count";
 
-		[TranslationReference]
+		[FluentReference]
 		const string NoServerSelected = "label-no-server-selected";
 
-		[TranslationReference]
+		[FluentReference]
 		const string MapStatusSearching = "label-map-status-searching";
 
-		[TranslationReference]
+		[FluentReference]
 		const string MapClassificationUnknown = "label-map-classification-unknown";
 
-		[TranslationReference("players")]
+		[FluentReference("players")]
 		const string PlayersLabel = "label-players-count";
 
-		[TranslationReference("bots")]
+		[FluentReference("bots")]
 		const string BotsLabel = "label-bots-count";
 
-		[TranslationReference("spectators")]
+		[FluentReference]
+		const string BotPlayer = "label-bot-player";
+
+		[FluentReference("spectators")]
 		const string SpectatorsLabel = "label-spectators-count";
 
-		[TranslationReference]
+		[FluentReference]
 		const string Players = "label-players";
 
-		[TranslationReference("team")]
+		[FluentReference("team")]
 		const string TeamNumber = "label-team-name";
 
-		[TranslationReference]
+		[FluentReference]
 		const string NoTeam = "label-no-team";
 
-		[TranslationReference]
+		[FluentReference]
 		const string Spectators = "label-spectators";
 
-		[TranslationReference("players")]
+		[FluentReference("players")]
 		const string OtherPlayers = "label-other-players-count";
 
-		[TranslationReference]
+		[FluentReference]
 		const string Playing = "label-playing";
 
-		[TranslationReference]
+		[FluentReference]
 		const string Waiting = "label-waiting";
 
-		[TranslationReference("minutes")]
+		[FluentReference("minutes")]
 		const string InProgress = "label-in-progress-for";
 
-		[TranslationReference]
+		[FluentReference]
 		const string PasswordProtected = "label-password-protected";
 
-		[TranslationReference]
+		[FluentReference]
 		const string WaitingForPlayers = "label-waiting-for-players";
 
-		[TranslationReference]
+		[FluentReference]
 		const string ServerShuttingDown = "label-server-shutting-down";
 
-		[TranslationReference]
+		[FluentReference]
 		const string UnknownServerState = "label-unknown-server-state";
 
 		readonly string noServerSelected;
@@ -148,8 +152,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		{
 			switch (searchStatus)
 			{
-				case SearchStatus.Failed: return TranslationProvider.GetString(SearchStatusFailed);
-				case SearchStatus.NoGames: return TranslationProvider.GetString(SearchStatusNoGames);
+				case SearchStatus.Failed: return FluentProvider.GetMessage(SearchStatusFailed);
+				case SearchStatus.NoGames: return FluentProvider.GetMessage(SearchStatusNoGames);
 				default: return "";
 			}
 		}
@@ -160,22 +164,22 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			this.modData = modData;
 			this.onJoin = onJoin;
 
-			playing = TranslationProvider.GetString(Playing);
-			waiting = TranslationProvider.GetString(Waiting);
+			playing = FluentProvider.GetMessage(Playing);
+			waiting = FluentProvider.GetMessage(Waiting);
 
-			noServerSelected = TranslationProvider.GetString(NoServerSelected);
-			mapStatusSearching = TranslationProvider.GetString(MapStatusSearching);
-			mapClassificationUnknown = TranslationProvider.GetString(MapClassificationUnknown);
+			noServerSelected = FluentProvider.GetMessage(NoServerSelected);
+			mapStatusSearching = FluentProvider.GetMessage(MapStatusSearching);
+			mapClassificationUnknown = FluentProvider.GetMessage(MapClassificationUnknown);
 
-			players = new CachedTransform<int, string>(i => TranslationProvider.GetString(PlayersLabel, Translation.Arguments("players", i)));
-			bots = new CachedTransform<int, string>(i => TranslationProvider.GetString(BotsLabel, Translation.Arguments("bots", i)));
-			spectators = new CachedTransform<int, string>(i => TranslationProvider.GetString(SpectatorsLabel, Translation.Arguments("spectators", i)));
+			players = new CachedTransform<int, string>(i => FluentProvider.GetMessage(PlayersLabel, "players", i));
+			bots = new CachedTransform<int, string>(i => FluentProvider.GetMessage(BotsLabel, "bots", i));
+			spectators = new CachedTransform<int, string>(i => FluentProvider.GetMessage(SpectatorsLabel, "spectators", i));
 
-			minutes = new CachedTransform<double, string>(i => TranslationProvider.GetString(InProgress, Translation.Arguments("minutes", i)));
-			passwordProtected = TranslationProvider.GetString(PasswordProtected);
-			waitingForPlayers = TranslationProvider.GetString(WaitingForPlayers);
-			serverShuttingDown = TranslationProvider.GetString(ServerShuttingDown);
-			unknownServerState = TranslationProvider.GetString(UnknownServerState);
+			minutes = new CachedTransform<double, string>(i => FluentProvider.GetMessage(InProgress, "minutes", i));
+			passwordProtected = FluentProvider.GetMessage(PasswordProtected);
+			waitingForPlayers = FluentProvider.GetMessage(WaitingForPlayers);
+			serverShuttingDown = FluentProvider.GetMessage(ServerShuttingDown);
+			unknownServerState = FluentProvider.GetMessage(UnknownServerState);
 
 			services = modData.Manifest.Get<WebServices>();
 			webServices = modData.Manifest.Get<GitHubWebServices>();
@@ -247,7 +251,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			{
 				// HACK: MULTIPLAYER_FILTER_PANEL doesn't follow our normal procedure for dropdown creation
 				// but we still need to be able to set the dropdown width based on the parent
-				// The yaml should use PARENT_RIGHT instead of DROPDOWN_WIDTH
+				// The yaml should use PARENT_WIDTH instead of DROPDOWN_WIDTH
 				var filtersPanel = Ui.LoadWidget("MULTIPLAYER_FILTER_PANEL", filtersButton, new WidgetArgs());
 				filtersButton.Children.Remove(filtersPanel);
 
@@ -322,7 +326,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var playersLabel = widget.GetOrNull<LabelWidget>("PLAYER_COUNT");
 			if (playersLabel != null)
 			{
-				var playersText = new CachedTransform<int, string>(p => TranslationProvider.GetString(PlayersOnline, Translation.Arguments("players", p)));
+				var playersText = new CachedTransform<int, string>(p => FluentProvider.GetMessage(PlayersOnline, "players", p));
 				playersLabel.IsVisible = () => playerCount != 0;
 				playersLabel.GetText = () => playersText.Update(playerCount);
 			}
@@ -585,14 +589,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var noTeams = players.Count == 1;
 			foreach (var p in players)
 			{
-				var label = noTeams ? TranslationProvider.GetString(Players) : p.Key > 0
-					? TranslationProvider.GetString(TeamNumber, Translation.Arguments("team", p.Key))
-					: TranslationProvider.GetString(NoTeam);
+				var label = noTeams ? FluentProvider.GetMessage(Players) : p.Key > 0
+					? FluentProvider.GetMessage(TeamNumber, "team", p.Key)
+					: FluentProvider.GetMessage(NoTeam);
 				teams.Add(label, p);
 			}
 
 			if (server.Clients.Any(c => c.IsSpectator))
-				teams.Add(TranslationProvider.GetString(Spectators), server.Clients.Where(c => c.IsSpectator));
+				teams.Add(FluentProvider.GetMessage(Spectators), server.Clients.Where(c => c.IsSpectator));
 
 			var factionInfo = modData.DefaultRules.Actors[SystemActors.World].TraitInfos<FactionInfo>();
 			foreach (var kv in teams)
@@ -608,14 +612,20 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				foreach (var option in kv.Value)
 				{
 					var o = option;
+					var playerName = new CachedTransform<(MapStatus, int, SpriteFont), string>(s =>
+					{
+						var name = o.IsBot
+							? currentMap.TryGetMessage(o.Name, out var msg) ? msg : FluentProvider.GetMessage(BotPlayer)
+							: o.Name;
+						return WidgetUtils.TruncateText(name, s.Item2, s.Item3);
+					});
 
 					var item = ScrollItemWidget.Setup(clientTemplate, () => false, () => { });
 					if (!o.IsSpectator && server.Mod == modData.Manifest.Id)
 					{
 						var label = item.Get<LabelWidget>("LABEL");
 						var font = Game.Renderer.Fonts[label.Font];
-						var name = WidgetUtils.TruncateText(o.Name, label.Bounds.Width, font);
-						label.GetText = () => name;
+						label.GetText = () => playerName.Update((currentMap.Status, label.Bounds.Width, font));
 						label.GetColor = () => o.Color;
 
 						var flag = item.Get<ImageWidget>("FLAG");
@@ -627,11 +637,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					{
 						var label = item.Get<LabelWidget>("NOFLAG_LABEL");
 						var font = Game.Renderer.Fonts[label.Font];
-						var name = WidgetUtils.TruncateText(o.Name, label.Bounds.Width, font);
 
 						// Force spectator color to prevent spoofing by the server
 						var color = o.IsSpectator ? Color.White : o.Color;
-						label.GetText = () => name;
+						label.GetText = () => playerName.Update((currentMap.Status, label.Bounds.Width, font));
 						label.GetColor = () => color;
 					}
 
@@ -764,14 +773,20 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 							if (game.Clients.Length > 0)
 							{
-								var displayClients = game.Clients.Select(c => c.Name);
-								if (game.Clients.Length > 10)
-									displayClients = displayClients
-										.Take(9)
-										.Append(TranslationProvider.GetString(OtherPlayers, Translation.Arguments("players", game.Clients.Length - 9)));
+								var preview = modData.MapCache[game.Map];
+								var tooltip = new CachedTransform<MapStatus, string>(s =>
+								{
+									var displayClients = game.Clients.Select(c => c.IsBot
+										? preview.TryGetMessage(c.Name, out var msg) ? msg : FluentProvider.GetMessage(BotPlayer)
+ 										: c.Name);
 
-								var tooltip = displayClients.JoinWith("\n");
-								players.GetTooltipText = () => tooltip;
+									if (game.Clients.Length > 10)
+										displayClients = displayClients
+											.Take(9)
+											.Append(FluentProvider.GetMessage(OtherPlayers, "players", game.Clients.Length - 9));
+									return displayClients.JoinWith("\n");
+								});
+								players.GetTooltipText = () => tooltip.Update(preview.Status);
 							}
 							else
 								players.GetTooltipText = null;

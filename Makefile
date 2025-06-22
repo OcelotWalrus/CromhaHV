@@ -3,7 +3,7 @@
 # to compile, run:
 #   make
 #
-# to compile using Mono (version 6.4 or greater) instead of .NET 6, run:
+# to compile using Mono (version 6.12 or greater) instead of .NET 6, run:
 #   make RUNTIME=mono
 #
 # to compile using system libraries for native dependencies, run:
@@ -82,16 +82,10 @@ fetch-engine:
 engine: fetch-engine
 	@echo "Compiling engine..."
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
-ifeq ("$(TARGETPLATFORM)","unix-generic")
-ifeq ("$(RUNTIME)","net6")
-	@rm $(ENGINE_DIRECTORY)/bin/*.so
-endif
-	@cd $(ENGINE_DIRECTORY) && ./configure-system-libraries.sh
-endif
 
 all: engine
 ifeq ($(RUNTIME), mono)
-	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool provided by Mono >= 6.4."; exit 1)
+	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool provided by Mono >= 6.12."; exit 1)
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=Release -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true \;
 endif
